@@ -1,0 +1,641 @@
+/* ==========================================================================
+   PawHealth — home2.css
+   Specialized Animal Care Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Specialized Care Hero (Split layout)
+   -------------------------------------------------------------------------- */
+.h2-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-alt) 100%);
+  overflow: hidden;
+  padding-top: clamp(var(--space-8), 5vw, var(--space-16));
+  padding-bottom: clamp(var(--space-12), 8vw, var(--space-24));
+  border-bottom: 1px solid var(--color-border);
+}
+
+.h2-hero__split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: clamp(var(--space-8), 5vw, var(--space-16));
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.h2-hero__content {
+  z-index: 2;
+}
+
+.h2-hero__eyebrow {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-teal);
+  background: rgba(40,109,115,0.1);
+  padding: 0.35em 1em;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.h2-hero__headline {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: var(--fw-bold);
+  color: var(--color-charcoal);
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+}
+
+.h2-hero__headline em {
+  font-style: italic;
+  color: var(--color-primary);
+  display: block;
+}
+
+.h2-hero__subtext {
+  font-size: clamp(var(--text-base), 1.8vw, var(--text-lg));
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-6);
+  max-width: 54ch;
+}
+
+.h2-hero__pillars {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+
+.h2-hero__pillar {
+  background: var(--color-mint);
+  padding: 0.25em 0.85em;
+  border-radius: var(--radius-full);
+}
+
+.h2-hero__pillar-sep {
+  color: var(--color-text-light);
+}
+
+.h2-hero__cta-group {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.h2-hero__image-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.h2-hero__image-wrap {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--color-surface);
+  position: relative;
+}
+
+.h2-hero__image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.h2-hero__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(39,51,47,0.4) 100%);
+}
+
+.h2-hero__float-card {
+  position: absolute;
+  bottom: -24px;
+  left: 24px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  border: 1px solid var(--color-border);
+  z-index: 3;
+}
+
+.h2-hero__float-stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.h2-hero__float-stat span {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.h2-hero__float-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-border);
+}
+
+/* --------------------------------------------------------------------------
+   2. Preventive Pet Healthcare List
+   -------------------------------------------------------------------------- */
+.h2-preventive__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(var(--space-10), 6vw, var(--space-16));
+  margin-top: var(--space-10);
+}
+
+.h2-preventive-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(var(--space-8), 5vw, var(--space-16));
+  background: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.h2-preventive-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.h2-preventive-item--reverse {
+  direction: rtl;
+}
+
+.h2-preventive-item--reverse > * {
+  direction: ltr;
+}
+
+.h2-preventive-item__image-wrap {
+  height: 100%;
+  min-height: 320px;
+}
+
+.h2-preventive-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.h2-preventive-item__content {
+  padding: clamp(var(--space-6), 4vw, var(--space-10));
+}
+
+.h2-preventive-item__number {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-mint);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+[data-theme="dark"] .h2-preventive-item__number {
+  color: var(--color-teal);
+}
+
+.h2-preventive-item__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-3);
+}
+
+.h2-preventive-item__desc {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   3. Advanced Treatment Capabilities Grid
+   -------------------------------------------------------------------------- */
+.h2-treatments {
+  background: var(--color-surface-alt);
+}
+
+.h2-treatments__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.h2-treatment-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.h2-treatment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.h2-treatment-card__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-xl);
+  background: var(--color-mint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+  transition: background var(--transition-base), color var(--transition-base), transform var(--transition-spring);
+}
+
+.h2-treatment-card:hover .h2-treatment-card__icon {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.h2-treatment-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-3);
+}
+
+.h2-treatment-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+/* --------------------------------------------------------------------------
+   4. Animals Care Tabs
+   -------------------------------------------------------------------------- */
+.h2-animals__tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.h2-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.h2-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.h2-tab[aria-selected="true"] {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(36,92,72,0.25);
+}
+
+.h2-tab-panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: opacity var(--transition-base);
+}
+
+.h2-tab-panel--hidden {
+  display: none;
+}
+
+.h2-tab-panel__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.h2-tab-panel__image-wrap {
+  height: 100%;
+  min-height: 420px;
+}
+
+.h2-tab-panel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.h2-tab-panel__content {
+  padding: clamp(var(--space-6), 5vw, var(--space-12));
+}
+
+.h2-tab-panel__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-4);
+}
+
+.h2-tab-panel__content p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-5);
+}
+
+.h2-tab-panel__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.h2-tab-panel__list li {
+  position: relative;
+  padding-left: var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+}
+
+.h2-tab-panel__list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: var(--fw-bold);
+}
+
+/* --------------------------------------------------------------------------
+   5. Treatment Process Timeline
+   -------------------------------------------------------------------------- */
+.h2-process {
+  background: var(--color-surface-alt);
+}
+
+.h2-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+  position: relative;
+}
+
+.h2-timeline__step {
+  text-align: center;
+  position: relative;
+}
+
+.h2-timeline__connector {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 1;
+}
+
+.h2-timeline__step:last-child .h2-timeline__connector {
+  display: none;
+}
+
+.h2-timeline__node {
+  position: relative;
+  z-index: 2;
+  margin-bottom: var(--space-4);
+}
+
+.h2-timeline__num {
+  position: absolute;
+  top: -8px;
+  right: calc(50% - 36px);
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--color-coral);
+  color: var(--color-white);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.h2-timeline__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 3px solid var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), background var(--transition-base), color var(--transition-base);
+}
+
+.h2-timeline__step:hover .h2-timeline__icon {
+  transform: scale(1.1);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.h2-timeline__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-2);
+}
+
+.h2-timeline__desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: var(--lh-snug);
+}
+
+/* --------------------------------------------------------------------------
+   6. Pet Health Appointment CTA Card
+   -------------------------------------------------------------------------- */
+.h2-cta__card {
+  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-mint) 100%);
+  border-radius: var(--radius-2xl);
+  border: 2px solid var(--color-primary);
+  padding: clamp(var(--space-8), 6vw, var(--space-16));
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+[data-theme="dark"] .h2-cta__card {
+  background: linear-gradient(135deg, #1d332a 0%, #173836 100%);
+}
+
+.h2-cta__illustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.h2-cta__content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.h2-cta__eyebrow {
+  margin-bottom: var(--space-3);
+  display: inline-block;
+}
+
+.h2-cta__headline {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  font-weight: var(--fw-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-4);
+  line-height: 1.2;
+}
+
+.h2-cta__subtext {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.h2-cta__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.h2-cta__benefit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-charcoal);
+  background: rgba(255,255,255,0.7);
+  padding: 0.35em 0.85em;
+  border-radius: var(--radius-full);
+}
+
+[data-theme="dark"] .h2-cta__benefit {
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints for Home 2
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .h2-hero__split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .h2-hero__content {
+    margin-inline: auto;
+  }
+  .h2-hero__pillars {
+    justify-content: center;
+  }
+  .h2-hero__cta-group {
+    justify-content: center;
+  }
+  .h2-hero__float-card {
+    position: static;
+    margin-top: var(--space-6);
+    justify-content: center;
+  }
+  .h2-preventive-item,
+  .h2-preventive-item--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  .h2-tab-panel__grid {
+    grid-template-columns: 1fr;
+  }
+  .h2-timeline {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: left;
+    padding-left: var(--space-12);
+  }
+  .h2-timeline__connector {
+    top: 0;
+    left: 36px;
+    width: 2px;
+    height: 100%;
+  }
+  .h2-timeline__step {
+    text-align: left;
+    display: flex;
+    gap: var(--space-6);
+    align-items: flex-start;
+  }
+  .h2-timeline__node {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .h2-animals__tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .h2-tab {
+    justify-content: center;
+  }
+}

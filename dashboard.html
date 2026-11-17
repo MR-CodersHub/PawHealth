@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PawHealth Pet Owner Dashboard — Secure portal to book appointments, manage pet profiles, view vaccination records, and access medical history." />
+  <title>Pet Owner Dashboard | PawHealth Animal Hospital</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-wrapper">
+
+    <!-- ===== SIDEBAR NAVIGATION ===== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Dashboard Navigation">
+
+      <!-- Sidebar Logo -->
+      <a href="index.html" class="sidebar-logo" aria-label="PawHealth Animal Hospital">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="20" fill="#FFF9F0"/>
+          <path d="M20 18 C14 18, 10 22, 11 27 C12 31, 15 33, 20 33 C25 33, 28 31, 29 27 C30 22, 26 18, 20 18Z" fill="#245C48"/>
+          <ellipse cx="14" cy="14" rx="2.5" ry="3.5" transform="rotate(-15 14 14)" fill="#245C48"/>
+          <ellipse cx="18" cy="11.5" rx="2.5" ry="3.5" transform="rotate(-5 18 11.5)" fill="#245C48"/>
+          <ellipse cx="22" cy="11.5" rx="2.5" ry="3.5" transform="rotate(5 22 11.5)" fill="#245C48"/>
+          <ellipse cx="26" cy="14" rx="2.5" ry="3.5" transform="rotate(15 26 14)" fill="#245C48"/>
+        </svg>
+        <span class="sidebar-logo-text">PawHealth</span>
+      </a>
+
+      <!-- Logged-in User Profile Card -->
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar">JD</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name user-display-name">Jane Demo</div>
+          <div class="sidebar-user-role">Registered Pet Owner</div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav" aria-label="Portal Menus">
+        <div class="sidebar-nav-label">Main Menu</div>
+
+        <button class="sidebar-nav-item active" data-panel="overview">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Overview</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-panel="pets">
+          <span class="nav-icon">🐾</span>
+          <span class="nav-label">My Pets</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-panel="book">
+          <span class="nav-icon">📅</span>
+          <span class="nav-label">Book Appointment</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-panel="appointments">
+          <span class="nav-icon">📋</span>
+          <span class="nav-label">My Appointments</span>
+        </button>
+
+        <div class="sidebar-nav-label">Medical Portal</div>
+
+        <button class="sidebar-nav-item" data-panel="vaccinations">
+          <span class="nav-icon">💉</span>
+          <span class="nav-label">Vaccination Records</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-panel="medical">
+          <span class="nav-icon">🏥</span>
+          <span class="nav-label">Medical History</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-panel="prescriptions">
+          <span class="nav-icon">📄</span>
+          <span class="nav-label">Prescriptions &amp; Docs</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-panel="notifications">
+          <span class="nav-icon">🔔</span>
+          <span class="nav-label">Notifications</span>
+          <span class="nav-badge notif-badge-count">3</span>
+        </button>
+
+        <div class="sidebar-nav-label">Account</div>
+
+        <button class="sidebar-nav-item" data-panel="profile">
+          <span class="nav-icon">👤</span>
+          <span class="nav-label">My Profile</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-panel="help">
+          <span class="nav-icon">❓</span>
+          <span class="nav-label">Help &amp; Support</span>
+        </button>
+
+        <button class="sidebar-nav-item logout-item" data-panel="logout">
+          <span class="nav-icon">🚪</span>
+          <span class="nav-label">Log Out</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <a href="index.html" class="sidebar-back-link">
+          <span>← Back to Public Website</span>
+        </a>
+        <div class="sidebar-version">PawHealth Portal v2.4 · Demo Mode</div>
+      </div>
+
+    </aside>
+
+    <!-- Overlay for mobile drawer -->
+    <div class="dashboard-sidebar-overlay" aria-hidden="true"></div>
+
+    <!-- ===== MAIN CONTENT AREA ===== -->
+    <div class="dashboard-main">
+
+      <!-- Topbar -->
+      <header class="dashboard-topbar" role="banner">
+        <button class="topbar-hamburger" aria-label="Toggle navigation drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <h2 class="topbar-title">Dashboard Overview</h2>
+
+        <div class="topbar-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search records, appointments, pets..." aria-label="Search dashboard" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="navbar__toggle-btn theme-toggle-btn" aria-label="Toggle theme" title="Toggle Theme">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+
+          <button class="topbar-btn" data-nav-target="notifications" aria-label="View notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="topbar-badge notif-badge-count">3</span>
+          </button>
+
+          <div class="topbar-user" data-nav-target="profile" title="My Profile">
+            <div class="topbar-avatar">JD</div>
+            <span class="topbar-user-name user-display-name">Jane Demo</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content View Area -->
+      <main class="dashboard-content">
+
+        <!-- =========================================================
+             PANEL 1: OVERVIEW
+             ========================================================= -->
+        <section id="panel-overview" class="dashboard-panel active">
+
+          <!-- Welcome Banner -->
+          <div class="db-welcome-card">
+            <div class="db-welcome-text">
+              <span class="badge badge--primary" style="margin-bottom: var(--space-2);">Pet Owner Portal</span>
+              <h2>Welcome back, <span class="user-display-name">Jane Demo</span>! 👋</h2>
+              <p>Here is an overview of your registered pets' upcoming veterinary visits, vaccinations due, and recent medical updates.</p>
+            </div>
+            <div class="db-welcome-actions">
+              <button class="btn btn--primary" data-nav-target="book">+ Book Appointment</button>
+            </div>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="db-stats-grid">
+            <div class="db-stat-card">
+              <div class="db-stat-icon" style="background: var(--db-mint); color: var(--db-green);">🐾</div>
+              <div>
+                <span class="db-stat-value">2</span>
+                <span class="db-stat-label">Registered Pets</span>
+              </div>
+            </div>
+
+            <div class="db-stat-card">
+              <div class="db-stat-icon" style="background: rgba(40,109,115,0.12); color: var(--db-teal);">📅</div>
+              <div>
+                <span class="db-stat-value">1</span>
+                <span class="db-stat-label">Upcoming Visit</span>
+              </div>
+            </div>
+
+            <div class="db-stat-card">
+              <div class="db-stat-icon" style="background: rgba(34,197,94,0.15); color: #15803d);">✅</div>
+              <div>
+                <span class="db-stat-value">8</span>
+                <span class="db-stat-label">Completed Visits</span>
+              </div>
+            </div>
+
+            <div class="db-stat-card">
+              <div class="db-stat-icon" style="background: rgba(242,139,120,0.15); color: var(--db-coral);">💉</div>
+              <div>
+                <span class="db-stat-value">1</span>
+                <span class="db-stat-label">Vaccination Due Soon</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Overview Layout Grid -->
+          <div class="db-overview-layout">
+
+            <!-- Left Column: Upcoming Visit & Registered Pets -->
+            <div class="db-overview-left">
+
+              <!-- Next Upcoming Appointment -->
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Next Scheduled Visit</h3>
+                  <button class="btn btn--outline-dark btn--sm" data-nav-target="appointments">View All</button>
+                </div>
+                <div class="db-card-body">
+                  <div class="upcoming-visit-card">
+                    <div class="upcoming-visit-pet">
+                      <img src="https://picsum.photos/seed/max-dog-profile/100/100" alt="Max" class="upcoming-pet-thumb" />
+                      <div>
+                        <h4>Max (Labrador Retriever)</h4>
+                        <span class="upcoming-service-name">General Wellness Checkup</span>
+                      </div>
+                    </div>
+                    <div class="upcoming-visit-meta">
+                      <div class="visit-meta-item">
+                        <span>📅 Date:</span>
+                        <strong>25 Nov 2026</strong>
+                      </div>
+                      <div class="visit-meta-item">
+                        <span>⏰ Time:</span>
+                        <strong>10:00 AM</strong>
+                      </div>
+                      <div class="visit-meta-item">
+                        <span>👨‍⚕️ Attending Vet:</span>
+                        <strong>Dr. Sarah Mitchell</strong>
+                      </div>
+                      <div class="visit-meta-item">
+                        <span>🏷️ Status:</span>
+                        <span class="badge badge--success">Confirmed</span>
+                      </div>
+                    </div>
+                    <div class="upcoming-visit-actions">
+                      <button class="btn btn--primary btn--sm" data-nav-target="appointments">View Appointment Details</button>
+                      <button class="btn btn--outline-coral btn--sm" data-nav-target="appointments">Request Reschedule</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Pet Cards -->
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">My Registered Pets</h3>
+                  <button class="btn btn--outline-primary btn--sm" data-nav-target="pets">Manage Pets</button>
+                </div>
+                <div class="db-card-body">
+                  <div class="quick-pets-grid">
+                    <div class="quick-pet-item" data-nav-target="pets">
+                      <img src="https://picsum.photos/seed/max-dog-profile/100/100" alt="Max" class="quick-pet-avatar" />
+                      <div class="quick-pet-info">
+                        <h4>Max</h4>
+                        <span>Dog · Labrador Retriever</span>
+                        <span class="quick-pet-age">3 Years · Golden</span>
+                      </div>
+                    </div>
+
+                    <div class="quick-pet-item" data-nav-target="pets">
+                      <img src="https://picsum.photos/seed/luna-cat-profile/100/100" alt="Luna" class="quick-pet-avatar" />
+                      <div class="quick-pet-info">
+                        <h4>Luna</h4>
+                        <span>Cat · Persian Longhair</span>
+                        <span class="quick-pet-age">5 Years · White &amp; Grey</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Reminders & Recent Activity -->
+            <div class="db-overview-right">
+
+              <!-- Vaccination Reminder Alert Box -->
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Vaccine Reminders</h3>
+                  <button class="btn btn--outline-dark btn--sm" data-nav-target="vaccinations">All Records</button>
+                </div>
+                <div class="db-card-body">
+                  <div class="vax-reminder-item warning">
+                    <span class="vax-reminder-icon">⚠️</span>
+                    <div class="vax-reminder-text">
+                      <strong>Max · Rabies Booster Due Soon</strong>
+                      <p>Due in 28 days (15 Dec 2026). Recommended to schedule booster before holiday travel.</p>
+                    </div>
+                  </div>
+
+                  <div class="vax-reminder-item success">
+                    <span class="vax-reminder-icon">✅</span>
+                    <div class="vax-reminder-text">
+                      <strong>Luna · FVRCP Core Vaccine</strong>
+                      <p>Up to Date. Next triennial renewal scheduled for July 2029.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recent Notifications Preview -->
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Recent Alerts</h3>
+                  <button class="btn btn--outline-dark btn--sm" data-nav-target="notifications">View All</button>
+                </div>
+                <div class="db-card-body">
+                  <ul class="activity-feed">
+                    <li class="activity-item">
+                      <span class="activity-dot"></span>
+                      <div>
+                        <strong>Appointment Confirmed</strong>
+                        <p>Max's checkup on 25 Nov 2026 at 10:00 AM confirmed.</p>
+                        <span class="activity-time">2 hours ago</span>
+                      </div>
+                    </li>
+                    <li class="activity-item">
+                      <span class="activity-dot"></span>
+                      <div>
+                        <strong>Health Notes Updated</strong>
+                        <p>Dr. Mitchell added clinical dental summary notes for Max.</p>
+                        <span class="activity-time">3 days ago</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- =========================================================
+             PANEL 2: MY PETS
+             ========================================================= -->
+        <section id="panel-pets" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">My Registered Pets</h2>
+              <p class="panel-subtitle">Manage animal profiles, microchip IDs, medical alerts, and dietary notes.</p>
+            </div>
+            <button class="btn btn--primary" id="addPetBtn">+ Add New Pet</button>
+          </div>
+
+          <div class="db-pets-grid" id="petsGridContainer">
+            <!-- Dynamically populated by js/dashboard.js -->
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 3: BOOK APPOINTMENT (8-STEP WIZARD)
+             ========================================================= -->
+        <section id="panel-book" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Book Veterinary Appointment</h2>
+              <p class="panel-subtitle">Follow our simple 8-step booking process to reserve your preferred veterinarian and time.</p>
+            </div>
+          </div>
+
+          <!-- Wizard Progress Step Indicators -->
+          <div class="booking-wizard-steps">
+            <div class="booking-step-indicator active" data-step="1"><span>1</span><label>Pet</label></div>
+            <div class="booking-step-indicator" data-step="2"><span>2</span><label>Service</label></div>
+            <div class="booking-step-indicator" data-step="3"><span>3</span><label>Vet</label></div>
+            <div class="booking-step-indicator" data-step="4"><span>4</span><label>Date</label></div>
+            <div class="booking-step-indicator" data-step="5"><span>5</span><label>Time</label></div>
+            <div class="booking-step-indicator" data-step="6"><span>6</span><label>Details</label></div>
+            <div class="booking-step-indicator" data-step="7"><span>7</span><label>Review</label></div>
+            <div class="booking-step-indicator" data-step="8"><span>8</span><label>Confirmed</label></div>
+          </div>
+
+          <div class="booking-card">
+
+            <!-- STEP 1: Select Pet -->
+            <div class="booking-step-panel active" data-step="1">
+              <h3 class="booking-step-title">Step 1: Which pet is this appointment for?</h3>
+              <p class="booking-step-sub">Select one of your registered animals or add a new companion.</p>
+
+              <div class="booking-pet-options">
+                <div class="booking-pet-card selected" data-pet-id="pet-1" data-pet-name="Max">
+                  <img src="https://picsum.photos/seed/max-dog-profile/80/80" alt="Max" />
+                  <div>
+                    <h4>Max</h4>
+                    <span>Dog · Labrador Retriever (3 Yrs)</span>
+                  </div>
+                </div>
+
+                <div class="booking-pet-card" data-pet-id="pet-2" data-pet-name="Luna">
+                  <img src="https://picsum.photos/seed/luna-cat-profile/80/80" alt="Luna" />
+                  <div>
+                    <h4>Luna</h4>
+                    <span>Cat · Persian Longhair (5 Yrs)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2: Select Service -->
+            <div class="booking-step-panel" data-step="2">
+              <h3 class="booking-step-title">Step 2: Select Veterinary Service Required</h3>
+              <p class="booking-step-sub">Choose the primary medical service your pet needs today.</p>
+
+              <div class="booking-services-grid">
+                <div class="booking-service-card selected" data-service-name="General Wellness Checkup">
+                  <span class="booking-card-icon">🩺</span>
+                  <h4>General Wellness Checkup</h4>
+                  <p>Comprehensive physical exam, vitals, nutrition check (30 mins)</p>
+                </div>
+
+                <div class="booking-service-card" data-service-name="Vaccination & Preventive Booster">
+                  <span class="booking-card-icon">💉</span>
+                  <h4>Vaccination &amp; Prevention</h4>
+                  <p>Core and lifestyle immunizations with health exam</p>
+                </div>
+
+                <div class="booking-service-card" data-service-name="Dental Cleaning & Exam">
+                  <span class="booking-card-icon">🦷</span>
+                  <h4>Dental Examination &amp; Cleaning</h4>
+                  <p>Oral inspection, tartar scaling, ultrasonic cleaning</p>
+                </div>
+
+                <div class="booking-service-card" data-service-name="Diagnostic Blood & Lab Work">
+                  <span class="booking-card-icon">🔬</span>
+                  <h4>Diagnostic Blood &amp; Lab Work</h4>
+                  <p>CBC, biochemistry, urinalysis with rapid in-house results</p>
+                </div>
+
+                <div class="booking-service-card" data-service-name="Surgical Consultation">
+                  <span class="booking-card-icon">🔪</span>
+                  <h4>Surgical Consultation</h4>
+                  <p>Pre-operative assessment for soft tissue or orthopedic procedures</p>
+                </div>
+
+                <div class="booking-service-card" data-service-name="Urgent Medical Care">
+                  <span class="booking-card-icon">🚨</span>
+                  <h4>Urgent Medical Concern</h4>
+                  <p>Acute illness, sudden lethargy, minor trauma, skin flare-up</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: Select Preferred Veterinarian -->
+            <div class="booking-step-panel" data-step="3">
+              <h3 class="booking-step-title">Step 3: Choose Your Preferred Veterinarian</h3>
+              <p class="booking-step-sub">Select a doctor or choose First Available for earliest scheduling.</p>
+
+              <div class="booking-vets-grid">
+                <div class="booking-vet-card selected" data-vet-name="Dr. Sarah Mitchell">
+                  <img src="https://picsum.photos/seed/dr-sarah-mitchell/100/100" alt="Dr. Sarah Mitchell" />
+                  <div>
+                    <h4>Dr. Sarah Mitchell</h4>
+                    <span>Chief Vet · Internal Medicine</span>
+                  </div>
+                </div>
+
+                <div class="booking-vet-card" data-vet-name="Dr. James Okoye">
+                  <img src="https://picsum.photos/seed/dr-james-okoye/100/100" alt="Dr. James Okoye" />
+                  <div>
+                    <h4>Dr. James Okoye</h4>
+                    <span>Veterinary Surgeon · Orthopedics</span>
+                  </div>
+                </div>
+
+                <div class="booking-vet-card" data-vet-name="Dr. Priya Sharma">
+                  <img src="https://picsum.photos/seed/dr-priya-sharma/100/100" alt="Dr. Priya Sharma" />
+                  <div>
+                    <h4>Dr. Priya Sharma</h4>
+                    <span>Wellness &amp; Preventive Medicine</span>
+                  </div>
+                </div>
+
+                <div class="booking-vet-card" data-vet-name="First Available Doctor">
+                  <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--db-mint); color: var(--db-green); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">⚡</div>
+                  <div>
+                    <h4>First Available Doctor</h4>
+                    <span>Shortest wait time guarantee</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 4: Choose Date -->
+            <div class="booking-step-panel" data-step="4">
+              <h3 class="booking-step-title">Step 4: Choose Appointment Date</h3>
+              <p class="booking-step-sub">Select from available clinical dates in November / December 2026.</p>
+
+              <div class="calendar-component">
+                <div class="calendar-header">
+                  <strong>November 2026</strong>
+                  <span style="font-size: 0.8rem; color: var(--db-text-muted);">Clinic Hours: 8:00 AM – 7:00 PM</span>
+                </div>
+                <div class="calendar-grid">
+                  <div class="calendar-day-label">Mon</div>
+                  <div class="calendar-day-label">Tue</div>
+                  <div class="calendar-day-label">Wed</div>
+                  <div class="calendar-day-label">Thu</div>
+                  <div class="calendar-day-label">Fri</div>
+                  <div class="calendar-day-label">Sat</div>
+                  <div class="calendar-day-label">Sun</div>
+
+                  <!-- Sample Calendar Days -->
+                  <div class="calendar-day disabled">16</div>
+                  <div class="calendar-day disabled">17</div>
+                  <div class="calendar-day disabled">18</div>
+                  <div class="calendar-day" data-date="2026-11-19">19</div>
+                  <div class="calendar-day" data-date="2026-11-20">20</div>
+                  <div class="calendar-day" data-date="2026-11-21">21</div>
+                  <div class="calendar-day disabled">22</div>
+
+                  <div class="calendar-day" data-date="2026-11-23">23</div>
+                  <div class="calendar-day" data-date="2026-11-24">24</div>
+                  <div class="calendar-day" data-date="2026-11-25">25</div>
+                  <div class="calendar-day" data-date="2026-11-26">26</div>
+                  <div class="calendar-day" data-date="2026-11-27">27</div>
+                  <div class="calendar-day selected" data-date="2026-11-28">28</div>
+                  <div class="calendar-day disabled">29</div>
+
+                  <div class="calendar-day" data-date="2026-11-30">30</div>
+                  <div class="calendar-day" data-date="2026-12-01">1</div>
+                  <div class="calendar-day" data-date="2026-12-02">2</div>
+                  <div class="calendar-day" data-date="2026-12-03">3</div>
+                  <div class="calendar-day" data-date="2026-12-04">4</div>
+                  <div class="calendar-day" data-date="2026-12-05">5</div>
+                  <div class="calendar-day disabled">6</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 5: Choose Available Time Slot -->
+            <div class="booking-step-panel" data-step="5">
+              <h3 class="booking-step-title">Step 5: Choose an Available Time Slot</h3>
+              <p class="booking-step-sub">Grayed slots are already booked. Select an open slot.</p>
+
+              <div class="time-slots-section">
+                <span class="time-period-label">🌅 Morning Slots</span>
+                <div class="time-slots-grid">
+                  <button type="button" class="time-slot-btn" data-time="08:30 AM">08:30 AM</button>
+                  <button type="button" class="time-slot-btn" data-time="09:00 AM">09:00 AM</button>
+                  <button type="button" class="time-slot-btn booked" disabled>09:30 AM (Booked)</button>
+                  <button type="button" class="time-slot-btn selected" data-time="10:00 AM">10:00 AM</button>
+                  <button type="button" class="time-slot-btn" data-time="10:30 AM">10:30 AM</button>
+                  <button type="button" class="time-slot-btn" data-time="11:15 AM">11:15 AM</button>
+                </div>
+
+                <span class="time-period-label" style="margin-top: var(--space-4);">☀️ Afternoon Slots</span>
+                <div class="time-slots-grid">
+                  <button type="button" class="time-slot-btn" data-time="01:30 PM">01:30 PM</button>
+                  <button type="button" class="time-slot-btn booked" disabled>02:00 PM (Booked)</button>
+                  <button type="button" class="time-slot-btn" data-time="02:45 PM">02:45 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="03:30 PM">03:30 PM</button>
+                </div>
+
+                <span class="time-period-label" style="margin-top: var(--space-4);">🌆 Evening Slots</span>
+                <div class="time-slots-grid">
+                  <button type="button" class="time-slot-btn" data-time="04:30 PM">04:30 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="05:15 PM">05:15 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="06:00 PM">06:00 PM</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 6: Reason for Visit & Urgency -->
+            <div class="booking-step-panel" data-step="6">
+              <h3 class="booking-step-title">Step 6: Describe Reason for Visit</h3>
+              <p class="booking-step-sub">Help our doctors prepare by providing symptom details.</p>
+
+              <div class="form-group">
+                <label class="form-label" for="bookingUrgencySelect">Urgency Classification</label>
+                <select id="bookingUrgencySelect" class="form-control">
+                  <option value="Routine" selected>Routine (Wellness check, planned vaccines)</option>
+                  <option value="Non-urgent concern">Non-urgent Concern (Mild scratching, ear check)</option>
+                  <option value="Urgent Illness">Urgent Illness (Needs attention within 24 hours)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bookingReasonInput">Symptoms, Behavioral Changes, or Notes</label>
+                <textarea id="bookingReasonInput" class="form-control" rows="4" placeholder="Describe what symptoms your pet has exhibited, duration, any changes in drinking/eating habits..."></textarea>
+              </div>
+            </div>
+
+            <!-- STEP 7: Review Appointment Details -->
+            <div class="booking-step-panel" data-step="7">
+              <h3 class="booking-step-title">Step 7: Review Your Appointment Summary</h3>
+              <p class="booking-step-sub">Please verify the details below before submitting your booking request.</p>
+
+              <div id="bookingReviewSummary">
+                <!-- Injected via JavaScript -->
+              </div>
+
+              <div style="background: var(--db-mint); border: 1px solid var(--db-green); border-radius: var(--db-card-radius); padding: var(--space-4); margin-top: var(--space-5); font-size: 0.85rem; color: var(--db-green);">
+                ℹ️ <strong>Demonstration Note:</strong> Submitting this form will register a simulated pending booking in your account and generate a demonstration confirmation reference.
+              </div>
+            </div>
+
+            <!-- STEP 8: Confirmation Screen -->
+            <div class="booking-step-panel" data-step="8">
+              <div style="text-align: center; padding: var(--space-8) 0;">
+                <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--db-mint); color: var(--db-green); font-size: 2.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">✓</div>
+                <h3 style="font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--db-green); margin-bottom: 6px;">Booking Request Received!</h3>
+                <p style="font-size: 0.95rem; color: var(--db-text-muted); max-width: 50ch; margin: 0 auto var(--space-5);">
+                  Your appointment request has been recorded. Our clinical intake desk will review your pet's schedule and confirm the slot within 24 hours.
+                </p>
+
+                <div style="background: var(--db-bg); border: 1px solid var(--db-border); border-radius: var(--db-card-radius); padding: var(--space-4); display: inline-block; margin-bottom: var(--space-6);">
+                  <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--db-text-muted); display: block; margin-bottom: 2px;">Demonstration Booking Reference</span>
+                  <strong style="font-size: 1.4rem; color: var(--db-green); font-family: monospace;" id="bookingConfirmationRef">#PH-2026-4821</strong>
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
+                  <button class="btn btn--primary" data-nav-target="appointments">View My Appointments</button>
+                  <button class="btn btn--outline-dark" data-nav-target="overview">Return to Overview</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wizard Navigation Buttons -->
+            <div class="booking-wizard-actions">
+              <button type="button" class="btn btn--outline-dark" id="bookingPrevBtn" style="display: none;">← Previous Step</button>
+              <button type="button" class="btn btn--primary" id="bookingNextBtn">Continue to Next Step →</button>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 4: MY APPOINTMENTS
+             ========================================================= -->
+        <section id="panel-appointments" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">My Appointments</h2>
+              <p class="panel-subtitle">Review scheduled visits, past medical appointments, and request rescheduling.</p>
+            </div>
+            <button class="btn btn--primary" data-nav-target="book">+ New Appointment</button>
+          </div>
+
+          <!-- Filter Bar -->
+          <div class="apt-filter-bar">
+            <button class="apt-filter-tab active" data-status-filter="all">All Visits</button>
+            <button class="apt-filter-tab" data-status-filter="confirmed">Confirmed</button>
+            <button class="apt-filter-tab" data-status-filter="pending">Pending</button>
+            <button class="apt-filter-tab" data-status-filter="completed">Completed</button>
+            <button class="apt-filter-tab" data-status-filter="cancelled">Cancelled</button>
+          </div>
+
+          <!-- Appointments List Container -->
+          <div id="appointmentsListContainer">
+            <!-- Dynamically populated by js/dashboard.js -->
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 5: VACCINATION RECORDS
+             ========================================================= -->
+        <section id="panel-vaccinations" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Vaccination Records &amp; Immunization Passports</h2>
+              <p class="panel-subtitle">Track core and lifestyle vaccination history, batch numbers, and upcoming booster deadlines.</p>
+            </div>
+            <button class="btn btn--outline-primary" id="printVaxCertBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              Print Vaccination Certificate
+            </button>
+          </div>
+
+          <!-- Pet Switcher Tabs -->
+          <div class="vax-pet-tabs">
+            <button class="vax-pet-tab active" data-pet="Max">Max (Labrador)</button>
+            <button class="vax-pet-tab" data-pet="Luna">Luna (Persian Cat)</button>
+          </div>
+
+          <!-- Table Container -->
+          <div class="db-card">
+            <div class="db-card-body" id="vaxTableContainer">
+              <!-- Dynamically populated by js/dashboard.js -->
+            </div>
+          </div>
+
+          <div style="background: var(--db-card-bg); border: 1px solid var(--db-border); border-radius: var(--db-card-radius); padding: var(--space-4); margin-top: var(--space-5); font-size: 0.8rem; color: var(--db-text-muted);">
+            ⚠️ <strong>Sample Demonstration Data:</strong> All vaccine dates and records shown are simulated demonstration data. In a live veterinary practice, these records are updated and certified directly by licensed veterinarians.
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 6: MEDICAL HISTORY
+             ========================================================= -->
+        <section id="panel-medical" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Chronological Medical History</h2>
+              <p class="panel-subtitle">Complete clinical history, physical assessments, diagnostic findings, and doctor instructions.</p>
+            </div>
+
+            <div style="display: flex; gap: var(--space-3);">
+              <select id="medHistoryPetFilter" class="form-control" style="width: auto; padding: 0.4em 2em 0.4em 0.8em; font-size: 0.85rem;">
+                <option value="all">All Pets</option>
+                <option value="Max">Max only</option>
+                <option value="Luna">Luna only</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Chronological List -->
+          <div class="med-history-list">
+
+            <!-- History Item 1 -->
+            <div class="med-history-item expanded" data-pet="Max">
+              <div class="med-history-header">
+                <div>
+                  <span class="badge badge--primary">10 Oct 2026</span>
+                  <h4 style="font-size: 1.1rem; color: var(--db-charcoal); margin-top: 4px;">Dental Checkup &amp; Ultrasonic Scaling · Max</h4>
+                </div>
+                <span class="med-history-vet">Dr. James Okoye, DACVS</span>
+              </div>
+              <div class="med-history-body">
+                <div class="med-history-field">
+                  <strong>Reason for Visit:</strong>
+                  <span>Routine annual oral examination and tartar evaluation.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Clinical Assessment:</strong>
+                  <span>Moderate supragingival calculus present on maxillary molars. Mild marginal gingivitis. No mobile teeth or periodontal pockets observed.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Diagnosis:</strong>
+                  <span>Grade 1 Periodontal Calculus Accumulation.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Treatment Administered:</strong>
+                  <span>Complete ultrasonic scaling and polishing performed under light anesthesia. Fluoride protective coating applied.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Follow-up Instructions:</strong>
+                  <span>Begin enzymatic toothpaste brushing twice weekly. Follow-up oral check in 6 months.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- History Item 2 -->
+            <div class="med-history-item" data-pet="Luna">
+              <div class="med-history-header">
+                <div>
+                  <span class="badge badge--teal">05 Sep 2026</span>
+                  <h4 style="font-size: 1.1rem; color: var(--db-charcoal); margin-top: 4px;">Annual Feline Wellness &amp; Senior Screen · Luna</h4>
+                </div>
+                <span class="med-history-vet">Dr. Sarah Mitchell, ECVIM</span>
+              </div>
+              <div class="med-history-body">
+                <div class="med-history-field">
+                  <strong>Reason for Visit:</strong>
+                  <span>Annual preventive feline checkup and comprehensive metabolic screening.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Clinical Assessment:</strong>
+                  <span>Hydration normal, coat glossy, heart auscultation clear with no murmurs. Abdominal palpation unremarkable. Blood pressure 125/80 mmHg (normal).</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Diagnosis:</strong>
+                  <span>Healthy adult feline.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Treatment Administered:</strong>
+                  <span>Annual wellness blood panel drawn. Core booster review confirmed current.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Follow-up Instructions:</strong>
+                  <span>Continue hairball control formula. Return for routine annual screen in September 2027.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- History Item 3 -->
+            <div class="med-history-item" data-pet="Max">
+              <div class="med-history-header">
+                <div>
+                  <span class="badge badge--coral">15 Jul 2026</span>
+                  <h4 style="font-size: 1.1rem; color: var(--db-charcoal); margin-top: 4px;">Diagnostic Joint Evaluation &amp; Radiograph · Max</h4>
+                </div>
+                <span class="med-history-vet">Dr. James Okoye, DACVS</span>
+              </div>
+              <div class="med-history-body">
+                <div class="med-history-field">
+                  <strong>Reason for Visit:</strong>
+                  <span>Owner reported mild morning stiffness following vigorous swimming activities.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Clinical Assessment:</strong>
+                  <span>Mild discomfort upon full extension of right elbow joint. Digital radiographs show early periarticular osteophytes.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Diagnosis:</strong>
+                  <span>Early Osteoarthritis (Right Elbow).</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Treatment Administered:</strong>
+                  <span>14-day anti-inflammatory course prescribed. Joint mobility diet supplement initiated.</span>
+                </div>
+                <div class="med-history-field">
+                  <strong>Follow-up Instructions:</strong>
+                  <span>Limit high-impact fetch on hard surfaces. Transition to controlled leash walking and swimming.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 7: PRESCRIPTIONS & DOCUMENTS
+             ========================================================= -->
+        <section id="panel-prescriptions" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Prescriptions &amp; Medical Documents</h2>
+              <p class="panel-subtitle">Access active medications, clinical discharge reports, laboratory summaries, and certificates.</p>
+            </div>
+          </div>
+
+          <!-- Document Tabs -->
+          <div class="doc-tabs">
+            <button class="doc-tab-btn active" data-doc-tab="prescriptions">Prescriptions</button>
+            <button class="doc-tab-btn" data-doc-tab="reports">Diagnostic Reports</button>
+            <button class="doc-tab-btn" data-doc-tab="certificates">Certificates</button>
+          </div>
+
+          <!-- Prescriptions Panel -->
+          <div class="doc-tab-panel active" data-doc-panel="prescriptions">
+            <div class="db-card">
+              <div class="db-card-body">
+                <div class="prescription-item">
+                  <div class="rx-icon">💊</div>
+                  <div class="rx-details">
+                    <h4>Meloxicam 1.5 mg/mL Oral Suspension</h4>
+                    <span class="rx-meta">Prescribed for: <strong>Max (Dog)</strong> · Attending: Dr. James Okoye</span>
+                    <p class="rx-instructions">Dosage: 1.2 mL with food once daily for 14 days. Anti-inflammatory for joint mobility.</p>
+                  </div>
+                  <div class="rx-status">
+                    <span class="badge badge--neutral">Course Completed</span>
+                  </div>
+                </div>
+
+                <div class="prescription-item">
+                  <div class="rx-icon">🛡️</div>
+                  <div class="rx-details">
+                    <h4>NexGard PLUS Chewables (Chewable Flea/Tick/Heartworm)</h4>
+                    <span class="rx-meta">Prescribed for: <strong>Max (Dog)</strong> · Attending: Dr. Priya Sharma</span>
+                    <p class="rx-instructions">Dosage: 1 chewable tablet once monthly on the 1st of each month.</p>
+                  </div>
+                  <div class="rx-status">
+                    <span class="badge badge--success">Active Monthly</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reports Panel -->
+          <div class="doc-tab-panel" data-doc-panel="reports">
+            <div class="db-card">
+              <div class="db-card-body">
+                <div class="doc-download-row">
+                  <div class="doc-file-info">
+                    <span class="doc-file-icon">📄</span>
+                    <div>
+                      <h4>Max — Right Elbow Radiography Analysis Report</h4>
+                      <span>PDF Document · 15 Jul 2026 · Signed by Dr. James Okoye</span>
+                    </div>
+                  </div>
+                  <button class="btn btn--outline-dark btn--sm doc-download-btn" data-doc-name="Max_Elbow_Radiograph_Report.pdf">Download PDF</button>
+                </div>
+
+                <div class="doc-download-row">
+                  <div class="doc-file-info">
+                    <span class="doc-file-icon">📄</span>
+                    <div>
+                      <h4>Luna — Comprehensive Senior Feline Blood Chemistry Panel</h4>
+                      <span>PDF Document · 05 Sep 2026 · Signed by Dr. Sarah Mitchell</span>
+                    </div>
+                  </div>
+                  <button class="btn btn--outline-dark btn--sm doc-download-btn" data-doc-name="Luna_Blood_Chemistry_Panel.pdf">Download PDF</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificates Panel -->
+          <div class="doc-tab-panel" data-doc-panel="certificates">
+            <div class="db-card">
+              <div class="db-card-body">
+                <div class="doc-download-row">
+                  <div class="doc-file-info">
+                    <span class="doc-file-icon">📜</span>
+                    <div>
+                      <h4>Official Rabies Vaccination Certificate — Max</h4>
+                      <span>Vaccine Batch: #RB-9981 · Microchip: #985141005123456</span>
+                    </div>
+                  </div>
+                  <button class="btn btn--primary btn--sm doc-download-btn" data-doc-name="Max_Rabies_Certificate.pdf">Download Certificate</button>
+                </div>
+
+                <div class="doc-download-row">
+                  <div class="doc-file-info">
+                    <span class="doc-file-icon">📜</span>
+                    <div>
+                      <h4>Official Core FVRCP Vaccination Certificate — Luna</h4>
+                      <span>Vaccine Batch: #FV-7712 · Microchip: #985141005654321</span>
+                    </div>
+                  </div>
+                  <button class="btn btn--primary btn--sm doc-download-btn" data-doc-name="Luna_FVRCP_Certificate.pdf">Download Certificate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 8: NOTIFICATIONS
+             ========================================================= -->
+        <section id="panel-notifications" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Notifications &amp; Reminders</h2>
+              <p class="panel-subtitle">Stay up-to-date with appointment statuses, vaccination alerts, and medical notes.</p>
+            </div>
+            <button class="btn btn--outline-dark btn--sm" id="markAllNotifsReadBtn">Mark All as Read</button>
+          </div>
+
+          <div class="db-card">
+            <div class="db-card-body" id="notificationsListContainer">
+              <!-- Dynamically populated by js/dashboard.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 9: MY PROFILE
+             ========================================================= -->
+        <section id="panel-profile" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">My Profile &amp; Account Settings</h2>
+              <p class="panel-subtitle">Update contact information, notification preferences, and portal security.</p>
+            </div>
+          </div>
+
+          <div class="profile-tabs">
+            <button class="profile-tab-btn active" data-profile-tab="personal">Personal Info</button>
+            <button class="profile-tab-btn" data-profile-tab="security">Security</button>
+            <button class="profile-tab-btn" data-profile-tab="preferences">Preferences</button>
+          </div>
+
+          <!-- Personal Info Tab -->
+          <div class="profile-tab-panel active" data-profile-panel="personal">
+            <div class="db-card">
+              <div class="db-card-body">
+                <form id="profileForm">
+                  <div class="grid grid--2" style="gap: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label" for="profName">Full Name</label>
+                      <input type="text" id="profName" name="name" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="profEmail">Email Address</label>
+                      <input type="email" id="profEmail" name="email" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="profPhone">Phone Number</label>
+                      <input type="tel" id="profPhone" name="phone" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="profAddress">Residential Address</label>
+                      <input type="text" id="profAddress" name="address" class="form-control" />
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn--primary">Save Profile Changes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Tab -->
+          <div class="profile-tab-panel" data-profile-panel="security">
+            <div class="db-card">
+              <div class="db-card-body" style="max-width: 500px;">
+                <form id="securityForm">
+                  <div class="form-group">
+                    <label class="form-label" for="currentPass">Current Password</label>
+                    <input type="password" id="currentPass" class="form-control" placeholder="••••••••" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="newPass">New Password</label>
+                    <input type="password" id="newPass" class="form-control" placeholder="Min. 8 characters" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="confirmNewPass">Confirm New Password</label>
+                    <input type="password" id="confirmNewPass" class="form-control" placeholder="Repeat new password" required />
+                  </div>
+                  <button type="submit" class="btn btn--primary">Update Password</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferences Tab -->
+          <div class="profile-tab-panel" data-profile-panel="preferences">
+            <div class="db-card">
+              <div class="db-card-body">
+                <h4 style="font-size: 1.1rem; margin-bottom: var(--space-4);">Communication Preferences</h4>
+                <div class="form-check" style="margin-bottom: var(--space-3);">
+                  <input type="checkbox" id="prefEmailReminders" checked />
+                  <label for="prefEmailReminders">Receive email appointment confirmations and reminders</label>
+                </div>
+                <div class="form-check" style="margin-bottom: var(--space-3);">
+                  <input type="checkbox" id="prefSmsReminders" checked />
+                  <label for="prefSmsReminders">Receive SMS text alerts 2 hours prior to scheduled visit</label>
+                </div>
+                <div class="form-check" style="margin-bottom: var(--space-6);">
+                  <input type="checkbox" id="prefNewsletter" />
+                  <label for="prefNewsletter">Receive monthly PawHealth educational newsletter</label>
+                </div>
+                <button type="button" class="btn btn--primary" onclick="if(window.showToast) window.showToast('Preferences Saved', 'Your communication settings have been updated.', 'success');">Save Preferences</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             PANEL 10: HELP & SUPPORT
+             ========================================================= -->
+        <section id="panel-help" class="dashboard-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Help &amp; Client Support</h2>
+              <p class="panel-subtitle">Access clinic emergency contacts, answers to portal questions, or submit a support inquiry.</p>
+            </div>
+          </div>
+
+          <div class="grid grid--2" style="gap: var(--space-8);">
+
+            <!-- Contact & Emergency Card -->
+            <div>
+              <div class="db-card" style="margin-bottom: var(--space-6);">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Hospital Desk Contacts</h3>
+                </div>
+                <div class="db-card-body">
+                  <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: var(--space-3);">
+                    📞 General Desk: <strong>(555) 123-4567</strong><br/>
+                    🚨 Emergency Trauma Line: <strong style="color: var(--db-coral);">(555) 123-4568</strong><br/>
+                    ✉️ Support Email: <strong>support@pawhealth.com</strong><br/>
+                    📍 Location: <strong>123 Greenleaf Avenue, City 10001</strong>
+                  </p>
+                  <span style="font-size: 0.8rem; color: var(--db-text-muted);">
+                    Desk hours: Mon–Fri 8am–7pm, Sat 9am–5pm. Emergency surgical staff on site 24/7.
+                  </span>
+                </div>
+              </div>
+
+              <!-- FAQ -->
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Frequently Asked Support Questions</h3>
+                </div>
+                <div class="db-card-body">
+                  <div class="accordion" data-single="true">
+                    <div class="accordion-item active">
+                      <button class="accordion-header">
+                        <span>How do I print a vaccination certificate for boarding?</span>
+                        <span class="accordion-icon">+</span>
+                      </button>
+                      <div class="accordion-body">
+                        <p>Go to Vaccination Records in the sidebar, select your pet, and click the "Print Vaccination Certificate" button in the upper right corner.</p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button class="accordion-header">
+                        <span>How soon are visit summaries available?</span>
+                        <span class="accordion-icon">+</span>
+                      </button>
+                      <div class="accordion-body">
+                        <p>Our veterinary doctors finalize clinical notes and upload blood panel results within 2 to 4 hours following your visit.</p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button class="accordion-header">
+                        <span>Can I request medication refills online?</span>
+                        <span class="accordion-icon">+</span>
+                      </button>
+                      <div class="accordion-body">
+                        <p>Yes. Send a refill message using the support form below specifying the medication name and prescription number.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Support Enquiry Form -->
+            <div>
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Send a Message to Our Support Desk</h3>
+                </div>
+                <div class="db-card-body">
+                  <form id="dashboardSupportForm">
+                    <div class="form-group">
+                      <label class="form-label" for="supportSubject">Topic / Inquiry Category</label>
+                      <select id="supportSubject" class="form-control" required>
+                        <option value="Appointment Question">Appointment Question / Rescheduling</option>
+                        <option value="Medication Refill">Prescription Refill Request</option>
+                        <option value="Medical Record Clarification">Medical Record Question</option>
+                        <option value="Billing / Insurance Claim">Billing or Insurance Query</option>
+                        <option value="Other">Other General Inquiry</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="supportPetSelect">Regarding Pet</label>
+                      <select id="supportPetSelect" class="form-control">
+                        <option value="Max">Max (Labrador)</option>
+                        <option value="Luna">Luna (Persian Cat)</option>
+                        <option value="General">General Account Question</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="supportMessage">Message Details</label>
+                      <textarea id="supportMessage" class="form-control" rows="5" placeholder="Please describe your question or refill request in detail..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">Send Message to Clinic</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- ===== ADD PET MODAL ===== -->
+  <div class="modal" id="petModal" role="dialog" aria-modal="true" aria-labelledby="petModalTitle">
+    <div class="modal__dialog" style="max-width: 620px;">
+      <div class="modal__header">
+        <h3 class="modal__title" id="petModalTitle">Add New Pet Profile</h3>
+        <button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal__body">
+        <form id="petForm">
+          <div class="grid grid--2" style="gap: var(--space-4);">
+            <div class="form-group">
+              <label class="form-label" for="newPetName">Pet's Name <span class="required">*</span></label>
+              <input type="text" id="newPetName" name="petName" class="form-control" placeholder="e.g. Bella" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="newPetType">Species / Animal Type <span class="required">*</span></label>
+              <select id="newPetType" name="petType" class="form-control" required>
+                <option value="Dog" selected>Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Rabbit">Rabbit</option>
+                <option value="Bird">Bird</option>
+                <option value="Other">Other Small Animal</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="newPetBreed">Breed</label>
+              <input type="text" id="newPetBreed" name="breed" class="form-control" placeholder="e.g. Golden Retriever" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="newPetAge">Age or Birth Date</label>
+              <input type="text" id="newPetAge" name="age" class="form-control" placeholder="e.g. 2 Years" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="newPetWeight">Weight</label>
+              <input type="text" id="newPetWeight" name="weight" class="form-control" placeholder="e.g. 14 kg" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="newPetAllergies">Known Allergies</label>
+              <input type="text" id="newPetAllergies" name="allergies" class="form-control" placeholder="e.g. None or Chicken" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="newPetNotes">Special Care Notes &amp; Behavior</label>
+            <textarea id="newPetNotes" name="notes" class="form-control" rows="3" placeholder="Friendly, shy around loud noises, loves treats..."></textarea>
+          </div>
+
+          <div class="modal__footer" style="display: flex; justify-content: flex-end; gap: var(--space-3); padding-top: var(--space-4);">
+            <button type="button" class="btn btn--outline-dark" data-close-modal>Cancel</button>
+            <button type="submit" class="btn btn--primary">Save Pet Record</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== APPOINTMENT DETAILS MODAL ===== -->
+  <div class="modal" id="appointmentDetailsModal" role="dialog" aria-modal="true" aria-labelledby="aptModalTitle">
+    <div class="modal__dialog" style="max-width: 540px;">
+      <div class="modal__header">
+        <h3 class="modal__title apt-modal-title" id="aptModalTitle">Appointment Details</h3>
+        <button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal__body">
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.95rem;">
+          <div><span>Date &amp; Time:</span> <strong class="apt-modal-date"></strong></div>
+          <div><span>Attending Veterinarian:</span> <strong class="apt-modal-vet"></strong></div>
+          <div><span>Current Status:</span> <strong class="apt-modal-status"></strong></div>
+          <div><span>Reason for Visit:</span> <p class="apt-modal-reason" style="margin-top: 4px; color: var(--db-text-muted);"></p></div>
+          <div style="background: var(--db-bg); padding: var(--space-4); border-radius: var(--db-card-radius); border: 1px solid var(--db-border);">
+            <strong>Clinical Notes / Assessment:</strong>
+            <p class="apt-modal-notes" style="font-size: 0.85rem; color: var(--db-text-muted); margin-top: 4px;"></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal__footer" style="display: flex; justify-content: flex-end; padding-top: var(--space-4);">
+        <button type="button" class="btn btn--primary" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LOGOUT CONFIRMATION MODAL ===== -->
+  <div class="modal" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutModalTitle">
+    <div class="modal__dialog" style="max-width: 440px; text-align: center; padding: var(--space-8);">
+      <div style="font-size: 2.5rem; margin-bottom: var(--space-3);">🚪</div>
+      <h3 class="modal__title" id="logoutModalTitle" style="font-family: 'Fraunces', serif; margin-bottom: 8px;">Log Out of Pet Portal?</h3>
+      <p style="font-size: 0.9rem; color: var(--db-text-muted); margin-bottom: var(--space-6);">
+        Are you sure you want to exit your dashboard session? Your demonstration data will be preserved.
+      </p>
+      <div style="display: flex; justify-content: center; gap: var(--space-3);">
+        <button type="button" class="btn btn--outline-dark" id="cancelLogoutBtn">Stay Logged In</button>
+        <button type="button" class="btn btn--coral" id="confirmLogoutBtn">Yes, Log Out</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" aria-hidden="true"></div>
+
+  <!-- Scripts -->
+  <script src="js/global.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+
+</body>
+</html>

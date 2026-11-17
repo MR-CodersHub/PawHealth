@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PawHealth Pet Health Knowledge Centre — Expert veterinary articles, health advice, puppy care, and nutrition guides written by licensed veterinarians." />
+  <meta name="keywords" content="veterinary blog, pet health articles, dog wellness advice, cat healthcare, puppy guide, PawHealth" />
+  <meta name="author" content="PawHealth Veterinary Clinic" />
+  <title>Pet Health Knowledge Centre — Articles &amp; Insights | PawHealth</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pet Health Knowledge Centre — PawHealth" />
+  <meta property="og:description" content="Veterinary insights, preventive medicine advice, and care tips for responsible pet parents." />
+  <meta property="og:image" content="https://picsum.photos/seed/pet-health-blog/1200/630" />
+  <meta property="og:type" content="website" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+
+  <!-- Reusable Navbar -->
+  <div id="navbar-container"></div>
+
+  <main id="main-content">
+
+    <!-- ===== SECTION 1: BLOG HERO ===== -->
+    <section class="blog-hero" aria-label="Pet Health Knowledge Centre Hero">
+      <div class="blog-hero__bg" role="img" aria-label="Veterinarian reading pet care chart"></div>
+      <div class="services-hero__overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="blog-hero__content reveal-on-scroll">
+          <nav class="about-hero__breadcrumb" aria-label="Breadcrumb" style="margin-bottom: var(--space-4);">
+            <a href="index.html">Home</a>
+            <span class="about-hero__breadcrumb-sep" aria-hidden="true">/</span>
+            <span>Blog</span>
+          </nav>
+
+          <span class="blog-hero__eyebrow">Veterinary Education</span>
+          <h1 class="blog-hero__title">Pet Health Knowledge Centre</h1>
+          <p class="blog-hero__subtext">
+            Evidence-based medical advice, preventive wellness guides, and practical care tips written directly by our certified veterinary medical staff.
+          </p>
+
+          <div class="blog-search-wrap" role="search">
+            <input type="text" class="blog-search-input" placeholder="Search by topic (e.g. vaccination, dental, nutrition)..." aria-label="Search pet health articles" />
+            <button class="blog-search-btn" aria-label="Search">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: FEATURED ARTICLE ===== -->
+    <section class="blog-featured section" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">Editorial Spotlight</span>
+          <h2 id="featured-heading" class="section-title">Featured Health Guide</h2>
+        </div>
+
+        <article class="blog-featured__card reveal-on-scroll">
+          <div class="blog-featured__img-wrap">
+            <img src="https://picsum.photos/seed/puppy-vaccine-guide/1000/600" alt="Veterinarian holding healthy golden retriever puppy" class="blog-featured__img" loading="lazy" />
+          </div>
+
+          <div class="blog-featured__content">
+            <span class="blog-featured__tag">Vaccination &amp; Prevention</span>
+            <h3 class="blog-featured__title">
+              <a href="blog-details.html">The Complete Guide to Puppy Vaccination Schedules: From 6 Weeks to 1 Year</a>
+            </h3>
+            <p class="blog-featured__excerpt">
+              Starting your puppy's immunization journey is one of the single most protective medical decisions you will make as a pet parent. Chief Veterinarian Dr. Sarah Mitchell details core versus non-core vaccines, developmental timelines, and safety expectations.
+            </p>
+
+            <div class="blog-featured__meta">
+              <span>By Dr. Sarah Mitchell</span>
+              <span>·</span>
+              <span>Oct 2026</span>
+              <span>·</span>
+              <span>8 min read</span>
+            </div>
+
+            <div>
+              <a href="blog-details.html" class="btn btn--primary" aria-label="Read complete puppy vaccination guide">Read Full Article →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: LATEST PET HEALTH ARTICLES ===== -->
+    <section class="blog-latest section" id="latest" aria-labelledby="latest-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">Recent Publications</span>
+          <h2 id="latest-heading" class="section-title">Latest Pet Health Articles</h2>
+          <p class="section-subtitle">Stay informed on the newest veterinary research, seasonal risks, and wellness best practices.</p>
+        </div>
+
+        <div class="blog-grid reveal-on-scroll">
+
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div class="blog-card__img-wrap">
+              <img src="https://picsum.photos/seed/dog-dental/600/400" alt="Dog showing healthy clean teeth" class="blog-card__img" loading="lazy" />
+              <span class="blog-card__category">Dog Health</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>By Dr. James Okoye</span>
+                <span>·</span>
+                <span>Sep 2026</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="blog-details.html">Understanding Periodontal Disease in Dogs: Prevention &amp; Care</a>
+              </h3>
+              <p class="blog-card__desc">
+                Over 80% of dogs over age three develop gum disease. Learn how dental bacteria affects kidney and cardiac health, and how to spot early warning signs.
+              </p>
+              <a href="blog-details.html" class="btn btn--outline-dark btn--sm" style="align-self: flex-start;">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div class="blog-card__img-wrap">
+              <img src="https://picsum.photos/seed/senior-cat/600/400" alt="Comfortable senior cat resting calmly" class="blog-card__img" loading="lazy" />
+              <span class="blog-card__category">Cat Health</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>By Dr. Priya Sharma</span>
+                <span>·</span>
+                <span>Sep 2026</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="blog-details.html">Senior Cat Care: What Biological Changes Occur at Age 7+</a>
+              </h3>
+              <p class="blog-card__desc">
+                Cats enter their senior years subtly. Discover the vital blood panels, dietary adjustments, and home comfort modifications recommended for aging felines.
+              </p>
+              <a href="blog-details.html" class="btn btn--outline-dark btn--sm" style="align-self: flex-start;">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div class="blog-card__img-wrap">
+              <img src="https://picsum.photos/seed/parasite-prevention/600/400" alt="Veterinarian examining dog for ticks and fleas" class="blog-card__img" loading="lazy" />
+              <span class="blog-card__category">Preventive Care</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>By Dr. Sarah Mitchell</span>
+                <span>·</span>
+                <span>Aug 2026</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="blog-details.html">Parasite Prevention: Why Year-Round Protection Is Essential</a>
+              </h3>
+              <p class="blog-card__desc">
+                Milder winters mean parasites no longer disappear in cold months. Explore why year-round heartworm, flea, and tick controls are mandatory for family pets.
+              </p>
+              <a href="blog-details.html" class="btn btn--outline-dark btn--sm" style="align-self: flex-start;">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card">
+            <div class="blog-card__img-wrap">
+              <img src="https://picsum.photos/seed/dog-nutrition/600/400" alt="Dog bowl with balanced nutritious meal" class="blog-card__img" loading="lazy" />
+              <span class="blog-card__category">Nutrition</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>By Dr. Priya Sharma</span>
+                <span>·</span>
+                <span>Aug 2026</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="blog-details.html">Canine Nutritional Science: Demystifying Ingredients &amp; Portions</a>
+              </h3>
+              <p class="blog-card__desc">
+                Navigating commercial dog food labels can be confusing. Our veterinary nutritionist breaks down crude protein, grain inclusion, and calorie balance.
+              </p>
+              <a href="blog-details.html" class="btn btn--outline-dark btn--sm" style="align-self: flex-start;">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-card">
+            <div class="blog-card__img-wrap">
+              <img src="https://picsum.photos/seed/cat-pain-signs/600/400" alt="Attentive domestic cat in home setting" class="blog-card__img" loading="lazy" />
+              <span class="blog-card__category">Cat Health</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>By Nurse Emma Chen</span>
+                <span>·</span>
+                <span>Jul 2026</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="blog-details.html">Recognizing Silent Pain in Cats: Behavioral Cues Every Owner Must Know</a>
+              </h3>
+              <p class="blog-card__desc">
+                Because cats instinctually conceal weakness, subtle changes in litter habits, jumping hesitation, or grooming routines often mask chronic orthopedic discomfort.
+              </p>
+              <a href="blog-details.html" class="btn btn--outline-dark btn--sm" style="align-self: flex-start;">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="blog-card">
+            <div class="blog-card__img-wrap">
+              <img src="https://picsum.photos/seed/dog-surgery-guide/600/400" alt="Veterinary surgical nurse caring for recovering dog" class="blog-card__img" loading="lazy" />
+              <span class="blog-card__category">Dog Health</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>By Dr. James Okoye</span>
+                <span>·</span>
+                <span>Jul 2026</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="blog-details.html">When Does My Dog Need Surgery? What to Expect from Consultation to Recovery</a>
+              </h3>
+              <p class="blog-card__desc">
+                From emergency foreign object ingestions to routine cruciate ligament repairs, learn what happens before, during, and after a surgical procedure.
+              </p>
+              <a href="blog-details.html" class="btn btn--outline-dark btn--sm" style="align-self: flex-start;">Read Article</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: PET CARE CATEGORIES ===== -->
+    <section class="blog-categories section" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">Explore Topics</span>
+          <h2 id="categories-heading" class="section-title">Browse by Pet Care Discipline</h2>
+          <p class="section-subtitle">Select a clinical category to find targeted educational resources for your animal companion.</p>
+        </div>
+
+        <div class="blog-categories__grid reveal-on-scroll">
+
+          <a href="#latest" class="blog-cat-card">
+            <div class="blog-cat-card__icon">💉</div>
+            <h3 class="blog-cat-card__title">Vaccination</h3>
+            <span class="blog-cat-card__count">12 Articles</span>
+          </a>
+
+          <a href="#latest" class="blog-cat-card">
+            <div class="blog-cat-card__icon">🥣</div>
+            <h3 class="blog-cat-card__title">Nutrition</h3>
+            <span class="blog-cat-card__count">8 Articles</span>
+          </a>
+
+          <a href="#latest" class="blog-cat-card">
+            <div class="blog-cat-card__icon">🛡️</div>
+            <h3 class="blog-cat-card__title">Preventive Care</h3>
+            <span class="blog-cat-card__count">15 Articles</span>
+          </a>
+
+          <a href="#latest" class="blog-cat-card">
+            <div class="blog-cat-card__icon">🐕</div>
+            <h3 class="blog-cat-card__title">Dog Health</h3>
+            <span class="blog-cat-card__count">22 Articles</span>
+          </a>
+
+          <a href="#latest" class="blog-cat-card">
+            <div class="blog-cat-card__icon">🐈</div>
+            <h3 class="blog-cat-card__title">Cat Health</h3>
+            <span class="blog-cat-card__count">18 Articles</span>
+          </a>
+
+          <a href="#latest" class="blog-cat-card">
+            <div class="blog-cat-card__icon">🌿</div>
+            <h3 class="blog-cat-card__title">Senior Pet Care</h3>
+            <span class="blog-cat-card__count">10 Articles</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: VETERINARY TIPS ===== -->
+    <section class="blog-tips section" id="tips" aria-labelledby="tips-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">Quick Knowledge</span>
+          <h2 id="tips-heading" class="section-title">Practical Veterinary Wellness Tips</h2>
+          <p class="section-subtitle">Simple, high-impact clinical habits that every pet owner can implement at home today.</p>
+        </div>
+
+        <div class="blog-tips__grid reveal-on-scroll">
+
+          <div class="blog-tip-card">
+            <div class="blog-tip-card__icon">🩺</div>
+            <div>
+              <h3 class="blog-tip-card__title">Annual Checkups</h3>
+              <p class="blog-tip-card__desc">Schedule regular wellness visits even when your pet seems completely healthy. Animals instinctively mask early pain.</p>
+            </div>
+          </div>
+
+          <div class="blog-tip-card">
+            <div class="blog-tip-card__icon">⚖️</div>
+            <div>
+              <h3 class="blog-tip-card__title">Watch Pet Weight</h3>
+              <p class="blog-tip-card__desc">Obesity is the #1 preventable condition in dogs and cats, leading directly to arthritis, diabetes, and shortened lifespan.</p>
+            </div>
+          </div>
+
+          <div class="blog-tip-card">
+            <div class="blog-tip-card__icon">📱</div>
+            <div>
+              <h3 class="blog-tip-card__title">Digital Records</h3>
+              <p class="blog-tip-card__desc">Keep vaccination dates and microchip IDs accessible in your digital Pet Portal in case of travel or an emergency boarding.</p>
+            </div>
+          </div>
+
+          <div class="blog-tip-card">
+            <div class="blog-tip-card__icon">🦷</div>
+            <div>
+              <h3 class="blog-tip-card__title">Dental Hygiene</h3>
+              <p class="blog-tip-card__desc">Brush your pet's teeth or use veterinary-approved dental chews weekly to stop plaque before it turns into painful tartar.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: NEWSLETTER CTA ===== -->
+    <section class="blog-newsletter-cta" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="blog-newsletter-cta__inner reveal-on-scroll">
+          <span class="badge badge--primary" style="background: rgba(255,255,255,0.2); color: #fff; margin-bottom: var(--space-3);">Stay Informed</span>
+          <h2 id="newsletter-heading" style="font-family: var(--font-heading); font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); margin-bottom: var(--space-3); color: #fff;">Get Veterinary Insights in Your Inbox</h2>
+          <p style="font-size: 1.05rem; color: rgba(255,255,255,0.88); line-height: 1.6; margin-bottom: var(--space-6);">
+            Join 2,500+ caring pet owners who receive our monthly veterinarian-curated advice on nutrition, seasonal hazards, and preventive wellness.
+          </p>
+
+          <form class="newsletter-form" style="display: flex; gap: var(--space-2); max-width: 500px; margin-inline: auto;">
+            <input type="email" class="form-control" placeholder="Enter your email address" required aria-label="Email for pet health newsletter" style="border-radius: var(--radius-full); background: #fff;" />
+            <button type="submit" class="btn btn--coral btn--medium" style="border-radius: var(--radius-full); white-space: nowrap;">Subscribe Free</button>
+          </form>
+
+          <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: var(--space-3);">
+            We respect your privacy. No spam, ever. Unsubscribe with one click anytime.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/global.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/blog.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof injectNavbar === 'function') injectNavbar('#navbar-container');
+      if (typeof injectFooter === 'function') injectFooter('#footer-container');
+    });
+  </script>
+
+</body>
+</html>
