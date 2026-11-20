@@ -133,7 +133,7 @@
   let notifications = [
     {
       id: 'notif-1',
-      icon: '📅',
+      icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>',
       title: 'Appointment Confirmed',
       message: 'Max\'s General Checkup on 25 Nov 2026 at 10:00 AM is confirmed.',
       time: '2 hours ago',
@@ -141,7 +141,7 @@
     },
     {
       id: 'notif-2',
-      icon: '💉',
+      icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M2 22 12 12"/><path d="M10 10 14 14"/><path d="M7 13 11 17"/><path d="m14 6 4 4-7 7-4-4z"/></svg>',
       title: 'Vaccination Reminder',
       message: 'Max\'s Rabies Booster is due in 28 days (15 Dec 2026).',
       time: '1 day ago',
@@ -149,7 +149,7 @@
     },
     {
       id: 'notif-3',
-      icon: '📋',
+      icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>',
       title: 'Clinical Notes Updated',
       message: 'Dr. Mitchell updated consultation summaries for Max.',
       time: '3 days ago',
@@ -157,7 +157,7 @@
     },
     {
       id: 'notif-4',
-      icon: '✅',
+      icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>',
       title: 'Visit Completed',
       message: 'Luna\'s Annual Wellness Visit was successfully completed.',
       time: '2 months ago',
@@ -414,27 +414,27 @@
       <div class="review-details-grid">
         <div class="review-item">
           <span class="review-label">Selected Pet:</span>
-          <strong>🐾 ${bookingState.petName}</strong>
+          <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="8.5" r="2"/><circle cx="12" cy="6.5" r="2"/><circle cx="16.5" cy="8.5" r="2"/><path d="M12 20c-3 0-5.5-2-5.5-4.5S9.5 11 12 11s5.5 2 5.5 4.5S15 20 12 20z"/></svg> ${bookingState.petName}</strong>
         </div>
         <div class="review-item">
           <span class="review-label">Service:</span>
-          <strong>🩺 ${bookingState.service}</strong>
+          <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg> ${bookingState.service}</strong>
         </div>
         <div class="review-item">
           <span class="review-label">Veterinarian:</span>
-          <strong>👨‍⚕️ ${bookingState.vet}</strong>
+          <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M12 14v3"/><path d="M10.5 15.5h3"/></svg> ${bookingState.vet}</strong>
         </div>
         <div class="review-item">
           <span class="review-label">Preferred Date:</span>
-          <strong>📅 ${bookingState.date}</strong>
+          <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg> ${bookingState.date}</strong>
         </div>
         <div class="review-item">
           <span class="review-label">Time Slot:</span>
-          <strong>⏰ ${bookingState.time}</strong>
+          <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ${bookingState.time}</strong>
         </div>
         <div class="review-item">
           <span class="review-label">Urgency Level:</span>
-          <strong>⚠️ ${bookingState.urgency}</strong>
+          <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> ${bookingState.urgency}</strong>
         </div>
         <div class="review-item full-width">
           <span class="review-label">Reason for Visit:</span>
@@ -522,7 +522,7 @@
       <div class="db-apt-card" data-apt-id="${apt.id}">
         <div class="db-apt-card__header">
           <div class="db-apt-card__pet-info">
-            <span class="db-apt-card__avatar">🐾</span>
+            <span class="db-apt-card__avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="8.5" r="2"/><circle cx="12" cy="6.5" r="2"/><circle cx="16.5" cy="8.5" r="2"/><path d="M12 20c-3 0-5.5-2-5.5-4.5S9.5 11 12 11s5.5 2 5.5 4.5S15 20 12 20z"/></svg></span>
             <div>
               <h4 class="db-apt-card__pet-name">${apt.petName}</h4>
               <span class="db-apt-card__service">${apt.service}</span>
@@ -808,7 +808,7 @@
               <td>15 Mar 2024</td>
               <td>15 Mar 2027</td>
               <td>Dr. Sarah Mitchell</td>
-              <td><span class="badge badge--success">✅ Up to Date</span></td>
+              <td><span class="badge badge--success"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Up to Date</span></td>
               <td>Standard 3-year canine booster</td>
             </tr>
             <tr>
@@ -816,7 +816,7 @@
               <td>15 Dec 2023</td>
               <td>15 Dec 2026</td>
               <td>Dr. Sarah Mitchell</td>
-              <td><span class="badge badge--warning">⚠️ Due Soon</span></td>
+              <td><span class="badge badge--warning"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> Due Soon</span></td>
               <td>Annual booster required next month</td>
             </tr>
             <tr>
@@ -824,7 +824,7 @@
               <td>20 Apr 2026</td>
               <td>20 Apr 2027</td>
               <td>Dr. Priya Sharma</td>
-              <td><span class="badge badge--success">✅ Up to Date</span></td>
+              <td><span class="badge badge--success"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Up to Date</span></td>
               <td>Lifestyle protection administered</td>
             </tr>
             <tr>
@@ -832,7 +832,7 @@
               <td>01 Jun 2025</td>
               <td>01 Jun 2026</td>
               <td>Dr. Priya Sharma</td>
-              <td><span class="badge badge--danger">❌ Overdue</span></td>
+              <td><span class="badge badge--danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg> Overdue</span></td>
               <td>Recommend renewal prior to boarding</td>
             </tr>
           </tbody>
@@ -857,7 +857,7 @@
               <td>08 Jul 2026</td>
               <td>08 Jul 2029</td>
               <td>Dr. Sarah Mitchell</td>
-              <td><span class="badge badge--success">✅ Up to Date</span></td>
+              <td><span class="badge badge--success"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Up to Date</span></td>
               <td>3-year protection against panleukopenia, herpes, calicivirus</td>
             </tr>
             <tr>
@@ -865,7 +865,7 @@
               <td>08 Jul 2026</td>
               <td>08 Jul 2027</td>
               <td>Dr. Sarah Mitchell</td>
-              <td><span class="badge badge--success">✅ Up to Date</span></td>
+              <td><span class="badge badge--success"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Up to Date</span></td>
               <td>Annual feline rabies booster completed</td>
             </tr>
           </tbody>
