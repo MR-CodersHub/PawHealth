@@ -21,7 +21,7 @@
   background-image: url('https://picsum.photos/seed/vaccination-hero/1600/700');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.5);
+  filter: brightness(0.88);
   transform: scale(1.03);
   transition: transform 6s ease-out;
 }
@@ -29,7 +29,7 @@
 .sd-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(36,92,72,0.78) 0%, rgba(40,109,115,0.66) 100%);
+  background: linear-gradient(135deg, rgba(20,46,38,0.6) 0%, rgba(36,92,72,0.46) 45%, rgba(20,46,38,0.36) 100%);
 }
 
 .sd-hero__content {
