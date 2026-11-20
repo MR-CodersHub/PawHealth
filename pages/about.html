@@ -32,27 +32,120 @@
     <!-- ===== SECTION 1: ABOUT HERO ===== -->
     <section class="about-hero" aria-label="About PawHealth Hero">
       <div class="about-hero__bg" role="img" aria-label="PawHealth clinical veterinary team"></div>
+      <div class="about-hero__glow about-hero__glow--1" aria-hidden="true"></div>
+      <div class="about-hero__glow about-hero__glow--2" aria-hidden="true"></div>
       <div class="about-hero__overlay" aria-hidden="true"></div>
 
       <div class="container">
         <div class="about-hero__inner">
+          <!-- Left Content Column -->
           <div class="about-hero__content reveal-on-scroll">
             <nav class="about-hero__breadcrumb" aria-label="Breadcrumb">
-              <a href="../index.html">Home</a>
+              <a href="../index.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Home</span>
+              </a>
               <span class="about-hero__breadcrumb-sep" aria-hidden="true">/</span>
               <span>About Us</span>
             </nav>
-            <span class="badge badge--primary" style="margin-bottom: var(--space-3);">Compassionate Healthcare</span>
-            <h1 class="about-hero__heading" style="margin-bottom: var(--space-4);">Dedicated to the Health &amp; Happiness of Your Pets</h1>
-            <p class="about-hero__sub" style="font-size: 1.15rem; color: rgba(255,255,255,0.9); line-height: 1.6; max-width: 60ch;">
-              At PawHealth, veterinary medicine is more than a science &mdash; it is a compassionate promise to provide gentle, comprehensive care that honors the sacred bond between pets and their human families.
+
+            <div class="about-hero__pill-badge">
+              <span class="about-hero__pulse-dot" aria-hidden="true"></span>
+              <span>Dedicated Animal Hospital • Est. 2015</span>
+            </div>
+
+            <h1 class="about-hero__heading">
+              Where Advanced Veterinary Medicine Meets Warm, <span class="about-hero__heading-accent">Gentle Empathy</span>
+            </h1>
+
+            <p class="about-hero__sub">
+              Founded on the conviction that pets are irreplaceable family, PawHealth combines board-certified clinical expertise, cutting-edge diagnostic technology, and low-stress care to keep your companions thriving at every stage of life.
             </p>
+
+            <div class="about-hero__cta-group">
+              <a href="#story" class="btn btn--primary btn--large about-hero__cta-primary">
+                <span>Our Story &amp; Mission</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+              </a>
+              <a href="#team" class="btn btn--outline-light btn--large about-hero__cta-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Meet the Doctors</span>
+              </a>
+            </div>
+
+            <!-- Trust Metrics Bar -->
+            <div class="about-hero__stats-row" role="region" aria-label="Key hospital statistics">
+              <div class="about-hero__stat-card">
+                <strong class="about-hero__stat-num">10+</strong>
+                <span class="about-hero__stat-label">Years of Care</span>
+              </div>
+              <div class="about-hero__stat-card">
+                <strong class="about-hero__stat-num">15,000+</strong>
+                <span class="about-hero__stat-label">Pets Healed</span>
+              </div>
+              <div class="about-hero__stat-card">
+                <strong class="about-hero__stat-num">25+</strong>
+                <span class="about-hero__stat-label">Veterinary Pros</span>
+              </div>
+              <div class="about-hero__stat-card">
+                <strong class="about-hero__stat-num">4.9 ★</strong>
+                <span class="about-hero__stat-label">1,400+ Reviews</span>
+              </div>
+            </div>
           </div>
-          <div class="about-hero__visual reveal-on-scroll" aria-hidden="true">
-            <img src="https://i.pinimg.com/736x/50/03/e3/5003e393913a07eab9f855c843c0c93f.jpg" alt="" class="about-hero__image" loading="eager" width="600" height="700" />
+
+          <!-- Right Visual Collage -->
+          <div class="about-hero__visual reveal-on-scroll" aria-label="PawHealth Veterinary Experience">
+            <div class="about-hero__image-wrap">
+              <img src="https://i.pinimg.com/736x/50/03/e3/5003e393913a07eab9f855c843c0c93f.jpg" alt="PawHealth veterinarian gently examining a pet" class="about-hero__image" loading="eager" width="600" height="700" />
+              <div class="about-hero__image-shine" aria-hidden="true"></div>
+
+              <!-- Floating Card 1: AAHA Accredited -->
+              <div class="about-hero__float-card about-hero__float-card--top" aria-hidden="true">
+                <div class="about-hero__float-icon about-hero__float-icon--gold">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="about-hero__float-text">
+                  <strong>AAHA Accredited</strong>
+                  <span>Top 12% Hospital Standard</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Fear Free Care -->
+              <div class="about-hero__float-card about-hero__float-card--bottom" aria-hidden="true">
+                <div class="about-hero__float-icon about-hero__float-icon--mint">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <div class="about-hero__float-text">
+                  <strong>Fear-Free® Certified</strong>
+                  <span>Gentle, Low-Stress Care</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 3: Trust Badge -->
+              <div class="about-hero__float-card about-hero__float-card--badge" aria-hidden="true">
+                <div class="about-hero__avatars-row">
+                  <span class="about-hero__avatar">🐾</span>
+                  <span class="about-hero__avatar">🐕</span>
+                  <span class="about-hero__avatar">🐈</span>
+                </div>
+                <div class="about-hero__float-text">
+                  <strong>5,000+ Pet Families</strong>
+                  <span class="about-hero__stars">★★★★★ 99.4% Love Score</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>    </section>
+      </div>
+
+      <!-- Hero Bottom Curve Divider -->
+      <div class="about-hero__curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none">
+          <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"></path>
+        </svg>
+      </div>
+    </section>
 
     <!-- ===== SECTION 2: OUR STORY ===== -->
     <section class="about-story section" id="story" aria-labelledby="story-heading">
