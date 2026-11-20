@@ -10,23 +10,33 @@ document.addEventListener('DOMContentLoaded', function () {
   const tabBtns = document.querySelectorAll('.auth-tab-btn');
   const loginSection = document.querySelector('#loginSection');
   const registerSection = document.querySelector('#registerSection');
+  const authSplit = document.querySelector('.auth-split');
+
+  function setAuthMode(target) {
+    const isRegister = target === 'register';
+
+    tabBtns.forEach(b => {
+      const active = b.getAttribute('data-tab') === target;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+
+    if (loginSection) loginSection.classList.toggle('active', !isRegister);
+    if (registerSection) registerSection.classList.toggle('active', isRegister);
+    if (authSplit) authSplit.classList.toggle('is-register', isRegister);
+  }
 
   // Tab switching
   tabBtns.forEach(btn => {
     btn.addEventListener('click', function () {
-      const target = this.getAttribute('data-tab');
-      tabBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-
-      if (target === 'login') {
-        if (loginSection) loginSection.classList.add('active');
-        if (registerSection) registerSection.classList.remove('active');
-      } else {
-        if (loginSection) loginSection.classList.remove('active');
-        if (registerSection) registerSection.classList.add('active');
-      }
+      setAuthMode(this.getAttribute('data-tab'));
     });
   });
+
+  // Initialize based on active tab or hash
+  const initialHash = window.location.hash.replace('#', '');
+  const initialTab = initialHash === 'register' || initialHash === 'signup' ? 'register' : 'login';
+  setAuthMode(initialTab);
 
   // Switch links inside forms
   document.querySelectorAll('[data-switch-tab]').forEach(link => {

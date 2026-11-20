@@ -31,10 +31,15 @@
 .auth-panel-brand__bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://picsum.photos/seed/pet-login/800/1000');
+  background-image: url('https://i.pinimg.com/1200x/1b/ec/36/1bec36b40819644b4eaa19c7879d1528.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.3);
+  transition: background-image 0.3s ease;
+}
+
+.auth-split.is-register .auth-panel-brand__bg {
+  background-image: url('https://i.pinimg.com/736x/24/b4/40/24b4402217a71d96c0138ccbbe95b8de.jpg');
 }
 
 .auth-panel-brand__overlay {
