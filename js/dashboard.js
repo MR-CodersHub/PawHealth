@@ -62,7 +62,7 @@
       allergies: 'None known',
       conditions: 'Mild hip sensitivity (managed with diet)',
       notes: 'Very friendly, loves chicken treats, slightly timid around loud diagnostic tools.',
-      photo: 'https://picsum.photos/seed/max-dog-profile/400/400'
+      photo: 'https://i.pinimg.com/1200x/ec/1d/ab/ec1dab1e94c126745f6b0992681a9223.jpg'
     },
     {
       id: 'pet-2',
@@ -78,7 +78,7 @@
       allergies: 'Chicken-based proteins',
       conditions: 'Hairball tendency in shedding season',
       notes: 'Indoor only. Prefers low-noise handling and gentle towel wraps.',
-      photo: 'https://picsum.photos/seed/luna-cat-profile/400/400'
+      photo: 'https://i.pinimg.com/736x/09/dd/02/09dd0291104d0da6c0456b4c6104f464.jpg'
     }
   ];
 
@@ -702,17 +702,66 @@
 
     const modal = document.querySelector('#petModal');
     const petForm = document.querySelector('#petForm');
+    const photoInput = document.querySelector('#newPetPhoto');
+    const photoPreview = document.querySelector('#newPetPhotoPreview');
+    const photoPreviewWrap = document.querySelector('#newPetPhotoPreviewWrap');
+    const removePhotoBtn = document.querySelector('#removePetPhotoBtn');
+    let selectedPetPhotoDataUrl = '';
+
+    function resetPetPhotoUpload() {
+      selectedPetPhotoDataUrl = '';
+      if (photoInput) photoInput.value = '';
+      if (photoPreview) {
+        photoPreview.src = '';
+        photoPreview.removeAttribute('src');
+      }
+      if (photoPreviewWrap) photoPreviewWrap.classList.remove('has-image');
+    }
+
+    function openAddPetModal() {
+      if (!modal) return;
+      if (petForm) petForm.reset();
+      resetPetPhotoUpload();
+      const title = modal.querySelector('.modal__title');
+      if (title) title.textContent = 'Add New Pet Profile';
+      modal.classList.add('active');
+      const overlay = document.querySelector('.overlay');
+      if (overlay) overlay.classList.add('active');
+    }
+
+    if (photoInput) {
+      photoInput.addEventListener('change', () => {
+        const file = photoInput.files && photoInput.files[0];
+        if (!file) {
+          resetPetPhotoUpload();
+          return;
+        }
+        if (!file.type || !file.type.startsWith('image/')) {
+          showToast('Invalid File', 'Please select an image file.', 'warning');
+          resetPetPhotoUpload();
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          selectedPetPhotoDataUrl = (event.target && event.target.result) ? String(event.target.result) : '';
+          if (selectedPetPhotoDataUrl && photoPreview) {
+            photoPreview.src = selectedPetPhotoDataUrl;
+          }
+          if (photoPreviewWrap) photoPreviewWrap.classList.toggle('has-image', !!selectedPetPhotoDataUrl);
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    if (removePhotoBtn) {
+      removePhotoBtn.addEventListener('click', () => {
+        resetPetPhotoUpload();
+      });
+    }
 
     const addPetBtn = document.querySelector('#addPetBtn');
     if (addPetBtn && modal) {
-      addPetBtn.addEventListener('click', () => {
-        if (petForm) petForm.reset();
-        const title = modal.querySelector('.modal__title');
-        if (title) title.textContent = 'Add New Pet Profile';
-        modal.classList.add('active');
-        const overlay = document.querySelector('.overlay');
-        if (overlay) overlay.classList.add('active');
-      });
+      addPetBtn.addEventListener('click', openAddPetModal);
     }
 
     if (petForm) {
@@ -725,6 +774,11 @@
         const weight = (petForm.querySelector('[name="weight"]') || {}).value || '5 kg';
         const allergies = (petForm.querySelector('[name="allergies"]') || {}).value || 'None known';
         const notes = (petForm.querySelector('[name="notes"]') || {}).value || 'Friendly';
+
+        const defaultPhoto = type.toLowerCase() === 'cat'
+          ? 'https://i.pinimg.com/736x/09/dd/02/09dd0291104d0da6c0456b4c6104f464.jpg'
+          : 'https://i.pinimg.com/1200x/ec/1d/ab/ec1dab1e94c126745f6b0992681a9223.jpg';
+        const hasSelectedPhoto = photoInput && photoInput.files && photoInput.files.length > 0 && selectedPetPhotoDataUrl;
 
         const newPet = {
           id: 'pet-' + (pets.length + 1),
@@ -740,9 +794,7 @@
           allergies: allergies,
           conditions: 'None reported',
           notes: notes,
-          photo: type.toLowerCase() === 'cat'
-            ? 'https://picsum.photos/seed/cat-profile-new/400/400'
-            : 'https://picsum.photos/seed/dog-profile-new/400/400'
+          photo: hasSelectedPhoto ? selectedPetPhotoDataUrl : defaultPhoto
         };
 
         pets.push(newPet);
@@ -750,6 +802,7 @@
         modal.classList.remove('active');
         const overlay = document.querySelector('.overlay');
         if (overlay) overlay.classList.remove('active');
+        resetPetPhotoUpload();
 
         showToast('Pet Added!', `${name}'s health record has been created.`, 'success');
       });
@@ -808,7 +861,17 @@
     if (newAddBtn) {
       newAddBtn.addEventListener('click', () => {
         const modal = document.querySelector('#petModal');
+        const petForm = document.querySelector('#petForm');
+        const photoInput = document.querySelector('#newPetPhoto');
+        const photoPreview = document.querySelector('#newPetPhotoPreview');
+        const photoPreviewWrap = document.querySelector('#newPetPhotoPreviewWrap');
+        if (petForm) petForm.reset();
+        if (photoInput) photoInput.value = '';
+        if (photoPreview) { photoPreview.src = ''; photoPreview.removeAttribute('src'); }
+        if (photoPreviewWrap) photoPreviewWrap.classList.remove('has-image');
         if (modal) {
+          const title = modal.querySelector('.modal__title');
+          if (title) title.textContent = 'Add New Pet Profile';
           modal.classList.add('active');
           const overlay = document.querySelector('.overlay');
           if (overlay) overlay.classList.add('active');

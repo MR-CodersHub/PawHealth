@@ -1776,3 +1776,11 @@ body.error-page-wrapper {
   }
   .reveal-on-scroll { opacity: 1; transform: none; }
 }
+
+/* Toast message contrast in dark mode */
+[data-theme="dark"] .toast__message {
+  color: #c8dbd3;
+}
+[data-theme="dark"] .toast__title {
+  color: #e8f0ec;
+}
