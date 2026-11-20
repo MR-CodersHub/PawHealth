@@ -505,20 +505,37 @@ document.addEventListener('DOMContentLoaded', function () {
   function renderRelated(currentSlug) {
     const grid = document.getElementById('art-related-grid');
     if (!grid) return;
+
     const related = Object.values(posts).filter(p => p.slug !== currentSlug).slice(0, 3);
-    grid.innerHTML = related.map(p => `
-      <article class="blog-card">
-        <div class="blog-card__img-wrap">
-          <img src="${p.featuredImage}" alt="${escapeAttr(p.featuredAlt || p.title)}" class="blog-card__img" loading="lazy" />
-          <span class="blog-card__category">${escapeHtml(p.category)}</span>
+    grid.innerHTML = related.map(p => {
+      const href = `blog-details.html?post=${encodeURIComponent(p.slug)}`;
+      const metaParts = String(p.authorMeta || '').split('•').map(s => s.trim()).filter(Boolean);
+      const readTime = metaParts.length ? metaParts[metaParts.length - 1] : '';
+      const author = (p.author || 'PawHealth Team').replace(/,\s*(BVSc|DVM|MRCVS|RVN).*$/i, '').trim();
+
+      return `
+      <article class="art-related-card">
+        <a href="${href}" class="art-related-card__media" aria-label="Read article: ${escapeAttr(p.title)}">
+          <img src="${p.featuredImage}" alt="${escapeAttr(p.featuredAlt || p.title)}" class="art-related-card__img" loading="lazy" />
+          <span class="art-related-card__category">${escapeHtml(p.category || 'Pet Health')}</span>
+        </a>
+        <div class="art-related-card__body">
+          <div class="art-related-card__meta">
+            <span>${escapeHtml(author)}</span>
+            ${readTime ? `<span class="art-related-card__meta-dot" aria-hidden="true">•</span><span>${escapeHtml(readTime)}</span>` : ''}
+          </div>
+          <h3 class="art-related-card__title"><a href="${href}">${escapeHtml(p.title)}</a></h3>
+          <p class="art-related-card__desc">${escapeHtml(p.excerpt || '')}</p>
+          <div class="art-related-card__footer">
+            <span class="art-related-card__author">${escapeHtml(p.category || '')}</span>
+            <a href="${href}" class="art-related-card__link">
+              Read Guide
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="blog-card__body">
-          <h3 class="blog-card__title"><a href="blog-details.html?post=${encodeURIComponent(p.slug)}">${escapeHtml(p.title)}</a></h3>
-          <p class="blog-card__desc">${escapeHtml(p.excerpt || '')}</p>
-          <a href="blog-details.html?post=${encodeURIComponent(p.slug)}" class="btn btn--outline-dark btn--sm" style="align-self: flex-start;">Read Article</a>
-        </div>
-      </article>
-    `).join('');
+      </article>`;
+    }).join('');
   }
 
   function escapeHtml(str) {
