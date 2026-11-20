@@ -125,7 +125,7 @@
 
             <!-- RTL/LTR Toggle -->
             <button class="navbar__toggle-btn rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL/LTR">
-              <span class="rtl-text" style="font-size: 11px; font-weight: 700; letter-spacing: 0.5px;">RTL</span>
+              <span class="rtl-text">RTL</span>
             </button>
 
             <!-- Login CTA -->
