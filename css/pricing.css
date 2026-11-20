@@ -15,7 +15,7 @@
 .pricing-hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://picsum.photos/seed/pricing-vet/1600/600');
+  background-image: url('https://i.pinimg.com/1200x/9a/c1/a3/9ac1a3a51db11c5ea4c2a4ecb9917004.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.9);
@@ -31,11 +31,52 @@
   pointer-events: none;
 }
 
-.pricing-hero__content {
+.pricing-hero__inner {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
   padding: 80px 40px 60px;
+}
+
+.pricing-hero__content {
+  position: relative;
+  max-width: 820px;
+}
+
+.pricing-hero__visual {
+  justify-self: end;
+  width: 100%;
+  max-width: 420px;
+}
+
+.pricing-hero__image {
+  width: 100%;
+  height: clamp(300px, 38vw, 460px);
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .pricing-hero__inner {
+    grid-template-columns: 1fr;
+    padding: 60px 20px 40px;
+  }
+
+  .pricing-hero__visual {
+    justify-self: stretch;
+    max-width: 560px;
+  }
+
+  .pricing-hero__image {
+    height: clamp(280px, 55vw, 420px);
+  }
 }
 
 .pricing-hero__tag {
@@ -664,7 +705,7 @@
 }
 
 @media (max-width: 768px) {
-  .pricing-hero__content,
+  .pricing-hero__inner,
   .pricing-consult,
   .pricing-packages,
   .pricing-treatments,
