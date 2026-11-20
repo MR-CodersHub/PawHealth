@@ -18,7 +18,7 @@
   background-image: url('https://picsum.photos/seed/pet-health-blog/1600/600');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.35);
+  filter: brightness(0.55);
 }
 
 .blog-hero__content {

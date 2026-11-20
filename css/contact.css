@@ -18,7 +18,7 @@
   background-image: url('https://picsum.photos/seed/contact-clinic/1600/600');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.45);
+  filter: brightness(0.6);
   z-index: 0;
 }
 

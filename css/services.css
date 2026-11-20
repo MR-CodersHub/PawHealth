@@ -18,7 +18,7 @@
   background-image: url('https://picsum.photos/seed/services-hero/1600/700');
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
+  opacity: 0.3;
   transform: scale(1.05);
   transition: transform 10s ease-out;
 }
@@ -32,8 +32,8 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(40, 109, 115, 0.9) 0%,
-    rgba(36, 92, 72, 0.8) 100%
+    rgba(40, 109, 115, 0.82) 0%,
+    rgba(36, 92, 72, 0.72) 100%
   );
 }
 
