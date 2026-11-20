@@ -9,8 +9,12 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-8);
-  background: var(--color-bg);
+  background: linear-gradient(rgba(246, 248, 245, 0.62), rgba(246, 248, 245, 0.62)), url('https://i.pinimg.com/736x/3c/3a/36/3c3a36d37f28b10fd69f02611f722405.jpg') center/cover no-repeat;
   text-align: center;
+}
+
+[data-theme="dark"] .error-page-wrapper {
+  background: linear-gradient(rgba(10, 20, 17, 0.72), rgba(10, 20, 17, 0.72)), url('https://i.pinimg.com/736x/3c/3a/36/3c3a36d37f28b10fd69f02611f722405.jpg') center/cover no-repeat;
 }
 
 .error-card {
