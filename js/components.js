@@ -172,7 +172,9 @@
                 <span class="footer__logo-name">PawHealth</span>
               </a>
               <p class="footer__tagline">
-                Compassionate veterinary care, cutting-edge animal medicine, and dedicated wellness support for your cherished pets.
+                Compassionate veterinary care, cutting-edge animal medicine, and dedicated wellness support for your cherished pets.<br>
+                Trusted by pet families for preventive, surgical, and emergency care.<br>
+                Your pet’s comfort, safety, and lifelong wellness are always our priority.
               </p>
               <div class="footer__social" aria-label="Follow PawHealth on social media">
                 <a href="#facebook" class="footer__social-link" aria-label="Facebook">
