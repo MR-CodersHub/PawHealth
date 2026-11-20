@@ -15,7 +15,7 @@
 .contact-hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://picsum.photos/seed/contact-clinic/1600/600');
+  background-image: url('https://i.pinimg.com/736x/37/ce/f1/37cef1bf70a58b1781cdc199197d2739.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.9);
@@ -31,11 +31,52 @@
   pointer-events: none;
 }
 
-.contact-hero__content {
+.contact-hero__inner {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
   padding: 80px 40px 60px;
+}
+
+.contact-hero__content {
+  position: relative;
+  max-width: 800px;
+}
+
+.contact-hero__visual {
+  justify-self: end;
+  width: 100%;
+  max-width: 420px;
+}
+
+.contact-hero__image {
+  width: 100%;
+  height: clamp(300px, 38vw, 460px);
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .contact-hero__inner {
+    grid-template-columns: 1fr;
+    padding: 60px 20px 40px;
+  }
+
+  .contact-hero__visual {
+    justify-self: stretch;
+    max-width: 560px;
+  }
+
+  .contact-hero__image {
+    height: clamp(280px, 55vw, 420px);
+  }
 }
 
 .contact-hero__breadcrumb {
@@ -812,7 +853,7 @@
 }
 
 @media (max-width: 768px) {
-  .contact-hero__content { padding: 60px 20px 40px; }
+  .contact-hero__inner { padding: 60px 20px 40px; }
   .contact-info,
   .contact-form-section,
   .contact-map,
