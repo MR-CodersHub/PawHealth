@@ -814,6 +814,48 @@
 [data-theme="dark"] .section-subtitle {
   color: var(--color-text-muted);
 }
+
+/* Home hero/trust badges: improve contrast in dark mode */
+[data-theme="dark"] .h1-hero__overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 20, 17, 0.92) 0%,
+    rgba(20, 46, 38, 0.86) 45%,
+    rgba(10, 20, 17, 0.78) 100%
+  );
+}
+[data-theme="dark"] .h1-hero__eyebrow {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+[data-theme="dark"] .h1-hero__headline {
+  color: #ffffff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+[data-theme="dark"] .h1-hero__subtext {
+  color: rgba(255, 255, 255, 0.96);
+}
+[data-theme="dark"] .h1-trust-badge {
+  background: rgba(10, 20, 17, 0.62);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+[data-theme="dark"] .h1-trust-badge:hover {
+  background: rgba(20, 46, 38, 0.78);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+[data-theme="dark"] .h1-trust-badge strong,
+[data-theme="dark"] .h1-trust-badge span {
+  color: #ffffff;
+}
+[data-theme="dark"] .h1-trust-badge span {
+  color: rgba(255, 255, 255, 0.92);
+}
+[data-theme="dark"] .h1-trust-badge__icon {
+  color: #ffd36b;
+}
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(28px);
