@@ -1120,21 +1120,30 @@ body { padding-top: var(--navbar-height); }
   margin-bottom: var(--space-4);
   text-decoration: none;
 }
+.footer__logo-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.footer__logo-text {
+  display: flex;
+  flex-direction: column;
+}
 .footer__logo-name {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: var(--fw-bold);
   color: var(--color-white);
+  line-height: 1;
 }
 .footer__brand-tagline {
-  font-size: var(--text-sm);
-  font-weight: var(--fw-semibold);
-  color: var(--color-mint);
-  margin: 0 0 var(--space-3);
-  letter-spacing: 0.02em;
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.05em;
+  line-height: 1.4;
 }
 [data-theme="dark"] .footer__brand-tagline {
-  color: var(--color-primary-light);
+  color: rgba(255,255,255,0.7);
 }
 .footer__tagline {
   font-size: var(--text-sm);

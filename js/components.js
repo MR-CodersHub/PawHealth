@@ -29,7 +29,7 @@
   `;
 
   const FOOTER_PAW_SVG = `
-    <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <svg class="footer__logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <circle cx="20" cy="20" r="20" fill="#245C48"/>
       <path d="M20 18 C14 18, 10 22, 11 27 C12 31, 15 33, 20 33 C25 33, 28 31, 29 27 C30 22, 26 18, 20 18Z" fill="#FFF9F0"/>
       <ellipse cx="14" cy="14" rx="2.5" ry="3.5" transform="rotate(-15 14 14)" fill="#FFF9F0"/>
@@ -169,9 +169,11 @@
             <div class="footer__brand">
               <a href="${toRoot}index.html" class="footer__logo" aria-label="PawHealth Animal Hospital">
                 ${FOOTER_PAW_SVG}
-                <span class="footer__logo-name">PawHealth</span>
+                <span class="footer__logo-text">
+                  <span class="footer__logo-name">PawHealth</span>
+                  <span class="footer__brand-tagline">Trusted Care for Every Paw</span>
+                </span>
               </a>
-              <p class="footer__brand-tagline">Trusted Care for Every Paw</p>
               <p class="footer__tagline">
                 Compassionate veterinary care, cutting-edge animal medicine, and dedicated wellness support for your cherished pets.<br>
                 Trusted by pet families for preventive, surgical, and emergency care.<br>
