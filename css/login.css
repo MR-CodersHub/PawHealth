@@ -34,7 +34,7 @@
   background-image: url('https://i.pinimg.com/1200x/1b/ec/36/1bec36b40819644b4eaa19c7879d1528.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.3);
+  filter: brightness(0.85);
   transition: background-image 0.3s ease;
 }
 
@@ -45,7 +45,7 @@
 .auth-panel-brand__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(36,92,72,0.9) 0%, rgba(40,109,115,0.8) 100%);
+  background: linear-gradient(135deg, rgba(20, 46, 38, 0.55) 0%, rgba(36, 92, 72, 0.42) 100%);
 }
 
 .auth-panel-brand__content {
