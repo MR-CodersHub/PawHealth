@@ -52,62 +52,102 @@
 
       <!-- Navigation Links -->
       <nav class="sidebar-nav" aria-label="Portal Menus">
-        <div class="sidebar-nav-label">Main Menu</div>
+        <div class="sidebar-nav-group" data-view="user">
+          <div class="sidebar-nav-label">Main Menu</div>
 
-        <button class="sidebar-nav-item active" data-panel="overview">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg></span>
-          <span class="nav-label">Overview</span>
-        </button>
+          <button class="sidebar-nav-item active" data-panel="overview" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg></span>
+            <span class="nav-label">Overview</span>
+          </button>
 
-        <button class="sidebar-nav-item" data-panel="pets">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="8.5" r="2"/><circle cx="12" cy="6.5" r="2"/><circle cx="16.5" cy="8.5" r="2"/><path d="M12 20c-3 0-5.5-2-5.5-4.5S9.5 11 12 11s5.5 2 5.5 4.5S15 20 12 20z"/></svg></span>
-          <span class="nav-label">My Pets</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="pets" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="8.5" r="2"/><circle cx="12" cy="6.5" r="2"/><circle cx="16.5" cy="8.5" r="2"/><path d="M12 20c-3 0-5.5-2-5.5-4.5S9.5 11 12 11s5.5 2 5.5 4.5S15 20 12 20z"/></svg></span>
+            <span class="nav-label">My Pets</span>
+          </button>
 
-        <button class="sidebar-nav-item" data-panel="book">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>
-          <span class="nav-label">Book Appointment</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="book" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>
+            <span class="nav-label">Book Appointment</span>
+          </button>
 
-        <button class="sidebar-nav-item" data-panel="appointments">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></span>
-          <span class="nav-label">My Appointments</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="appointments" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></span>
+            <span class="nav-label">My Appointments</span>
+          </button>
 
-        <div class="sidebar-nav-label">Medical Portal</div>
+          <div class="sidebar-nav-label">Medical Portal</div>
 
-        <button class="sidebar-nav-item" data-panel="vaccinations">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M2 22 12 12"/><path d="M10 10 14 14"/><path d="M7 13 11 17"/><path d="m14 6 4 4-7 7-4-4z"/></svg></span>
-          <span class="nav-label">Vaccination Records</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="vaccinations" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M2 22 12 12"/><path d="M10 10 14 14"/><path d="M7 13 11 17"/><path d="m14 6 4 4-7 7-4-4z"/></svg></span>
+            <span class="nav-label">Vaccination Records</span>
+          </button>
 
-        <button class="sidebar-nav-item" data-panel="medical">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"/><path d="M9 21v-6h6v6"/><path d="M12 7v6"/><path d="M9 10h6"/></svg></span>
-          <span class="nav-label">Medical History</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="medical" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"/><path d="M9 21v-6h6v6"/><path d="M12 7v6"/><path d="M9 10h6"/></svg></span>
+            <span class="nav-label">Medical History</span>
+          </button>
 
-        <button class="sidebar-nav-item" data-panel="prescriptions">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span>
-          <span class="nav-label">Prescriptions &amp; Docs</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="prescriptions" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span>
+            <span class="nav-label">Prescriptions &amp; Docs</span>
+          </button>
 
-        <button class="sidebar-nav-item" data-panel="notifications">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
-          <span class="nav-label">Notifications</span>
-          <span class="nav-badge notif-badge-count">3</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="notifications" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+            <span class="nav-label">Notifications</span>
+            <span class="nav-badge notif-badge-count">3</span>
+          </button>
 
-        <div class="sidebar-nav-label">Account</div>
+          <div class="sidebar-nav-label">Account</div>
 
-        <button class="sidebar-nav-item" data-panel="profile">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-          <span class="nav-label">My Profile</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="profile" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <span class="nav-label">My Profile</span>
+          </button>
 
-        <button class="sidebar-nav-item" data-panel="help">
-          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
-          <span class="nav-label">Help &amp; Support</span>
-        </button>
+          <button class="sidebar-nav-item" data-panel="help" data-view="user">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
+            <span class="nav-label">Help &amp; Support</span>
+          </button>
+        </div>
+
+        <div class="sidebar-nav-group" data-view="admin" hidden>
+          <div class="sidebar-nav-label">Admin Console</div>
+
+          <button class="sidebar-nav-item" data-panel="admin-overview" data-view="admin">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></span>
+            <span class="nav-label">Dashboard</span>
+          </button>
+
+          <button class="sidebar-nav-item" data-panel="admin-appointments" data-view="admin">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span>
+            <span class="nav-label">Appointments</span>
+            <span class="nav-badge">5</span>
+          </button>
+
+          <button class="sidebar-nav-item" data-panel="admin-patients" data-view="admin">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="8.5" r="2"/><circle cx="12" cy="6.5" r="2"/><circle cx="16.5" cy="8.5" r="2"/><path d="M12 20c-3 0-5.5-2-5.5-4.5S9.5 11 12 11s5.5 2 5.5 4.5S15 20 12 20z"/></svg></span>
+            <span class="nav-label">Patients &amp; Pets</span>
+          </button>
+
+          <button class="sidebar-nav-item" data-panel="admin-staff" data-view="admin">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <span class="nav-label">Staff &amp; Schedules</span>
+          </button>
+
+          <button class="sidebar-nav-item" data-panel="admin-messages" data-view="admin">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <span class="nav-label">Messages</span>
+            <span class="nav-badge">2</span>
+          </button>
+
+          <div class="sidebar-nav-label">Clinic</div>
+
+          <button class="sidebar-nav-item" data-panel="admin-settings" data-view="admin">
+            <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <span class="nav-label">Settings</span>
+          </button>
+        </div>
 
         <button class="sidebar-nav-item logout-item" data-panel="logout">
           <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg></span>
@@ -1168,6 +1208,577 @@
               </div>
             </div>
 
+          </div>
+        </section>
+
+        <!-- =========================================================
+             ADMIN PANEL 1: OVERVIEW
+             ========================================================= -->
+        <section id="panel-admin-overview" class="dashboard-panel admin-panel">
+          <div class="admin-hero">
+            <div>
+              <span class="admin-hero__eyebrow">Clinic Administration</span>
+              <h2 class="admin-hero__title">Operations Overview</h2>
+              <p class="admin-hero__subtitle">Monitor today’s appointments, patient flow, staff coverage, and clinic alerts from one place.</p>
+            </div>
+            <div class="admin-hero__actions">
+              <button class="btn btn--primary" data-nav-target="admin-appointments">Manage Appointments</button>
+              <button class="btn btn--outline-dark" data-nav-target="admin-patients">View Patients</button>
+            </div>
+          </div>
+
+          <div class="admin-kpi-grid">
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></div>
+              <div class="admin-kpi-content">
+                <span class="admin-kpi-label">Today’s Appointments</span>
+                <strong class="admin-kpi-value">12</strong>
+                <span class="admin-kpi-meta">5 confirmed, 3 pending, 4 completed</span>
+              </div>
+            </div>
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <div class="admin-kpi-content">
+                <span class="admin-kpi-label">Active Patients</span>
+                <strong class="admin-kpi-value">148</strong>
+                <span class="admin-kpi-meta">+9 new registrations this month</span>
+              </div>
+            </div>
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg></div>
+              <div class="admin-kpi-content">
+                <span class="admin-kpi-label">Pending Actions</span>
+                <strong class="admin-kpi-value">7</strong>
+                <span class="admin-kpi-meta">Confirmations, refills, follow-ups</span>
+              </div>
+            </div>
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7 10 17l-5-5"/></svg></div>
+              <div class="admin-kpi-content">
+                <span class="admin-kpi-label">Staff On Duty</span>
+                <strong class="admin-kpi-value">6</strong>
+                <span class="admin-kpi-meta">2 vets, 3 nurses, 1 front desk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-grid admin-grid--main">
+            <div class="db-card">
+              <div class="db-card-header">
+                <h3 class="db-card-title">Today’s Schedule</h3>
+                <button class="btn btn--outline-dark btn--sm" data-nav-target="admin-appointments">Open Schedule</button>
+              </div>
+              <div class="db-card-body">
+                <div class="admin-table-wrap">
+                  <table class="admin-table">
+                    <thead>
+                      <tr>
+                        <th>Time</th>
+                        <th>Patient</th>
+                        <th>Service</th>
+                        <th>Veterinarian</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>09:00 AM</td>
+                        <td><strong>Max</strong> <span class="admin-muted">· Jane Demo</span></td>
+                        <td>General Wellness Checkup</td>
+                        <td>Dr. Sarah Mitchell</td>
+                        <td><span class="admin-status admin-status--success">Confirmed</span></td>
+                      </tr>
+                      <tr>
+                        <td>10:30 AM</td>
+                        <td><strong>Luna</strong> <span class="admin-muted">· Jane Demo</span></td>
+                        <td>Vaccination Booster</td>
+                        <td>Dr. Priya Sharma</td>
+                        <td><span class="admin-status admin-status--warning">Pending</span></td>
+                      </tr>
+                      <tr>
+                        <td>12:00 PM</td>
+                        <td><strong>Buddy</strong> <span class="admin-muted">· Arjun Rao</span></td>
+                        <td>Dental Examination</td>
+                        <td>Dr. James Okoye</td>
+                        <td><span class="admin-status admin-status--info">Checked In</span></td>
+                      </tr>
+                      <tr>
+                        <td>02:15 PM</td>
+                        <td><strong>Milo</strong> <span class="admin-muted">· Sara Kim</span></td>
+                        <td>Post-op Follow-up</td>
+                        <td>Dr. Sarah Mitchell</td>
+                        <td><span class="admin-status admin-status--success">Confirmed</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-side-stack">
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Alerts &amp; Priorities</h3>
+                </div>
+                <div class="db-card-body">
+                  <ul class="admin-alert-list">
+                    <li class="admin-alert-item admin-alert-item--warning">
+                      <strong>3 appointment confirmations pending</strong>
+                      <span>Review and confirm requests before 11:00 AM.</span>
+                    </li>
+                    <li class="admin-alert-item admin-alert-item--info">
+                      <strong>2 prescription refill requests</strong>
+                      <span>Awaiting veterinarian approval.</span>
+                    </li>
+                    <li class="admin-alert-item admin-alert-item--success">
+                      <strong>Lab reports uploaded</strong>
+                      <span>2 diagnostic summaries ready for owner review.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Quick Actions</h3>
+                </div>
+                <div class="db-card-body">
+                  <div class="admin-quick-actions">
+                    <button class="admin-quick-action" data-nav-target="admin-appointments">Confirm Requests</button>
+                    <button class="admin-quick-action" data-nav-target="admin-patients">Register Walk-in</button>
+                    <button class="admin-quick-action" data-nav-target="admin-staff">Adjust Staff Schedule</button>
+                    <button class="admin-quick-action" data-nav-target="admin-messages">Reply to Messages</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             ADMIN PANEL 2: APPOINTMENTS
+             ========================================================= -->
+        <section id="panel-admin-appointments" class="dashboard-panel admin-panel">
+          <div class="panel-header admin-panel-header">
+            <div>
+              <h2 class="panel-title">Appointment Management</h2>
+              <p class="panel-subtitle">Review, confirm, reschedule, and track clinic appointments across veterinarians and services.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button class="btn btn--outline-dark btn--sm" data-admin-toast="Schedule view refreshed">Refresh</button>
+              <button class="btn btn--primary btn--sm" data-admin-toast="New appointment form opened (demo)">+ New Appointment</button>
+            </div>
+          </div>
+
+          <div class="admin-toolbar">
+            <div class="admin-filter-group" role="group" aria-label="Filter appointments">
+              <button class="admin-filter-chip active" data-admin-apt-filter="all">All</button>
+              <button class="admin-filter-chip" data-admin-apt-filter="confirmed">Confirmed</button>
+              <button class="admin-filter-chip" data-admin-apt-filter="pending">Pending</button>
+              <button class="admin-filter-chip" data-admin-apt-filter="completed">Completed</button>
+              <button class="admin-filter-chip" data-admin-apt-filter="cancelled">Cancelled</button>
+            </div>
+            <div class="admin-search-pill" aria-hidden="true">Search by patient, owner, vet, or service</div>
+          </div>
+
+          <div class="db-card">
+            <div class="db-card-body">
+              <div class="admin-table-wrap">
+                <table class="admin-table admin-table--interactive" id="adminAppointmentsTable">
+                  <thead>
+                    <tr>
+                      <th>Date &amp; Time</th>
+                      <th>Patient / Owner</th>
+                      <th>Service</th>
+                      <th>Veterinarian</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-status="confirmed">
+                      <td>25 Nov 2026 · 10:00 AM</td>
+                      <td><strong>Max</strong><div class="admin-muted">Jane Demo</div></td>
+                      <td>General Wellness Checkup</td>
+                      <td>Dr. Sarah Mitchell</td>
+                      <td><span class="admin-status admin-status--success" data-status-badge>Confirmed</span></td>
+                      <td class="admin-actions-cell">
+                        <button class="btn btn--outline-dark btn--sm" data-admin-status-action="completed">Complete</button>
+                        <button class="btn btn--outline-coral btn--sm" data-admin-status-action="cancelled">Cancel</button>
+                      </td>
+                    </tr>
+                    <tr data-status="pending">
+                      <td>02 Dec 2026 · 02:00 PM</td>
+                      <td><strong>Luna</strong><div class="admin-muted">Jane Demo</div></td>
+                      <td>Vaccination Booster (FVRCP)</td>
+                      <td>Dr. Priya Sharma</td>
+                      <td><span class="admin-status admin-status--warning" data-status-badge>Pending</span></td>
+                      <td class="admin-actions-cell">
+                        <button class="btn btn--primary btn--sm" data-admin-status-action="confirmed">Confirm</button>
+                        <button class="btn btn--outline-coral btn--sm" data-admin-status-action="cancelled">Cancel</button>
+                      </td>
+                    </tr>
+                    <tr data-status="completed">
+                      <td>10 Oct 2026 · 11:00 AM</td>
+                      <td><strong>Max</strong><div class="admin-muted">Jane Demo</div></td>
+                      <td>Dental Cleaning &amp; Tartar Removal</td>
+                      <td>Dr. James Okoye</td>
+                      <td><span class="admin-status admin-status--neutral" data-status-badge>Completed</span></td>
+                      <td class="admin-actions-cell">
+                        <button class="btn btn--outline-dark btn--sm" data-admin-toast="Appointment details opened (demo)">View</button>
+                      </td>
+                    </tr>
+                    <tr data-status="pending">
+                      <td>28 Nov 2026 · 04:30 PM</td>
+                      <td><strong>Buddy</strong><div class="admin-muted">Arjun Rao</div></td>
+                      <td>Skin Allergy Consultation</td>
+                      <td>Dr. Priya Sharma</td>
+                      <td><span class="admin-status admin-status--warning" data-status-badge>Pending</span></td>
+                      <td class="admin-actions-cell">
+                        <button class="btn btn--primary btn--sm" data-admin-status-action="confirmed">Confirm</button>
+                        <button class="btn btn--outline-coral btn--sm" data-admin-status-action="cancelled">Cancel</button>
+                      </td>
+                    </tr>
+                    <tr data-status="confirmed">
+                      <td>29 Nov 2026 · 09:30 AM</td>
+                      <td><strong>Milo</strong><div class="admin-muted">Sara Kim</div></td>
+                      <td>Post-op Follow-up</td>
+                      <td>Dr. Sarah Mitchell</td>
+                      <td><span class="admin-status admin-status--success" data-status-badge>Confirmed</span></td>
+                      <td class="admin-actions-cell">
+                        <button class="btn btn--outline-dark btn--sm" data-admin-status-action="completed">Complete</button>
+                        <button class="btn btn--outline-coral btn--sm" data-admin-status-action="cancelled">Cancel</button>
+                      </td>
+                    </tr>
+                    <tr data-status="cancelled">
+                      <td>18 Nov 2026 · 03:00 PM</td>
+                      <td><strong>Coco</strong><div class="admin-muted">Nina Patel</div></td>
+                      <td>Nail Trim &amp; Wellness Check</td>
+                      <td>First Available Doctor</td>
+                      <td><span class="admin-status admin-status--danger" data-status-badge>Cancelled</span></td>
+                      <td class="admin-actions-cell">
+                        <button class="btn btn--outline-dark btn--sm" data-admin-toast="Rebooking flow opened (demo)">Rebook</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             ADMIN PANEL 3: PATIENTS & PETS
+             ========================================================= -->
+        <section id="panel-admin-patients" class="dashboard-panel admin-panel">
+          <div class="panel-header admin-panel-header">
+            <div>
+              <h2 class="panel-title">Patients &amp; Pet Records</h2>
+              <p class="panel-subtitle">Browse registered patients, view pet profiles, and track recent clinical activity.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button class="btn btn--primary btn--sm" data-admin-toast="New patient registration opened (demo)">+ Add Patient</button>
+            </div>
+          </div>
+
+          <div class="admin-patient-grid">
+            <article class="admin-patient-card">
+              <div class="admin-patient-card__head">
+                <div>
+                  <h3>Max <span class="admin-muted">· Labrador Retriever</span></h3>
+                  <p>Owner: Jane Demo · +1 (555) 987-6543</p>
+                </div>
+                <span class="admin-status admin-status--success">Active</span>
+              </div>
+              <div class="admin-patient-meta">
+                <span><strong>Age:</strong> 3 yrs</span>
+                <span><strong>Weight:</strong> 28.5 kg</span>
+                <span><strong>Last Visit:</strong> 10 Oct 2026</span>
+              </div>
+              <p class="admin-patient-note"><strong>Notes:</strong> Mild hip sensitivity; Rabies booster due soon.</p>
+            </article>
+
+            <article class="admin-patient-card">
+              <div class="admin-patient-card__head">
+                <div>
+                  <h3>Luna <span class="admin-muted">· Persian Longhair</span></h3>
+                  <p>Owner: Jane Demo · +1 (555) 987-6543</p>
+                </div>
+                <span class="admin-status admin-status--success">Active</span>
+              </div>
+              <div class="admin-patient-meta">
+                <span><strong>Age:</strong> 5 yrs</span>
+                <span><strong>Weight:</strong> 4.2 kg</span>
+                <span><strong>Last Visit:</strong> 05 Sep 2026</span>
+              </div>
+              <p class="admin-patient-note"><strong>Notes:</strong> Chicken protein allergy; prefers low-noise handling.</p>
+            </article>
+
+            <article class="admin-patient-card">
+              <div class="admin-patient-card__head">
+                <div>
+                  <h3>Buddy <span class="admin-muted">· Golden Retriever</span></h3>
+                  <p>Owner: Arjun Rao · +1 (555) 220-1148</p>
+                </div>
+                <span class="admin-status admin-status--warning">Follow-up Due</span>
+              </div>
+              <div class="admin-patient-meta">
+                <span><strong>Age:</strong> 6 yrs</span>
+                <span><strong>Weight:</strong> 31.0 kg</span>
+                <span><strong>Last Visit:</strong> 12 Nov 2026</span>
+              </div>
+              <p class="admin-patient-note"><strong>Notes:</strong> Skin allergy treatment in progress; review in 2 weeks.</p>
+            </article>
+
+            <article class="admin-patient-card">
+              <div class="admin-patient-card__head">
+                <div>
+                  <h3>Milo <span class="admin-muted">· Domestic Shorthair</span></h3>
+                  <p>Owner: Sara Kim · +1 (555) 661-9082</p>
+                </div>
+                <span class="admin-status admin-status--info">Post-op Monitoring</span>
+              </div>
+              <div class="admin-patient-meta">
+                <span><strong>Age:</strong> 2 yrs</span>
+                <span><strong>Weight:</strong> 4.8 kg</span>
+                <span><strong>Last Visit:</strong> 20 Nov 2026</span>
+              </div>
+              <p class="admin-patient-note"><strong>Notes:</strong> Recovery progressing well; follow-up appointment scheduled.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             ADMIN PANEL 4: STAFF & SCHEDULES
+             ========================================================= -->
+        <section id="panel-admin-staff" class="dashboard-panel admin-panel">
+          <div class="panel-header admin-panel-header">
+            <div>
+              <h2 class="panel-title">Staff &amp; Schedules</h2>
+              <p class="panel-subtitle">View team availability, roles, and today’s coverage across clinical and front-desk operations.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button class="btn btn--outline-dark btn--sm" data-admin-toast="Shift planner opened (demo)">Manage Shifts</button>
+            </div>
+          </div>
+
+          <div class="admin-staff-grid">
+            <article class="admin-staff-card">
+              <div class="admin-staff-card__top">
+                <div class="admin-staff-avatar">SM</div>
+                <div>
+                  <h3>Dr. Sarah Mitchell</h3>
+                  <p>Chief Veterinarian · Internal Medicine</p>
+                </div>
+                <span class="admin-status admin-status--success">On Duty</span>
+              </div>
+              <ul class="admin-staff-meta">
+                <li><strong>Shift:</strong> 08:00 AM – 04:00 PM</li>
+                <li><strong>Appointments:</strong> 5 scheduled today</li>
+                <li><strong>Focus:</strong> Wellness, diagnostics, follow-ups</li>
+              </ul>
+            </article>
+
+            <article class="admin-staff-card">
+              <div class="admin-staff-card__top">
+                <div class="admin-staff-avatar">JO</div>
+                <div>
+                  <h3>Dr. James Okoye</h3>
+                  <p>Veterinary Surgeon · Orthopedics</p>
+                </div>
+                <span class="admin-status admin-status--success">On Duty</span>
+              </div>
+              <ul class="admin-staff-meta">
+                <li><strong>Shift:</strong> 10:00 AM – 06:00 PM</li>
+                <li><strong>Appointments:</strong> 3 scheduled today</li>
+                <li><strong>Focus:</strong> Dental, surgery consults, imaging</li>
+              </ul>
+            </article>
+
+            <article class="admin-staff-card">
+              <div class="admin-staff-card__top">
+                <div class="admin-staff-avatar">PS</div>
+                <div>
+                  <h3>Dr. Priya Sharma</h3>
+                  <p>Wellness &amp; Preventive Medicine</p>
+                </div>
+                <span class="admin-status admin-status--warning">Break</span>
+              </div>
+              <ul class="admin-staff-meta">
+                <li><strong>Shift:</strong> 09:00 AM – 05:00 PM</li>
+                <li><strong>Appointments:</strong> 4 scheduled today</li>
+                <li><strong>Focus:</strong> Vaccinations, preventive care</li>
+              </ul>
+            </article>
+
+            <article class="admin-staff-card">
+              <div class="admin-staff-card__top">
+                <div class="admin-staff-avatar">RK</div>
+                <div>
+                  <h3>Riya Kapoor</h3>
+                  <p>Front Desk Coordinator</p>
+                </div>
+                <span class="admin-status admin-status--success">On Duty</span>
+              </div>
+              <ul class="admin-staff-meta">
+                <li><strong>Shift:</strong> 08:00 AM – 04:30 PM</li>
+                <li><strong>Tasks:</strong> Check-ins, confirmations, billing queries</li>
+                <li><strong>Queue:</strong> 2 pending confirmations</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             ADMIN PANEL 5: MESSAGES
+             ========================================================= -->
+        <section id="panel-admin-messages" class="dashboard-panel admin-panel">
+          <div class="panel-header admin-panel-header">
+            <div>
+              <h2 class="panel-title">Messages &amp; Requests</h2>
+              <p class="panel-subtitle">Review client inquiries, refill requests, and follow-up messages requiring clinic response.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button class="btn btn--outline-dark btn--sm" data-admin-toast="Inbox marked as reviewed (demo)">Mark Reviewed</button>
+            </div>
+          </div>
+
+          <div class="db-card">
+            <div class="db-card-body">
+              <div class="admin-message-list" id="adminMessageList">
+                <article class="admin-message-item unread" data-admin-message>
+                  <div class="admin-message-item__top">
+                    <div>
+                      <h3>Prescription refill request — Max</h3>
+                      <p>Jane Demo · Medication Refill · 20 min ago</p>
+                    </div>
+                    <span class="admin-status admin-status--warning">New</span>
+                  </div>
+                  <p class="admin-message-preview">Requesting refill for NexGard PLUS monthly chewable. Last dose given on 01 Nov 2026.</p>
+                </article>
+
+                <article class="admin-message-item unread" data-admin-message>
+                  <div class="admin-message-item__top">
+                    <div>
+                      <h3>Appointment reschedule request — Buddy</h3>
+                      <p>Arjun Rao · Appointment Question · 1 hour ago</p>
+                    </div>
+                    <span class="admin-status admin-status--warning">New</span>
+                  </div>
+                  <p class="admin-message-preview">Asked to move skin allergy consultation from 28 Nov 4:30 PM to 29 Nov morning if available.</p>
+                </article>
+
+                <article class="admin-message-item" data-admin-message>
+                  <div class="admin-message-item__top">
+                    <div>
+                      <h3>Billing clarification — Luna wellness visit</h3>
+                      <p>Sara Kim · Billing / Insurance Claim · Yesterday</p>
+                    </div>
+                    <span class="admin-status admin-status--info">Open</span>
+                  </div>
+                  <p class="admin-message-preview">Requested an itemized invoice for recent wellness screening and vaccination services.</p>
+                </article>
+
+                <article class="admin-message-item" data-admin-message>
+                  <div class="admin-message-item__top">
+                    <div>
+                      <h3>Post-op care question — Milo</h3>
+                      <p>Sara Kim · Medical Record Question · 2 days ago</p>
+                    </div>
+                    <span class="admin-status admin-status--neutral">Replied</span>
+                  </div>
+                  <p class="admin-message-preview">Owner asked about incision care timeline; nurse response sent with home-care instructions.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             ADMIN PANEL 6: SETTINGS
+             ========================================================= -->
+        <section id="panel-admin-settings" class="dashboard-panel admin-panel">
+          <div class="panel-header admin-panel-header">
+            <div>
+              <h2 class="panel-title">Clinic Settings</h2>
+              <p class="panel-subtitle">Manage clinic profile details, operational preferences, and administrative notification settings.</p>
+            </div>
+          </div>
+
+          <div class="admin-settings-grid">
+            <div class="db-card">
+              <div class="db-card-header">
+                <h3 class="db-card-title">Clinic Profile</h3>
+              </div>
+              <div class="db-card-body">
+                <form class="admin-settings-form" id="adminClinicProfileForm">
+                  <div class="grid grid--2" style="gap: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label" for="adminClinicName">Clinic Name</label>
+                      <input type="text" id="adminClinicName" class="form-control" value="PawHealth Animal Hospital" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="adminClinicPhone">Phone Number</label>
+                      <input type="text" id="adminClinicPhone" class="form-control" value="(555) 123-4567" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="adminClinicEmail">Support Email</label>
+                      <input type="email" id="adminClinicEmail" class="form-control" value="support@pawhealth.com" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="adminClinicHours">Operating Hours</label>
+                      <input type="text" id="adminClinicHours" class="form-control" value="Mon–Fri 8:00 AM – 7:00 PM, Sat 9:00 AM – 5:00 PM" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="adminClinicAddress">Address</label>
+                    <input type="text" id="adminClinicAddress" class="form-control" value="123 Greenleaf Avenue, City 10001" />
+                  </div>
+                  <button type="submit" class="btn btn--primary">Save Clinic Profile</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="admin-side-stack">
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">Operational Preferences</h3>
+                </div>
+                <div class="db-card-body">
+                  <div class="form-check" style="margin-bottom: var(--space-3);">
+                    <input type="checkbox" id="adminPrefConfirm" checked />
+                    <label for="adminPrefConfirm">Require manual confirmation for new online bookings</label>
+                  </div>
+                  <div class="form-check" style="margin-bottom: var(--space-3);">
+                    <input type="checkbox" id="adminPrefReminders" checked />
+                    <label for="adminPrefReminders">Send automated appointment reminders 24 hours before visits</label>
+                  </div>
+                  <div class="form-check" style="margin-bottom: var(--space-3);">
+                    <input type="checkbox" id="adminPrefRefills" checked />
+                    <label for="adminPrefRefills">Notify veterinarians about prescription refill requests</label>
+                  </div>
+                  <div class="form-check" style="margin-bottom: var(--space-5);">
+                    <input type="checkbox" id="adminPrefEmergency" checked />
+                    <label for="adminPrefEmergency">Highlight urgent cases at top of appointment queue</label>
+                  </div>
+                  <button type="button" class="btn btn--outline-dark" data-admin-toast="Preferences saved (demo)">Save Preferences</button>
+                </div>
+              </div>
+
+              <div class="db-card">
+                <div class="db-card-header">
+                  <h3 class="db-card-title">System Status</h3>
+                </div>
+                <div class="db-card-body">
+                  <ul class="admin-status-list">
+                    <li><span>Online booking</span><span class="admin-status admin-status--success">Active</span></li>
+                    <li><span>Reminder emails</span><span class="admin-status admin-status--success">Enabled</span></li>
+                    <li><span>SMS alerts</span><span class="admin-status admin-status--warning">Limited</span></li>
+                    <li><span>Portal mode</span><span class="admin-status admin-status--info">Demo</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
