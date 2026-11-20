@@ -6,6 +6,15 @@
 (function () {
   'use strict';
 
+  function getPathPrefixes() {
+    var path = window.location.pathname.replace(/\\/g, '/');
+    var inPages = path.indexOf('/pages/') !== -1;
+    return {
+      toRoot: inPages ? '../' : '',
+      toPage: inPages ? '' : 'pages/'
+    };
+  }
+
   const PAW_ICON_SVG = `
     <svg class="navbar__logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <circle cx="20" cy="20" r="20" fill="#245C48"/>
@@ -37,16 +46,20 @@
     const container = document.querySelector(targetSelector);
     if (!container) return;
 
+    const paths = getPathPrefixes();
+    const toRoot = paths.toRoot;
+    const toPage = paths.toPage;
+
     // Check if user is logged into demo dashboard
     const isLogged = localStorage.getItem('pawhealth_demo_user');
-    const portalLink = isLogged ? 'dashboard.html' : 'login.html';
+    const portalLink = toPage + (isLogged ? 'dashboard.html' : 'login.html');
     const portalLabel = isLogged ? 'My Dashboard' : 'Pet Owner Portal';
 
     const navbarHtml = `
       <header class="navbar" role="banner">
         <div class="navbar__inner">
           <!-- Brand Logo -->
-          <a href="index.html" class="navbar__logo" aria-label="PawHealth Animal Hospital - Home">
+          <a href="${toRoot}index.html" class="navbar__logo" aria-label="PawHealth Animal Hospital - Home">
             ${PAW_ICON_SVG}
             <div class="navbar__logo-text">
               <span class="navbar__logo-name">PawHealth</span>
@@ -58,44 +71,44 @@
           <nav class="navbar__nav" aria-label="Main Navigation">
             <!-- Home Dropdown -->
             <div class="navbar__dropdown-wrap">
-              <a href="index.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
+              <a href="${toRoot}index.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
                 Home
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </a>
               <div class="navbar__dropdown" role="menu">
-                <a href="index.html" role="menuitem">Home 1 — General Care</a>
-                <a href="home2.html" role="menuitem">Home 2 — Specialized Care</a>
+                <a href="${toRoot}index.html" role="menuitem">Home 1 — General Care</a>
+                <a href="${toPage}home2.html" role="menuitem">Home 2 — Specialized Care</a>
               </div>
             </div>
 
-            <a href="about.html" class="navbar__nav-link">About Us</a>
+            <a href="${toPage}about.html" class="navbar__nav-link">About Us</a>
 
             <!-- Services Dropdown -->
             <div class="navbar__dropdown-wrap">
-              <a href="services.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
+              <a href="${toPage}services.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
                 Services
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </a>
               <div class="navbar__dropdown" role="menu">
-                <a href="services.html" role="menuitem">All Services & Treatments</a>
-                <a href="service-details.html" role="menuitem">Vaccination & Prevention</a>
+                <a href="${toPage}services.html" role="menuitem">All Services & Treatments</a>
+                <a href="${toPage}service-details.html" role="menuitem">Vaccination & Prevention</a>
               </div>
             </div>
 
             <!-- Blog Dropdown -->
             <div class="navbar__dropdown-wrap">
-              <a href="blog.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
+              <a href="${toPage}blog.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
                 Blog
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </a>
               <div class="navbar__dropdown" role="menu">
-                <a href="blog.html" role="menuitem">Pet Health Articles</a>
-                <a href="blog-details.html" role="menuitem">Puppy Vaccination Guide</a>
+                <a href="${toPage}blog.html" role="menuitem">Pet Health Articles</a>
+                <a href="${toPage}blog-details.html" role="menuitem">Puppy Vaccination Guide</a>
               </div>
             </div>
 
-            <a href="pricing.html" class="navbar__nav-link">Pricing</a>
-            <a href="contact.html" class="navbar__nav-link">Contact Us</a>
+            <a href="${toPage}pricing.html" class="navbar__nav-link">Pricing</a>
+            <a href="${toPage}contact.html" class="navbar__nav-link">Contact Us</a>
           </nav>
 
           <!-- Controls Right -->
@@ -118,7 +131,7 @@
             </a>
 
             <!-- Book Appointment CTA -->
-            <a href="contact.html" class="btn btn--primary btn--sm" aria-label="Book an Appointment">
+            <a href="${toPage}contact.html" class="btn btn--primary btn--sm" aria-label="Book an Appointment">
               Book Appointment
             </a>
 
@@ -143,34 +156,34 @@
           </div>
 
           <nav class="navbar__mobile-nav">
-            <a href="index.html" class="navbar__mobile-has-subnav">Home ▾</a>
+            <a href="${toRoot}index.html" class="navbar__mobile-has-subnav">Home ▾</a>
             <div class="navbar__mobile-subnav">
-              <a href="index.html">Home 1 — General Care</a>
-              <a href="home2.html">Home 2 — Specialized Care</a>
+              <a href="${toRoot}index.html">Home 1 — General Care</a>
+              <a href="${toPage}home2.html">Home 2 — Specialized Care</a>
             </div>
 
-            <a href="about.html">About Us</a>
+            <a href="${toPage}about.html">About Us</a>
 
-            <a href="services.html" class="navbar__mobile-has-subnav">Services ▾</a>
+            <a href="${toPage}services.html" class="navbar__mobile-has-subnav">Services ▾</a>
             <div class="navbar__mobile-subnav">
-              <a href="services.html">All Services & Treatments</a>
-              <a href="service-details.html">Featured: Vaccination & Prevention</a>
+              <a href="${toPage}services.html">All Services & Treatments</a>
+              <a href="${toPage}service-details.html">Featured: Vaccination & Prevention</a>
             </div>
 
-            <a href="blog.html" class="navbar__mobile-has-subnav">Blog ▾</a>
+            <a href="${toPage}blog.html" class="navbar__mobile-has-subnav">Blog ▾</a>
             <div class="navbar__mobile-subnav">
-              <a href="blog.html">Pet Health Articles</a>
-              <a href="blog-details.html">Featured: Puppy Vaccination Guide</a>
+              <a href="${toPage}blog.html">Pet Health Articles</a>
+              <a href="${toPage}blog-details.html">Featured: Puppy Vaccination Guide</a>
             </div>
 
-            <a href="pricing.html">Pricing & Packages</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="dashboard.html" style="font-weight: 700; color: var(--color-primary);">🐾 Pet Owner Dashboard</a>
+            <a href="${toPage}pricing.html">Pricing & Packages</a>
+            <a href="${toPage}contact.html">Contact Us</a>
+            <a href="${toPage}dashboard.html" style="font-weight: 700; color: var(--color-primary);">🐾 Pet Owner Dashboard</a>
           </nav>
 
           <div class="navbar__mobile-actions">
             <a href="${portalLink}" class="btn btn--outline-primary btn--full">${portalLabel}</a>
-            <a href="contact.html" class="btn btn--primary btn--full">Book Appointment</a>
+            <a href="${toPage}contact.html" class="btn btn--primary btn--full">Book Appointment</a>
           </div>
         </div>
       </header>
@@ -191,6 +204,10 @@
     const container = document.querySelector(targetSelector);
     if (!container) return;
 
+    const paths = getPathPrefixes();
+    const toRoot = paths.toRoot;
+    const toPage = paths.toPage;
+
     const footerHtml = `
       <footer class="footer" role="contentinfo">
         <div class="container">
@@ -198,7 +215,7 @@
 
             <!-- Brand Column -->
             <div class="footer__brand">
-              <a href="index.html" class="footer__logo" aria-label="PawHealth Animal Hospital">
+              <a href="${toRoot}index.html" class="footer__logo" aria-label="PawHealth Animal Hospital">
                 ${FOOTER_PAW_SVG}
                 <span class="footer__logo-name">PawHealth</span>
               </a>
@@ -225,13 +242,13 @@
             <div class="footer__col">
               <h3 class="footer__col-title">Navigation</h3>
               <ul class="footer__links">
-                <li><a href="index.html">Home 1 — General Care</a></li>
-                <li><a href="home2.html">Home 2 — Specialized Care</a></li>
-                <li><a href="about.html">About Our Clinic</a></li>
-                <li><a href="about.html#team">Meet Our Vets</a></li>
-                <li><a href="pricing.html">Pricing & Packages</a></li>
-                <li><a href="dashboard.html">Pet Owner Dashboard</a></li>
-                <li><a href="contact.html">Contact & Emergency</a></li>
+                <li><a href="${toRoot}index.html">Home 1 — General Care</a></li>
+                <li><a href="${toPage}home2.html">Home 2 — Specialized Care</a></li>
+                <li><a href="${toPage}about.html">About Our Clinic</a></li>
+                <li><a href="${toPage}about.html#team">Meet Our Vets</a></li>
+                <li><a href="${toPage}pricing.html">Pricing & Packages</a></li>
+                <li><a href="${toPage}dashboard.html">Pet Owner Dashboard</a></li>
+                <li><a href="${toPage}contact.html">Contact & Emergency</a></li>
               </ul>
             </div>
 
@@ -239,13 +256,13 @@
             <div class="footer__col">
               <h3 class="footer__col-title">Our Services</h3>
               <ul class="footer__links">
-                <li><a href="service-details.html">Vaccination & Prevention</a></li>
-                <li><a href="services.html#checkups">Routine Health Examinations</a></li>
-                <li><a href="services.html#diagnostics">Diagnostic Imaging & Lab</a></li>
-                <li><a href="services.html#surgery">Veterinary Surgery</a></li>
-                <li><a href="services.html#dental">Dental Care & Hygiene</a></li>
-                <li><a href="services.html#specialized">Senior Pet Geriatric Care</a></li>
-                <li><a href="contact.html#emergency">24/7 Urgent Medical Advice</a></li>
+                <li><a href="${toPage}service-details.html">Vaccination & Prevention</a></li>
+                <li><a href="${toPage}services.html#checkups">Routine Health Examinations</a></li>
+                <li><a href="${toPage}services.html#diagnostics">Diagnostic Imaging & Lab</a></li>
+                <li><a href="${toPage}services.html#surgery">Veterinary Surgery</a></li>
+                <li><a href="${toPage}services.html#dental">Dental Care & Hygiene</a></li>
+                <li><a href="${toPage}services.html#specialized">Senior Pet Geriatric Care</a></li>
+                <li><a href="${toPage}contact.html#emergency">24/7 Urgent Medical Advice</a></li>
               </ul>
             </div>
 
@@ -283,10 +300,10 @@
               &copy; 2026 PawHealth Veterinary Clinic & Animal Hospital. All rights reserved.
             </p>
             <div class="footer__bottom-links">
-              <a href="coming-soon.html">Privacy Policy</a>
-              <a href="coming-soon.html">Terms of Service</a>
-              <a href="404.html">404 Error Page</a>
-              <a href="coming-soon.html">Maintenance Notice</a>
+              <a href="${toPage}privacy-policy.html">Privacy Policy</a>
+              <a href="${toPage}terms-of-service.html">Terms of Service</a>
+              <a href="${toPage}404.html">404 Error Page</a>
+              <a href="${toPage}maintenance.html">Maintenance Notice</a>
             </div>
           </div>
         </div>

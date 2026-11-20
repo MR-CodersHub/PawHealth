@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PawHealth is currently undergoing scheduled maintenance. We'll be back shortly with an improved experience." />
+  <title>Maintenance in Progress | PawHealth Animal Hospital</title>
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/error.css" />
+</head>
+<body class="error-page-wrapper">
+
+  <div class="error-card reveal-on-scroll">
+
+    <!-- Maintenance Vector Illustration -->
+    <svg class="error-illustration" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+      <defs>
+        <linearGradient id="maintBg" x1="30" y1="20" x2="190" y2="200" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#DCEFE5" />
+          <stop offset="1" stop-color="#FFF9F0" />
+        </linearGradient>
+      </defs>
+      <circle cx="110" cy="110" r="96" fill="url(#maintBg)" />
+      <circle cx="110" cy="110" r="88" stroke="#245C48" stroke-width="4" stroke-dasharray="10 8" opacity="0.35" />
+
+      <!-- Monitor -->
+      <rect x="58" y="62" width="104" height="70" rx="10" fill="#245C48" />
+      <rect x="66" y="70" width="88" height="50" rx="6" fill="#F4FBF8" />
+      <rect x="96" y="132" width="28" height="10" rx="3" fill="#286D73" />
+      <rect x="82" y="142" width="56" height="8" rx="4" fill="#286D73" />
+
+      <!-- Medical cross on screen -->
+      <rect x="106" y="80" width="8" height="30" rx="3" fill="#F28B78" />
+      <rect x="95" y="91" width="30" height="8" rx="3" fill="#F28B78" />
+
+      <!-- Wrench tool -->
+      <g transform="translate(138 118) rotate(20)">
+        <rect x="-6" y="-28" width="12" height="34" rx="5" fill="#286D73" />
+        <circle cx="0" cy="-34" r="12" stroke="#286D73" stroke-width="8" fill="none" />
+        <circle cx="0" cy="-34" r="4" fill="#F4FBF8" />
+      </g>
+
+      <!-- Gear -->
+      <g transform="translate(72 142)">
+        <circle cx="0" cy="0" r="14" fill="#F28B78" />
+        <circle cx="0" cy="0" r="5" fill="#FFF9F0" />
+        <rect x="-3" y="-20" width="6" height="8" rx="2" fill="#F28B78" />
+        <rect x="-3" y="12" width="6" height="8" rx="2" fill="#F28B78" />
+        <rect x="-20" y="-3" width="8" height="6" rx="2" fill="#F28B78" />
+        <rect x="12" y="-3" width="8" height="6" rx="2" fill="#F28B78" />
+      </g>
+
+      <!-- Paw accent -->
+      <ellipse cx="156" cy="64" rx="8" ry="9" fill="#245C48" opacity="0.9" />
+      <circle cx="148" cy="52" r="3.2" fill="#245C48" opacity="0.9" />
+      <circle cx="156" cy="49" r="3.2" fill="#245C48" opacity="0.9" />
+      <circle cx="164" cy="52" r="3.2" fill="#245C48" opacity="0.9" />
+    </svg>
+
+    <span class="badge badge--primary" style="margin-bottom: var(--space-3);">Scheduled Maintenance</span>
+    <h1 class="error-title">We're Performing a Quick Tune-Up</h1>
+    <p class="error-desc">
+      PawHealth is undergoing scheduled maintenance to improve performance, security, and your pet care experience.
+      Our veterinary team and hospital services remain available by phone for urgent needs.
+    </p>
+
+    <div class="countdown-grid" aria-label="Estimated time until maintenance is complete">
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdDays">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdHours">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdMinutes">00</span>
+        <span class="countdown-label">Mins</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdSeconds">00</span>
+        <span class="countdown-label">Secs</span>
+      </div>
+    </div>
+
+    <form id="notifyForm" style="display: flex; gap: var(--space-2); max-width: 440px; margin: 0 auto var(--space-8); flex-wrap: wrap; justify-content: center;">
+      <input type="email" class="form-control" placeholder="Enter your email for updates" required aria-label="Email for maintenance updates" style="border-radius: var(--radius-full); flex: 1 1 220px;" />
+      <button type="submit" class="btn btn--primary" style="border-radius: var(--radius-full); white-space: nowrap;">Notify Me</button>
+    </form>
+
+    <div class="error-actions">
+      <a href="../index.html" class="btn btn--primary btn--large">Return to Home</a>
+      <a href="contact.html" class="btn btn--outline-dark btn--large">Contact Clinic</a>
+    </div>
+
+    <div style="margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid var(--color-border); font-size: 0.85rem; color: var(--color-text-muted);">
+      For urgent pet care, call <strong>(555) 123-4567</strong> · 123 Greenleaf Avenue
+    </div>
+
+  </div>
+
+  <script src="../js/global.js" defer></script>
+  <script src="../js/maintenance.js" defer></script>
+</body>
+</html>

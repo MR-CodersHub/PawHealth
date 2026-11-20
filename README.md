@@ -26,25 +26,27 @@
 
 ---
 
-## 📂 Complete 13-Page Website Structure
+## 📂 Website Structure
 
-Every public page contains **EXACTLY SIX meaningful main content sections** (excluding the global header and footer).
+`index.html` remains in the project root. All other site pages are organized inside the `pages/` folder.
 
 | # | Page File | Page Title & Purpose | Main Content Sections Count |
 |---|---|---|:---:|
 | 1 | `index.html` | **Home 1 – General Veterinary Care** | 6 Sections |
-| 2 | `home2.html` | **Home 2 – Specialized Animal Care** | 6 Sections |
-| 3 | `about.html` | **About Us – Clinic Story & Veterinary Team** | 6 Sections |
-| 4 | `services.html` | **Services – Veterinary Services & Treatments** | 6 Sections |
-| 5 | `service-details.html` | **Service Details – Vaccination & Preventive Healthcare** | 6 Sections |
-| 6 | `blog.html` | **Blog – Pet Health & Veterinary Articles** | 6 Sections |
-| 7 | `blog-details.html` | **Blog Details – Complete Puppy Vaccination Guide** | 6 Sections |
-| 8 | `contact.html` | **Contact Us – Clinic Contact & Appointment Enquiries** | 6 Sections |
-| 9 | `dashboard.html` | **Pet Owner Dashboard – Pet Health & Appointment Portal** | 11 Functional Panels |
-| 10 | `pricing.html` | **Pricing – Treatment Packages & Preventive Care Plans** | 6 Sections |
-| 11 | `login.html` | **Login / Register – Pet Owner Authentication** | Interactive Auth Tabs |
-| 12 | `404.html` | **404 – Page Not Found** | Standalone Animal Themed |
-| 13 | `coming-soon.html` | **Coming Soon / Maintenance** | Standalone with Live Timer |
+| 2 | `pages/home2.html` | **Home 2 – Specialized Animal Care** | 6 Sections |
+| 3 | `pages/about.html` | **About Us – Clinic Story & Veterinary Team** | 6 Sections |
+| 4 | `pages/services.html` | **Services – Veterinary Services & Treatments** | 6 Sections |
+| 5 | `pages/service-details.html` | **Service Details – Vaccination & Preventive Healthcare** | 6 Sections |
+| 6 | `pages/blog.html` | **Blog – Pet Health & Veterinary Articles** | 6 Sections |
+| 7 | `pages/blog-details.html` | **Blog Details – Complete Puppy Vaccination Guide** | 6 Sections |
+| 8 | `pages/contact.html` | **Contact Us – Clinic Contact & Appointment Enquiries** | 6 Sections |
+| 9 | `pages/dashboard.html` | **Pet Owner Dashboard – Pet Health & Appointment Portal** | 11 Functional Panels |
+| 10 | `pages/pricing.html` | **Pricing – Treatment Packages & Preventive Care Plans** | 6 Sections |
+| 11 | `pages/login.html` | **Login / Register – Pet Owner Authentication** | Interactive Auth Tabs |
+| 12 | `pages/404.html` | **404 – Page Not Found** | Standalone Animal Themed |
+| 13 | `pages/maintenance.html` | **Maintenance** | Standalone with Vector Image & Live Timer |
+| 14 | `pages/privacy-policy.html` | **Privacy Policy** | Policy Content Sections |
+| 15 | `pages/terms-of-service.html` | **Terms of Service** | Terms Content Sections |
 
 ---
 
@@ -77,7 +79,7 @@ A practical application interface specifically built for veterinary pet care:
 ## 🔑 Demo Access Credentials
 
 To test the Pet Owner Dashboard:
-- Navigate to `login.html`
+- Navigate to `pages/login.html`
 - Click the **"Enter Dashboard as Demo User"** quick action button
 - **OR** log in with:
   - **Email**: `demo@pawhealth.com`
