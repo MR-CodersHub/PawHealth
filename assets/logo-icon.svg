@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A4D3A"/>
+      <stop offset="100%" stop-color="#1E7A6E"/>
+    </linearGradient>
+    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.22)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield Base -->
+  <path d="M32 4 L56 14 L56 32 C56 44 44 56 32 60 C20 56 8 44 8 32 L8 14 Z" fill="url(#shieldGrad)"/>
+  <!-- Inner Highlight -->
+  <path d="M32 7 L53 16 L53 32 C53 42.5 42.5 53 32 57 C21.5 53 11 42.5 11 32 L11 16 Z" fill="url(#shineGrad)"/>
+
+  <!-- Paw Main Pad -->
+  <ellipse cx="32" cy="36" rx="8.5" ry="7" fill="rgba(255,255,255,0.92)"/>
+  <!-- Paw Toe Pads -->
+  <ellipse cx="22.5" cy="27" rx="3.4" ry="4.4" transform="rotate(-18 22.5 27)" fill="rgba(255,255,255,0.88)"/>
+  <ellipse cx="28.5" cy="23.5" rx="3.2" ry="4.2" transform="rotate(-6 28.5 23.5)" fill="rgba(255,255,255,0.88)"/>
+  <ellipse cx="35.5" cy="23.5" rx="3.2" ry="4.2" transform="rotate(6 35.5 23.5)" fill="rgba(255,255,255,0.88)"/>
+  <ellipse cx="41.5" cy="27" rx="3.4" ry="4.4" transform="rotate(18 41.5 27)" fill="rgba(255,255,255,0.88)"/>
+
+  <!-- Heart Accent on Main Pad -->
+  <path d="M29.5 34.5 C29.5 33.1 30.6 32 32 32 C33.4 32 34.5 33.1 34.5 34.5 C34.5 36.2 32.8 37.6 32 38.4 C31.2 37.6 29.5 36.2 29.5 34.5 Z" fill="#E8A020" opacity="0.95"/>
+</svg>
