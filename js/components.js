@@ -169,7 +169,20 @@
     const footerHtml = `
       <footer class="footer" role="contentinfo">
         <div class="container container--2xl">
-          <div class="footer__top">
+          <div class="footer__cta">
+            <div class="footer__cta-copy">
+              <span class="footer__cta-eyebrow">Pet wellness updates</span>
+              <h3 class="footer__cta-title">Stay Informed</h3>
+              <p class="footer__cta-desc">Monthly care tips, clinic news, and seasonal health guidance from our veterinary team.</p>
+            </div>
+            <form class="footer__newsletter-form">
+              <label class="sr-only" for="footer-newsletter-email">Email address</label>
+              <input id="footer-newsletter-email" type="email" class="footer__newsletter-input" placeholder="Enter your email address" required aria-label="Email address for pet newsletter" />
+              <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+
+          <div class="footer__main">
             <div class="footer__brand">
               <a href="${toRoot}index.html" class="footer__logo" aria-label="PawHealth Animal Hospital">
                 ${FOOTER_PAW_SVG}
@@ -200,19 +213,6 @@
               </div>
             </div>
 
-            <div class="footer__newsletter-card" aria-labelledby="footer-newsletter-title">
-              <span class="footer__newsletter-eyebrow">Pet wellness updates</span>
-              <h3 class="footer__newsletter-title" id="footer-newsletter-title">Stay Informed</h3>
-              <p class="footer__newsletter-desc">Get monthly care tips, clinic news, and seasonal pet health guidance from our veterinary team.</p>
-              <form class="footer__newsletter-form">
-                <label class="sr-only" for="footer-newsletter-email">Email address</label>
-                <input id="footer-newsletter-email" type="email" class="footer__newsletter-input" placeholder="Enter your email address" required aria-label="Email address for pet newsletter" />
-                <button type="submit" class="footer__newsletter-btn">Subscribe</button>
-              </form>
-            </div>
-          </div>
-
-          <div class="footer__grid">
             <div class="footer__col">
               <h3 class="footer__col-title">Navigation</h3>
               <ul class="footer__links">
