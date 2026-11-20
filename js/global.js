@@ -438,6 +438,7 @@
     };
 
     window.addEventListener('pageshow', closeAllDropdowns);
+    window.addEventListener('pagehide', closeAllDropdowns);
 
     if (document.documentElement.dataset.dropdownsInit === '1') {
       closeAllDropdowns();
@@ -463,6 +464,11 @@
         });
         wrap.classList.toggle('open', willOpen);
         toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        return;
+      }
+
+      if (e.target.closest('.navbar__dropdown a')) {
+        closeAllDropdowns();
         return;
       }
 
