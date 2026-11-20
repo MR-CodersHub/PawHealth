@@ -1126,6 +1126,16 @@ body { padding-top: var(--navbar-height); }
   font-weight: var(--fw-bold);
   color: var(--color-white);
 }
+.footer__brand-tagline {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-mint);
+  margin: 0 0 var(--space-3);
+  letter-spacing: 0.02em;
+}
+[data-theme="dark"] .footer__brand-tagline {
+  color: var(--color-primary-light);
+}
 .footer__tagline {
   font-size: var(--text-sm);
   line-height: var(--lh-relaxed);

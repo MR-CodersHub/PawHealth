@@ -65,7 +65,7 @@
             ${PAW_ICON_SVG}
             <div class="navbar__logo-text">
               <span class="navbar__logo-name">PawHealth</span>
-              <span class="navbar__logo-tagline">Veterinary & Animal Hospital</span>
+              <span class="navbar__logo-tagline">Trusted Care for Every Paw</span>
             </div>
           </a>
 
@@ -171,6 +171,7 @@
                 ${FOOTER_PAW_SVG}
                 <span class="footer__logo-name">PawHealth</span>
               </a>
+              <p class="footer__brand-tagline">Trusted Care for Every Paw</p>
               <p class="footer__tagline">
                 Compassionate veterinary care, cutting-edge animal medicine, and dedicated wellness support for your cherished pets.<br>
                 Trusted by pet families for preventive, surgical, and emergency care.<br>
