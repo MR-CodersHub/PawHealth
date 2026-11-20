@@ -28,6 +28,13 @@
   --color-yellow:         #F2C66D;   /* Soft Golden Yellow */
   --color-white:          #FFFFFF;
 
+  /* Aliases used by some page stylesheets */
+  --color-forest-green:   #245C48;
+  --color-deep-teal:      #286D73;
+  --color-soft-mint:      #DCEFE5;
+  --color-warm-cream:     #FFF9F0;
+  --color-light-bg:       #F6F8F5;
+
   /* Semantic Aliases */
   --color-text:           #27332F;
   --color-text-muted:     #5a6e68;
@@ -145,10 +152,15 @@
 
   /* Lighter accents for readable text/icons on dark backgrounds */
   --color-primary:       #63c29f;
-  --color-primary-dark:  #245C48;
+  --color-primary-dark:  #9ed8c3;
   --color-primary-light: #7fd4b5;
   --color-teal:          #63c6ce;
-  --color-teal-dark:     #286D73;
+  --color-teal-dark:     #9fe3e8;
+  --color-forest-green:  #63c29f;
+  --color-deep-teal:     #63c6ce;
+  --color-soft-mint:     #1a3028;
+  --color-warm-cream:    #1f2d28;
+  --color-light-bg:      #141e1a;
 
   --navbar-bg:     #1a2820;
   --navbar-shadow: 0 2px 20px rgba(0,0,0,0.3);
@@ -228,12 +240,34 @@
   background: linear-gradient(90deg, #245C48 0%, #286D73 100%);
   color: #fff;
 }
+[data-theme="dark"] .sd-hero,
+[data-theme="dark"] .sd-cta {
+  background: linear-gradient(135deg, #245C48 0%, #286D73 100%);
+}
+[data-theme="dark"] .auth-tab-btn.active {
+  background: #245C48;
+  color: #fff;
+}
 [data-theme="dark"] .badge--primary { color: var(--color-primary-light); }
 [data-theme="dark"] .badge--teal { color: var(--color-teal); }
+[data-theme="dark"] .badge--success { color: #4ade80; }
+[data-theme="dark"] .badge--warning { color: #fbbf24; }
+[data-theme="dark"] .badge--danger  { color: #f87171; }
+[data-theme="dark"] .badge--yellow  { color: #fcd34d; }
 [data-theme="dark"] .tag--primary { color: var(--color-primary-light); }
 [data-theme="dark"] .tag--teal { color: var(--color-teal); }
 [data-theme="dark"] .alert--info { color: var(--color-teal); border-color: rgba(99,198,206,0.35); }
+[data-theme="dark"] .alert--success { color: #4ade80; border-color: rgba(74,222,128,0.3); }
+[data-theme="dark"] .alert--warning { color: #fbbf24; border-color: rgba(251,191,36,0.3); }
+[data-theme="dark"] .alert--danger  { color: #f87171; border-color: rgba(248,113,113,0.3); }
+[data-theme="dark"] .toast--success .toast__icon { color: #4ade80; }
+[data-theme="dark"] .toast--warning .toast__icon { color: #fbbf24; }
+[data-theme="dark"] .toast--error .toast__icon { color: #f87171; }
+[data-theme="dark"] .status-dot--online { background: #4ade80; box-shadow: 0 0 0 2px rgba(74,222,128,0.25); }
 [data-theme="dark"] .faq-item.open .faq-item__question { color: var(--color-primary); }
+[data-theme="dark"] [stroke="#245C48"] { stroke: var(--color-primary) !important; }
+[data-theme="dark"] [stroke="#27332F"] { stroke: var(--color-text) !important; }
+[data-theme="dark"] [fill="#27332F"] { fill: var(--color-text) !important; }
 [data-theme="dark"] .navbar__nav-link:hover,
 [data-theme="dark"] .navbar__nav-link.active,
 [data-theme="dark"] .navbar__dropdown a:hover,

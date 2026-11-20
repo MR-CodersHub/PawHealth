@@ -659,6 +659,76 @@
   border-bottom-color: var(--color-forest-green);
 }
 
+/* ── Dark Theme Contrast Fixes ───────────────────────────── */
+[data-theme="dark"] .services-hero {
+  background: linear-gradient(135deg, #286D73 0%, #1d5a60 55%, #245C48 100%);
+}
+[data-theme="dark"] .service-section:nth-child(even) {
+  background: var(--color-surface-alt);
+}
+[data-theme="dark"] .service-section:nth-child(odd) {
+  background: var(--color-surface);
+}
+[data-theme="dark"] .service-item {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .service-item__icon {
+  background: var(--color-mint);
+}
+[data-theme="dark"] .service-item:hover .service-item__icon {
+  background: #245C48;
+}
+[data-theme="dark"] .service-sub-group__heading,
+[data-theme="dark"] .services-specialized__label,
+[data-theme="dark"] .services-cta__label,
+[data-theme="dark"] .services-nav__link:hover,
+[data-theme="dark"] .services-nav__link.active {
+  color: var(--color-primary);
+}
+[data-theme="dark"] .service-sub-group__heading::before {
+  background: var(--color-primary);
+}
+[data-theme="dark"] .service-note {
+  background: var(--color-cream);
+  color: var(--color-text);
+}
+[data-theme="dark"] .services-specialized {
+  background: linear-gradient(135deg, #1a3028 0%, #1f352d 100%);
+}
+[data-theme="dark"] .specialty-card {
+  background: var(--color-surface);
+}
+[data-theme="dark"] .specialty-card__icon {
+  background: var(--color-mint);
+}
+[data-theme="dark"] .specialty-card:hover .specialty-card__icon {
+  background: #245C48;
+}
+[data-theme="dark"] .specialty-card::before {
+  background: linear-gradient(to right, #245C48, #286D73);
+}
+[data-theme="dark"] .services-cta {
+  background: var(--color-bg);
+}
+[data-theme="dark"] .services-cta__tip-icon {
+  background: var(--color-mint);
+  color: var(--color-primary);
+}
+[data-theme="dark"] .services-cta__panel {
+  background: linear-gradient(135deg, #245C48, #286D73);
+}
+[data-theme="dark"] .services-cta__panel-btn--primary {
+  color: #245C48;
+}
+[data-theme="dark"] .services-nav {
+  background: var(--color-surface);
+  border-bottom-color: var(--color-border);
+}
+[data-theme="dark"] .services-nav__link {
+  color: var(--color-text);
+}
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .services-specialized__cards {

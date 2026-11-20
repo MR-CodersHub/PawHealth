@@ -572,6 +572,35 @@
   box-shadow: 0 12px 32px rgba(0,0,0,0.2);
 }
 
+/* ---- Dark Theme Contrast Fixes ---- */
+[data-theme="dark"] .pricing-hero,
+[data-theme="dark"] .pkg-badge,
+[data-theme="dark"] .package-card.featured .pkg-check,
+[data-theme="dark"] .btn-package.filled,
+[data-theme="dark"] .btn-package.outline:hover,
+[data-theme="dark"] .treatment-table thead th,
+[data-theme="dark"] .compare-table thead th.featured-col,
+[data-theme="dark"] .pricing-custom {
+  background: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .btn-package.filled,
+[data-theme="dark"] .btn-package.outline:hover {
+  border-color: #245C48;
+}
+[data-theme="dark"] .pricing-custom .final-cta-box__btn {
+  color: #245C48;
+}
+[data-theme="dark"] .compare-table tbody tr:nth-child(even) {
+  background: var(--color-surface-alt);
+}
+[data-theme="dark"] .compare-table tbody tr:hover {
+  background: var(--color-mint);
+}
+[data-theme="dark"] .cmp-no {
+  color: var(--color-text-muted);
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
   .packages-grid { grid-template-columns: 1fr; gap: 20px; }
