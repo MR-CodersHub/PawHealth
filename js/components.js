@@ -266,6 +266,7 @@
             <div class="footer__bottom-links">
               <a href="${toPage}privacy-policy.html">Privacy Policy</a>
               <a href="${toPage}terms-of-service.html">Terms of Service</a>
+              <a href="${toPage}sitemap.html">Sitemap</a>
               <a href="${toPage}maintenance.html">Maintenance Notice</a>
             </div>
           </div>
