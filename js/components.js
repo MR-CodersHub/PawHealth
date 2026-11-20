@@ -75,29 +75,8 @@
             <a href="${toPage}home2.html" class="navbar__nav-link">Home 2</a>
             <a href="${toPage}about.html" class="navbar__nav-link">About</a>
 
-            <!-- Services Dropdown -->
-            <div class="navbar__dropdown-wrap">
-              <a href="${toPage}services.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
-                Services
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </a>
-              <div class="navbar__dropdown" role="menu">
-                <a href="${toPage}services.html" role="menuitem">All Services & Treatments</a>
-                <a href="${toPage}service-details.html" role="menuitem">Vaccination & Prevention</a>
-              </div>
-            </div>
-
-            <!-- Blog Dropdown -->
-            <div class="navbar__dropdown-wrap">
-              <a href="${toPage}blog.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
-                Blog
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </a>
-              <div class="navbar__dropdown" role="menu">
-                <a href="${toPage}blog.html" role="menuitem">Pet Health Articles</a>
-                <a href="${toPage}blog-details.html" role="menuitem">Puppy Vaccination Guide</a>
-              </div>
-            </div>
+            <a href="${toPage}services.html" class="navbar__nav-link">Services</a>
+            <a href="${toPage}blog.html" class="navbar__nav-link">Blog</a>
 
             <a href="${toPage}pricing.html" class="navbar__nav-link">Pricing</a>
             <a href="${toPage}contact.html" class="navbar__nav-link">Contact</a>
@@ -142,17 +121,8 @@
             <a href="${toPage}home2.html">Home 2</a>
             <a href="${toPage}about.html">About</a>
 
-            <a href="${toPage}services.html" class="navbar__mobile-has-subnav">Services ▾</a>
-            <div class="navbar__mobile-subnav">
-              <a href="${toPage}services.html">All Services & Treatments</a>
-              <a href="${toPage}service-details.html">Featured: Vaccination & Prevention</a>
-            </div>
-
-            <a href="${toPage}blog.html" class="navbar__mobile-has-subnav">Blog ▾</a>
-            <div class="navbar__mobile-subnav">
-              <a href="${toPage}blog.html">Pet Health Articles</a>
-              <a href="${toPage}blog-details.html">Featured: Puppy Vaccination Guide</a>
-            </div>
+            <a href="${toPage}services.html">Services</a>
+            <a href="${toPage}blog.html">Blog</a>
 
             <a href="${toPage}pricing.html">Pricing</a>
             <a href="${toPage}contact.html">Contact</a>
