@@ -989,6 +989,102 @@
 }
 
 /* --------------------------------------------------------------------------
+   Accordion (generic .accordion-* classes used by pages/JS)
+   -------------------------------------------------------------------------- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.accordion-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+.accordion-item.active {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  background: transparent;
+  border: none;
+  color: var(--color-text-main, var(--color-charcoal));
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  text-align: left;
+  cursor: pointer;
+  line-height: var(--lh-snug);
+}
+.accordion-header:hover {
+  color: var(--color-primary);
+}
+.accordion-header:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+.accordion-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform var(--transition-base), background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+  background: var(--color-mint);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.accordion-body {
+  display: none;
+  padding: 0 var(--space-6) var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: var(--lh-relaxed);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+.accordion-item.active .accordion-body {
+  display: block;
+}
+.accordion-body p {
+  color: inherit;
+  margin: 0;
+}
+[data-theme="dark"] .accordion-item {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .accordion-header {
+  color: var(--color-text-main);
+}
+[data-theme="dark"] .accordion-body {
+  color: var(--color-text-muted);
+  border-top-color: var(--color-border);
+}
+[data-theme="dark"] .accordion-icon {
+  background: var(--color-surface-alt);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
    16. Responsive Adjustments for Components
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
