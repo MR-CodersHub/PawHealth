@@ -943,6 +943,21 @@
 [data-theme="dark"] .about-facilities {
   background: var(--color-light-bg, #141e1a);
 }
+[data-theme="dark"] .about-cta {
+  background: #245C48;
+}
+[data-theme="dark"] .about-cta__heading,
+[data-theme="dark"] .about-cta__sub,
+[data-theme="dark"] .about-cta__pillar-title,
+[data-theme="dark"] .about-cta__pillar-text {
+  color: #fff;
+}
+[data-theme="dark"] .about-cta__sub {
+  color: rgba(255,255,255,0.82);
+}
+[data-theme="dark"] .about-cta__pillar-text {
+  color: rgba(255,255,255,0.78);
+}
 [data-theme="dark"] .philosophy-card,
 [data-theme="dark"] .team-card,
 [data-theme="dark"] .facility-card__info {
