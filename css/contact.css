@@ -743,6 +743,58 @@
   color: var(--color-text-muted);
 }
 
+/* ---- Dark theme contrast fixes ---- */
+[data-theme="dark"] .info-card,
+[data-theme="dark"] .appt-form,
+[data-theme="dark"] .map-overlay-card,
+[data-theme="dark"] .transport-item,
+[data-theme="dark"] .expect-step,
+[data-theme="dark"] .bring-checklist,
+[data-theme="dark"] .faq-item {
+  background: var(--color-surface);
+  border-color: var(--color-border, rgba(255,255,255,0.08));
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] .emergency-notice {
+  background: rgba(242, 198, 109, 0.12);
+  border-left-color: var(--color-golden, #F2C66D);
+}
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+  background: var(--color-surface-alt, #24332c);
+  color: var(--color-text-main);
+  border-color: var(--color-border, rgba(255,255,255,0.12));
+}
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+  color: var(--color-text-muted);
+}
+[data-theme="dark"] .section-desc,
+[data-theme="dark"] .info-card__desc,
+[data-theme="dark"] .info-card__note,
+[data-theme="dark"] .emergency-notice p,
+[data-theme="dark"] .map-overlay-card__desc,
+[data-theme="dark"] .transport-item__desc,
+[data-theme="dark"] .expect-step__desc,
+[data-theme="dark"] .bring-list li,
+[data-theme="dark"] .form-check-label,
+[data-theme="dark"] .form-success__text,
+[data-theme="dark"] .form-header .section-desc,
+[data-theme="dark"] .contact-info__header .section-desc,
+[data-theme="dark"] .contact-faq__header .section-desc {
+  color: var(--color-text-muted);
+}
+[data-theme="dark"] .transport-item__title,
+[data-theme="dark"] .expect-step__title,
+[data-theme="dark"] .bring-checklist__title,
+[data-theme="dark"] .form-success__title {
+  color: var(--color-text-main);
+}
+[data-theme="dark"] .faq-item {
+  border: 1px solid var(--color-border, rgba(255,255,255,0.08));
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
   .contact-info__grid { grid-template-columns: repeat(2, 1fr); }

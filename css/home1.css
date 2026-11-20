@@ -774,6 +774,39 @@
 }
 
 /* ---- Reveal on scroll ---- */
+
+/* ---- Dark theme contrast fixes ---- */
+[data-theme="dark"] .h1-service-card,
+[data-theme="dark"] .h1-compassion,
+[data-theme="dark"] .h1-vet-card,
+[data-theme="dark"] .h1-trust-card,
+[data-theme="dark"] .h1-stats-row {
+  background: var(--color-surface);
+}
+[data-theme="dark"] .h1-service-card,
+[data-theme="dark"] .h1-vet-card,
+[data-theme="dark"] .h1-trust-card,
+[data-theme="dark"] .h1-stats-row {
+  border-color: var(--color-border, rgba(255,255,255,0.08));
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] .h1-service-card__title,
+[data-theme="dark"] .h1-vet-card__name,
+[data-theme="dark"] .h1-trust-card__title,
+[data-theme="dark"] .h1-stat__number {
+  color: var(--color-text-main);
+}
+[data-theme="dark"] .h1-service-card__desc,
+[data-theme="dark"] .h1-vet-card__specialty,
+[data-theme="dark"] .h1-vet-card__exp,
+[data-theme="dark"] .h1-vet-card__bio,
+[data-theme="dark"] .h1-trust-card__desc,
+[data-theme="dark"] .h1-stat__label,
+[data-theme="dark"] .h1-compassion__desc,
+[data-theme="dark"] .h1-feature-list li span,
+[data-theme="dark"] .section-subtitle {
+  color: var(--color-text-muted);
+}
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(28px);

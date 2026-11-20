@@ -601,6 +601,50 @@
   color: var(--color-text-muted);
 }
 
+/* ---- Additional dark theme contrast fixes ---- */
+[data-theme="dark"] .consult-card,
+[data-theme="dark"] .package-card,
+[data-theme="dark"] .free-check-banner,
+[data-theme="dark"] .treatment-table,
+[data-theme="dark"] .compare-table {
+  background: var(--color-surface);
+  border-color: var(--color-border, rgba(255,255,255,0.08));
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] .treatment-table tfoot td {
+  background: var(--color-surface-alt, #24332c);
+}
+[data-theme="dark"] .compare-table tbody td,
+[data-theme="dark"] .treatment-table tbody td {
+  border-bottom-color: var(--color-border, rgba(255,255,255,0.08));
+}
+[data-theme="dark"] .consult-card__desc,
+[data-theme="dark"] .pkg-feature,
+[data-theme="dark"] .pkg-features li,
+[data-theme="dark"] .free-check-banner p,
+[data-theme="dark"] .treatment-table tbody td,
+[data-theme="dark"] .compare-table tbody td,
+[data-theme="dark"] .cmp-txt,
+[data-theme="dark"] .section-desc,
+[data-theme="dark"] .section-eyebrow {
+  color: var(--color-text-muted);
+}
+[data-theme="dark"] .consult-card__name,
+[data-theme="dark"] .pkg-name,
+[data-theme="dark"] .free-check-banner strong,
+[data-theme="dark"] .treatment-table tbody td:first-child,
+[data-theme="dark"] .compare-table tbody td:first-child {
+  color: var(--color-text-main);
+}
+[data-theme="dark"] .save-badge {
+  background: var(--color-surface);
+  color: var(--color-primary-light, #7dd3a8);
+  border: 1px solid var(--color-border, rgba(255,255,255,0.12));
+}
+[data-theme="dark"] .package-card {
+  border: 1px solid var(--color-border, rgba(255,255,255,0.08));
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
   .packages-grid { grid-template-columns: 1fr; gap: 20px; }

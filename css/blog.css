@@ -402,6 +402,19 @@
   margin-inline: auto;
 }
 
+[data-theme="dark"] .blog-search-bar {
+  background: var(--color-surface);
+  border-color: var(--color-border, rgba(255,255,255,0.12));
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] .blog-search-bar input {
+  background: transparent;
+  color: var(--color-text-main);
+}
+[data-theme="dark"] .blog-search-bar input::placeholder {
+  color: var(--color-text-muted);
+}
+
 @media (max-width: 1024px) {
   .blog-featured__card {
     grid-template-columns: 1fr;
