@@ -227,13 +227,13 @@
             <div class="footer__col">
               <h3 class="footer__col-title">Navigation</h3>
               <ul class="footer__links">
-                <li><a href="${toRoot}index.html">Home 1 — General Care</a></li>
-                <li><a href="${toPage}home2.html">Home 2 — Specialized Care</a></li>
-                <li><a href="${toPage}about.html">About Our Clinic</a></li>
-                <li><a href="${toPage}about.html#team">Meet Our Vets</a></li>
-                <li><a href="${toPage}pricing.html">Pricing & Packages</a></li>
-                <li><a href="${toPage}dashboard.html">Pet Owner Dashboard</a></li>
-                <li><a href="${toPage}contact.html">Contact & Emergency</a></li>
+                <li><a href="${toRoot}index.html">Home</a></li>
+                <li><a href="${toPage}home2.html">Home 2</a></li>
+                <li><a href="${toPage}about.html">About</a></li>
+                <li><a href="${toPage}services.html">Services</a></li>
+                <li><a href="${toPage}blog.html">Blog</a></li>
+                <li><a href="${toPage}pricing.html">Pricing</a></li>
+                <li><a href="${toPage}contact.html">Contact</a></li>
               </ul>
             </div>
 
