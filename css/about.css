@@ -937,3 +937,33 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- Dark theme contrast fixes ---- */
+[data-theme="dark"] .about-story,
+[data-theme="dark"] .about-facilities {
+  background: var(--color-light-bg, #141e1a);
+}
+[data-theme="dark"] .philosophy-card,
+[data-theme="dark"] .team-card,
+[data-theme="dark"] .facility-card__info {
+  background: var(--color-surface);
+  border-color: var(--color-border, rgba(255,255,255,0.08));
+}
+[data-theme="dark"] .philosophy-card,
+[data-theme="dark"] .team-card {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] .team-card__name,
+[data-theme="dark"] .philosophy-card__title,
+[data-theme="dark"] .facility-card__name,
+[data-theme="dark"] .about-story__content .section-title {
+  color: var(--color-text-main);
+}
+[data-theme="dark"] .team-card__bio,
+[data-theme="dark"] .team-card__credentials,
+[data-theme="dark"] .team-card__role,
+[data-theme="dark"] .philosophy-card__desc,
+[data-theme="dark"] .facility-card__category,
+[data-theme="dark"] .about-story__image-badge span {
+  color: var(--color-text-muted);
+}
