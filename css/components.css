@@ -1108,23 +1108,64 @@
    16. Responsive Adjustments for Components
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .hero__title { font-size: clamp(2rem, 5vw, 3.5rem); }
+  .hero__title { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  .hero__subtitle { font-size: 1.05rem; }
+  .hero--page .hero__title { font-size: clamp(1.9rem, 3.8vw, 2.8rem); }
+  .section-header h2 { font-size: clamp(1.75rem, 3.2vw, 2.4rem); }
+  .service-card__title { font-size: 1.2rem; }
+  .service-card__text { font-size: 0.94rem; }
+  .blog-card__title { font-size: 1.2rem; }
+  .blog-card__excerpt { font-size: 0.92rem; }
+  .pricing-card__name { font-size: 1.1rem; }
+  .pricing-card__price { font-size: 2.6rem; }
+  .testimonial-card__text { font-size: 0.98rem; }
   .timeline { padding-left: var(--space-8); }
 }
 
 @media (max-width: 768px) {
+  .hero__title { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+  .hero__subtitle { font-size: 0.98rem; }
+  .hero--page .hero__title { font-size: clamp(1.7rem, 5vw, 2.3rem); }
+  .section-header h2 { font-size: clamp(1.55rem, 4.5vw, 2rem); }
+  .section-header p { font-size: 0.96rem; }
   .service-card { padding: var(--space-6) var(--space-5); }
+  .service-card__title { font-size: 1.12rem; }
+  .service-card__text { font-size: 0.9rem; }
   .pricing-card { padding: var(--space-6); }
+  .pricing-card__name { font-size: 1.05rem; }
+  .pricing-card__price { font-size: 2.3rem; }
+  .pricing-card__features li { font-size: 0.9rem; }
   .testimonial-card { padding: var(--space-6) var(--space-5); }
+  .testimonial-card__text { font-size: 0.94rem; }
+  .blog-card__title { font-size: 1.1rem; }
+  .blog-card__excerpt { font-size: 0.9rem; }
+  .stat__number { font-size: clamp(2rem, 6vw, 3rem); }
+  .stat__label { font-size: 0.84rem; }
   .hero--page { min-height: 240px; padding-block: var(--space-16); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
   .hero { min-height: 90vh; }
+  .hero__title { font-size: clamp(1.6rem, 7.5vw, 2.1rem); }
+  .hero__subtitle { font-size: 0.92rem; }
+  .hero--page .hero__title { font-size: clamp(1.45rem, 6.5vw, 1.9rem); }
+  .section-header h2 { font-size: clamp(1.35rem, 6vw, 1.7rem); }
+  .section-header p { font-size: 0.9rem; }
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .hero--center .hero__actions { align-items: center; }
   .hero__actions .btn { width: 100%; justify-content: center; }
+  .service-card__title { font-size: 1.05rem; }
+  .service-card__text { font-size: 0.87rem; }
+  .pricing-card__name { font-size: 1rem; }
+  .pricing-card__price { font-size: 2rem; }
+  .pricing-card__features li { font-size: 0.86rem; }
+  .testimonial-card__text { font-size: 0.9rem; }
+  .testimonial-card__name { font-size: 0.9rem; }
+  .blog-card__title { font-size: 1.02rem; }
+  .blog-card__excerpt { font-size: 0.86rem; }
+  .accordion-header { font-size: 0.95rem; }
+  .accordion-body { font-size: 0.88rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .timeline { padding-left: var(--space-6); }
   .pagination__btn { min-width: 36px; height: 36px; font-size: var(--text-xs); }

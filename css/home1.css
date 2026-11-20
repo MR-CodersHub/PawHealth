@@ -909,3 +909,29 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+ /* Responsive font sizes (all viewports) */
+ @media (max-width: 1024px) {
+   .h1-hero__headline { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+   .h1-hero__subtext { font-size: 1rem; }
+   .h1-cta-banner__headline { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
+   .h1-cta-banner__subtext { font-size: 1rem; }
+   .h1-about__text p, .h1-blog-preview__excerpt { font-size: 0.95rem; }
+ }
+ @media (max-width: 768px) {
+   .h1-hero__headline { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+   .h1-hero__subtext { font-size: 0.96rem; }
+   .h1-hero__pill { font-size: 0.82rem; }
+   .h1-cta-banner__headline { font-size: 1.7rem; }
+   .h1-cta-banner__subtext { font-size: 0.95rem; }
+   .h1-stat__label { font-size: 0.82rem; }
+ }
+ @media (max-width: 480px) {
+   .h1-hero__headline { font-size: clamp(1.6rem, 7.5vw, 2.1rem); }
+   .h1-hero__subtext { font-size: 0.9rem; }
+   .h1-hero__pill { font-size: 0.78rem; }
+   .h1-cta-banner__headline { font-size: 1.45rem; }
+   .h1-cta-banner__subtext { font-size: 0.9rem; }
+   .h1-stat__suffix { font-size: 1.2rem; }
+   .h1-stat__label { font-size: 0.78rem; }
+ }
