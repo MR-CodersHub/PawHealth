@@ -1101,6 +1101,11 @@ select.form-control {
 
 /* Body offset for fixed navbar */
 body { padding-top: var(--navbar-height); }
+body.dashboard-body,
+body.auth-page,
+body.error-page-wrapper {
+  padding-top: 0;
+}
 
 /* --------------------------------------------------------------------------
    13. Footer Styles
