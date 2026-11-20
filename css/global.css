@@ -1714,6 +1714,7 @@ body.error-page-wrapper {
 /* ---- 1024px ---- */
 @media (max-width: 1024px) {
   .navbar__nav { display: none; }
+  .navbar__cta { display: none; }
   .navbar__hamburger { display: flex; }
   .footer__cta { grid-template-columns: 1fr; }
   .footer__newsletter-form { grid-template-columns: 1fr; }

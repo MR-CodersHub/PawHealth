@@ -129,7 +129,7 @@
             </button>
 
             <!-- Login CTA -->
-            <a href="${loginCtaHref}" class="btn btn--primary btn--sm" aria-label="${loginCtaLabel}">
+            <a href="${loginCtaHref}" class="btn btn--primary btn--sm navbar__cta" aria-label="${loginCtaLabel}">
               ${loginCtaLabel}
             </a>
 
