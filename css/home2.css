@@ -8,7 +8,7 @@
    -------------------------------------------------------------------------- */
 .h2-hero {
   position: relative;
-  background: url("https://i.pinimg.com/736x/34/0a/11/340a1164bb5d2f19d42df5ee78ad3c93.jpg") center/cover no-repeat;
+  background: url("https://i.pinimg.com/736x/25/de/84/25de8495084e4e60052b0f944f02b40c.jpg") center/cover no-repeat;
   overflow: hidden;
   padding-top: clamp(var(--space-8), 5vw, var(--space-16));
   padding-bottom: clamp(var(--space-12), 8vw, var(--space-24));
