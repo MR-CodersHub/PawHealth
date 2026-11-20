@@ -728,8 +728,41 @@
 [data-theme="dark"] .services-nav__link {
   color: var(--color-text);
 }
-
-/* ── Responsive ──────────────────────────────────────────── */
+[data-theme="dark"] .service-section:nth-child(odd),
+[data-theme="dark"] .services-cta {
+  background: var(--color-light-bg, #141e1a);
+}
+[data-theme="dark"] .service-item {
+  background: var(--color-surface);
+  border-color: var(--color-border, rgba(255,255,255,0.08));
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+[data-theme="dark"] .service-section__image-badge {
+  background: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .service-item:hover .service-item__icon {
+  background: #245C48;
+}
+[data-theme="dark"] .service-item__title,
+[data-theme="dark"] .service-section__title,
+[data-theme="dark"] .services-specialized__title,
+[data-theme="dark"] .specialty-card__title,
+[data-theme="dark"] .services-cta__title {
+  color: var(--color-text-main);
+}
+[data-theme="dark"] .service-item__desc,
+[data-theme="dark"] .service-section__intro,
+[data-theme="dark"] .services-specialized__sub,
+[data-theme="dark"] .specialty-card__desc,
+[data-theme="dark"] .services-cta__desc,
+[data-theme="dark"] .services-cta__tip-text {
+  color: var(--color-text-muted);
+}
+[data-theme="dark"] .service-section__count {
+  background: rgba(99, 194, 159, 0.15);
+  color: var(--color-primary-light, #7fd4b5);
+}
 @media (max-width: 1024px) {
   .services-specialized__cards {
     grid-template-columns: repeat(2, 1fr);

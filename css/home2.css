@@ -581,6 +581,14 @@
   color: #fff;
 }
 
+[data-theme="dark"] .h2-treatment-card:hover .h2-treatment-card__icon,
+[data-theme="dark"] .h2-tab[aria-selected="true"],
+[data-theme="dark"] .h2-timeline__step:hover .h2-timeline__icon {
+  background: #245C48;
+  border-color: #245C48;
+  color: #fff;
+}
+
 /* --------------------------------------------------------------------------
    Responsive Breakpoints for Home 2
    -------------------------------------------------------------------------- */

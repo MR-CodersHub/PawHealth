@@ -414,6 +414,19 @@
 [data-theme="dark"] .blog-search-bar input::placeholder {
   color: var(--color-text-muted);
 }
+[data-theme="dark"] .blog-hero {
+  background: #286D73;
+  color: #fff;
+}
+[data-theme="dark"] .blog-newsletter-cta {
+  background: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .blog-search-btn,
+[data-theme="dark"] .blog-category-badge {
+  background: #245C48;
+  color: #fff;
+}
 
 @media (max-width: 1024px) {
   .blog-featured__card {

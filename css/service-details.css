@@ -397,3 +397,31 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- Dark theme contrast fixes ---- */
+[data-theme="dark"] .sd-hero {
+  background: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .sd-hero__overlay {
+  background: linear-gradient(135deg, rgba(36,92,72,0.88) 0%, rgba(40,109,115,0.8) 100%);
+}
+[data-theme="dark"] .sd-schedule-icon {
+  background: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .sd-cta {
+  background: linear-gradient(135deg, #245C48 0%, #286D73 100%);
+  color: #fff;
+}
+[data-theme="dark"] .sd-cta__title,
+[data-theme="dark"] .sd-cta__desc,
+[data-theme="dark"] .sd-cta__note {
+  color: #fff;
+}
+[data-theme="dark"] .sd-cta__desc {
+  color: rgba(255,255,255,0.88);
+}
+[data-theme="dark"] .sd-cta__note {
+  color: rgba(255,255,255,0.75);
+}

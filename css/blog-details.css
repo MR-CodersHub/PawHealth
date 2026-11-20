@@ -278,3 +278,13 @@
   padding: clamp(var(--space-10), 6vw, var(--space-16)) 0;
   text-align: center;
 }
+
+[data-theme="dark"] .art-share-btn:hover {
+  background: #245C48;
+  border-color: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .art-cta-section {
+  background: #245C48;
+  color: #fff;
+}

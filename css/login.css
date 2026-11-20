@@ -235,3 +235,25 @@
     display: none;
   }
 }
+
+/* ---- Dark theme contrast fixes ---- */
+[data-theme="dark"] .auth-panel-brand {
+  background: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .auth-panel-brand__overlay {
+  background: linear-gradient(135deg, rgba(36,92,72,0.92) 0%, rgba(40,109,115,0.85) 100%);
+}
+[data-theme="dark"] .auth-tab.active {
+  background: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .auth-form-title,
+[data-theme="dark"] .auth-form-subtitle,
+[data-theme="dark"] .auth-divider span,
+[data-theme="dark"] .auth-switch-text {
+  color: var(--color-text-muted);
+}
+[data-theme="dark"] .auth-form-title {
+  color: var(--color-text-main);
+}

@@ -975,6 +975,19 @@
 .announcement-banner__close:hover { color: var(--color-white); background: rgba(255,255,255,0.15); }
 .announcement-banner__close svg { width: 16px; height: 16px; }
 
+[data-theme="dark"] .announcement-banner {
+  background: linear-gradient(90deg, #245C48 0%, #286D73 100%);
+  color: #fff;
+}
+[data-theme="dark"] .service-card:hover .service-card__icon,
+[data-theme="dark"] .team-card__overlay a:hover,
+[data-theme="dark"] .pricing-card__badge,
+[data-theme="dark"] .pagination__btn.active {
+  background: #245C48;
+  border-color: #245C48;
+  color: #fff;
+}
+
 /* --------------------------------------------------------------------------
    16. Responsive Adjustments for Components
    -------------------------------------------------------------------------- */
