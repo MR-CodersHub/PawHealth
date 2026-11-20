@@ -883,7 +883,7 @@ select.form-control {
   text-decoration: none;
   flex-shrink: 0;
 }
-.navbar__logo-icon { width: 40px; height: 40px; }
+.navbar__logo-icon { width: 40px; height: 40px; flex-shrink: 0; }
 .navbar__logo-text { display: flex; flex-direction: column; }
 .navbar__logo-name {
   font-family: var(--font-heading);
@@ -1115,6 +1115,10 @@ body { padding-top: var(--navbar-height); }
 }
 [data-theme="dark"] .footer { background: #0f1a16; }
 
+.footer .container {
+  max-width: var(--container-2xl);
+}
+
 .footer__main {
   display: grid;
   grid-template-columns: 1.5fr repeat(3, 1fr);
@@ -1185,6 +1189,8 @@ body { padding-top: var(--navbar-height); }
   color: var(--color-white);
 }
 .footer__social-link svg { width: 16px; height: 16px; }
+.footer__social-youtube-play { fill: #27332F; }
+[data-theme="dark"] .footer__social-youtube-play { fill: #0f1a16; }
 
 .footer__col-title {
   font-family: var(--font-body);
