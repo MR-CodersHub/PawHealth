@@ -156,12 +156,6 @@
             <a href="${toPage}contact.html">Contact</a>
           </nav>
 
-          <div class="navbar__mobile-toggles">
-            <a href="${profileLink}" class="btn btn--outline-dark btn--sm" style="flex: 1;">${profileLabel}</a>
-            <button class="btn btn--outline-dark btn--sm theme-toggle-btn" style="flex: 1;">Theme</button>
-            <button class="btn btn--outline-dark btn--sm rtl-toggle-btn" style="flex: 1;"><span class="rtl-text">RTL</span></button>
-          </div>
-
           <div class="navbar__mobile-actions">
             <a href="${loginCtaHref}" class="btn btn--primary btn--full">${loginCtaLabel}</a>
           </div>
