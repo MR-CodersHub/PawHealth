@@ -302,7 +302,6 @@
             <div class="footer__bottom-links">
               <a href="${toPage}privacy-policy.html">Privacy Policy</a>
               <a href="${toPage}terms-of-service.html">Terms of Service</a>
-              <a href="${toPage}404.html">404 Error Page</a>
               <a href="${toPage}maintenance.html">Maintenance Notice</a>
             </div>
           </div>
