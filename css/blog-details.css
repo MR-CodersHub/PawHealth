@@ -27,6 +27,20 @@
   margin-inline: auto;
 }
 
+.art-header .about-hero__breadcrumb {
+  color: var(--color-text-muted);
+}
+.art-header .about-hero__breadcrumb a {
+  color: var(--color-text-muted);
+}
+.art-header .about-hero__breadcrumb a:hover {
+  color: var(--color-primary);
+}
+.art-header .about-hero__breadcrumb-sep {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
 .art-header__tag {
   display: inline-block;
   background: var(--color-mint);
@@ -155,14 +169,13 @@
   color: var(--color-charcoal);
   margin-bottom: var(--space-8);
   display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 [data-theme="dark"] .art-disclaimer-box {
   color: var(--color-text);
   background: rgba(242,139,120,0.12);
-}
-  align-items: center;
-  gap: var(--space-3);
 }
 
 /* ── Article Content Typography ──────────────────────────────── */
