@@ -52,8 +52,10 @@
 
     // Check if user is logged into demo dashboard
     const isLogged = localStorage.getItem('pawhealth_demo_user');
-    const portalLink = toPage + (isLogged ? 'dashboard.html' : 'login.html');
-    const portalLabel = isLogged ? 'My Dashboard' : 'Pet Owner Portal';
+    const profileLink = toPage + (isLogged ? 'dashboard.html' : 'login.html');
+    const profileLabel = isLogged ? 'My Dashboard' : 'User Profile';
+    const loginCtaHref = toPage + (isLogged ? 'dashboard.html' : 'login.html');
+    const loginCtaLabel = isLogged ? 'Dashboard' : 'Login';
 
     const navbarHtml = `
       <header class="navbar" role="banner">
@@ -69,19 +71,9 @@
 
           <!-- Main Desktop Nav -->
           <nav class="navbar__nav" aria-label="Main Navigation">
-            <!-- Home Dropdown -->
-            <div class="navbar__dropdown-wrap">
-              <a href="${toRoot}index.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
-                Home
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </a>
-              <div class="navbar__dropdown" role="menu">
-                <a href="${toRoot}index.html" role="menuitem">Home 1 — General Care</a>
-                <a href="${toPage}home2.html" role="menuitem">Home 2 — Specialized Care</a>
-              </div>
-            </div>
-
-            <a href="${toPage}about.html" class="navbar__nav-link">About Us</a>
+            <a href="${toRoot}index.html" class="navbar__nav-link">Home</a>
+            <a href="${toPage}home2.html" class="navbar__nav-link">Home 2</a>
+            <a href="${toPage}about.html" class="navbar__nav-link">About</a>
 
             <!-- Services Dropdown -->
             <div class="navbar__dropdown-wrap">
@@ -108,15 +100,15 @@
             </div>
 
             <a href="${toPage}pricing.html" class="navbar__nav-link">Pricing</a>
-            <a href="${toPage}contact.html" class="navbar__nav-link">Contact Us</a>
+            <a href="${toPage}contact.html" class="navbar__nav-link">Contact</a>
           </nav>
 
           <!-- Controls Right -->
           <div class="navbar__controls">
-            <!-- RTL Toggle -->
-            <button class="navbar__toggle-btn rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL/LTR">
-              <span class="rtl-text" style="font-size: 11px; font-weight: 700; letter-spacing: 0.5px;">RTL</span>
-            </button>
+            <!-- User Profile Icon -->
+            <a href="${profileLink}" class="navbar__toggle-btn" aria-label="${profileLabel}" title="${profileLabel}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </a>
 
             <!-- Dark/Light Theme Toggle -->
             <button class="navbar__toggle-btn theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
@@ -124,15 +116,14 @@
               <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
             </button>
 
-            <!-- Pet Owner Portal Button -->
-            <a href="${portalLink}" class="btn btn--outline-primary btn--sm" aria-label="${portalLabel}">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              ${portalLabel}
-            </a>
+            <!-- RTL/LTR Toggle -->
+            <button class="navbar__toggle-btn rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL/LTR">
+              <span class="rtl-text" style="font-size: 11px; font-weight: 700; letter-spacing: 0.5px;">RTL</span>
+            </button>
 
-            <!-- Book Appointment CTA -->
-            <a href="${toPage}contact.html" class="btn btn--primary btn--sm" aria-label="Book an Appointment">
-              Book Appointment
+            <!-- Login CTA -->
+            <a href="${loginCtaHref}" class="btn btn--primary btn--sm" aria-label="${loginCtaLabel}">
+              ${loginCtaLabel}
             </a>
 
             <!-- Mobile Hamburger -->
@@ -146,23 +137,10 @@
 
         <!-- Mobile Navigation Panel -->
         <div class="navbar__mobile" aria-label="Mobile Navigation">
-          <div class="navbar__mobile-toggles">
-            <button class="btn btn--outline-dark btn--sm rtl-toggle-btn" style="flex: 1;">
-              Switch to <span class="rtl-text">RTL</span>
-            </button>
-            <button class="btn btn--outline-dark btn--sm theme-toggle-btn" style="flex: 1;">
-              Theme Toggle
-            </button>
-          </div>
-
           <nav class="navbar__mobile-nav">
-            <a href="${toRoot}index.html" class="navbar__mobile-has-subnav">Home ▾</a>
-            <div class="navbar__mobile-subnav">
-              <a href="${toRoot}index.html">Home 1 — General Care</a>
-              <a href="${toPage}home2.html">Home 2 — Specialized Care</a>
-            </div>
-
-            <a href="${toPage}about.html">About Us</a>
+            <a href="${toRoot}index.html">Home</a>
+            <a href="${toPage}home2.html">Home 2</a>
+            <a href="${toPage}about.html">About</a>
 
             <a href="${toPage}services.html" class="navbar__mobile-has-subnav">Services ▾</a>
             <div class="navbar__mobile-subnav">
@@ -176,14 +154,18 @@
               <a href="${toPage}blog-details.html">Featured: Puppy Vaccination Guide</a>
             </div>
 
-            <a href="${toPage}pricing.html">Pricing & Packages</a>
-            <a href="${toPage}contact.html">Contact Us</a>
-            <a href="${toPage}dashboard.html" style="font-weight: 700; color: var(--color-primary);">🐾 Pet Owner Dashboard</a>
+            <a href="${toPage}pricing.html">Pricing</a>
+            <a href="${toPage}contact.html">Contact</a>
           </nav>
 
+          <div class="navbar__mobile-toggles">
+            <a href="${profileLink}" class="btn btn--outline-dark btn--sm" style="flex: 1;">${profileLabel}</a>
+            <button class="btn btn--outline-dark btn--sm theme-toggle-btn" style="flex: 1;">Theme</button>
+            <button class="btn btn--outline-dark btn--sm rtl-toggle-btn" style="flex: 1;"><span class="rtl-text">RTL</span></button>
+          </div>
+
           <div class="navbar__mobile-actions">
-            <a href="${portalLink}" class="btn btn--outline-primary btn--full">${portalLabel}</a>
-            <a href="${toPage}contact.html" class="btn btn--primary btn--full">Book Appointment</a>
+            <a href="${loginCtaHref}" class="btn btn--primary btn--full">${loginCtaLabel}</a>
           </div>
         </div>
       </header>
