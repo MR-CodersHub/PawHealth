@@ -169,9 +169,7 @@
     const footerHtml = `
       <footer class="footer" role="contentinfo">
         <div class="container container--2xl">
-          <div class="footer__main">
-
-            <!-- Brand Column -->
+          <div class="footer__top">
             <div class="footer__brand">
               <a href="${toRoot}index.html" class="footer__logo" aria-label="PawHealth Animal Hospital">
                 ${FOOTER_PAW_SVG}
@@ -181,30 +179,40 @@
                 </span>
               </a>
               <p class="footer__tagline">
-                Compassionate veterinary care, cutting-edge animal medicine, and dedicated wellness support for your cherished pets.<br>
-                Trusted by pet families for preventive, surgical, and emergency care.<br>
-                Your pet’s comfort, safety, and lifelong wellness are always our priority.
+                Compassionate veterinary care, modern medicine, and dedicated wellness support for every stage of your pet's life. Trusted by families for preventive, surgical, and emergency care.
               </p>
               <div class="footer__social" aria-label="Follow PawHealth on social media">
                 <a href="#facebook" class="footer__social-link" aria-label="Facebook">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 </a>
                 <a href="#instagram" class="footer__social-link" aria-label="Instagram">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
                 <a href="#linkedin" class="footer__social-link" aria-label="LinkedIn">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
                 <a href="#youtube" class="footer__social-link" aria-label="YouTube">
                   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon class="footer__social-youtube-play" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
                 </a>
                 <a href="#x" class="footer__social-link" aria-label="X">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
               </div>
             </div>
 
-            <!-- Quick Links -->
+            <div class="footer__newsletter-card" aria-labelledby="footer-newsletter-title">
+              <span class="footer__newsletter-eyebrow">Pet wellness updates</span>
+              <h3 class="footer__newsletter-title" id="footer-newsletter-title">Stay Informed</h3>
+              <p class="footer__newsletter-desc">Get monthly care tips, clinic news, and seasonal pet health guidance from our veterinary team.</p>
+              <form class="footer__newsletter-form">
+                <label class="sr-only" for="footer-newsletter-email">Email address</label>
+                <input id="footer-newsletter-email" type="email" class="footer__newsletter-input" placeholder="Enter your email address" required aria-label="Email address for pet newsletter" />
+                <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer__grid">
             <div class="footer__col">
               <h3 class="footer__col-title">Navigation</h3>
               <ul class="footer__links">
@@ -218,52 +226,42 @@
               </ul>
             </div>
 
-            <!-- Services -->
             <div class="footer__col">
               <h3 class="footer__col-title">Our Services</h3>
               <ul class="footer__links">
-                <li><a href="${toPage}service-details.html">Vaccination & Prevention</a></li>
+                <li><a href="${toPage}service-details.html">Vaccination &amp; Prevention</a></li>
                 <li><a href="${toPage}services.html#checkups">Routine Health Examinations</a></li>
-                <li><a href="${toPage}services.html#diagnostics">Diagnostic Imaging & Lab</a></li>
+                <li><a href="${toPage}services.html#diagnostics">Diagnostic Imaging &amp; Lab</a></li>
                 <li><a href="${toPage}services.html#surgery">Veterinary Surgery</a></li>
-                <li><a href="${toPage}services.html#dental">Dental Care & Hygiene</a></li>
+                <li><a href="${toPage}services.html#dental">Dental Care &amp; Hygiene</a></li>
                 <li><a href="${toPage}services.html#specialized">Senior Pet Geriatric Care</a></li>
                 <li><a href="${toPage}contact.html#emergency">24/7 Urgent Medical Advice</a></li>
               </ul>
             </div>
 
-            <!-- Hours & Newsletter -->
-            <div class="footer__col">
+            <div class="footer__col footer__col--hours">
               <h3 class="footer__col-title">Clinic Hours</h3>
-              <div class="footer__hours" style="margin-bottom: var(--space-6);">
+              <div class="footer__hours">
                 <div class="footer__hours-item">
-                  <span class="footer__hours-day">Mon – Fri</span>
-                  <span class="footer__hours-time">8:00 AM – 7:00 PM</span>
+                  <span class="footer__hours-day">Mon - Fri</span>
+                  <span class="footer__hours-time">8:00 AM - 7:00 PM</span>
                 </div>
                 <div class="footer__hours-item">
                   <span class="footer__hours-day">Saturday</span>
-                  <span class="footer__hours-time">9:00 AM – 5:00 PM</span>
+                  <span class="footer__hours-time">9:00 AM - 5:00 PM</span>
                 </div>
                 <div class="footer__hours-item">
                   <span class="footer__hours-day">Sunday</span>
                   <span class="footer__hours-badge">Emergency Only</span>
                 </div>
               </div>
-
-              <h3 class="footer__col-title" style="margin-bottom: var(--space-3);">Stay Informed</h3>
-              <p class="footer__newsletter-desc">Monthly pet wellness guidance from our veterinary experts.</p>
-              <form class="footer__newsletter-form">
-                <input type="email" class="footer__newsletter-input" placeholder="Your email address" required aria-label="Email address for pet newsletter" />
-                <button type="submit" class="footer__newsletter-btn">Subscribe</button>
-              </form>
+              <p class="footer__hours-note">Emergency guidance is available any time. Call us for urgent concerns.</p>
             </div>
-
           </div>
 
-          <!-- Footer Bottom Bar -->
           <div class="footer__bottom">
             <p class="footer__copyright">
-              &copy; 2026 PawHealth Veterinary Clinic & Animal Hospital. All rights reserved.
+              &copy; 2026 PawHealth Veterinary Clinic &amp; Animal Hospital. All rights reserved.
             </p>
             <div class="footer__bottom-links">
               <a href="${toPage}privacy-policy.html">Privacy Policy</a>
