@@ -15,7 +15,7 @@
 .blog-hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://picsum.photos/seed/pet-health-blog/1600/600');
+  background-image: url('https://i.pinimg.com/736x/ac/5a/9b/ac5a9bc43937812e9838da1b52b59521.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.9);
@@ -30,10 +30,50 @@
   pointer-events: none;
 }
 
-.blog-hero__content {
+.blog-hero__inner {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.blog-hero__content {
+  position: relative;
   max-width: 760px;
+}
+
+.blog-hero__visual {
+  justify-self: end;
+  width: 100%;
+  max-width: 420px;
+}
+
+.blog-hero__image {
+  width: 100%;
+  height: clamp(300px, 38vw, 460px);
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .blog-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-hero__visual {
+    justify-self: stretch;
+    max-width: 560px;
+  }
+
+  .blog-hero__image {
+    height: clamp(280px, 55vw, 420px);
+  }
 }
 
 .blog-hero__eyebrow {
