@@ -155,6 +155,12 @@
   color: var(--color-charcoal);
   margin-bottom: var(--space-8);
   display: flex;
+}
+
+[data-theme="dark"] .art-disclaimer-box {
+  color: var(--color-text);
+  background: rgba(242,139,120,0.12);
+}
   align-items: center;
   gap: var(--space-3);
 }

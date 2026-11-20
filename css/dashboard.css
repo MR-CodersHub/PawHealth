@@ -43,10 +43,44 @@
   --db-card-bg: #1e2922;
   --db-card-shadow: 0 2px 12px rgba(0,0,0,0.3);
   --db-text: #e8f0ec;
-  --db-text-muted: #8fa89a;
-  --db-border: #2e3d36;
+  --db-text-muted: #9abfb5;
+  --db-border: #2f4a40;
   --db-topbar-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  --db-charcoal: #e8f0ec;
+  --db-green: #63c29f;
+  --db-green-light: #1a3028;
+  --db-teal: #63c6ce;
+  --db-teal-light: #173336;
 }
+
+/* Dashboard dark-mode fill contrast fixes (keep white text readable on green fills) */
+[data-theme="dark"] .badge-unread,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .booking-step.completed::before,
+[data-theme="dark"] .booking-step.active::before,
+[data-theme="dark"] .booking-step.completed .step-bubble,
+[data-theme="dark"] .cal-day.selected,
+[data-theme="dark"] .cal-day.available::after,
+[data-theme="dark"] .time-slot.selected,
+[data-theme="dark"] .review-summary-dot,
+[data-theme="dark"] .toggle-switch input:checked + .toggle-slider,
+[data-theme="dark"] .filter-btn.active,
+[data-theme="dark"] .toast.success {
+  background: #245C48;
+  border-color: #245C48;
+  color: #fff;
+}
+[data-theme="dark"] .btn-primary:hover { background: #2f7a60; }
+[data-theme="dark"] .booking-step.active .step-bubble {
+  background: #1e2922;
+  color: var(--db-green);
+  border-color: var(--db-green);
+  box-shadow: 0 0 0 4px rgba(99,194,159,0.15);
+}
+[data-theme="dark"] .btn-secondary { color: var(--db-green); }
+[data-theme="dark"] .btn-outline { color: var(--db-green); border-color: var(--db-green); }
+[data-theme="dark"] .filter-btn:hover:not(.active) { border-color: var(--db-green); color: var(--db-green); }
+[data-theme="dark"] .booking-step.active .step-label { color: var(--db-green); }
 
 /* ── Layout Shell ───────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

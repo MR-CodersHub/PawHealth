@@ -225,6 +225,10 @@
   margin-bottom: var(--space-3);
 }
 
+[data-theme="dark"] .h2-preventive-item__title {
+  color: var(--color-text);
+}
+
 .h2-preventive-item__desc {
   font-size: var(--text-base);
   color: var(--color-text-muted);
