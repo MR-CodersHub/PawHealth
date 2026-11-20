@@ -9,12 +9,12 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-8);
-  background: linear-gradient(rgba(246, 248, 245, 0.62), rgba(246, 248, 245, 0.62)), url('https://i.pinimg.com/736x/3c/3a/36/3c3a36d37f28b10fd69f02611f722405.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(246, 248, 245, 0.62), rgba(246, 248, 245, 0.62)), url('https://i.pinimg.com/736x/ab/1b/a7/ab1ba751a2a2e4fd245c21f067228e3f.jpg') center/cover no-repeat;
   text-align: center;
 }
 
 [data-theme="dark"] .error-page-wrapper {
-  background: linear-gradient(rgba(10, 20, 17, 0.72), rgba(10, 20, 17, 0.72)), url('https://i.pinimg.com/736x/3c/3a/36/3c3a36d37f28b10fd69f02611f722405.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(10, 20, 17, 0.72), rgba(10, 20, 17, 0.72)), url('https://i.pinimg.com/736x/ab/1b/a7/ab1ba751a2a2e4fd245c21f067228e3f.jpg') center/cover no-repeat;
 }
 
 .error-page-wrapper.maintenance-page {
