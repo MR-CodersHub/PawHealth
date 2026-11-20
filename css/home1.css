@@ -784,15 +784,18 @@
 [data-theme="dark"] .h1-compassion,
 [data-theme="dark"] .h1-vet-card,
 [data-theme="dark"] .h1-trust-card,
-[data-theme="dark"] .h1-stats-row {
+[data-theme="dark"] .h1-stats {
   background: var(--color-surface);
 }
 [data-theme="dark"] .h1-service-card,
 [data-theme="dark"] .h1-vet-card,
 [data-theme="dark"] .h1-trust-card,
-[data-theme="dark"] .h1-stats-row {
+[data-theme="dark"] .h1-stats {
   border-color: var(--color-border, rgba(255,255,255,0.08));
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] .h1-stat__suffix {
+  color: var(--color-primary, #63c29f);
 }
 [data-theme="dark"] .h1-service-card__title,
 [data-theme="dark"] .h1-vet-card__name,
