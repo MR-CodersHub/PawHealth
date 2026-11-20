@@ -32,9 +32,9 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(20, 46, 38, 0.62) 0%,
-    rgba(40, 109, 115, 0.48) 45%,
-    rgba(36, 92, 72, 0.38) 100%
+    rgba(12, 28, 23, 0.78) 0%,
+    rgba(28, 70, 60, 0.62) 45%,
+    rgba(12, 28, 23, 0.58) 100%
   );
 }
 
@@ -91,21 +91,21 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.92);
   margin-bottom: var(--space-lg);
   flex-wrap: wrap;
 }
 
 .services-hero__breadcrumb a {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.92);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.services-hero__breadcrumb a:hover { color: var(--color-soft-mint); }
+.services-hero__breadcrumb a:hover { color: #fff; }
 
 .services-hero__breadcrumb-sep {
-  opacity: 0.45;
+  opacity: 0.8;
   font-size: 0.75rem;
 }
 
@@ -115,6 +115,7 @@
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-white);
+  text-shadow: 0 2px 14px rgba(0,0,0,0.35);
   margin-bottom: var(--space-md);
   opacity: 0;
   transform: translateY(28px);
@@ -123,7 +124,7 @@
 
 .services-hero__sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.96);
   line-height: 1.65;
   max-width: 580px;
   opacity: 0;

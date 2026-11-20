@@ -26,7 +26,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(20, 46, 38, 0.58) 0%, rgba(36, 92, 72, 0.42) 50%, rgba(20, 46, 38, 0.34) 100%);
+  background: linear-gradient(135deg, rgba(12, 28, 23, 0.76) 0%, rgba(28, 70, 60, 0.60) 50%, rgba(12, 28, 23, 0.56) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -85,21 +85,21 @@
   gap: 8px;
   margin-bottom: 20px;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.92);
 }
 
 .contact-hero__breadcrumb a {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.92);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .contact-hero__breadcrumb a:hover { color: #fff; }
-.contact-hero__breadcrumb span { color: rgba(255,255,255,0.5); }
+.contact-hero__breadcrumb span { color: rgba(255,255,255,0.8); }
 
 .contact-hero__tag {
   display: inline-block;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.22);
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
@@ -107,6 +107,7 @@
   text-transform: uppercase;
   padding: 6px 16px;
   border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
   margin-bottom: 20px;
   backdrop-filter: blur(4px);
 }
@@ -117,11 +118,12 @@
   color: #fff;
   line-height: 1.15;
   margin-bottom: 16px;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.35);
 }
 
 .contact-hero__sub {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.96);
   line-height: 1.6;
   max-width: 580px;
   margin-bottom: 36px;
