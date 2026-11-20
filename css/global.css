@@ -1209,8 +1209,11 @@ body { padding-top: var(--navbar-height); }
   align-items: center;
   gap: var(--space-2);
 }
-.footer__links a:hover { color: var(--color-mint); }
-.footer__links a svg { width: 14px; height: 14px; opacity: 0.6; flex-shrink: 0; }
+.footer__links a:hover,
+.footer__links a:focus-visible { color: #ffffff; }
+.footer__links a svg { width: 14px; height: 14px; opacity: 0.6; flex-shrink: 0; transition: opacity var(--transition-fast); }
+.footer__links a:hover svg,
+.footer__links a:focus-visible svg { opacity: 1; }
 
 .footer__hours-item {
   display: flex;
@@ -1309,7 +1312,8 @@ body { padding-top: var(--navbar-height); }
   text-decoration: none;
   transition: color var(--transition-fast);
 }
-.footer__bottom-links a:hover { color: var(--color-mint); }
+.footer__bottom-links a:hover,
+.footer__bottom-links a:focus-visible { color: #ffffff; }
 
 /* --------------------------------------------------------------------------
    14. Modal / Overlay Styles
