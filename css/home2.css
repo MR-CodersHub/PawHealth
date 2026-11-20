@@ -405,11 +405,15 @@
 }
 
 .h2-tab-panel__list li::before {
-  content: '✓';
+  content: '';
   position: absolute;
-  left: 0;
-  color: var(--color-primary);
-  font-weight: var(--fw-bold);
+  left: 0.1em;
+  top: 0.45em;
+  width: 0.45em;
+  height: 0.75em;
+  border: solid var(--color-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 /* --------------------------------------------------------------------------

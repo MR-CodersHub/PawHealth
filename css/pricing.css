@@ -177,17 +177,15 @@
 }
 
 .consult-card__features li::before {
-  content: '✓';
+  content: '';
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--color-soft-mint, #DCEFE5);
-  color: var(--color-forest-green, #245C48);
-  font-size: 0.75rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--color-soft-mint, #DCEFE5);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23245C48' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
   flex-shrink: 0;
 }
 
@@ -599,6 +597,10 @@
 }
 [data-theme="dark"] .cmp-no {
   color: var(--color-text-muted);
+}
+
+[data-theme="dark"] .consult-card__features li::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2363c29f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
 }
 
 /* ---- Additional dark theme contrast fixes ---- */
