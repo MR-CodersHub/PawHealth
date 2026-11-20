@@ -776,6 +776,10 @@
 /* ---- Reveal on scroll ---- */
 
 /* ---- Dark theme contrast fixes ---- */
+[data-theme="dark"] .h1-services,
+[data-theme="dark"] .h1-team {
+  background: var(--color-light-bg, #141e1a);
+}
 [data-theme="dark"] .h1-service-card,
 [data-theme="dark"] .h1-compassion,
 [data-theme="dark"] .h1-vet-card,
