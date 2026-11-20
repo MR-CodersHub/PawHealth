@@ -84,10 +84,16 @@
 
           <!-- Controls Right -->
           <div class="navbar__controls">
-            <!-- User Profile Icon -->
-            <a href="${profileLink}" class="navbar__toggle-btn" aria-label="${profileLabel}" title="${profileLabel}">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </a>
+            <!-- User Profile Dropdown -->
+            <div class="navbar__dropdown-wrap navbar__profile-dropdown">
+              <button class="navbar__toggle-btn" aria-label="${profileLabel}" title="${profileLabel}" aria-haspopup="true" aria-expanded="false">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </button>
+              <div class="navbar__dropdown navbar__dropdown--align-right" role="menu" aria-label="Profile menu">
+                <a href="${toPage}dashboard.html" role="menuitem">User Dashboard</a>
+                <a href="${toPage}dashboard.html?view=admin" role="menuitem">Admin Dashboard</a>
+              </div>
+            </div>
 
             <!-- Dark/Light Theme Toggle -->
             <button class="navbar__toggle-btn theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">

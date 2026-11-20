@@ -954,6 +954,16 @@ select.form-control {
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
+.navbar__dropdown--align-right {
+  left: auto;
+  right: 0;
+  transform: translateY(-8px);
+}
+.navbar__dropdown-wrap:hover .navbar__dropdown--align-right,
+.navbar__dropdown-wrap:focus-within .navbar__dropdown--align-right,
+.navbar__dropdown-wrap.open .navbar__dropdown--align-right {
+  transform: translateY(0);
+}
 .navbar__dropdown a {
   display: block;
   padding: var(--space-2) var(--space-4);

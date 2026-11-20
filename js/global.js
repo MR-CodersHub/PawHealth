@@ -428,6 +428,51 @@
     });
   }
 
+  function initDropdowns() {
+    if (document.documentElement.dataset.dropdownsInit === '1') return;
+    document.documentElement.dataset.dropdownsInit = '1';
+
+    document.addEventListener('click', (e) => {
+      const toggle = e.target.closest('.navbar__dropdown-wrap > button');
+      if (toggle) {
+        const wrap = toggle.closest('.navbar__dropdown-wrap');
+        if (!wrap) return;
+        e.preventDefault();
+        e.stopPropagation();
+
+        const willOpen = !wrap.classList.contains('open');
+        document.querySelectorAll('.navbar__dropdown-wrap.open').forEach((other) => {
+          if (other !== wrap) {
+            other.classList.remove('open');
+            const otherToggle = other.querySelector(':scope > button, :scope > a.navbar__nav-link');
+            if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+        wrap.classList.toggle('open', willOpen);
+        toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        return;
+      }
+
+      document.querySelectorAll('.navbar__dropdown-wrap.open').forEach((wrap) => {
+        if (!wrap.contains(e.target)) {
+          wrap.classList.remove('open');
+          const t = wrap.querySelector(':scope > button, :scope > a.navbar__nav-link');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.navbar__dropdown-wrap.open').forEach((wrap) => {
+          wrap.classList.remove('open');
+          const t = wrap.querySelector(':scope > button, :scope > a.navbar__nav-link');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+  }
+
   // -------------------------------------------------------------------------
   // Initialize Global on DOMContentLoaded
   // -------------------------------------------------------------------------
@@ -436,6 +481,7 @@
     initDirection();
     initStickyNavbar();
     initMobileMenu();
+    initDropdowns();
     initBackToTop();
     initScrollReveal();
     initAccordions();
