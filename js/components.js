@@ -16,26 +16,48 @@
   }
 
   const PAW_ICON_SVG = `
-    <svg class="navbar__logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="20" cy="20" r="20" fill="#245C48"/>
-      <!-- Main pad -->
-      <path d="M20 18 C14 18, 10 22, 11 27 C12 31, 15 33, 20 33 C25 33, 28 31, 29 27 C30 22, 26 18, 20 18Z" fill="#DCEFE5"/>
-      <!-- Toe pads -->
-      <ellipse cx="14" cy="14" rx="2.5" ry="3.5" transform="rotate(-15 14 14)" fill="#DCEFE5"/>
-      <ellipse cx="18" cy="11.5" rx="2.5" ry="3.5" transform="rotate(-5 18 11.5)" fill="#DCEFE5"/>
-      <ellipse cx="22" cy="11.5" rx="2.5" ry="3.5" transform="rotate(5 22 11.5)" fill="#DCEFE5"/>
-      <ellipse cx="26" cy="14" rx="2.5" ry="3.5" transform="rotate(15 26 14)" fill="#DCEFE5"/>
+    <svg class="navbar__logo-icon" width="40" height="40" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="nb-shield" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1A4D3A"/>
+          <stop offset="100%" stop-color="#1E7A6E"/>
+        </linearGradient>
+        <linearGradient id="nb-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+          <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+        </linearGradient>
+      </defs>
+      <path d="M50 2 L96 20 L96 54 C96 78 76 98 50 108 C24 98 4 78 4 54 L4 20 Z" fill="url(#nb-shield)"/>
+      <path d="M50 7 L90 23 L90 54 C90 75 72 93 50 103 C28 93 10 75 10 54 L10 23 Z" fill="url(#nb-shine)"/>
+      <ellipse cx="50" cy="66" rx="16" ry="13" fill="rgba(255,255,255,0.92)"/>
+      <ellipse cx="31" cy="50" rx="6.5" ry="8" transform="rotate(-18 31 50)" fill="rgba(255,255,255,0.88)"/>
+      <ellipse cx="42" cy="43" rx="6" ry="7.5" transform="rotate(-6 42 43)" fill="rgba(255,255,255,0.88)"/>
+      <ellipse cx="58" cy="43" rx="6" ry="7.5" transform="rotate(6 58 43)" fill="rgba(255,255,255,0.88)"/>
+      <ellipse cx="69" cy="50" rx="6.5" ry="8" transform="rotate(18 69 50)" fill="rgba(255,255,255,0.88)"/>
+      <path d="M43 63 C43 59.7 46.1 57 50 57 C53.9 57 57 59.7 57 63 C57 67 53.5 70 50 72.5 C46.5 70 43 67 43 63 Z" fill="#E8A020" opacity="0.95"/>
     </svg>
   `;
 
   const FOOTER_PAW_SVG = `
-    <svg class="footer__logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="20" cy="20" r="20" fill="#245C48"/>
-      <path d="M20 18 C14 18, 10 22, 11 27 C12 31, 15 33, 20 33 C25 33, 28 31, 29 27 C30 22, 26 18, 20 18Z" fill="#FFF9F0"/>
-      <ellipse cx="14" cy="14" rx="2.5" ry="3.5" transform="rotate(-15 14 14)" fill="#FFF9F0"/>
-      <ellipse cx="18" cy="11.5" rx="2.5" ry="3.5" transform="rotate(-5 18 11.5)" fill="#FFF9F0"/>
-      <ellipse cx="22" cy="11.5" rx="2.5" ry="3.5" transform="rotate(5 22 11.5)" fill="#FFF9F0"/>
-      <ellipse cx="26" cy="14" rx="2.5" ry="3.5" transform="rotate(15 26 14)" fill="#FFF9F0"/>
+    <svg class="footer__logo-icon" width="40" height="40" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="ft-shield" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1A4D3A"/>
+          <stop offset="100%" stop-color="#1E7A6E"/>
+        </linearGradient>
+        <linearGradient id="ft-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+          <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+        </linearGradient>
+      </defs>
+      <path d="M50 2 L96 20 L96 54 C96 78 76 98 50 108 C24 98 4 78 4 54 L4 20 Z" fill="url(#ft-shield)"/>
+      <path d="M50 7 L90 23 L90 54 C90 75 72 93 50 103 C28 93 10 75 10 54 L10 23 Z" fill="url(#ft-shine)"/>
+      <ellipse cx="50" cy="66" rx="16" ry="13" fill="rgba(255,255,255,0.92)"/>
+      <ellipse cx="31" cy="50" rx="6.5" ry="8" transform="rotate(-18 31 50)" fill="rgba(255,255,255,0.88)"/>
+      <ellipse cx="42" cy="43" rx="6" ry="7.5" transform="rotate(-6 42 43)" fill="rgba(255,255,255,0.88)"/>
+      <ellipse cx="58" cy="43" rx="6" ry="7.5" transform="rotate(6 58 43)" fill="rgba(255,255,255,0.88)"/>
+      <ellipse cx="69" cy="50" rx="6.5" ry="8" transform="rotate(18 69 50)" fill="rgba(255,255,255,0.88)"/>
+      <path d="M43 63 C43 59.7 46.1 57 50 57 C53.9 57 57 59.7 57 63 C57 67 53.5 70 50 72.5 C46.5 70 43 67 43 63 Z" fill="#E8A020" opacity="0.95"/>
     </svg>
   `;
 

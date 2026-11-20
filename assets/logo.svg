@@ -1,30 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="title desc">
-  <title id="title">PawHealth</title>
-  <desc id="desc">PawHealth veterinary clinic logo with the tagline Trusted Care for Every Paw</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 110" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">PawHealth</title>
+  <desc id="logo-desc">PawHealth veterinary clinic logo — Trusted Care for Every Paw</desc>
   <defs>
-    <linearGradient id="pawBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#245C48"/>
-      <stop offset="100%" stop-color="#286D73"/>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A4D3A"/>
+      <stop offset="100%" stop-color="#1E7A6E"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A4D3A"/>
+      <stop offset="100%" stop-color="#1E7A6E"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
     </linearGradient>
   </defs>
 
-  <!-- Icon -->
-  <g transform="translate(60 60)">
-    <circle cx="0" cy="0" r="46" fill="url(#pawBg)"/>
-    <ellipse cx="0" cy="10" rx="15" ry="12.5" fill="#F4FBF7"/>
-    <circle cx="-11" cy="-6" r="5.8" fill="#F4FBF7"/>
-    <circle cx="-4" cy="-13" r="5.4" fill="#F4FBF7"/>
-    <circle cx="5" cy="-13" r="5.4" fill="#F4FBF7"/>
-    <circle cx="12" cy="-6" r="5.8" fill="#F4FBF7"/>
-    <path d="M-4.2 10.5c0-2.3 1.9-4.1 4.2-4.1s4.2 1.8 4.2 4.1c0 1.9-1.3 3.1-2.8 4.1L0 16.2l-1.4-1.6c-1.5-1-2.8-2.2-2.8-4.1z" fill="#245C48" opacity="0.9"/>
-    <circle cx="28" cy="-28" r="7" fill="#F2C66D"/>
-    <path d="M28 -32v8M24 -28h8" stroke="#245C48" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- === Icon Mark (Shield) === -->
+  <g transform="translate(4, 2)">
+    <!-- Shield outer -->
+    <path d="M50 4 L93 20 L93 48 C93 68 73 86 50 96 C27 86 7 68 7 48 L7 20 Z" fill="url(#shieldGrad)"/>
+    <!-- Shield inner shine -->
+    <path d="M50 9 L87 23 L87 48 C87 65.5 69.5 82 50 91 C30.5 82 13 65.5 13 48 L13 23 Z" fill="url(#shine)"/>
+
+    <!-- Paw — main pad -->
+    <ellipse cx="50" cy="57" rx="14" ry="11.5" fill="rgba(255,255,255,0.92)"/>
+    <!-- Paw — toe pads -->
+    <ellipse cx="34" cy="43" rx="5.6" ry="7" transform="rotate(-18 34 43)" fill="rgba(255,255,255,0.88)"/>
+    <ellipse cx="44" cy="37" rx="5.2" ry="6.6" transform="rotate(-6 44 37)" fill="rgba(255,255,255,0.88)"/>
+    <ellipse cx="56" cy="37" rx="5.2" ry="6.6" transform="rotate(6 56 37)" fill="rgba(255,255,255,0.88)"/>
+    <ellipse cx="66" cy="43" rx="5.6" ry="7" transform="rotate(18 66 43)" fill="rgba(255,255,255,0.88)"/>
+
+    <!-- Heart notch on main pad -->
+    <path d="M44.5 54.5 C44.5 51.5 47 49 50 49 C53 49 55.5 51.5 55.5 54.5 C55.5 57.8 52.5 60.4 50 62.4 C47.5 60.4 44.5 57.8 44.5 54.5 Z" fill="#E8A020" opacity="0.95"/>
+
+    <!-- Gold accent dot (top-right) -->
+    <circle cx="82" cy="20" r="8.5" fill="#E8A020" opacity="0.9"/>
+    <path d="M82 15.5 L82 24.5 M77.5 20 L86.5 20" stroke="#1A4D3A" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 
-  <!-- Wordmark -->
-  <g transform="translate(122 52)">
-    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#245C48">Paw</text>
-    <text x="112" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#286D73">Health</text>
-    <text x="2" y="34" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" letter-spacing="1.2" fill="#5a6e68">Trusted Care for Every Paw</text>
+  <!-- === Wordmark === -->
+  <g transform="translate(110, 22)">
+    <!-- "Paw" in dark green -->
+    <text font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="url(#textGrad)">
+      <tspan x="0" y="44">Paw</tspan>
+    </text>
+    <!-- "Health" in teal, slightly offset for brand emphasis -->
+    <text font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#1E7A6E">
+      <tspan x="109" y="44">Health</tspan>
+    </text>
+    <!-- Tagline -->
+    <text x="1" y="70" font-family="'Arial', Helvetica, sans-serif" font-size="17" font-weight="500" letter-spacing="1.8" fill="#5a7a72" opacity="0.85">TRUSTED CARE FOR EVERY PAW</text>
+    <!-- Thin accent line under wordmark -->
+    <line x1="0" y1="52" x2="348" y2="52" stroke="#E8A020" stroke-width="2" opacity="0.6"/>
   </g>
 </svg>

@@ -437,8 +437,17 @@
       });
     };
 
-    window.addEventListener('pageshow', closeAllDropdowns);
-    window.addEventListener('pagehide', closeAllDropdowns);
+    // Close on bfcache restore (back/forward navigation) — registered once globally
+    if (!window.__dropdownPageshowBound) {
+      window.__dropdownPageshowBound = true;
+      window.addEventListener('pageshow', (e) => {
+        // e.persisted = true when restored from bfcache
+        closeAllDropdowns();
+      });
+      window.addEventListener('pagehide', closeAllDropdowns);
+      // Also close if user navigates via History API (SPA-style)
+      window.addEventListener('popstate', closeAllDropdowns);
+    }
 
     if (document.documentElement.dataset.dropdownsInit === '1') {
       closeAllDropdowns();

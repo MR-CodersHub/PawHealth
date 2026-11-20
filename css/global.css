@@ -14,11 +14,12 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Brand Colors */
-  --color-primary:        #245C48;   /* Forest Green */
-  --color-primary-dark:   #1a4535;
-  --color-primary-light:  #2f7a60;
-  --color-teal:           #286D73;   /* Deep Teal */
-  --color-teal-dark:      #1d5257;
+  --color-primary:        #1A4D3A;   /* Deep Forest Green */
+  --color-primary-dark:   #122e23;
+  --color-primary-light:  #1E7A6E;
+  --color-teal:           #1E7A6E;   /* Deep Teal */
+  --color-teal-dark:      #155a51;
+  --color-gold:           #E8A020;   /* Brand Gold Accent */
   --color-mint:           #DCEFE5;   /* Soft Mint */
   --color-cream:          #FFF9F0;   /* Warm Cream */
   --color-bg:             #F6F8F5;   /* Light Background */
@@ -883,7 +884,7 @@ select.form-control {
   text-decoration: none;
   flex-shrink: 0;
 }
-.navbar__logo-icon { width: 40px; height: 40px; flex-shrink: 0; }
+.navbar__logo-icon { width: 36px; height: 40px; flex-shrink: 0; }
 .navbar__logo-text { display: flex; flex-direction: column; }
 .navbar__logo-name {
   font-family: var(--font-heading);
@@ -947,8 +948,6 @@ select.form-control {
   transition: opacity var(--transition-fast), transform var(--transition-fast);
   z-index: var(--z-dropdown);
 }
-.navbar__dropdown-wrap:hover .navbar__dropdown,
-.navbar__dropdown-wrap:focus-within .navbar__dropdown,
 .navbar__dropdown-wrap.open .navbar__dropdown {
   opacity: 1;
   pointer-events: auto;
@@ -959,8 +958,6 @@ select.form-control {
   right: 0;
   transform: translateY(-8px);
 }
-.navbar__dropdown-wrap:hover .navbar__dropdown--align-right,
-.navbar__dropdown-wrap:focus-within .navbar__dropdown--align-right,
 .navbar__dropdown-wrap.open .navbar__dropdown--align-right {
   transform: translateY(0);
 }
@@ -1238,8 +1235,8 @@ body { padding-top: var(--navbar-height); }
   text-decoration: none;
 }
 .footer__logo-icon {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 40px;
   flex-shrink: 0;
 }
 .footer__logo-text {
