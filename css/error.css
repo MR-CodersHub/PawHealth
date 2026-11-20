@@ -17,6 +17,14 @@
   background: linear-gradient(rgba(10, 20, 17, 0.72), rgba(10, 20, 17, 0.72)), url('https://i.pinimg.com/736x/3c/3a/36/3c3a36d37f28b10fd69f02611f722405.jpg') center/cover no-repeat;
 }
 
+.error-page-wrapper.maintenance-page {
+  background: linear-gradient(rgba(246, 248, 245, 0.62), rgba(246, 248, 245, 0.62)), url('https://i.pinimg.com/1200x/16/fc/33/16fc33aedde48e24d08512ac20fac7a0.jpg') center/cover no-repeat;
+}
+
+[data-theme="dark"] .error-page-wrapper.maintenance-page {
+  background: linear-gradient(rgba(10, 20, 17, 0.72), rgba(10, 20, 17, 0.72)), url('https://i.pinimg.com/1200x/16/fc/33/16fc33aedde48e24d08512ac20fac7a0.jpg') center/cover no-repeat;
+}
+
 .error-card {
   background: var(--color-surface);
   border-radius: var(--radius-2xl);
