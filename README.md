@@ -4,7 +4,7 @@
 
 ---
 
-## 🌟 Project Overview
+## Project Overview
 
 **PawHealth** is designed for modern veterinary practices and animal hospitals. The website blends clinical credibility with deep empathy, providing pet parents with clear medical education, transparent care pricing, online appointment scheduling, and a practical **Pet Owner Dashboard**.
 
@@ -26,7 +26,7 @@
 
 ---
 
-## 📂 Website Structure
+## Website Structure
 
 `index.html` remains in the project root. All other site pages are organized inside the `pages/` folder.
 
@@ -50,7 +50,7 @@
 
 ---
 
-## 🐾 Pet Owner Dashboard (`dashboard.html`)
+## Pet Owner Dashboard (`dashboard.html`)
 
 A practical application interface specifically built for veterinary pet care:
 
@@ -76,7 +76,7 @@ A practical application interface specifically built for veterinary pet care:
 
 ---
 
-## 🔑 Demo Access Credentials
+## Demo Access Credentials
 
 To test the Pet Owner Dashboard:
 - Navigate to `pages/login.html`
@@ -87,7 +87,7 @@ To test the Pet Owner Dashboard:
 
 ---
 
-## 🌐 Global Interactive Capabilities
+## Global Interactive Capabilities
 
 - **Dark / Light Theme Toggle**: Seamless CSS variables switch with `localStorage` memory (`pawhealth_theme`).
 - **RTL / LTR Direction Toggle**: Full bidirectional layout switching with `localStorage` memory (`pawhealth_dir`).
@@ -101,7 +101,7 @@ To test the Pet Owner Dashboard:
 
 ---
 
-## 🚀 How to Run the Website
+## How to Run the Website
 
 No build tools, bundlers, or servers are required:
 1. Double-click `index.html` to open the website in any modern web browser (Chrome, Edge, Firefox, Safari).
