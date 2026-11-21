@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/sitemap.css" />
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
   <link rel="shortcut icon" href="../assets/favicon.svg" />
   <meta name="theme-color" content="#245C48" />
@@ -21,22 +21,149 @@
 
   <main id="main-content">
 
-    <section class="about-hero" aria-label="Sitemap Hero">
-      <div class="about-hero__bg" role="img" aria-label="PawHealth clinic and pet care" style="background-image: url('https://i.pinimg.com/736x/8f/f4/d0/8ff4d0c5c84db4433519a9a3c21f9311.jpg');"></div>
-      <div class="about-hero__overlay" aria-hidden="true"></div>
+    <section class="sitemap-hero" aria-label="PawHealth Website Directory & Sitemap Hero">
+      <div class="sitemap-hero__bg" role="img" aria-label="PawHealth hospital and patient navigation directory"></div>
+      <div class="sitemap-hero__glow sitemap-hero__glow--1" aria-hidden="true"></div>
+      <div class="sitemap-hero__glow sitemap-hero__glow--2" aria-hidden="true"></div>
+      <div class="sitemap-hero__overlay" aria-hidden="true"></div>
+
       <div class="container">
-        <div class="about-hero__content reveal-on-scroll">
-          <nav class="about-hero__breadcrumb" aria-label="Breadcrumb">
-            <a href="../index.html">Home</a>
-            <span class="about-hero__breadcrumb-sep" aria-hidden="true">/</span>
-            <span>Sitemap</span>
-          </nav>
-          <span class="badge badge--primary" style="margin-bottom: var(--space-3); background: rgba(255,255,255,0.22); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Website Navigation</span>
-          <h1 class="about-hero__heading" style="margin-bottom: var(--space-4);">Sitemap</h1>
-          <p style="font-size: 1.1rem; color: rgba(255,255,255,0.96); line-height: 1.6; max-width: 60ch;">
-            Explore all PawHealth pages in one place — from veterinary services and resources to account access and legal information.
-          </p>
+        <div class="sitemap-hero__inner">
+          <!-- Left Content Column -->
+          <div class="sitemap-hero__content reveal-on-scroll">
+            <nav class="sitemap-hero__breadcrumb" aria-label="Breadcrumb">
+              <a href="../index.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Home</span>
+              </a>
+              <span class="sitemap-hero__breadcrumb-sep" aria-hidden="true">/</span>
+              <span>Website Directory</span>
+            </nav>
+
+            <div class="sitemap-hero__pill-badge">
+              <span class="sitemap-hero__pulse-dot" aria-hidden="true"></span>
+              <span>Complete Website Architecture • Fast Navigation Directory</span>
+            </div>
+
+            <h1 class="sitemap-hero__title">
+              Explore PawHealth Pages &amp; <span class="sitemap-hero__title-accent">Website Directory</span>
+            </h1>
+
+            <p class="sitemap-hero__sub">
+              A comprehensive visual directory of all veterinary care specialties, pricing plans, educational medical guides, patient portal tools, and legal documentation.
+            </p>
+
+            <!-- Quick Navigation Pills to Sitemap Sections -->
+            <div class="sitemap-hero__pills" role="navigation" aria-label="Quick jump to sitemap categories">
+              <a href="#sitemap-main" class="sitemap-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Main Pages</span>
+              </a>
+              <a href="#sitemap-blog" class="sitemap-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Blog &amp; Resources</span>
+              </a>
+              <a href="#sitemap-account" class="sitemap-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="7" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path></svg>
+                <span>Patient Portal</span>
+              </a>
+              <a href="#sitemap-legal" class="sitemap-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Legal &amp; Utility</span>
+              </a>
+            </div>
+
+            <!-- Dual Action CTAs -->
+            <div class="sitemap-hero__cta-group">
+              <a href="services.html" class="btn btn--primary btn--large sitemap-hero__cta-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                <span>Explore Services</span>
+              </a>
+              <a href="dashboard.html" class="btn btn--outline-light btn--large sitemap-hero__cta-secondary">
+                <span>Visit Pet Portal</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- Notice Banner -->
+            <div class="sitemap-hero__notice" role="note">
+              <span class="sitemap-hero__notice-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </span>
+              <span class="sitemap-hero__notice-text">
+                <strong>Complete Directory Index:</strong> Over 15 dedicated clinical sections and client tools indexed for rapid accessibility and structured navigation.
+              </span>
+            </div>
+
+            <!-- Trust Metrics Bar -->
+            <div class="sitemap-hero__stats-row" role="region" aria-label="Sitemap architecture statistics">
+              <div class="sitemap-hero__stat-card">
+                <strong class="sitemap-hero__stat-num">15+</strong>
+                <span class="sitemap-hero__stat-label">Live Clinic Pages</span>
+              </div>
+              <div class="sitemap-hero__stat-card">
+                <strong class="sitemap-hero__stat-num">4</strong>
+                <span class="sitemap-hero__stat-label">Core Directory Areas</span>
+              </div>
+              <div class="sitemap-hero__stat-card">
+                <strong class="sitemap-hero__stat-num">100%</strong>
+                <span class="sitemap-hero__stat-label">Mobile Responsive</span>
+              </div>
+              <div class="sitemap-hero__stat-card">
+                <strong class="sitemap-hero__stat-num">Instant</strong>
+                <span class="sitemap-hero__stat-label">Direct Navigation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Collage with Floating Micro-Cards -->
+          <div class="sitemap-hero__visual reveal-on-scroll" aria-label="Sitemap structure and clinic navigation showcase">
+            <div class="sitemap-hero__image-wrap">
+              <img src="https://i.pinimg.com/736x/8f/f4/d0/8ff4d0c5c84db4433519a9a3c21f9311.jpg" alt="PawHealth veterinary clinic modern facilities and digital navigation" class="sitemap-hero__image" loading="eager" width="600" height="700" />
+              <div class="sitemap-hero__image-shine" aria-hidden="true"></div>
+
+              <!-- Floating Card 1: Full Directory -->
+              <div class="sitemap-hero__float-card sitemap-hero__float-card--top" aria-hidden="true">
+                <div class="sitemap-hero__float-icon sitemap-hero__float-icon--teal">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                </div>
+                <div class="sitemap-hero__float-text">
+                  <strong>Full Directory</strong>
+                  <span>15+ Veterinary Pages</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Patient Portal -->
+              <div class="sitemap-hero__float-card sitemap-hero__float-card--bottom" aria-hidden="true">
+                <div class="sitemap-hero__float-icon sitemap-hero__float-icon--coral">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <div class="sitemap-hero__float-text">
+                  <strong>Patient Portal</strong>
+                  <span>Fast Health Record Access</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 3: Accessible Structure -->
+              <div class="sitemap-hero__float-card sitemap-hero__float-card--badge" aria-hidden="true">
+                <div class="sitemap-hero__float-icon sitemap-hero__float-icon--gold">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="sitemap-hero__float-text">
+                  <strong>Accessible Structure</strong>
+                  <span class="sitemap-hero__stars">★★★★★ WCAG AA Standards</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Bottom Curve Transition into Sitemap Directory Section -->
+      <div class="sitemap-hero__curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none">
+          <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"></path>
+        </svg>
       </div>
     </section>
 
@@ -48,7 +175,7 @@
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6);">
             <section aria-labelledby="sitemap-main" style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
-              <h3 id="sitemap-main" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Main Pages</h3>
+              <h3 id="sitemap-main" style="scroll-margin-top: 100px;" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Main Pages</h3>
               <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem;">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="home2.html">Home 2</a></li>
@@ -61,7 +188,7 @@
             </section>
 
             <section aria-labelledby="sitemap-blog" style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
-              <h3 id="sitemap-blog" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Blog &amp; Resources</h3>
+              <h3 id="sitemap-blog" style="scroll-margin-top: 100px;" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Blog &amp; Resources</h3>
               <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem;">
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="blog-details.html">Blog Details</a></li>
@@ -69,7 +196,7 @@
             </section>
 
             <section aria-labelledby="sitemap-account" style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
-              <h3 id="sitemap-account" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Account &amp; Portal</h3>
+              <h3 id="sitemap-account" style="scroll-margin-top: 100px;" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Account &amp; Portal</h3>
               <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem;">
                 <li><a href="login.html">Login</a></li>
                 <li><a href="dashboard.html">User Dashboard</a></li>
@@ -78,7 +205,7 @@
             </section>
 
             <section aria-labelledby="sitemap-legal" style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
-              <h3 id="sitemap-legal" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Legal &amp; Utility</h3>
+              <h3 id="sitemap-legal" style="scroll-margin-top: 100px;" style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Legal &amp; Utility</h3>
               <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem;">
                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 <li><a href="terms-of-service.html">Terms of Service</a></li>
