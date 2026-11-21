@@ -182,177 +182,349 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 2: CONTACT INFORMATION ===== -->
-    <section class="section" id="info" style="background: var(--color-surface);" aria-labelledby="info-heading">
+    <!-- ===== SECTION 2: CLINIC CHANNELS & LIVE HOURS ===== -->
+    <section class="contact-channels-section" id="info" aria-labelledby="info-heading">
       <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Get In Touch</span>
-          <h2 id="info-heading" class="section-title">Clinic Contact Information</h2>
-          <div class="live-clinic-status" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.95rem; margin-top: 8px; color: var(--color-primary); background: var(--color-mint); padding: 4px 14px; border-radius: 50px;">
-            <span class="status-dot status-dot--online"></span>
-            <span>Checking Clinic Operating Status...</span>
+        <div class="contact-section-head reveal-on-scroll">
+          <div class="contact-section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Direct Hospital Communication</span>
+          </div>
+          <h2 id="info-heading" class="contact-section-title">
+            Direct Hospital Channels &amp; <span class="contact-title-accent">Operating Desk</span>
+          </h2>
+          <p class="contact-section-subtitle">
+            Whether scheduling routine wellness diagnostics or seeking advice during an emergency, our bedside veterinary team is accessible via phone, secure email, or in-person walk-in triage.
+          </p>
+
+          <!-- Live Dynamic Status Indicator -->
+          <div class="contact-status-bar">
+            <div class="live-clinic-status">
+              <span class="status-dot status-dot--online"></span>
+              <span>Checking Hospital Operating Status...</span>
+            </div>
+            <span class="contact-status-sep" aria-hidden="true">&bull;</span>
+            <span class="contact-status-sub">In-Person &amp; Emergency Trauma Triage Ready</span>
           </div>
         </div>
 
-        <div class="grid grid--4 reveal-on-scroll" style="margin-top: var(--space-8); gap: var(--space-6);">
-
-          <div class="service-card" style="text-align: left; padding: var(--space-6);">
-            <div class="service-card__icon" style="margin: 0 0 var(--space-4) 0;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <div class="contact-channels-grid reveal-on-scroll">
+          <!-- Channel 1: Primary Reception Desk -->
+          <div class="contact-channel-card">
+            <div class="contact-channel-icon contact-channel-icon--teal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.72 5.72l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: 6px;">Hospital Location</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 4px;">
-              123 Greenleaf Avenue<br/>Veterinary District, City, 10001
+            <div class="contact-channel-badge">Standard Enquiries</div>
+            <h3 class="contact-channel-title">Main Reception Desk</h3>
+            <p class="contact-channel-desc">
+              Appointments, general wellness questions, vaccination certificates &amp; pharmacy inquiries.
             </p>
-            <span style="font-size: 0.75rem; color: var(--color-primary); font-weight: 600;">Free on-site pet parent parking</span>
+            <div class="contact-channel-action">
+              <a href="tel:5551234567" class="contact-channel-link">
+                <strong>(555) 123-4567</strong>
+              </a>
+              <span class="contact-channel-meta">Mon &ndash; Fri 8am &ndash; 7pm &bull; Sat 9am &ndash; 5pm</span>
+            </div>
           </div>
 
-          <div class="service-card" style="text-align: left; padding: var(--space-6);">
-            <div class="service-card__icon" style="margin: 0 0 var(--space-4) 0;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.72 5.72l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <!-- Channel 2: 24/7 Emergency Triage (Featured Alert) -->
+          <div class="contact-channel-card contact-channel-card--urgent">
+            <div class="contact-urgent-badge">
+              <span class="contact-live-dot" aria-hidden="true"></span>
+              24/7 Critical Care
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: 6px;">Phone Numbers</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 4px;">
-              General: <strong>(555) 123-4567</strong><br/>
-              Urgent/24-7: <strong style="color: var(--color-coral);">(555) 123-4568</strong>
+            <div class="contact-channel-icon contact-channel-icon--coral">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="contact-channel-title">24/7 Emergency &amp; Trauma</h3>
+            <p class="contact-channel-desc">
+              Direct hotline to on-duty trauma surgeons and intensive care staff for acute emergencies.
             </p>
-            <span style="font-size: 0.75rem; color: var(--color-text-light);">Emergency line answered 24/7</span>
+            <div class="contact-channel-action">
+              <a href="tel:5551234568" class="contact-channel-link contact-channel-link--urgent">
+                <strong>(555) 123-4568</strong>
+              </a>
+              <span class="contact-channel-meta contact-channel-meta--alert">Call ahead so our trauma bay prepares oxygen &amp; fluids</span>
+            </div>
           </div>
 
-          <div class="service-card" style="text-align: left; padding: var(--space-6);">
-            <div class="service-card__icon" style="margin: 0 0 var(--space-4) 0;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <!-- Channel 3: Secure Email & Medical Records -->
+          <div class="contact-channel-card">
+            <div class="contact-channel-icon contact-channel-icon--gold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: 6px;">Email Contacts</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 4px;">
-              hello@pawhealth.com<br/>
-              records@pawhealth.com
+            <div class="contact-channel-badge">Records &amp; Insurance</div>
+            <h3 class="contact-channel-title">Email &amp; Records Desk</h3>
+            <p class="contact-channel-desc">
+              Submit past medical histories, insurance pre-approvals, or adoption paperwork electronically.
             </p>
-            <span style="font-size: 0.75rem; color: var(--color-text-light);">Average reply in 2–4 hours</span>
+            <div class="contact-channel-action">
+              <a href="mailto:hello@pawhealth.com" class="contact-channel-link">
+                <strong>hello@pawhealth.com</strong>
+              </a>
+              <span class="contact-channel-meta">Average reply time within 2&ndash;4 hours</span>
+            </div>
           </div>
 
-          <div class="service-card" style="text-align: left; padding: var(--space-6);">
-            <div class="service-card__icon" style="margin: 0 0 var(--space-4) 0;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <!-- Channel 4: Campus Location & Curbside -->
+          <div class="contact-channel-card">
+            <div class="contact-channel-icon contact-channel-icon--mint">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-charcoal); margin-bottom: 6px;">Hours of Care</h3>
-            <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 4px;">
-              Mon – Fri: 8:00 AM – 7:00 PM<br/>
-              Saturday: 9:00 AM – 5:00 PM<br/>
-              Sunday: Emergency On-Call
+            <div class="contact-channel-badge">Campus &amp; Parking</div>
+            <h3 class="contact-channel-title">Hospital Location</h3>
+            <p class="contact-channel-desc">
+              123 Greenleaf Avenue, Suite 100<br />
+              Veterinary District, City 10001
             </p>
-            <span style="font-size: 0.75rem; color: var(--color-coral); font-weight: 600;">Call ahead for emergency triage</span>
+            <div class="contact-channel-action">
+              <a href="#location" class="contact-channel-link">
+                <strong>View Directions &amp; Parking</strong>
+              </a>
+              <span class="contact-channel-meta">25 free client parking bays &amp; relief garden</span>
+            </div>
           </div>
+        </div>
 
+        <!-- Emergency Advisory Banner -->
+        <div class="contact-emergency-advisory reveal-on-scroll">
+          <div class="contact-emergency-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="contact-emergency-text">
+            <strong>Experiencing an Acute Veterinary Emergency?</strong>
+            <span>Do not wait for form responses. If your pet is struggling to breathe, collapsed, suspected of toxic ingestion, or actively bleeding, call our 24/7 trauma desk at <strong>(555) 123-4568</strong> or proceed immediately to 123 Greenleaf Avenue.</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 3: APPOINTMENT ENQUIRY FORM ===== -->
-    <section class="section" id="enquiry-form"><span id="appointment" style="position: absolute; top: -80px; visibility: hidden;"></span style="background: var(--color-surface-alt);" aria-labelledby="form-heading">
+    <!-- ===== SECTION 3: APPOINTMENT ENQUIRY SUITE ===== -->
+    <section class="contact-booking-section" id="enquiry-form" aria-labelledby="form-heading">
+      <span id="appointment" class="contact-anchor-target" aria-hidden="true"></span>
       <div class="container">
-        <div style="max-width: 860px; margin-inline: auto;">
-          <div class="section-header reveal-on-scroll" style="text-align: center; margin-bottom: var(--space-8);">
-            <span class="section-eyebrow">Online Booking Request</span>
-            <h2 id="form-heading" class="section-title">Schedule Your Pet's Appointment</h2>
-            <p class="section-subtitle">Complete this form and our client care team will confirm your preferred timeslot within 24 hours.</p>
+        <div class="contact-section-head reveal-on-scroll">
+          <div class="contact-section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Priority Online Scheduling</span>
+          </div>
+          <h2 id="form-heading" class="contact-section-title">
+            Schedule Your Pet's <span class="contact-title-accent">Appointment</span>
+          </h2>
+          <p class="contact-section-subtitle">
+            Submit your preferred time slot and details below. Our client coordinator will review your pet's needs and confirm your consultation via SMS and email within 2 hours.
+          </p>
+        </div>
+
+        <div class="contact-booking-layout reveal-on-scroll">
+          <!-- Left: Experience & Trust Card -->
+          <div class="contact-booking-sidebar">
+            <div class="contact-sidebar-card">
+              <h3 class="contact-sidebar-title">The PawHealth Promise</h3>
+              <p class="contact-sidebar-intro">
+                Veterinary medicine designed to minimize stress and maximize one-on-one doctor time.
+              </p>
+
+              <ul class="contact-sidebar-features" role="list">
+                <li>
+                  <div class="contact-sidebar-check">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div>
+                    <strong>Unhurried 30-Minute Visits</strong>
+                    <span>Twice the length of generic clinics, giving full time to examine and discuss care.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-sidebar-check">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div>
+                    <strong>Fear-Free&reg; Certified Handling</strong>
+                    <span>Separate dog and cat suites, non-slip mats, and gentle treats for stress-free exams.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-sidebar-check">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div>
+                    <strong>Itemized Estimates First</strong>
+                    <span>Clear fee breakdown approved before any diagnostic testing or procedure.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-sidebar-check">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div>
+                    <strong>Instant Digital Health Portal</strong>
+                    <span>All visit summaries, lab reports, and vaccination records accessible 24/7 on your phone.</span>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Testimonial Quote -->
+              <div class="contact-sidebar-quote">
+                <div class="contact-quote-stars">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <p>&ldquo;Booking online was effortless. Dr. Martinez had Max&rsquo;s full medical history loaded before we walked through the door. Truly premier care.&rdquo;</p>
+                <div class="contact-quote-author">
+                  <strong>Sarah T. &amp; Max</strong>
+                  <span>Golden Retriever &bull; Patient since 2023</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="card reveal-on-scroll" style="background: var(--color-surface); border-radius: var(--radius-2xl); padding: clamp(var(--space-6), 5vw, var(--space-12)); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border);">
-            <form id="appointmentEnquiryForm" novalidate>
-              <div class="grid grid--2" style="gap: var(--space-5);">
-
-                <div class="form-group">
-                  <label class="form-label" for="ownerName">Pet Owner Full Name <span class="required">*</span></label>
-                  <input type="text" id="ownerName" name="name" class="form-control" placeholder="e.g. Jane Doe" required />
+          <!-- Right: Interactive Booking Form -->
+          <div class="contact-booking-form-wrap">
+            <form id="appointmentEnquiryForm" class="contact-form" novalidate>
+              <div class="contact-form-grid">
+                <!-- Owner Details -->
+                <div class="contact-field-group">
+                  <label class="contact-label" for="ownerName">
+                    Pet Owner Full Name <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <input type="text" id="ownerName" name="name" class="contact-input" placeholder="e.g. Jane Doe" required />
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="ownerEmail">Email Address <span class="required">*</span></label>
-                  <input type="email" id="ownerEmail" name="email" class="form-control" placeholder="jane@example.com" required />
+                <div class="contact-field-group">
+                  <label class="contact-label" for="ownerEmail">
+                    Email Address <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <input type="email" id="ownerEmail" name="email" class="contact-input" placeholder="jane@example.com" required />
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="ownerPhone">Phone Number <span class="required">*</span></label>
-                  <input type="tel" id="ownerPhone" name="phone" class="form-control" placeholder="(555) 000-0000" required />
+                <div class="contact-field-group">
+                  <label class="contact-label" for="ownerPhone">
+                    Phone Number <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <input type="tel" id="ownerPhone" name="phone" class="contact-input" placeholder="(555) 000-0000" required />
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="petName">Pet's Name <span class="required">*</span></label>
-                  <input type="text" id="petName" name="petName" class="form-control" placeholder="e.g. Max" required />
+                <!-- Pet Details -->
+                <div class="contact-field-group">
+                  <label class="contact-label" for="petName">
+                    Pet's Name <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <input type="text" id="petName" name="petName" class="contact-input" placeholder="e.g. Max or Luna" required />
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="petType">Animal / Pet Type <span class="required">*</span></label>
-                  <select id="petType" name="petType" class="form-control" required>
-                    <option value="" disabled selected>Select pet type</option>
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                    <option value="Puppy">Puppy (Under 1 Year)</option>
-                    <option value="Kitten">Kitten (Under 1 Year)</option>
-                    <option value="Other">Other Small Companion</option>
-                  </select>
+                <div class="contact-field-group">
+                  <label class="contact-label" for="petType">
+                    Animal / Species <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <select id="petType" name="petType" class="contact-select" required>
+                      <option value="" disabled selected>Select pet species</option>
+                      <option value="Canine / Dog">Canine / Dog</option>
+                      <option value="Feline / Cat">Feline / Cat</option>
+                      <option value="Puppy (Under 1 Year)">Puppy (Under 1 Year)</option>
+                      <option value="Kitten (Under 1 Year)">Kitten (Under 1 Year)</option>
+                      <option value="Small Mammal / Other">Small Mammal / Other Companion</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="petAge">Pet's Age</label>
-                  <select id="petAge" name="petAge" class="form-control">
-                    <option value="Under 1 year">Under 1 year</option>
-                    <option value="1 - 3 years">1 – 3 years</option>
-                    <option value="4 - 7 years">4 – 7 years</option>
-                    <option value="8+ years (Senior)">8+ years (Senior)</option>
-                  </select>
+                <div class="contact-field-group">
+                  <label class="contact-label" for="petAge">
+                    Pet's Life Stage
+                  </label>
+                  <div class="contact-input-wrap">
+                    <select id="petAge" name="petAge" class="contact-select">
+                      <option value="Puppy / Kitten (&lt; 1 yr)">Puppy / Kitten (&lt; 1 year)</option>
+                      <option value="Young Adult (1 &ndash; 3 yrs)">Young Adult (1 &ndash; 3 years)</option>
+                      <option value="Mature Adult (4 &ndash; 7 yrs)" selected>Mature Adult (4 &ndash; 7 years)</option>
+                      <option value="Senior Golden (8+ yrs)">Senior Golden (8+ years)</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="serviceRequired">Service Required <span class="required">*</span></label>
-                  <select id="serviceRequired" name="service" class="form-control" required>
-                    <option value="" disabled selected>Select required service</option>
-                    <option value="General Health Checkup">General Wellness Checkup</option>
-                    <option value="Vaccination & Preventive Care">Vaccination &amp; Preventive Care</option>
-                    <option value="Dental Examination & Cleaning">Dental Examination &amp; Cleaning</option>
-                    <option value="Diagnostic Consultation / Lab">Diagnostic Blood / Lab Work</option>
-                    <option value="Surgical Consultation">Surgical Consultation</option>
-                    <option value="Urgent Illness / Injury">Urgent Medical Concern</option>
-                    <option value="Other">Other Specialized Care</option>
-                  </select>
+                <div class="contact-field-group contact-field-group--full">
+                  <label class="contact-label" for="serviceRequired">
+                    Primary Service Needed <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <select id="serviceRequired" name="service" class="contact-select" required>
+                      <option value="" disabled selected>Select required veterinary service</option>
+                      <option value="General Health Checkup">General Wellness &amp; Comprehensive Physical Exam</option>
+                      <option value="Vaccination & Preventive Care">Vaccination Boosters &amp; Parasite Prevention</option>
+                      <option value="Dental Examination & Cleaning">Dental Health Examination &amp; Ultrasonic Cleaning</option>
+                      <option value="Diagnostic Consultation / Lab">In-House Diagnostic Bloodwork / Imaging</option>
+                      <option value="Surgical Consultation">Pre-Surgical Consultation &amp; Plan</option>
+                      <option value="Urgent Illness / Injury">Urgent Illness / Acute Symptom Intake</option>
+                      <option value="Senior Companion Wellness">Senior Companion Geriatric Care</option>
+                      <option value="Other">Other Specialized Medical Care</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="prefDate">Preferred Date <span class="required">*</span></label>
-                  <input type="date" id="prefDate" name="date" class="form-control" required />
+                <div class="contact-field-group">
+                  <label class="contact-label" for="prefDate">
+                    Preferred Visit Date <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <input type="date" id="prefDate" name="date" class="contact-input" required />
+                  </div>
                 </div>
 
-                <div class="form-group" style="grid-column: 1 / -1;">
-                  <label class="form-label" for="prefTime">Preferred Time Slot <span class="required">*</span></label>
-                  <select id="prefTime" name="time" class="form-control" required>
-                    <option value="Morning (8:00 AM - 10:00 AM)">Morning (8:00 AM – 10:00 AM)</option>
-                    <option value="Late Morning (10:00 AM - 12:00 PM)">Late Morning (10:00 AM – 12:00 PM)</option>
-                    <option value="Afternoon (12:00 PM - 3:00 PM)">Afternoon (12:00 PM – 3:00 PM)</option>
-                    <option value="Late Afternoon (3:00 PM - 5:00 PM)">Late Afternoon (3:00 PM – 5:00 PM)</option>
-                    <option value="Evening (5:00 PM - 7:00 PM)">Evening (5:00 PM – 7:00 PM)</option>
-                  </select>
+                <div class="contact-field-group">
+                  <label class="contact-label" for="prefTime">
+                    Preferred Time Slot <span class="contact-req">*</span>
+                  </label>
+                  <div class="contact-input-wrap">
+                    <select id="prefTime" name="time" class="contact-select" required>
+                      <option value="Morning (8:00 AM - 10:00 AM)">Morning (8:00 AM &ndash; 10:00 AM)</option>
+                      <option value="Late Morning (10:00 AM - 12:00 PM)">Late Morning (10:00 AM &ndash; 12:00 PM)</option>
+                      <option value="Early Afternoon (12:00 PM - 3:00 PM)">Early Afternoon (12:00 PM &ndash; 3:00 PM)</option>
+                      <option value="Late Afternoon (3:00 PM - 5:00 PM)">Late Afternoon (3:00 PM &ndash; 5:00 PM)</option>
+                      <option value="Evening (5:00 PM - 7:00 PM)">Evening (5:00 PM &ndash; 7:00 PM)</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="form-group" style="grid-column: 1 / -1;">
-                  <label class="form-label" for="enquiryMessage">Reason for Visit / Symptoms or Special Notes</label>
-                  <textarea id="enquiryMessage" name="message" class="form-control" rows="4" placeholder="Please describe any symptoms, behavioral changes, or specific questions for our veterinary team..."></textarea>
+                <div class="contact-field-group contact-field-group--full">
+                  <label class="contact-label" for="enquiryMessage">
+                    Reason for Visit / Symptoms or Dietary Notes
+                  </label>
+                  <div class="contact-input-wrap">
+                    <textarea id="enquiryMessage" name="message" class="contact-textarea" rows="4" placeholder="Please describe any observed symptoms, dietary changes, behavioral notes, or questions for our veterinary doctors..."></textarea>
+                  </div>
                 </div>
-
               </div>
 
-              <div class="form-check" style="margin-bottom: var(--space-6);">
-                <input type="checkbox" id="existingPatient" name="existingPatient" />
-                <label for="existingPatient" style="font-size: 0.85rem; color: var(--color-text-muted);">
-                  This pet is an existing patient registered at PawHealth.
+              <!-- Checkbox: Existing Patient -->
+              <div class="contact-checkbox-wrap">
+                <input type="checkbox" id="existingPatient" name="existingPatient" class="contact-checkbox" />
+                <label for="existingPatient" class="contact-checkbox-label">
+                  This pet is an existing patient already registered with PawHealth.
                 </label>
               </div>
 
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4);">
-                <span style="font-size: 0.8rem; color: var(--color-text-light);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Your medical privacy is protected. Never shared with third parties.
-                </span>
-                <button type="submit" class="btn btn--primary btn--large">Submit Appointment Enquiry</button>
+              <!-- Form Action Bar -->
+              <div class="contact-form-footer">
+                <div class="contact-privacy-note">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Your medical data is secure. We never share contact details.</span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--large contact-submit-btn">
+                  <span>Submit Appointment Enquiry</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
               </div>
             </form>
           </div>
@@ -360,160 +532,239 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 4: CLINIC LOCATION ===== -->
-    <section class="section" id="location" style="background: var(--color-surface);" aria-labelledby="location-heading">
+    <!-- ===== SECTION 4: CLINIC CAMPUS & DIRECTIONS ===== -->
+    <section class="contact-location-section" id="location" aria-labelledby="location-heading">
       <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Find Our Hospital</span>
-          <h2 id="location-heading" class="section-title">Convenient Clinic Location &amp; Parking</h2>
-          <p class="section-subtitle">Easily accessible from major avenues with dedicated, stress-free animal drop-off bays.</p>
+        <div class="contact-section-head reveal-on-scroll">
+          <div class="contact-section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Campus Location &amp; Directions</span>
+          </div>
+          <h2 id="location-heading" class="contact-section-title">
+            Visit Our Welcoming <span class="contact-title-accent">Hospital Campus</span>
+          </h2>
+          <p class="contact-section-subtitle">
+            Centrally situated in the veterinary medical district, with dedicated client parking bays and a low-stress pet relief garden.
+          </p>
         </div>
 
-        <div class="grid grid--2 reveal-on-scroll" style="gap: var(--space-8); align-items: center; margin-top: var(--space-8);">
+        <div class="contact-location-grid reveal-on-scroll">
+          <!-- Interactive Location Showcase Card -->
+          <div class="contact-map-card">
+            <div class="contact-map-visual">
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" alt="PawHealth Animal Hospital modern campus aerial view" class="contact-map-img" loading="lazy" />
+              <div class="contact-map-overlay-layer" aria-hidden="true"></div>
 
-          <!-- Map placeholder with clear editable note -->
-          <div style="border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid var(--color-border); position: relative; min-height: 380px;">
-            <img src="https://picsum.photos/seed/map-placeholder/1200/500" alt="Clinic location map preview" style="width: 100%; height: 380px; object-fit: cover; display: block;" />
-            <div style="position: absolute; inset: 0; background: rgba(36,92,72,0.15); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-6); text-align: center;">
-              <div style="background: var(--color-surface, #fff); padding: var(--space-4) var(--space-6); border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); max-width: 380px;">
-                <span style="font-size: 1.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-                <h4 style="font-family: var(--font-heading); color: var(--color-charcoal); margin-bottom: 4px;">PawHealth Animal Hospital</h4>
-                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 8px;">123 Greenleaf Avenue, Veterinary District, City 10001</p>
-                <span style="font-size: 0.75rem; background: var(--color-mint); color: var(--color-primary); padding: 3px 10px; border-radius: 50px; font-weight: 700;">Sample Location Preview</span>
+              <!-- Floating Campus Pin Badge -->
+              <div class="contact-map-pin-card">
+                <div class="contact-map-pin-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <strong class="contact-map-pin-name">PawHealth Animal Hospital</strong>
+                  <span class="contact-map-pin-addr">123 Greenleaf Ave, Suite 100</span>
+                  <div class="contact-map-pin-links">
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="contact-map-action-link">Google Maps &rarr;</a>
+                    <a href="https://maps.apple.com" target="_blank" rel="noopener noreferrer" class="contact-map-action-link">Apple Maps &rarr;</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Curbside Badge -->
+              <div class="contact-curbside-pill">
+                <span class="contact-pulse-curbside" aria-hidden="true"></span>
+                <span>25 Free Reserved Pet Owner Spaces</span>
               </div>
             </div>
           </div>
 
-          <div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Directions &amp; Arrival Protocol</h3>
-            <p style="font-size: 0.95rem; color: var(--color-text); line-height: 1.7; margin-bottom: var(--space-4);">
-              PawHealth is centrally situated in the veterinary medical district, 5 minutes from Central Parkway with direct access to regional transit.
+          <!-- Directions & Arrival Protocol -->
+          <div class="contact-arrival-card">
+            <h3 class="contact-arrival-title">Arrival Protocol &amp; Directions</h3>
+            <p class="contact-arrival-intro">
+              Conveniently located 4 minutes from Central Parkway with barrier-free ground entrance for strollers, pet carriers, and mobility carts.
             </p>
 
-            <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-6) 0; display: flex; flex-direction: column; gap: var(--space-3);">
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start; font-size: 0.9rem;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13 5 7h14l2 6"/><path d="M5 13h14v5H5z"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="16.5" cy="18" r="1.5"/></svg></span>
-                <span><strong>Complimentary Parking:</strong> 25 dedicated client parking spaces immediately behind the clinic, including 4 wide emergency discharge bays.</span>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start; font-size: 0.9rem;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6v6"/><path d="M16 6v6"/><path d="M2 12h20"/><path d="M7 18h.01"/><path d="M17 18h.01"/><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/></svg></span>
-                <span><strong>Public Transit:</strong> Bus lines #12 and #45 stop directly in front of our main entrance (Greenleaf Ave Station).</span>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start; font-size: 0.9rem;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.96-1.45-2.344-2.5"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309"/><path d="M9 13s.5 1 3 1 3-1 3-1"/></svg></span>
-                <span><strong>Pet Relief Area:</strong> A sanitized, enclosed grass lawn is available right outside reception so dogs can relieve themselves comfortably before visits.</span>
-              </li>
-            </ul>
+            <div class="contact-transport-list">
+              <div class="contact-transport-item">
+                <div class="contact-transport-icon contact-transport-icon--car">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>
+                </div>
+                <div>
+                  <strong>Dedicated Client Parking</strong>
+                  <p>25 free spaces situated immediately behind our clinic, including 4 extra-wide bays reserved for rapid emergency and surgical discharge.</p>
+                </div>
+              </div>
 
-            <div style="background: var(--color-cream); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-yellow); font-size: 0.85rem; color: var(--color-charcoal);">
-              <strong>Note on Custom Maps:</strong> Replace this sample preview with your preferred Google Maps iframe embed or custom clinic coordinates.
+              <div class="contact-transport-item">
+                <div class="contact-transport-icon contact-transport-icon--bus">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M3 10h18"></path><path d="M8 21v-3"></path><path d="M16 21v-3"></path></svg>
+                </div>
+                <div>
+                  <strong>Public Transit Access</strong>
+                  <p>Metropolitan bus routes #12 and #45 stop directly in front of our hospital lobby at the Greenleaf Ave Medical Station.</p>
+                </div>
+              </div>
+
+              <div class="contact-transport-item">
+                <div class="contact-transport-icon contact-transport-icon--grass">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div>
+                  <strong>Sanitized Pet Relief Garden</strong>
+                  <p>A double-gated, enclosed grass yard right beside reception allows dogs to relieve themselves comfortably before stepping into exam rooms.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Curbside Check-in Notice -->
+            <div class="contact-curbside-box">
+              <div class="contact-curbside-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <div class="contact-curbside-text">
+                <strong>Anxious or Reactive Companion?</strong>
+                <span>Text our desk upon arrival from your car at <strong>(555) 123-4567</strong>. We will escort you directly into a private exam room so your pet avoids the waiting lobby.</span>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 5: WHAT TO EXPECT ===== -->
-    <section class="section" id="expect" style="background: var(--color-surface-alt);" aria-labelledby="expect-heading">
+    <!-- ===== SECTION 5: WHAT TO EXPECT DURING YOUR VISIT ===== -->
+    <section class="contact-expect-section" id="expect" aria-labelledby="expect-heading">
       <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Smooth Visit</span>
-          <h2 id="expect-heading" class="section-title">What to Expect During Your Visit</h2>
-          <p class="section-subtitle">How our team prepares for your appointment and what to bring to ensure your pet has a stress-free experience.</p>
+        <div class="contact-section-head reveal-on-scroll">
+          <div class="contact-section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            <span>Patient Journey</span>
+          </div>
+          <h2 id="expect-heading" class="contact-section-title">
+            What to Expect During <span class="contact-title-accent">Your Visit</span>
+          </h2>
+          <p class="contact-section-subtitle">
+            From initial booking to take-home care roadmaps, our 4-step consultation flow ensures your pet receives compassionate, transparent veterinary medicine.
+          </p>
         </div>
 
-        <div class="grid grid--2 reveal-on-scroll" style="gap: var(--space-8); margin-top: var(--space-8);">
+        <!-- 4-Step Patient Journey Cards -->
+        <div class="contact-steps-grid reveal-on-scroll">
+          <div class="contact-step-card">
+            <div class="contact-step-num">01</div>
+            <h3 class="contact-step-title">Online Request</h3>
+            <p class="contact-step-desc">
+              Submit your desired date, symptoms, and service online. Our intake nurses prepare your pet&rsquo;s clinical file.
+            </p>
+          </div>
 
-          <!-- 4-step process -->
-          <div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">The 4-Step Booking Process</h3>
+          <div class="contact-step-card">
+            <div class="contact-step-num">02</div>
+            <h3 class="contact-step-title">Fast Confirmation</h3>
+            <p class="contact-step-desc">
+              We send an SMS and email confirming your exact consultation time and provide pre-visit fasting or medication notes.
+            </p>
+          </div>
 
-            <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-              <div style="display: flex; gap: var(--space-4); background: var(--color-surface); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-border);">
-                <div style="width: 36px; height: 36px; border-radius: 50%; background: #245C48; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
-                <div>
-                  <h4 style="font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 2px;">Submit Enquiry</h4>
-                  <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">Fill out our online booking form or call our intake desk directly.</p>
-                </div>
-              </div>
+          <div class="contact-step-card">
+            <div class="contact-step-num">03</div>
+            <h3 class="contact-step-title">Unhurried Exam</h3>
+            <p class="contact-step-desc">
+              A 30-minute face-to-face with your veterinary doctor covering nose-to-tail physical health, body scoring, and open Q&amp;A.
+            </p>
+          </div>
 
-              <div style="display: flex; gap: var(--space-4); background: var(--color-surface); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-border);">
-                <div style="width: 36px; height: 36px; border-radius: 50%; background: #245C48; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
-                <div>
-                  <h4 style="font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 2px;">Confirmation Contact</h4>
-                  <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">We contact you via phone or email within 24 hours with exact timeslot details.</p>
-                </div>
-              </div>
+          <div class="contact-step-card">
+            <div class="contact-step-num">04</div>
+            <h3 class="contact-step-title">Portal Sync &amp; Care</h3>
+            <p class="contact-step-desc">
+              Within 2 hours, your visit summary, lab diagnostics, and prescription dosing instructions are accessible on your phone.
+            </p>
+          </div>
+        </div>
 
-              <div style="display: flex; gap: var(--space-4); background: var(--color-surface); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-border);">
-                <div style="width: 36px; height: 36px; border-radius: 50%; background: #245C48; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
-                <div>
-                  <h4 style="font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 2px;">Pre-Visit Preparation</h4>
-                  <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">We send friendly reminder instructions (fasting if blood test required, etc.).</p>
-                </div>
-              </div>
-
-              <div style="display: flex; gap: var(--space-4); background: var(--color-surface); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-border);">
-                <div style="width: 36px; height: 36px; border-radius: 50%; background: #245C48; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">4</div>
-                <div>
-                  <h4 style="font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 2px;">Your Pet's Visit</h4>
-                  <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">Gentle check-in, unhurried veterinary examination, and clear treatment discussion.</p>
-                </div>
-              </div>
+        <!-- What to Bring Checklist -->
+        <div class="contact-checklist-card reveal-on-scroll">
+          <div class="contact-checklist-header">
+            <div class="contact-checklist-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+            </div>
+            <div>
+              <h3 class="contact-checklist-title">Checklist for Your Pet's Appointment</h3>
+              <span class="contact-checklist-sub">Bringing these items allows our veterinary team to perform an exhaustive evaluation</span>
             </div>
           </div>
 
-          <!-- What to bring checklist -->
-          <div style="background: var(--color-surface); padding: var(--space-8); border-radius: var(--radius-2xl); border: 2px solid var(--color-mint); box-shadow: var(--shadow-md);">
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-charcoal); margin-bottom: var(--space-4);">Checklist for Pet Owners</h3>
-            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: var(--space-5);">
-              Bringing the right items helps our veterinary doctors review past medical history accurately:
-            </p>
+          <div class="contact-checklist-grid">
+            <div class="contact-check-item">
+              <div class="contact-check-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <strong>Prior Medical &amp; Vaccine Records</strong>
+                <p>Physical health booklets or digital records from previous veterinary clinics for vaccine reconciliation.</p>
+              </div>
+            </div>
 
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-3);">
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start; font-size: 0.9rem;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <span><strong>Past Health &amp; Vaccine Records:</strong> Physical booklets or digital records from previous veterinary clinics.</span>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start; font-size: 0.9rem;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <span><strong>Current Prescriptions:</strong> Medication bottles, supplements, or dietary formulas currently given.</span>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start; font-size: 0.9rem;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <span><strong>Safe Transport:</strong> Secure cat carrier or well-fitted dog harness/leash.</span>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start; font-size: 0.9rem;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <span><strong>Comfort Blanket or Treat:</strong> Familiar scents reduce animal anxiety in medical environments.</span>
-              </li>
-            </ul>
+            <div class="contact-check-item">
+              <div class="contact-check-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <strong>Current Medication Bottles</strong>
+                <p>Bring active prescription bottles, flea/tick preventatives, or dietary supplements currently administered.</p>
+              </div>
+            </div>
+
+            <div class="contact-check-item">
+              <div class="contact-check-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <strong>Secure Transport Equipment</strong>
+                <p>Hard-sided cat carrier or well-fitted dog harness/leash to maintain safety in reception and transit.</p>
+              </div>
+            </div>
+
+            <div class="contact-check-item">
+              <div class="contact-check-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <strong>Familiar Comfort Blanket or Scent</strong>
+                <p>A familiar blanket or favorite chew toy provides positive sensory reinforcement in the exam suite.</p>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 6: FREQUENTLY ASKED QUESTIONS ===== -->
-    <section class="section" id="faq" style="background: var(--color-surface);" aria-labelledby="contact-faq-heading">
+    <!-- ===== SECTION 6: FREQUENTLY ASKED QUESTIONS & CTA ===== -->
+    <section class="contact-faq-section" id="faq" aria-labelledby="contact-faq-heading">
       <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Helpful Answers</span>
-          <h2 id="contact-faq-heading" class="section-title">Contact &amp; Appointment FAQs</h2>
-          <p class="section-subtitle">Common queries regarding appointments, emergency protocols, and clinic procedures.</p>
+        <div class="contact-section-head reveal-on-scroll">
+          <div class="contact-section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Clear Information</span>
+          </div>
+          <h2 id="contact-faq-heading" class="contact-section-title">
+            Contact &amp; Appointment <span class="contact-title-accent">FAQs</span>
+          </h2>
+          <p class="contact-section-subtitle">
+            Answers to common questions regarding our booking procedure, arrival guidelines, and hospital emergency triage.
+          </p>
         </div>
 
-        <div style="max-width: 820px; margin-inline: auto;" class="reveal-on-scroll">
+        <div class="contact-faq-container reveal-on-scroll">
           <div class="accordion" data-single="true">
-
             <div class="accordion-item active">
               <button class="accordion-header" aria-expanded="true">
-                <span>How far in advance should I book a routine checkup?</span>
+                <span>How far in advance should I book a routine wellness exam?</span>
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>For routine wellness examinations, preventive vaccines, and dental checkups, we recommend booking 3 to 7 days in advance. For same-day sick animal concerns, call our urgent line early in the morning so we can triage your pet into our reserved urgent slots.</p>
+                <p>For routine wellness examinations, annual booster vaccinations, and dental checkups, we recommend booking 3 to 7 days in advance. For sick animals or sudden symptoms, call our clinic desk early in the morning so we can triage your pet into our reserved daily urgent slots.</p>
               </div>
             </div>
 
@@ -523,7 +774,7 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>We accept walk-ins for true acute medical emergencies. However, to maintain low-stress consultation rooms and avoid long waiting room times for animals, all routine exams must be scheduled in advance.</p>
+                <p>We accept walk-ins for acute emergencies and severe trauma. However, to preserve low-stress private rooms and eliminate long waiting times for animals, all routine preventative examinations must be scheduled in advance.</p>
               </div>
             </div>
 
@@ -533,7 +784,7 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>In cases of severe trauma, collapse, difficulty breathing, toxic ingestion, or bloat, call our emergency line immediately at <strong>(555) 123-4568</strong> before traveling. Calling ahead allows our veterinary surgical team to prepare oxygen, IV fluids, and the trauma bay before you arrive.</p>
+                <p>In cases of severe trauma, collapse, difficulty breathing, toxic ingestion, or bloat, call our emergency line immediately at <strong>(555) 123-4568</strong> prior to transit. Calling ahead allows our veterinary surgical team to prepare oxygen, IV fluids, and the trauma bay before you arrive.</p>
               </div>
             </div>
 
@@ -543,7 +794,7 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>We accept all major credit and debit cards, contactless payments, and cash. We work with all leading pet health insurance providers and will gladly provide itemized medical receipts and direct electronic claim submissions.</p>
+                <p>We accept all major credit and debit cards, Apple Pay, Google Pay, and cash. We work seamlessly with all leading pet insurance companies (e.g., Trupanion, Nationwide, Healthy Paws, Lemonade) and provide itemized digital receipts with veterinary diagnostic codes for fast claim reimbursement. Flexible 0% financing is available via CareCredit and Scratchpay.</p>
               </div>
             </div>
 
@@ -553,7 +804,7 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>You can request rescheduling or cancellation with one click inside your Pet Owner Dashboard under "My Appointments", or by calling our desk. We kindly request at least 24 hours notice so another pet in need can receive care.</p>
+                <p>You can reschedule or cancel with one click inside your Pet Owner Dashboard under &ldquo;My Appointments&rdquo;, or by calling our desk. We kindly request at least 24 hours notice so another pet in need can receive timely care.</p>
               </div>
             </div>
 
@@ -563,7 +814,7 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>Our standard appointments are 30 minutes — twice as long as generic veterinary clinics. This gives our doctors ample time to perform a gentle physical exam, discuss lifestyle habits, and answer all your questions without rushing.</p>
+                <p>Our standard appointments are 30 minutes &mdash; twice as long as generic veterinary clinics. This gives our doctors ample time to perform an unhurried physical exam, review lifestyle habits, and answer all your questions without rushing.</p>
               </div>
             </div>
 
@@ -573,20 +824,50 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>Yes! We offer multi-pet family appointments in our larger family consultation suites. Please note in your booking enquiry that you have multiple animals so we can reserve an extended 60-minute consultation window.</p>
+                <p>Yes! We offer multi-pet family appointments in our larger family consultation suites. Please note in your booking enquiry that you have multiple animals so we can reserve an extended 60-minute consultation window and apply our 10% multi-pet examination discount.</p>
               </div>
             </div>
 
             <div class="accordion-item">
               <button class="accordion-header" aria-expanded="false">
-                <span>How do I access my pet's vaccination certificates digitally?</span>
+                <span>How do I access my pet's medical records digitally?</span>
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
               <div class="accordion-body">
-                <p>All registered pet parents have 24/7 access to the Pet Owner Dashboard. Simply log in to view and print official vaccination certificates, medical summaries, and medication dosage records anytime.</p>
+                <p>All registered pet parents have 24/7 access to the Pet Owner Dashboard. Simply log in to view and download official vaccination certificates, doctor examination notes, blood chemistry panels, and medication dosage records anytime.</p>
               </div>
             </div>
+          </div>
+        </div>
 
+        <!-- Grand Emerald Gradient CTA Box -->
+        <div class="contact-cta-card reveal-on-scroll">
+          <div class="contact-cta-glow contact-cta-glow--1" aria-hidden="true"></div>
+          <div class="contact-cta-glow contact-cta-glow--2" aria-hidden="true"></div>
+
+          <div class="contact-cta-content">
+            <span class="contact-cta-badge">Always Here for Your Pet</span>
+            <h3 class="contact-cta-title">Ready to Experience Compassionate Veterinary Care?</h3>
+            <p class="contact-cta-sub">
+              Schedule your appointment online today, or call our desk directly for urgent triage advice.
+            </p>
+
+            <div class="contact-cta-actions">
+              <a href="#enquiry-form" class="btn btn--white btn--large contact-cta-btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Book Appointment Online</span>
+              </a>
+              <a href="tel:5551234567" class="btn btn--outline-white btn--large contact-cta-btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Call Desk: (555) 123-4567</span>
+              </a>
+            </div>
+
+            <div class="contact-cta-trust-strip">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Same-Day Triage Available</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Free On-Site Pet Parking</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Fear-Free&reg; Certified Team</span>
+            </div>
           </div>
         </div>
       </div>
