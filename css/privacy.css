@@ -1,0 +1,580 @@
+/* ============================================================
+   privacy.css — PawHealth Privacy Policy Page Styles
+   ============================================================ */
+
+/* ---- Privacy Hero ---- */
+.privacy-hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(40, 109, 115, 0.45) 0%, transparent 60%),
+    radial-gradient(circle at 10% 85%, rgba(232, 160, 32, 0.16) 0%, transparent 45%),
+    linear-gradient(135deg, #0d2621 0%, #153e35 38%, #1c5449 75%, #12372f 100%);
+  padding-bottom: 3.5rem;
+}
+
+[data-theme="dark"] .privacy-hero {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(99, 198, 206, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 10% 85%, rgba(232, 160, 32, 0.1) 0%, transparent 45%),
+    linear-gradient(135deg, #091a16 0%, #0e2720 40%, #0c211a 100%);
+}
+
+.privacy-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://i.pinimg.com/736x/7a/7d/e2/7a7de2be48afed87656984f21c330f3a.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(1.2);
+  transform: scale(1.04);
+  transition: transform 8s ease-out;
+  pointer-events: none;
+}
+
+.privacy-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(65px);
+  z-index: 1;
+}
+
+.privacy-hero__glow--1 {
+  top: -80px;
+  right: 10%;
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(40, 109, 115, 0.4) 0%, transparent 70%);
+}
+
+.privacy-hero__glow--2 {
+  bottom: 8%;
+  left: -60px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(232, 160, 32, 0.22) 0%, transparent 70%);
+}
+
+.privacy-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 38, 33, 0.55) 0%,
+    rgba(13, 38, 33, 0.75) 50%,
+    rgba(13, 38, 33, 0.92) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.privacy-hero__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.95fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(44px, 7vw, 76px) 0 clamp(48px, 8vw, 80px);
+}
+
+.privacy-hero__content {
+  position: relative;
+  color: #ffffff;
+}
+
+/* Breadcrumb */
+.privacy-hero__breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 5px 14px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.privacy-hero__breadcrumb a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color var(--transition-fast);
+}
+
+.privacy-hero__breadcrumb a:hover,
+.privacy-hero__breadcrumb a:focus-visible {
+  color: #ffffff;
+}
+
+.privacy-hero__breadcrumb-sep {
+  opacity: 0.6;
+  font-size: 0.75rem;
+}
+
+/* Eyebrow Live Badge */
+.privacy-hero__pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: var(--space-4);
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.02em;
+}
+
+.privacy-hero__pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #48bb78;
+  box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7);
+  animation: pulseGlow 2s infinite;
+  flex-shrink: 0;
+}
+
+/* Title & Accent */
+.privacy-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.privacy-hero__title-accent {
+  background: linear-gradient(135deg, #F2C66D 0%, #F28B78 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.privacy-hero__sub {
+  font-size: clamp(0.98rem, 1.4vw, 1.12rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.65;
+  max-width: 62ch;
+  margin-bottom: var(--space-6);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Quick Jump Category Pills */
+.privacy-hero__pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.privacy-cat-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.privacy-cat-link svg {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.privacy-cat-link:hover,
+.privacy-cat-link:focus-visible {
+  background: #ffffff;
+  color: var(--color-deep-teal, #153c34);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.privacy-cat-link:hover svg,
+.privacy-cat-link:focus-visible svg {
+  stroke: var(--color-deep-teal, #153c34);
+}
+
+/* Dual CTAs */
+.privacy-hero__cta-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.privacy-hero__cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(36, 92, 72, 0.35);
+}
+
+.privacy-hero__cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.privacy-hero__cta-secondary:hover,
+.privacy-hero__cta-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+/* Notice Banner */
+.privacy-hero__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(40, 109, 115, 0.25);
+  border: 1px solid rgba(99, 198, 206, 0.35);
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin-bottom: var(--space-8);
+  backdrop-filter: blur(8px);
+  max-width: 640px;
+}
+
+.privacy-hero__notice-icon {
+  color: #63c6ce;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.privacy-hero__notice-text {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.5;
+}
+
+.privacy-hero__notice-text strong {
+  color: #63c6ce;
+}
+
+/* 4-Item Trust Metrics Bar */
+.privacy-hero__stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.privacy-hero__stat-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px 14px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.privacy-hero__stat-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.privacy-hero__stat-num {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+  font-weight: 800;
+  color: #F2C66D;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.privacy-hero__stat-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.25;
+}
+
+/* Right Visual Collage */
+.privacy-hero__visual {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+.privacy-hero__image-wrap {
+  position: relative;
+  border-radius: 28px;
+  overflow: visible;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.38);
+}
+
+.privacy-hero__image {
+  width: 100%;
+  height: clamp(380px, 46vw, 530px);
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  display: block;
+}
+
+.privacy-hero__image-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+}
+
+/* Floating Micro-Cards */
+.privacy-hero__float-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  background: rgba(13, 38, 33, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
+  z-index: 3;
+  color: #ffffff;
+  max-width: 260px;
+  animation: floatSubtle 4.5s ease-in-out infinite;
+}
+
+.privacy-hero__float-card--top {
+  top: 28px;
+  left: -24px;
+  animation-delay: 0s;
+}
+
+.privacy-hero__float-card--bottom {
+  bottom: 50px;
+  right: -24px;
+  animation-delay: 1.8s;
+}
+
+.privacy-hero__float-card--badge {
+  bottom: -16px;
+  left: 24px;
+  animation-delay: 0.9s;
+}
+
+.privacy-hero__float-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.privacy-hero__float-icon--teal {
+  background: rgba(40, 109, 115, 0.35);
+  color: #63c6ce;
+}
+
+.privacy-hero__float-icon--coral {
+  background: rgba(242, 139, 120, 0.28);
+  color: #F28B78;
+}
+
+.privacy-hero__float-icon--gold {
+  background: rgba(242, 198, 109, 0.28);
+  color: #F2C66D;
+}
+
+.privacy-hero__float-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.privacy-hero__float-text strong {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.privacy-hero__float-text span {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.2;
+}
+
+.privacy-hero__stars {
+  color: #F2C66D !important;
+  font-weight: 600;
+}
+
+/* Bottom Curve Divider */
+.privacy-hero__curve {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.privacy-hero__curve svg {
+  width: 100%;
+  height: clamp(28px, 4vw, 48px);
+  display: block;
+}
+
+.privacy-hero__curve path {
+  fill: var(--color-bg, #F6F8F5);
+}
+
+[data-theme="dark"] .privacy-hero__curve path {
+  fill: var(--color-bg, #111916);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .privacy-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .privacy-hero__visual {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .privacy-hero__float-card--top {
+    left: 8px;
+  }
+
+  .privacy-hero__float-card--bottom {
+    right: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .privacy-hero {
+    padding-bottom: 2.5rem;
+  }
+
+  .privacy-hero__inner {
+    padding: 36px 0 48px;
+  }
+
+  .privacy-hero__cta-group {
+    flex-direction: column;
+  }
+
+  .privacy-hero__cta-primary,
+  .privacy-hero__cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .privacy-hero__stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .privacy-hero__float-card {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .privacy-hero__float-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .privacy-hero__float-card--top {
+    top: 14px;
+    left: 4px;
+  }
+
+  .privacy-hero__float-card--bottom {
+    bottom: 30px;
+    right: 4px;
+  }
+
+  .privacy-hero__float-card--badge {
+    bottom: -12px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .privacy-hero__pills {
+    gap: 6px;
+  }
+
+  .privacy-cat-link {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+  }
+
+  .privacy-hero__stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .privacy-hero__stat-card {
+    padding: 8px 10px;
+  }
+
+  .privacy-hero__float-card {
+    position: static;
+    margin-top: 10px;
+    max-width: 100%;
+    animation: none;
+  }
+
+  .privacy-hero__float-card--top,
+  .privacy-hero__float-card--bottom,
+  .privacy-hero__float-card--badge {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+}
