@@ -32,33 +32,151 @@
     <!-- ===== SECTION 1: PRICING HERO ===== -->
     <section class="pricing-hero" aria-label="Transparent Veterinary Pricing Hero">
       <div class="pricing-hero__bg" role="img" aria-label="Veterinarian with pet owner discussing treatment"></div>
+      <div class="pricing-hero__glow pricing-hero__glow--1" aria-hidden="true"></div>
+      <div class="pricing-hero__glow pricing-hero__glow--2" aria-hidden="true"></div>
+      <div class="pricing-hero__overlay" aria-hidden="true"></div>
 
       <div class="container">
         <div class="pricing-hero__inner">
+          <!-- Left Content Column -->
           <div class="pricing-hero__content reveal-on-scroll">
-            <nav class="about-hero__breadcrumb" aria-label="Breadcrumb" style="margin-bottom: var(--space-4);">
-              <a href="../index.html">Home</a>
-              <span class="about-hero__breadcrumb-sep" aria-hidden="true">/</span>
-              <span>Pricing</span>
+            <nav class="pricing-hero__breadcrumb" aria-label="Breadcrumb">
+              <a href="../index.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Home</span>
+              </a>
+              <span class="pricing-hero__breadcrumb-sep" aria-hidden="true">/</span>
+              <span>Pricing &amp; Care Plans</span>
             </nav>
 
-            <span class="pricing-hero__tag">Fair &amp; Transparent</span>
-            <h1 class="pricing-hero__title">Transparent Veterinary Pricing &amp; Care Plans</h1>
+            <div class="pricing-hero__pill-badge">
+              <span class="pricing-hero__pulse-dot" aria-hidden="true"></span>
+              <span>100% Upfront Pricing • No Surprise Medical Fees</span>
+            </div>
+
+            <h1 class="pricing-hero__title">
+              Transparent Veterinary Pricing &amp; <span class="pricing-hero__title-accent">Care Plans</span>
+            </h1>
+
             <p class="pricing-hero__sub">
-              We believe that veterinary care should never involve surprise bills. Our pricing is straightforward, honest, and explained in advance with itemized estimates.
+              We believe veterinary care should never involve surprise bills. Our pricing is straightforward, fully itemized in advance, and designed to provide compassionate medical care that fits your family's budget.
             </p>
 
-            <div style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-5); display: inline-flex; align-items: center; gap: var(--space-3); max-width: 650px;">
-              <span style="font-size: 1.25rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
-              <span style="font-size: 0.85rem; color: #fff;">
-                <strong>Demonstration Notice:</strong> All fees displayed are representative sample rates for illustrative purposes. Please contact our clinic for an accurate written medical estimate tailored to your pet.
+            <!-- Quick Jump Category Navigation Pills -->
+            <div class="pricing-hero__pills" role="navigation" aria-label="Quick jump to pricing categories">
+              <a href="#consultations" class="pricing-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                <span>Consultations</span>
+              </a>
+              <a href="#packages" class="pricing-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Wellness Plans</span>
+              </a>
+              <a href="#treatments" class="pricing-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                <span>Procedures</span>
+              </a>
+              <a href="#comparison" class="pricing-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                <span>Comparison</span>
+              </a>
+              <a href="#faq" class="pricing-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                <span>FAQs</span>
+              </a>
+            </div>
+
+            <!-- Dual Conversion CTAs -->
+            <div class="pricing-hero__cta-group">
+              <a href="contact.html#appointment" class="btn btn--primary btn--large pricing-hero__cta-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Book a Consultation</span>
+              </a>
+              <a href="#packages" class="btn btn--outline-light btn--large pricing-hero__cta-secondary">
+                <span>Explore Wellness Plans</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- Transparency Notice Banner -->
+            <div class="pricing-hero__notice" role="note">
+              <span class="pricing-hero__notice-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              </span>
+              <span class="pricing-hero__notice-text">
+                <strong>Itemized Estimates:</strong> All fees are transparent sample rates for reference. Our veterinary doctors always provide a written, detailed estimate prior to any major clinical treatment or surgery.
               </span>
             </div>
+
+            <!-- Trust Metrics Bar -->
+            <div class="pricing-hero__stats-row" role="region" aria-label="Pricing and financial transparency statistics">
+              <div class="pricing-hero__stat-card">
+                <strong class="pricing-hero__stat-num">100%</strong>
+                <span class="pricing-hero__stat-label">Upfront Estimates</span>
+              </div>
+              <div class="pricing-hero__stat-card">
+                <strong class="pricing-hero__stat-num">$0</strong>
+                <span class="pricing-hero__stat-label">Surprise Fees</span>
+              </div>
+              <div class="pricing-hero__stat-card">
+                <strong class="pricing-hero__stat-num">Save 25%</strong>
+                <span class="pricing-hero__stat-label">On Wellness Plans</span>
+              </div>
+              <div class="pricing-hero__stat-card">
+                <strong class="pricing-hero__stat-num">0% APR</strong>
+                <span class="pricing-hero__stat-label">Flexible Financing</span>
+              </div>
+            </div>
           </div>
-          <div class="pricing-hero__visual reveal-on-scroll" aria-hidden="true">
-            <img src="https://i.pinimg.com/736x/71/1e/fd/711efdb23cd6694b6f1be388ff7899c1.jpg" alt="" class="pricing-hero__image" loading="eager" width="600" height="700" />
+
+          <!-- Right Visual Collage with Floating Micro-Cards -->
+          <div class="pricing-hero__visual reveal-on-scroll" aria-label="Veterinary pricing transparency showcase">
+            <div class="pricing-hero__image-wrap">
+              <img src="https://i.pinimg.com/736x/71/1e/fd/711efdb23cd6694b6f1be388ff7899c1.jpg" alt="Veterinarian discussing care plan with pet owner" class="pricing-hero__image" loading="eager" width="600" height="700" />
+              <div class="pricing-hero__image-shine" aria-hidden="true"></div>
+
+              <!-- Floating Card 1: Itemized Estimates -->
+              <div class="pricing-hero__float-card pricing-hero__float-card--top" aria-hidden="true">
+                <div class="pricing-hero__float-icon pricing-hero__float-icon--teal">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                </div>
+                <div class="pricing-hero__float-text">
+                  <strong>Itemized Estimates</strong>
+                  <span>Approved Before Any Care</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Wellness Savings -->
+              <div class="pricing-hero__float-card pricing-hero__float-card--bottom" aria-hidden="true">
+                <div class="pricing-hero__float-icon pricing-hero__float-icon--coral">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div class="pricing-hero__float-text">
+                  <strong>Wellness Savings</strong>
+                  <span>Save Up to 25% Annually</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 3: Flexible Financing -->
+              <div class="pricing-hero__float-card pricing-hero__float-card--badge" aria-hidden="true">
+                <div class="pricing-hero__float-icon pricing-hero__float-icon--gold">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="pricing-hero__float-text">
+                  <strong>0% APR Financing</strong>
+                  <span class="pricing-hero__stars">★★★★★ CareCredit &amp; Scratchpay</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- Bottom Curve Transition into General Consultation Section -->
+      <div class="pricing-hero__curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none">
+          <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"></path>
+        </svg>
       </div>
     </section>
 
