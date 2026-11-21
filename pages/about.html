@@ -147,46 +147,87 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 2: OUR STORY ===== -->
+    <!-- ===== SECTION 2: OUR STORY & MISSION ===== -->
     <section class="about-story section" id="story" aria-labelledby="story-heading">
       <div class="container">
         <div class="about-story__grid">
 
-          <div class="about-story__image-wrap reveal-on-scroll">
-            <img src="https://i.pinimg.com/736x/25/8b/3d/258b3d48d8f4d8c9b9b3a6ce1c07d8d7.jpg" alt="PawHealth veterinary care and compassion" loading="lazy" />
-            <div class="about-story__image-badge">
-              <strong>Founded 2015</strong>
-              <span>Over a Decade of Excellence</span>
+          <!-- Left Media Column -->
+          <div class="about-story__media reveal-on-scroll">
+            <div class="about-story__glow-backdrop" aria-hidden="true"></div>
+            <div class="about-story__frame">
+              <img
+                src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=900&q=80"
+                alt="Compassionate veterinarian examining a golden retriever puppy at PawHealth"
+                class="about-story__image"
+                loading="lazy"
+                width="800"
+                height="650"
+              />
+            </div>
+
+            <!-- Floating Micro-Card 1: Founded 2015 -->
+            <div class="about-story__float-card about-story__float-card--top" aria-hidden="true">
+              <div class="about-story__float-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="about-story__float-text">
+                <strong>Founded in 2015</strong>
+                <span>Over a decade of clinical trust</span>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Card 2: AAHA Accredited -->
+            <div class="about-story__float-card about-story__float-card--bottom" aria-hidden="true">
+              <div class="about-story__float-icon about-story__float-icon--gold">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="about-story__float-text">
+                <strong>AAHA Accredited Hospital</strong>
+                <span>Voluntary top 12% standard</span>
+              </div>
             </div>
           </div>
 
-          <div class="about-story__content reveal-on-scroll">
-            <span class="section-eyebrow">Our Journey</span>
-            <h2 id="story-heading" class="section-title">A Lifelong Passion for Animal Healing</h2>
-            <p style="margin-bottom: var(--space-4); font-size: 1.05rem; line-height: 1.7; color: var(--color-text);">
-              PawHealth was founded in 2015 by Chief Veterinarian Dr. Sarah Mitchell with an uncompromising vision: to establish an animal hospital where medical excellence, modern diagnostic technology, and genuine human empathy unite seamlessly.
+          <!-- Right Content Column -->
+          <div class="about-story__content reveal-on-scroll" style="--delay: 0.15s">
+            <span class="section-eyebrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              Our Founding Odyssey
+            </span>
+            <h2 id="story-heading" class="section-title">Built From A Lifelong Devotion To Compassionate Animal Healing</h2>
+            
+            <p class="about-story__lead">
+              PawHealth was founded in 2015 by Chief Veterinarian Dr. Sarah Mitchell with a clear mission: to create a hospital where medical precision, modern diagnostic technology, and heartfelt human empathy unite seamlessly.
             </p>
-            <p style="margin-bottom: var(--space-5); color: var(--color-text-muted); line-height: 1.65;">
-              What began as a close-knit community veterinary practice has blossomed into a full-service animal medical hospital serving over 5,000 registered animal patients. Throughout our growth, our foundational ethos has never wavered: we treat each patient with the same warmth, tenderness, and attentiveness we would expect for our own animal companions.
+            <p class="about-story__desc">
+              What began as a close-knit community practice has blossomed into a full-service animal hospital serving over 5,000 animal families. Throughout our growth, our guiding philosophy has remained unchanged: we treat every companion with the exact same tenderness, dignity, and thoroughness we demand for our own pets.
             </p>
 
-            <blockquote style="background: var(--color-mint); border-left: 4px solid var(--color-primary); padding: var(--space-4) var(--space-6); border-radius: 0 12px 12px 0; margin-bottom: var(--space-6); font-style: italic; color: var(--color-primary-dark);">
-              "Our mission is to safeguard animal health through proactive prevention, precise diagnostics, ethical treatments, and empowering pet parents with transparent medical knowledge."
+            <!-- Pull Quote -->
+            <blockquote class="about-story__quote">
+              <div class="about-story__quote-mark" aria-hidden="true">&ldquo;</div>
+              <p>We started PawHealth because no pet should ever feel terrified at the vet, and no pet parent should ever feel left in the dark about their companion's medical care.</p>
+              <cite>&mdash; <strong>Dr. Sarah Mitchell, DVM</strong>, Chief Medical Officer &amp; Founder</cite>
             </blockquote>
 
-            <!-- Milestone Timeline -->
-            <div class="milestones-row" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-top: var(--space-6);">
-              <div style="background: var(--color-surface-alt); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-border); text-align: center;">
-                <strong style="color: var(--color-primary); font-size: 1.25rem; display: block;">2015</strong>
-                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Clinic Established</span>
+            <!-- Milestones Pathway -->
+            <div class="about-story__milestones">
+              <div class="about-milestone-pill">
+                <span class="about-milestone-year">2015</span>
+                <span class="about-milestone-label">Clinic Established</span>
               </div>
-              <div style="background: var(--color-surface-alt); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-border); text-align: center;">
-                <strong style="color: var(--color-primary); font-size: 1.25rem; display: block;">2020</strong>
-                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Surgical Wing Added</span>
+              <div class="about-milestone-pill">
+                <span class="about-milestone-year">2019</span>
+                <span class="about-milestone-label">AAHA Accreditation</span>
               </div>
-              <div style="background: var(--color-surface-alt); padding: var(--space-4); border-radius: 12px; border: 1px solid var(--color-border); text-align: center;">
-                <strong style="color: var(--color-primary); font-size: 1.25rem; display: block;">2024</strong>
-                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Pet Portal Launched</span>
+              <div class="about-milestone-pill">
+                <span class="about-milestone-year">2021</span>
+                <span class="about-milestone-label">Surgical Wing Added</span>
+              </div>
+              <div class="about-milestone-pill">
+                <span class="about-milestone-year">2024</span>
+                <span class="about-milestone-label">24/7 Digital Portal</span>
               </div>
             </div>
           </div>
@@ -195,200 +236,334 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 3: VETERINARY PHILOSOPHY ===== -->
+    <!-- ===== SECTION 3: VETERINARY CARE PHILOSOPHY ===== -->
     <section class="about-philosophy section" id="philosophy" aria-labelledby="philosophy-heading">
       <div class="container">
-        <div class="about-philosophy__header reveal-on-scroll">
-          <span class="about-philosophy__label">Guiding Principles</span>
-          <h2 id="philosophy-heading" class="about-philosophy__heading">Our Veterinary Care Philosophy</h2>
-          <p class="section-subtitle">Four foundational values direct every decision we make in our examination rooms and surgical suites.</p>
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Guiding Ethical Pillars
+          </span>
+          <h2 id="philosophy-heading" class="section-title">The Four Non-Negotiables of PawHealth Medicine</h2>
+          <p class="section-subtitle">Every clinical recommendation, diagnostic evaluation, and surgical protocol is anchored in our four non-negotiable standards of care.</p>
         </div>
 
-        <div class="grid grid--4 reveal-on-scroll" style="gap: var(--space-6);">
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Compassion-First</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">Gentle, low-stress handling that calms anxious pets, minimizing fear and discomfort during every clinical exam.</p>
-          </div>
+        <div class="about-philosophy__grid" role="list">
 
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <!-- Pillar 1 -->
+          <article class="about-pillar-card reveal-on-scroll" style="--delay: 0.05s" role="listitem">
+            <div class="about-pillar-card__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Ethical Medicine</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">Evidence-backed clinical treatments with total transparency. We only recommend procedures that truly benefit your pet's wellbeing.</p>
-          </div>
+            <span class="about-pillar-card__tag">Pillar 01 &bull; Fear-Free Protocol</span>
+            <h3 class="about-pillar-card__title">Gentle, Low-Stress Handling</h3>
+            <p class="about-pillar-card__desc">Species-separated waiting lounges, feline facial pheromone diffusers, acoustic soundproofing, and positive reward handling so clinic visits never induce panic.</p>
+            <div class="about-pillar-card__highlight">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Zero-Fear Certified Staff</span>
+            </div>
+          </article>
 
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <!-- Pillar 2 -->
+          <article class="about-pillar-card reveal-on-scroll" style="--delay: 0.15s" role="listitem">
+            <div class="about-pillar-card__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Personalized Plans</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">No cookie-cutter care. We tailor vaccination protocols, diet regimens, and senior care to your pet's lifestyle and biology.</p>
-          </div>
+            <span class="about-pillar-card__tag">Pillar 02 &bull; Patient-First</span>
+            <h3 class="about-pillar-card__title">Unhurried 30-Minute Visits</h3>
+            <p class="about-pillar-card__desc">We refuse the 10-minute revolving door model. Our doctors dedicate unhurried time to listen, perform a complete 12-system physical check, and address subtle behavioral changes.</p>
+            <div class="about-pillar-card__highlight">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Double Industry Average</span>
+            </div>
+          </article>
 
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <!-- Pillar 3 -->
+          <article class="about-pillar-card reveal-on-scroll" style="--delay: 0.25s" role="listitem">
+            <div class="about-pillar-card__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Clear Communication</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">We break down complex diagnoses into understandable language and provide written estimates before any treatment begins.</p>
-          </div>
+            <span class="about-pillar-card__tag">Pillar 03 &bull; Integrity</span>
+            <h3 class="about-pillar-card__title">100% Upfront Itemized Pricing</h3>
+            <p class="about-pillar-card__desc">Zero hidden hospital fees or surprise invoices. You receive a comprehensive, itemized written estimate detailing every medication and procedure before treatment begins.</p>
+            <div class="about-pillar-card__highlight">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>No Surprise Surcharges</span>
+            </div>
+          </article>
+
+          <!-- Pillar 4 -->
+          <article class="about-pillar-card reveal-on-scroll" style="--delay: 0.35s" role="listitem">
+            <div class="about-pillar-card__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <span class="about-pillar-card__tag">Pillar 04 &bull; Clinical Science</span>
+            <h3 class="about-pillar-card__title">Hospital-Grade Technology</h3>
+            <p class="about-pillar-card__desc">In-house point-of-care IDEXX clinical laboratory, digital high-definition radiography, color Doppler ultrasound, and sterile positive-pressure surgical operatory suites.</p>
+            <div class="about-pillar-card__highlight">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Human-Standard Equipment</span>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 4: MEET OUR VETERINARIANS ===== -->
+    <!-- ===== SECTION 4: CERTIFIED VETERINARY TEAM ===== -->
     <section class="about-team section" id="team" aria-labelledby="team-heading">
       <div class="container">
-        <div class="about-team__header reveal-on-scroll">
-          <span class="about-team__label">Medical Leadership</span>
-          <h2 id="team-heading" class="about-team__heading">Meet Our Veterinary Specialists</h2>
-          <p class="about-team__sub">Our veterinarians combine decades of board-certified clinical training with genuine animal devotion.</p>
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Board-Certified Clinicians
+          </span>
+          <h2 id="team-heading" class="section-title">Meet The Doctors Devoted To Your Pet</h2>
+          <p class="section-subtitle">Our licensed veterinary doctors bring over 26 years of combined medical expertise, advanced surgical fellowships, and genuine bedside compassion.</p>
         </div>
 
-        <div class="about-team__grid reveal-on-scroll">
+        <div class="about-team__grid" role="list">
 
-          <!-- Vet 1 -->
-          <article class="team-card">
-            <div style="height: 100%; min-height: 240px; overflow: hidden;">
-              <img src="https://i.pinimg.com/1200x/4f/ce/96/4fce966d2cdb0ddf819eacf8b0c4227d.jpg" alt="Dr. Sarah Mitchell, Chief Veterinarian" style="width: 100%; height: 100%; object-fit: cover;" />
+          <!-- Doctor 1: Dr. Sarah Mitchell -->
+          <article class="about-doctor-card reveal-on-scroll" style="--delay: 0.05s" role="listitem">
+            <div class="about-doctor-card__photo-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&h=1000&q=80"
+                alt="Dr. Sarah Mitchell, Chief Medical Officer at PawHealth"
+                class="about-doctor-card__photo"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
+              <div class="about-doctor-card__status-badge">
+                <span class="about-pulse-dot" aria-hidden="true"></span> Available Today
+              </div>
+              <div class="about-doctor-card__overlay" aria-hidden="true">
+                <a href="https://linkedin.com" class="about-doctor-card__social" aria-label="Dr. Sarah Mitchell LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+              </div>
             </div>
-            <div style="padding: var(--space-6); display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge badge--primary" style="align-self: flex-start; margin-bottom: var(--space-2);">Chief Veterinarian &amp; Founder</span>
-              <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-charcoal); margin-bottom: 2px;">Dr. Sarah Mitchell</h3>
-              <p style="font-size: 0.85rem; color: var(--color-teal); font-weight: 600; margin-bottom: var(--space-3);">BVSc, MRCVS, Dip. ECVIM · 12+ Yrs Experience</p>
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-4);">
-                Specializing in Internal Medicine, Diagnostic Ultrasound, and Geriatric Feline Care. Dr. Mitchell trained at top referral hospitals and advocates for low-stress preventive medical protocols.
-              </p>
-              <span style="font-size: 0.75rem; color: var(--color-text-light);">Focus Areas: Feline Renal Health · Chronic Disease Management</span>
+            <div class="about-doctor-card__body">
+              <div class="about-doctor-card__meta">
+                <span class="about-doctor-card__specialty">Internal Medicine</span>
+                <span class="about-doctor-card__exp">12+ Yrs Exp</span>
+              </div>
+              <h3 class="about-doctor-card__name">Dr. Sarah Mitchell</h3>
+              <p class="about-doctor-card__role">DVM, Chief Medical Director &amp; Founder</p>
+              <p class="about-doctor-card__education">UC Davis School of Veterinary Medicine</p>
+              <p class="about-doctor-card__bio">Leading PawHealth's clinical team with focused expertise in feline medicine, complex endocrinology, and senior quality-of-life care.</p>
+              <div class="about-doctor-card__footer">
+                <a href="contact.html?doctor=mitchell#appointment" class="btn btn--outline-dark btn--sm about-doctor-card__btn" aria-label="Book an appointment with Dr. Sarah Mitchell">
+                  <span>Book with Dr. Mitchell</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- Vet 2 -->
-          <article class="team-card">
-            <div style="height: 100%; min-height: 240px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/a9/27/cb/a927cb63dbb5084a496951c954d71a74.jpg" alt="Dr. James Okoye, Veterinary Surgeon" style="width: 100%; height: 100%; object-fit: cover;" />
+          <!-- Doctor 2: Dr. James Okoye -->
+          <article class="about-doctor-card reveal-on-scroll" style="--delay: 0.15s" role="listitem">
+            <div class="about-doctor-card__photo-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80"
+                alt="Dr. James Okoye, Head of Veterinary Surgery at PawHealth"
+                class="about-doctor-card__photo"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
+              <div class="about-doctor-card__status-badge">
+                <span class="about-pulse-dot" aria-hidden="true"></span> Operating Today
+              </div>
+              <div class="about-doctor-card__overlay" aria-hidden="true">
+                <a href="https://linkedin.com" class="about-doctor-card__social" aria-label="Dr. James Okoye LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+              </div>
             </div>
-            <div style="padding: var(--space-6); display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge badge--teal" style="align-self: flex-start; margin-bottom: var(--space-2);">Lead Veterinary Surgeon</span>
-              <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-charcoal); margin-bottom: 2px;">Dr. James Okoye</h3>
-              <p style="font-size: 0.85rem; color: var(--color-teal); font-weight: 600; margin-bottom: var(--space-3);">BVSc, MS (Surgery), DACVS · 8+ Yrs Experience</p>
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-4);">
-                Specializing in Soft Tissue Surgery, Orthopedics, and Minimally Invasive Laparoscopy. Dedicated to safe anesthetics, modern pain management, and rapid post-operative recovery.
-              </p>
-              <span style="font-size: 0.75rem; color: var(--color-text-light);">Focus Areas: Orthopedic Reconstruction · Laparoscopic Spay</span>
-            </div>
-          </article>
-
-          <!-- Vet 3 -->
-          <article class="team-card">
-            <div style="height: 100%; min-height: 240px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/0f/41/a8/0f41a81aa3d40679bd4708107d977543.jpg" alt="Dr. Priya Sharma, Animal Wellness Specialist" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div style="padding: var(--space-6); display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge badge--coral" style="align-self: flex-start; margin-bottom: var(--space-2);">Wellness &amp; Prevention Director</span>
-              <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-charcoal); margin-bottom: 2px;">Dr. Priya Sharma</h3>
-              <p style="font-size: 0.85rem; color: var(--color-teal); font-weight: 600; margin-bottom: var(--space-3);">BVSc &amp; AH, MVSc Preventive Medicine · 6+ Yrs Experience</p>
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-4);">
-                Leading our proactive healthcare and immunization programs. Dr. Sharma designs science-based puppy/kitten foundations and clinical nutritional plans to prevent chronic illness.
-              </p>
-              <span style="font-size: 0.75rem; color: var(--color-text-light);">Focus Areas: Immunization Schedules · Canine Clinical Nutrition</span>
-            </div>
-          </article>
-
-          <!-- Vet 4 -->
-          <article class="team-card">
-            <div style="height: 100%; min-height: 240px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/4a/de/6d/4ade6d2a43e9bdf4cb20cf1dc05def79.jpg" alt="Nurse Emma Chen, Head Veterinary Nurse" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div style="padding: var(--space-6); display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge badge--neutral" style="align-self: flex-start; margin-bottom: var(--space-2);">Head Veterinary Nurse</span>
-              <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-charcoal); margin-bottom: 2px;">Emma Chen, RVN</h3>
-              <p style="font-size: 0.85rem; color: var(--color-teal); font-weight: 600; margin-bottom: var(--space-3);">RVN, Cert. Animal Behavior · 9+ Yrs Experience</p>
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-4);">
-                Certified in Fear-Free animal handling, surgical anesthetic monitoring, and post-op intensive care nursing. Emma ensures every hospitalized patient receives round-the-clock comfort.
-              </p>
-              <span style="font-size: 0.75rem; color: var(--color-text-light);">Focus Areas: Fear-Free Protocols · Inpatient Recovery Care</span>
+            <div class="about-doctor-card__body">
+              <div class="about-doctor-card__meta">
+                <span class="about-doctor-card__specialty">Surgery &amp; Orthopedics</span>
+                <span class="about-doctor-card__exp">8+ Yrs Exp</span>
+              </div>
+              <h3 class="about-doctor-card__name">Dr. James Okoye</h3>
+              <p class="about-doctor-card__role">DVM, DACVS Board-Certified Surgeon</p>
+              <p class="about-doctor-card__education">Cornell University College of Veterinary Medicine</p>
+              <p class="about-doctor-card__bio">Board-certified specialist renowned for minimally invasive laparoscopy, TPLO cruciate ligament stabilization, and reconstructive soft-tissue surgery.</p>
+              <div class="about-doctor-card__footer">
+                <a href="contact.html?doctor=okoye#appointment" class="btn btn--outline-dark btn--sm about-doctor-card__btn" aria-label="Book an appointment with Dr. James Okoye">
+                  <span>Book with Dr. James</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
             </div>
           </article>
 
+          <!-- Doctor 3: Dr. Priya Sharma -->
+          <article class="about-doctor-card reveal-on-scroll" style="--delay: 0.25s" role="listitem">
+            <div class="about-doctor-card__photo-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&h=1000&q=80"
+                alt="Dr. Priya Sharma, Integrative Medicine & Acupuncture Specialist"
+                class="about-doctor-card__photo"
+                loading="lazy"
+                width="400"
+                height="500"
+                style="object-position: 50% 15%;"
+              />
+              <div class="about-doctor-card__status-badge">
+                <span class="about-pulse-dot" aria-hidden="true"></span> Accepting Patients
+              </div>
+              <div class="about-doctor-card__overlay" aria-hidden="true">
+                <a href="https://linkedin.com" class="about-doctor-card__social" aria-label="Dr. Priya Sharma LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="about-doctor-card__body">
+              <div class="about-doctor-card__meta">
+                <span class="about-doctor-card__specialty">Integrative &amp; Rehab</span>
+                <span class="about-doctor-card__exp">6+ Yrs Exp</span>
+              </div>
+              <h3 class="about-doctor-card__name">Dr. Priya Sharma</h3>
+              <p class="about-doctor-card__role">DVM, Certified Veterinary Acupuncturist (CVA)</p>
+              <p class="about-doctor-card__education">PennVet School of Veterinary Medicine</p>
+              <p class="about-doctor-card__bio">Pioneering multimodal pain management through gentle acupuncture, Class IV regenerative laser therapy, and proactive pediatric wellness.</p>
+              <div class="about-doctor-card__footer">
+                <a href="contact.html?doctor=sharma#appointment" class="btn btn--outline-dark btn--sm about-doctor-card__btn" aria-label="Book an appointment with Dr. Priya Sharma">
+                  <span>Book with Dr. Priya</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Support Staff Callout Strip -->
+        <div class="about-team__support-strip reveal-on-scroll">
+          <div class="about-team__support-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="about-team__support-text">
+            <h4>Supported by 15+ Licensed Veterinary Technicians, ICU Nurses &amp; Coordinators</h4>
+            <p>Our compassionate nursing staff provides continuous 24/7 post-operative monitoring, medication administration, and warm blankets for every hospitalized pet.</p>
+          </div>
+          <a href="contact.html#appointment" class="btn btn--primary btn--small">Join Our Care Family &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 5: OUR CLINIC & FACILITIES ===== -->
+    <!-- ===== SECTION 5: MODERN VETERINARY FACILITIES ===== -->
     <section class="about-facilities section" id="facilities" aria-labelledby="facilities-heading">
       <div class="container">
-        <div class="about-facilities__header reveal-on-scroll">
-          <span class="about-facilities__label">State-of-the-Art Hospital</span>
-          <h2 id="facilities-heading" class="about-facilities__heading">Our Clinic &amp; Medical Facilities</h2>
-          <p class="about-facilities__sub">Engineered specifically to minimize pet anxiety while providing modern diagnostic, surgical, and therapeutic capabilities.</p>
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            Clinical Infrastructure
+          </span>
+          <h2 id="facilities-heading" class="section-title">Tour Our Modern Veterinary Hospital</h2>
+          <p class="section-subtitle">Engineered from the ground up to eliminate sensory stress, protect surgical sterility, and deliver hospital-grade medical precision.</p>
         </div>
 
-        <div class="about-facilities__grid reveal-on-scroll">
+        <div class="about-facilities__grid" role="list">
 
-          <div class="facility-card">
-            <div style="height: 200px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/d6/be/8e/d6be8e384b43d22c0659485d381a69ff.jpg" alt="Clean, spacious veterinary consultation room" style="width: 100%; height: 100%; object-fit: cover;" data-lightbox data-caption="Spacious, Fear-Free Consultation Examination Room" />
+          <!-- Facility 1: Sterile Surgical Suite -->
+          <article class="about-facility-card reveal-on-scroll" style="--delay: 0.05s" role="listitem">
+            <div class="about-facility-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80"
+                alt="Positive-pressure sterile veterinary surgical suite"
+                class="about-facility-card__img"
+                loading="lazy"
+                width="600"
+                height="420"
+              />
+              <span class="about-facility-card__badge">HEPA Filtered OR</span>
             </div>
-            <div style="padding: var(--space-4); background: var(--color-surface);">
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-charcoal); margin-bottom: 4px;">Consultation Suites</h4>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted);">Dedicated quiet rooms with non-slip exam tables, pheromone diffusers, and warm lighting to ease pet stress.</p>
+            <div class="about-facility-card__body">
+              <h3 class="about-facility-card__title">Positive-Pressure Sterile Surgical Suites</h3>
+              <p class="about-facility-card__desc">Hospital-grade positive air pressure prevents external contaminants. Equipped with multiparameter telemetry, Bair Hugger warm-air blankets, and dual surgical LED arrays.</p>
+              <div class="about-facility-card__tags">
+                <span>HD Laparoscopy</span>
+                <span>Electrosurgery</span>
+                <span>Telemetry ICU</span>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="facility-card">
-            <div style="height: 200px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/92/3b/1a/923b1aa3af6d2aae4748fc7fb55749bc.jpg" alt="In-house veterinary diagnostic laboratory" style="width: 100%; height: 100%; object-fit: cover;" data-lightbox data-caption="In-House Clinical Diagnostic Testing Laboratory" />
+          <!-- Facility 2: In-House Diagnostic Lab -->
+          <article class="about-facility-card reveal-on-scroll" style="--delay: 0.15s" role="listitem">
+            <div class="about-facility-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80"
+                alt="In-house point-of-care IDEXX clinical laboratory"
+                class="about-facility-card__img"
+                loading="lazy"
+                width="600"
+                height="420"
+              />
+              <span class="about-facility-card__badge">Results &lt; 15 Mins</span>
             </div>
-            <div style="padding: var(--space-4); background: var(--color-surface);">
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-charcoal); margin-bottom: 4px;">In-House Diagnostic Lab</h4>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted);">Automated hematology, biochemistry, and urinalysis analyzers delivering vital blood work results in under 20 minutes.</p>
+            <div class="about-facility-card__body">
+              <h3 class="about-facility-card__title">Point-of-Care IDEXX Clinical Laboratory</h3>
+              <p class="about-facility-card__desc">Complete blood chemistry, electrolyte panels, automated urinalysis, and in-clinic cytology delivering real-time answers before you leave the consultation.</p>
+              <div class="about-facility-card__tags">
+                <span>CBC &amp; Chemistry</span>
+                <span>Blood Gas</span>
+                <span>Rapid Triage</span>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="facility-card">
-            <div style="height: 200px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/e1/11/eb/e111ebacb1be7183bdb721103fd9cfbf.jpg" alt="Sterile veterinary surgical theater" style="width: 100%; height: 100%; object-fit: cover;" data-lightbox data-caption="Fully Equipped Sterile Surgical Operating Suite" />
+          <!-- Facility 3: Sound-Isolated Species Wards -->
+          <article class="about-facility-card reveal-on-scroll" style="--delay: 0.25s" role="listitem">
+            <div class="about-facility-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80"
+                alt="Sound-isolated comfortable recovery wards for dogs and cats"
+                class="about-facility-card__img"
+                loading="lazy"
+                width="600"
+                height="420"
+              />
+              <span class="about-facility-card__badge">Species Separated</span>
             </div>
-            <div style="padding: var(--space-4); background: var(--color-surface);">
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-charcoal); margin-bottom: 4px;">Sterile Surgical Suite</h4>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted);">Positive-pressure HEPA filtration, multiparameter vitals monitoring, and dedicated heated surgical recovery tables.</p>
+            <div class="about-facility-card__body">
+              <h3 class="about-facility-card__title">Sound-Isolated Inpatient Recovery Wards</h3>
+              <p class="about-facility-card__desc">Acoustically damped recovery bays ensure recovering cats never see, smell, or hear barking dogs, preventing adrenaline spikes and accelerating natural recovery.</p>
+              <div class="about-facility-card__tags">
+                <span>Feliway Diffused</span>
+                <span>Orthopedic Bedding</span>
+                <span>24/7 Monitoring</span>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="facility-card">
-            <div style="height: 200px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/e9/8d/94/e98d94fa1e94aea0d629d8e8c664b1ca.jpg" alt="Digital X-ray and ultrasound diagnostic room" style="width: 100%; height: 100%; object-fit: cover;" data-lightbox data-caption="Low-Radiation Digital Radiography & High-Resolution Ultrasound" />
+          <!-- Facility 4: Low-Stress Reception Lounge -->
+          <article class="about-facility-card reveal-on-scroll" style="--delay: 0.35s" role="listitem">
+            <div class="about-facility-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                alt="Welcoming low-stress reception with separate waiting zones"
+                class="about-facility-card__img"
+                loading="lazy"
+                width="600"
+                height="420"
+              />
+              <span class="about-facility-card__badge">Zero-Stress Lobby</span>
             </div>
-            <div style="padding: var(--space-4); background: var(--color-surface);">
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-charcoal); margin-bottom: 4px;">Digital Radiography &amp; Ultrasound</h4>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted);">Low-dose digital imaging that provides instant high-resolution skeletal, abdominal, and cardiac evaluations.</p>
+            <div class="about-facility-card__body">
+              <h3 class="about-facility-card__title">Welcoming Reception &amp; Separate Waiting Bays</h3>
+              <p class="about-facility-card__desc">Spacious reception with divided canine and feline seating areas, non-slip flooring, soothing natural lighting, and complimentary positive-reinforcement treat bars.</p>
+              <div class="about-facility-card__tags">
+                <span>Divided Seating</span>
+                <span>Traction Mats</span>
+                <span>Express Check-In</span>
+              </div>
             </div>
-          </div>
-
-          <div class="facility-card">
-            <div style="height: 200px; overflow: hidden;">
-              <img src="https://i.pinimg.com/736x/ac/cd/eb/accdeb2a220cfb8408645a8cfb045983.jpg" alt="Temperature-controlled pet inpatient recovery wards" style="width: 100%; height: 100%; object-fit: cover;" data-lightbox data-caption="Separate Dog and Cat Temperature-Controlled Inpatient Recovery Wards" />
-            </div>
-            <div style="padding: var(--space-4); background: var(--color-surface);">
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-charcoal); margin-bottom: 4px;">Separate Cat &amp; Dog Wards</h4>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted);">Sound-isolated recovery wards ensure feline patients do not see or hear dogs, speeding post-operative healing.</p>
-            </div>
-          </div>
-
-          <div class="facility-card">
-            <div style="height: 200px; overflow: hidden;">
-              <img src="https://i.pinimg.com/1200x/a0/42/f4/a042f437db44fef93d188c9439f1da6d.jpg" alt="Welcoming veterinary hospital reception" style="width: 100%; height: 100%; object-fit: cover;" data-lightbox data-caption="Welcoming Reception with Separate Species Waiting Zones" />
-            </div>
-            <div style="padding: var(--space-4); background: var(--color-surface);">
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-charcoal); margin-bottom: 4px;">Welcoming Reception</h4>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted);">Spacious check-in lounge with separated dog and cat waiting bays, complimentary treats, and warm client assistance.</p>
-            </div>
-          </div>
+          </article>
 
         </div>
       </div>
@@ -396,18 +571,55 @@
 
     <!-- ===== SECTION 6: OUR COMMITMENT TO PETS CTA ===== -->
     <section class="about-cta section" id="commitment" aria-labelledby="cta-heading">
-      <div class="container">
-        <div class="about-cta__header reveal-on-scroll">
-          <span class="badge badge--primary" style="margin-bottom: var(--space-3); background: rgba(255,255,255,0.2); color: #fff;">Always By Your Side</span>
-          <h2 id="cta-heading" class="about-cta__heading">Our Enduring Commitment to Your Pet</h2>
-          <p class="about-cta__sub">
-            Whether your pet needs their first puppy vaccines, a complex dental evaluation, or gentle geriatric management, our team is ready to deliver extraordinary veterinary healthcare with deep compassion.
-          </p>
-        </div>
+      <div class="about-cta__ambient about-cta__ambient--1" aria-hidden="true"></div>
+      <div class="about-cta__ambient about-cta__ambient--2" aria-hidden="true"></div>
 
-        <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap; position: relative; z-index: 2;">
-          <a href="contact.html" class="btn btn--white btn--large" aria-label="Book a veterinary consultation">Book a Consultation</a>
-          <a href="contact.html#emergency" class="btn btn--outline-light btn--large" aria-label="Emergency contact information">Contact Emergency Care</a>
+      <div class="container about-cta__content">
+        <div class="about-cta__box reveal-on-scroll">
+
+          <div class="about-cta__status-pill">
+            <span class="about-pulse-dot" aria-hidden="true"></span>
+            <span>Accepting New Patients &bull; Same-Day Appointments Available</span>
+          </div>
+
+          <h2 id="cta-heading" class="about-cta__headline">
+            Experience Veterinary Care Where Your Pet <span class="about-cta__accent-text">Truly Comes First</span>
+          </h2>
+          <p class="about-cta__subtext">
+            Whether you are welcoming a new puppy or kitten into your family, seeking advanced surgical consultation, or navigating senior comfort care, our board-certified clinical team is honored to walk alongside you.
+          </p>
+
+          <div class="about-cta__actions">
+            <a href="contact.html#appointment" class="btn btn--white btn--large about-cta__btn-main" aria-label="Book a veterinary consultation online">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Schedule Visit Online</span>
+            </a>
+            <a href="tel:+15551234568" class="about-cta__phone" aria-label="Call PawHealth 24/7 emergency triage at (555) 123-4568">
+              <div class="about-cta__phone-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.72 5.72l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="about-cta__phone-meta">
+                <span class="about-cta__phone-label">24/7 Urgent Triage</span>
+                <strong class="about-cta__phone-num">(555) 123-4568</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="about-cta__assurances" aria-label="PawHealth clinical commitments">
+            <div class="about-cta__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>100% Itemized Upfront Pricing</span>
+            </div>
+            <div class="about-cta__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Zero Prepayment or Deposit</span>
+            </div>
+            <div class="about-cta__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Dedicated Nurse Post-Visit Check-In</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
