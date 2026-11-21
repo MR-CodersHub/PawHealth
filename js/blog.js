@@ -1,6 +1,6 @@
 /**
  * PawHealth — blog.js
- * Pet Health Knowledge Centre: Search filter and category selection
+ * Pet Health Knowledge Centre: Search filter, category selection & filter pills
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -9,18 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.querySelector('.blog-search-input');
   const searchBtn = document.querySelector('.blog-search-btn');
   const articles = document.querySelectorAll('.blog-card');
+  const filterBtns = document.querySelectorAll('.blog-filter-btn');
 
   function filterArticles(query) {
-    const q = query.toLowerCase().trim();
+    const q = (query || '').toLowerCase().trim();
     let matches = 0;
 
     articles.forEach(card => {
       const title = (card.querySelector('.blog-card__title') || {}).textContent || '';
       const desc = (card.querySelector('.blog-card__desc') || {}).textContent || '';
       const cat = (card.querySelector('.blog-card__category') || {}).textContent || '';
-      const text = `${title} ${desc} ${cat}`.toLowerCase();
+      const cardCategoryAttr = (card.getAttribute('data-category') || '').toLowerCase();
+      const text = `${title} ${desc} ${cat} ${cardCategoryAttr}`.toLowerCase();
 
-      if (!q || text.includes(q)) {
+      if (!q || q === 'all' || text.includes(q)) {
         card.style.display = 'flex';
         matches++;
       } else {
@@ -28,11 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    if (window.showToast && q) {
-      window.showToast('Search Results', `Found ${matches} article${matches === 1 ? '' : 's'} matching "${query}"`, 'info', 2000);
+    if (window.showToast && q && q !== 'all') {
+      window.showToast('Search Results', `Found ${matches} article${matches === 1 ? '' : 's'} for "${query}"`, 'info', 2000);
     }
   }
 
+  // 1. Text input live filter
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       filterArticles(e.target.value);
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Quick topic pills click event in hero
+  // 2. Quick topic pills in Hero
   const topicPills = document.querySelectorAll('.blog-topic-pill');
   topicPills.forEach(pill => {
     pill.addEventListener('click', (e) => {
@@ -55,22 +58,46 @@ document.addEventListener('DOMContentLoaded', function () {
       if (searchInput) {
         searchInput.value = topic;
         filterArticles(topic);
-        searchInput.focus();
+        const latestSec = document.getElementById('latest');
+        if (latestSec) latestSec.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
 
-  // Category card clicks filter articles
+  // 3. Category cards in Section 4
   const catCards = document.querySelectorAll('.blog-cat-card');
   catCards.forEach(catCard => {
     catCard.addEventListener('click', (e) => {
-      e.preventDefault();
-      const catTitle = (catCard.querySelector('.blog-cat-card__title') || {}).textContent || '';
+      const filter = catCard.getAttribute('data-cat-filter') || (catCard.querySelector('.blog-cat-card__title') || {}).textContent || '';
       if (searchInput) {
-        searchInput.value = catTitle;
-        filterArticles(catTitle);
-        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        searchInput.value = filter;
       }
+      filterArticles(filter);
+
+      // Update active filter button if exists
+      filterBtns.forEach(btn => {
+        if (btn.getAttribute('data-filter') === filter.toLowerCase()) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // 4. Interactive Filter Pills above articles
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      const filterVal = this.getAttribute('data-filter') || 'all';
+      if (searchInput && filterVal !== 'all') {
+        searchInput.value = filterVal;
+      } else if (searchInput && filterVal === 'all') {
+        searchInput.value = '';
+      }
+      filterArticles(filterVal);
     });
   });
 });
