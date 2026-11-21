@@ -573,213 +573,664 @@
   }
 }
 
-/* ---- Section base override for home1 ---- */
+/* ==========================================================================
+   SECTION BASE & SHARED REVEAL STYLES
+   ========================================================================== */
 .section {
-  padding: 5rem 0;
+  padding: 5.5rem 0;
+  position: relative;
 }
 
-@media (min-width: 768px) {
-  .section { padding: 7rem 0; }
+@media (min-width: 992px) {
+  .section {
+    padding: 7.5rem 0;
+  }
 }
 
-/* ---- Services Grid ---- */
+/* Pulsing status dot */
+.h1-pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: h1Pulse 2s infinite;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+@keyframes h1Pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+/* ==========================================================================
+   SECTION 2: VETERINARY SERVICES GRID
+   ========================================================================== */
 .h1-services {
-  background: var(--color-bg-light, #F6F8F5);
+  background: var(--color-bg-light, #f8faf8);
+  position: relative;
+}
+
+[data-theme="dark"] .h1-services {
+  background: var(--color-bg-dark, #0d1714);
 }
 
 .h1-services__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-top: 3.5rem;
 }
 
 @media (min-width: 640px) {
+  .h1-services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
   .h1-services__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
-  .h1-services__grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-/* Service Card */
 .h1-service-card {
-  background: #fff;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e5e9e5);
   border-radius: 20px;
-  padding: 2rem 1.4rem;
+  padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.8rem;
-  box-shadow: 0 4px 24px rgba(36, 92, 72, 0.07);
-  border: 1.5px solid transparent;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  cursor: default;
-  animation: fadeInUp 0.5s var(--delay, 0s) ease both;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.h1-service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #245c48, #40916c);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .h1-service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(36, 92, 72, 0.14);
-  border-color: var(--color-primary, #245C48);
+  transform: translateY(-7px);
+  box-shadow: 0 20px 35px -10px rgba(27, 67, 50, 0.12), 0 8px 15px -6px rgba(0, 0, 0, 0.04);
+  border-color: rgba(36, 92, 72, 0.28);
 }
 
-.h1-service-card--emergency .h1-service-card__icon {
-  color: var(--color-coral, #F28B78);
+.h1-service-card:hover::before {
+  opacity: 1;
 }
 
-.h1-service-card--emergency:hover {
-  border-color: var(--color-coral, #F28B78);
+[data-theme="dark"] .h1-service-card {
+  background: #14221e;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .h1-service-card:hover {
+  border-color: rgba(64, 145, 108, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.45);
+}
+
+.h1-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
 .h1-service-card__icon {
-  color: var(--color-primary, #245C48);
-  background: var(--color-mint, #DCEFE5);
-  border-radius: 14px;
-  padding: 0.8rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(36, 92, 72, 0.08);
+  color: #245c48;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .h1-service-card:hover .h1-service-card__icon {
-  background: var(--color-primary, #245C48);
-  color: #fff;
-  transform: scale(1.1);
+  background: #245c48;
+  color: #ffffff;
+  transform: scale(1.08) rotate(-3deg);
+}
+
+[data-theme="dark"] .h1-service-card__icon {
+  background: rgba(64, 145, 108, 0.18);
+  color: #78e08f;
+}
+
+[data-theme="dark"] .h1-service-card:hover .h1-service-card__icon {
+  background: #40916c;
+  color: #ffffff;
+}
+
+.h1-service-card__badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #f0f4f1;
+  color: #245c48;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+[data-theme="dark"] .h1-service-card__badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: #a3e6be;
 }
 
 .h1-service-card__title {
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--color-charcoal, #27332F);
-  margin: 0;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  color: var(--color-text, #111e19);
+}
+
+[data-theme="dark"] .h1-service-card__title {
+  color: #f1f5f3;
 }
 
 .h1-service-card__desc {
-  font-size: 0.82rem;
-  color: #6b7c74;
-  line-height: 1.55;
-  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted, #556b62);
+  margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .h1-service-card__desc {
+  color: #9ab3a8;
+}
+
+.h1-service-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-top: 1px dashed var(--color-border, #e5e9e5);
+  padding-top: 1.25rem;
+}
+
+[data-theme="dark"] .h1-service-card__features {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.h1-service-card__features li {
+  font-size: 0.88rem;
+  color: var(--color-text, #2c3e37);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .h1-service-card__features li {
+  color: #cbdad3;
+}
+
+.h1-service-card__features svg {
+  color: #245c48;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .h1-service-card__features svg {
+  color: #78e08f;
+}
+
+.h1-service-card__action {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
 }
 
 .h1-service-card__link {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--color-primary, #245C48);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #245c48;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   text-decoration: none;
-  margin-top: auto;
-  transition: gap 0.2s ease;
+  transition: gap 0.25s ease, color 0.25s ease;
 }
 
-.h1-service-card__link:hover {
-  text-decoration: underline;
+.h1-service-card__link svg {
+  transition: transform 0.25s ease;
 }
 
-/* ---- Compassionate Care ---- */
+.h1-service-card:hover .h1-service-card__link {
+  color: #1b4332;
+  gap: 0.65rem;
+}
+
+.h1-service-card:hover .h1-service-card__link svg {
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .h1-service-card__link {
+  color: #78e08f;
+}
+
+[data-theme="dark"] .h1-service-card:hover .h1-service-card__link {
+  color: #a3e6be;
+}
+
+/* Emergency card specialized styling */
+.h1-service-card--emergency {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: linear-gradient(180deg, rgba(254, 242, 242, 0.5) 0%, rgba(255, 255, 255, 1) 40%);
+}
+
+.h1-service-card--emergency::before {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  opacity: 1;
+}
+
+.h1-service-card--emergency .h1-service-card__icon {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.h1-service-card--emergency:hover .h1-service-card__icon {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.h1-service-card__badge--emergency {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+.h1-service-card__action--dual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn--danger-subtle {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn--danger-subtle:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+
+[data-theme="dark"] .h1-service-card--emergency {
+  background: linear-gradient(180deg, rgba(45, 15, 15, 0.45) 0%, #171c1a 50%);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+[data-theme="dark"] .btn--danger-subtle {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+[data-theme="dark"] .btn--danger-subtle:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+/* Services footer banner */
+.h1-services__footer-banner {
+  margin-top: 3.5rem;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e5e9e5);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .h1-services__footer-banner {
+  background: #14221e;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.h1-services__footer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--color-text, #111e19);
+}
+
+[data-theme="dark"] .h1-services__footer-info {
+  color: #cbdad3;
+}
+
+.h1-services__footer-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(36, 92, 72, 0.08);
+  color: #245c48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .h1-services__footer-icon {
+  background: rgba(64, 145, 108, 0.2);
+  color: #78e08f;
+}
+
+/* ==========================================================================
+   SECTION 3: PATIENT-FIRST COMPASSIONATE CARE
+   ========================================================================== */
 .h1-compassion {
-  background: #fff;
+  background: var(--color-white, #ffffff);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .h1-compassion {
+  background: #09110e;
 }
 
 .h1-compassion__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 3.5rem;
   align-items: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .h1-compassion__grid {
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 4.5rem;
   }
 }
 
 .h1-compassion__image-wrap {
   position: relative;
-  border-radius: 24px;
-  overflow: visible;
+  border-radius: 28px;
+}
+
+.h1-compassion__glow-backdrop {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle at center, rgba(36, 92, 72, 0.18) 0%, rgba(36, 92, 72, 0) 70%);
+  filter: blur(25px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.h1-compassion__frame {
+  position: relative;
+  z-index: 1;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(27, 67, 50, 0.22);
+  border: 1px solid rgba(36, 92, 72, 0.15);
 }
 
 .h1-compassion__image {
   width: 100%;
-  height: auto;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(36, 92, 72, 0.15);
+  height: 480px;
+  object-fit: cover;
   display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.h1-compassion__image-badge {
+.h1-compassion__image-wrap:hover .h1-compassion__image {
+  transform: scale(1.03);
+}
+
+/* Floating micro-badges */
+.h1-compassion__float-badge {
   position: absolute;
-  bottom: -1.5rem;
-  right: -1rem;
-  background: var(--color-primary, #245C48);
-  color: #fff;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 16px;
-  padding: 1rem 1.4rem;
+  padding: 0.85rem 1.25rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(36, 92, 72, 0.3);
+  gap: 0.9rem;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15);
+  animation: floatSlow 6s ease-in-out infinite alternate;
 }
 
-.h1-compassion__badge-number {
-  font-size: 1.8rem;
-  font-weight: 800;
-  line-height: 1;
+.h1-compassion__float-badge--top {
+  top: 24px;
+  left: -15px;
 }
 
-.h1-compassion__badge-text {
-  font-size: 0.75rem;
-  opacity: 0.85;
-  white-space: nowrap;
+.h1-compassion__float-badge--bottom {
+  bottom: 24px;
+  right: -15px;
+  animation-delay: -3s;
 }
 
-/* Feature list */
-.h1-feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
 }
 
-.h1-feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.95rem;
-  color: var(--color-charcoal, #27332F);
+@media (max-width: 640px) {
+  .h1-compassion__float-badge--top {
+    left: 10px;
+    top: 10px;
+  }
+  .h1-compassion__float-badge--bottom {
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
-.h1-feature-icon {
-  flex-shrink: 0;
-  margin-top: 2px;
-  background: var(--color-mint, #DCEFE5);
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
+[data-theme="dark"] .h1-compassion__float-badge {
+  background: rgba(20, 34, 30, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5);
+}
+
+.h1-compassion__float-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(36, 92, 72, 0.12);
+  color: #245c48;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-/* ---- Team Section ---- */
+.h1-compassion__float-icon--amber {
+  background: rgba(217, 119, 6, 0.12);
+  color: #d97706;
+}
+
+[data-theme="dark"] .h1-compassion__float-icon {
+  background: rgba(64, 145, 108, 0.25);
+  color: #78e08f;
+}
+
+[data-theme="dark"] .h1-compassion__float-icon--amber {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.h1-compassion__float-content strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #111e19;
+}
+
+[data-theme="dark"] .h1-compassion__float-content strong {
+  color: #ffffff;
+}
+
+.h1-compassion__float-content span {
+  display: block;
+  font-size: 0.75rem;
+  color: #556b62;
+}
+
+[data-theme="dark"] .h1-compassion__float-content span {
+  color: #9ab3a8;
+}
+
+/* Text column */
+.h1-compassion__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1-compassion__lead {
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #245c48;
+  margin: 1.25rem 0 1rem 0;
+}
+
+[data-theme="dark"] .h1-compassion__lead {
+  color: #78e08f;
+}
+
+.h1-compassion__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted, #556b62);
+  margin-bottom: 2rem;
+}
+
+[data-theme="dark"] .h1-compassion__desc {
+  color: #9ab3a8;
+}
+
+.h1-compassion__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin-bottom: 2.5rem;
+}
+
+.h1-compassion__pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+}
+
+.h1-compassion__pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(36, 92, 72, 0.08);
+  color: #245c48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+[data-theme="dark"] .h1-compassion__pillar-icon {
+  background: rgba(64, 145, 108, 0.18);
+  color: #78e08f;
+}
+
+.h1-compassion__pillar-body h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text, #111e19);
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .h1-compassion__pillar-body h4 {
+  color: #f1f5f3;
+}
+
+.h1-compassion__pillar-body p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #556b62);
+  margin: 0;
+}
+
+[data-theme="dark"] .h1-compassion__pillar-body p {
+  color: #9ab3a8;
+}
+
+.h1-compassion__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   SECTION 4: MEET OUR VETERINARY DOCTORS
+   ========================================================================== */
 .h1-team {
-  background: var(--color-bg-light, #F6F8F5);
+  background: var(--color-bg-light, #f8faf8);
+}
+
+[data-theme="dark"] .h1-team {
+  background: var(--color-bg-dark, #0d1714);
 }
 
 .h1-team__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 @media (min-width: 640px) {
@@ -795,496 +1246,739 @@
 }
 
 .h1-vet-card {
-  background: #fff;
-  border-radius: 24px;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e5e9e5);
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(36, 92, 72, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.6s var(--delay, 0s) ease both;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .h1-vet-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(36, 92, 72, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 22px 40px -12px rgba(27, 67, 50, 0.14);
+  border-color: rgba(36, 92, 72, 0.3);
+}
+
+[data-theme="dark"] .h1-vet-card {
+  background: #14221e;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .h1-vet-card:hover {
+  border-color: rgba(64, 145, 108, 0.45);
+  box-shadow: 0 22px 45px -12px rgba(0, 0, 0, 0.5);
 }
 
 .h1-vet-card__photo-wrap {
   position: relative;
+  width: 100%;
+  padding-top: 105%; /* Aspect ratio */
   overflow: hidden;
-  height: 340px;
+  background: #eef2ef;
 }
 
 .h1-vet-card__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 18%;
   transition: transform 0.5s ease;
-  display: block;
 }
 
 .h1-vet-card:hover .h1-vet-card__photo {
   transform: scale(1.05);
 }
 
+.h1-vet-card__status-pill {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1b4332;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .h1-vet-card__status-pill {
+  background: rgba(13, 23, 20, 0.9);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #78e08f;
+}
+
 .h1-vet-card__overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(36, 92, 72, 0.7), transparent);
+  top: 16px;
+  right: 16px;
+  z-index: 2;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 1.5rem;
+  transform: translateY(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .h1-vet-card:hover .h1-vet-card__overlay {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .h1-vet-card__social {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: #245c48;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  transition: background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .h1-vet-card__social:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: #245c48;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .h1-vet-card__social {
+  background: rgba(20, 34, 30, 0.92);
+  color: #78e08f;
 }
 
 .h1-vet-card__body {
-  padding: 1.5rem;
+  padding: 1.75rem 1.75rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.h1-vet-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  gap: 0.5rem;
 }
 
 .h1-vet-card__specialty {
-  display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-primary, #245C48);
-  background: var(--color-mint, #DCEFE5);
-  border-radius: 100px;
-  padding: 0.2em 0.8em;
-  margin-bottom: 0.6rem;
+  letter-spacing: 0.05em;
+  color: #245c48;
+  background: rgba(36, 92, 72, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
 }
 
-.h1-vet-card__name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-charcoal, #27332F);
-  margin: 0 0 0.2rem;
-}
-
-.h1-vet-card__title-role {
-  font-size: 0.85rem;
-  color: var(--color-teal, #286D73);
-  font-weight: 600;
-  margin: 0 0 0.2rem;
+[data-theme="dark"] .h1-vet-card__specialty {
+  color: #78e08f;
+  background: rgba(64, 145, 108, 0.18);
 }
 
 .h1-vet-card__exp {
-  font-size: 0.8rem;
-  color: #8a9a93;
-  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+[data-theme="dark"] .h1-vet-card__exp {
+  color: #9ca3af;
+}
+
+.h1-vet-card__name {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--color-text, #111e19);
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .h1-vet-card__name {
+  color: #ffffff;
+}
+
+.h1-vet-card__title-role {
+  font-size: 0.88rem;
+  color: #245c48;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+[data-theme="dark"] .h1-vet-card__title-role {
+  color: #78e08f;
 }
 
 .h1-vet-card__bio {
-  font-size: 0.88rem;
-  color: #5a6b63;
+  font-size: 0.9rem;
   line-height: 1.6;
+  color: var(--color-text-muted, #556b62);
+  margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .h1-vet-card__bio {
+  color: #9ab3a8;
+}
+
+.h1-vet-card__footer {
+  margin-top: auto;
+  border-top: 1px solid var(--color-border, #e5e9e5);
+  padding-top: 1.15rem;
+}
+
+[data-theme="dark"] .h1-vet-card__footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.h1-vet-card__book-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+}
+
+/* Team CTA bar */
+.h1-team__cta {
+  margin-top: 3.5rem;
+}
+
+.h1-team__cta-box {
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e5e9e5);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .h1-team__cta-box {
+  background: #14221e;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.h1-team__cta-text h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--color-text, #111e19);
+}
+
+[data-theme="dark"] .h1-team__cta-text h4 {
+  color: #ffffff;
+}
+
+.h1-team__cta-text p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted, #556b62);
   margin: 0;
 }
 
-.h1-team__cta {
-  text-align: center;
-  margin-top: 3rem;
+[data-theme="dark"] .h1-team__cta-text p {
+  color: #9ab3a8;
 }
 
-/* ---- Trust Section ---- */
+/* ==========================================================================
+   SECTION 5: WHY TRUST US & FROSTED GLASS STATS
+   ========================================================================== */
 .h1-trust {
-  background: var(--color-mint, #DCEFE5);
+  background: var(--color-white, #ffffff);
+  position: relative;
+}
+
+[data-theme="dark"] .h1-trust {
+  background: #09110e;
 }
 
 .h1-trust__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-top: 3.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .h1-trust__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .h1-trust__grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-.h1-trust-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 1.8rem 1.2rem;
-  text-align: center;
-  box-shadow: 0 2px 16px rgba(36, 92, 72, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.5s var(--delay, 0s) ease both;
-}
-
-.h1-trust-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 36px rgba(36, 92, 72, 0.12);
-}
-
-.h1-trust-card__icon {
-  color: var(--color-primary, #245C48);
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.h1-trust-card__title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-charcoal, #27332F);
-  margin: 0 0 0.5rem;
-}
-
-.h1-trust-card__desc {
-  font-size: 0.8rem;
-  color: #6b7c74;
-  line-height: 1.55;
-  margin: 0;
-}
-
-/* ---- Stats Row ---- */
-.h1-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-  padding: 2.5rem;
-  background: #fff;
-  border-radius: 24px;
-  box-shadow: 0 4px 24px rgba(36, 92, 72, 0.08);
-}
-
-@media (min-width: 768px) {
-  .h1-stats {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
+.h1-trust-card {
+  background: var(--color-bg-light, #f8faf8);
+  border: 1px solid var(--color-border, #e5e9e5);
+  border-radius: 20px;
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.h1-trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px -10px rgba(27, 67, 50, 0.12);
+  border-color: rgba(36, 92, 72, 0.3);
+}
+
+[data-theme="dark"] .h1-trust-card {
+  background: #14221e;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .h1-trust-card:hover {
+  border-color: rgba(64, 145, 108, 0.4);
+  box-shadow: 0 18px 35px -10px rgba(0, 0, 0, 0.4);
+}
+
+.h1-trust-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(36, 92, 72, 0.09);
+  color: #245c48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.35rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.h1-trust-card:hover .h1-trust-card__icon {
+  background: #245c48;
+  color: #ffffff;
+  transform: scale(1.1) rotate(-4deg);
+}
+
+[data-theme="dark"] .h1-trust-card__icon {
+  background: rgba(64, 145, 108, 0.18);
+  color: #78e08f;
+}
+
+[data-theme="dark"] .h1-trust-card:hover .h1-trust-card__icon {
+  background: #40916c;
+  color: #ffffff;
+}
+
+.h1-trust-card__title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-text, #111e19);
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .h1-trust-card__title {
+  color: #f1f5f3;
+}
+
+.h1-trust-card__desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted, #556b62);
+  margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .h1-trust-card__desc {
+  color: #9ab3a8;
+}
+
+.h1-trust-card__highlight {
+  margin-top: auto;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #245c48;
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(36, 92, 72, 0.07);
+}
+
+[data-theme="dark"] .h1-trust-card__highlight {
+  color: #78e08f;
+  background: rgba(64, 145, 108, 0.18);
+}
+
+/* ==========================================================================
+   LIVE STATS BAR (Targeted by js/home1.js IntersectionObserver & Counters)
+   ========================================================================== */
+.h1-stats {
+  margin-top: 4.5rem;
+  background: linear-gradient(135deg, #1b4332 0%, #245c48 50%, #2d6a4f 100%);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  box-shadow: 0 20px 45px -15px rgba(27, 67, 50, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.h1-stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  .h1-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .h1-stats {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3.25rem 3rem;
+  }
+}
+
 .h1-stat {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.h1-stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .h1-stat:not(:last-child)::after {
+    display: block;
+  }
+}
+
+.h1-stat__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #78e08f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.h1-stat__value-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
 .h1-stat__number {
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: 2.75rem;
   font-weight: 800;
-  color: var(--color-primary, #245C48);
-  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
   font-variant-numeric: tabular-nums;
 }
 
 .h1-stat__suffix {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-primary, #245C48);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #78e08f;
   margin-left: 2px;
-  display: inline;
 }
 
 .h1-stat__label {
-  font-size: 0.85rem;
-  color: #6b7c74;
-  margin-top: 0.4rem;
+  font-size: 0.92rem;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.01em;
 }
 
-/* ---- CTA Banner ---- */
+/* ==========================================================================
+   SECTION 6: HIGH-CONVERTING APPOINTMENT CTA BANNER
+   ========================================================================== */
 .h1-cta-banner {
   position: relative;
-  background: linear-gradient(135deg, #245C48 0%, #286D73 60%, #1a4535 100%);
-  color: #fff;
-  padding: 5rem 0;
+  background: linear-gradient(135deg, #0b231e 0%, #153e35 50%, #1c5449 100%);
+  color: #ffffff;
+  padding: 6.5rem 0;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .h1-cta-banner {
+    padding: 8rem 0;
+  }
+}
+
+/* Ambient glow blobs */
+.h1-cta-banner__ambient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.h1-cta-banner__ambient--1 {
+  width: 400px;
+  height: 400px;
+  background: #245c48;
+  top: -100px;
+  left: -100px;
+}
+
+.h1-cta-banner__ambient--2 {
+  width: 500px;
+  height: 500px;
+  background: #40916c;
+  bottom: -150px;
+  right: -100px;
 }
 
 .h1-cta-banner__paw-pattern {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 40%);
-  background-size: cover;
-  /* Paw print pattern via CSS */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='rgba(255,255,255,0.04)'%3E%3Cellipse cx='40' cy='52' rx='14' ry='17'/%3E%3Ccircle cx='25' cy='35' r='6'/%3E%3Ccircle cx='40' cy='30' r='6'/%3E%3Ccircle cx='55' cy='35' r='6'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 80px 80px;
-}
-
-.h1-cta-banner__pet-silhouette {
-  position: absolute;
-  right: 5%;
-  bottom: 0;
-  width: min(280px, 35vw);
-  opacity: 0.15;
+  opacity: 0.04;
+  background-image: radial-gradient(circle at 10px 10px, #ffffff 2px, transparent 0);
+  background-size: 32px 32px;
   pointer-events: none;
 }
 
 .h1-cta-banner__content {
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 
 .h1-cta-banner__text {
-  max-width: 640px;
+  max-width: 820px;
   margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h1-cta-banner__status-pill {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 0.45rem 1.15rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #d1fae5;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.75rem;
 }
 
 .h1-cta-banner__headline {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1.35rem;
+}
+
+.h1-cta-banner__accent-text {
+  background: linear-gradient(90deg, #78e08f, #a3e6be);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
 }
 
 .h1-cta-banner__subtext {
-  font-size: 1.05rem;
+  font-size: 1.12rem;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 2.5rem;
-  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
 }
 
 .h1-cta-banner__actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.h1-cta-banner__btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.h1-cta-banner__btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
 }
 
 .h1-cta-banner__phone {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
-  font-weight: 600;
+  gap: 0.85rem;
   text-decoration: none;
-  transition: color 0.2s ease;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  padding: 0.7rem 1.35rem;
+  border-radius: 12px;
+  transition: all 0.25s ease;
 }
 
 .h1-cta-banner__phone:hover {
-  color: #fff;
-}
-
-/* Btn white variant */
-.btn--white {
-  background: #fff;
-  color: var(--color-primary, #245C48);
-  border: 2px solid #fff;
-}
-
-.btn--white:hover {
-  background: transparent;
-  color: #fff;
-}
-
-/* Btn outline-light */
-.btn--outline-light {
-  background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-}
-
-.btn--outline-light:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #fff;
-}
-
-/* Btn outline-dark */
-.btn--outline-dark {
-  background: transparent;
-  color: var(--color-charcoal, #27332F);
-  border: 2px solid var(--color-charcoal, #27332F);
-}
-
-.btn--outline-dark:hover {
-  background: var(--color-charcoal, #27332F);
-  color: #fff;
-}
-
-.btn--small {
-  padding: 0.5rem 1.2rem;
-  font-size: 0.85rem;
-}
-
-/* ---- Shared Section Header ---- */
-.section-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.section-eyebrow {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-primary, #245C48);
-  margin-bottom: 0.6rem;
-}
-
-.section-title {
-  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-  font-weight: 700;
-  color: var(--color-charcoal, #27332F);
-  margin: 0 0 1rem;
-  line-height: 1.2;
-}
-
-.section-subtitle {
-  font-size: 1rem;
-  color: #6b7c74;
-  line-height: 1.65;
-  margin: 0;
-}
-
-/* ---- Reveal on scroll ---- */
-
-/* ---- Dark theme contrast fixes ---- */
-[data-theme="dark"] .h1-services,
-[data-theme="dark"] .h1-team {
-  background: var(--color-light-bg, #141e1a);
-}
-[data-theme="dark"] .h1-service-card,
-[data-theme="dark"] .h1-compassion,
-[data-theme="dark"] .h1-vet-card,
-[data-theme="dark"] .h1-trust-card,
-[data-theme="dark"] .h1-stats {
-  background: var(--color-surface);
-}
-[data-theme="dark"] .h1-service-card,
-[data-theme="dark"] .h1-vet-card,
-[data-theme="dark"] .h1-trust-card,
-[data-theme="dark"] .h1-stats {
-  border-color: var(--color-border, rgba(255,255,255,0.08));
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-}
-[data-theme="dark"] .h1-stat__suffix {
-  color: var(--color-primary, #63c29f);
-}
-[data-theme="dark"] .h1-service-card__title,
-[data-theme="dark"] .h1-vet-card__name,
-[data-theme="dark"] .h1-trust-card__title,
-[data-theme="dark"] .h1-stat__number {
-  color: var(--color-text-main);
-}
-[data-theme="dark"] .h1-service-card__desc,
-[data-theme="dark"] .h1-vet-card__specialty,
-[data-theme="dark"] .h1-vet-card__exp,
-[data-theme="dark"] .h1-vet-card__bio,
-[data-theme="dark"] .h1-trust-card__desc,
-[data-theme="dark"] .h1-stat__label,
-[data-theme="dark"] .h1-compassion__desc,
-[data-theme="dark"] .h1-feature-list li span,
-[data-theme="dark"] .section-subtitle {
-  color: var(--color-text-muted);
-}
-
-/* Home hero/trust badges: improve contrast in dark mode */
-[data-theme="dark"] .h1-hero__overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(10, 20, 17, 0.92) 0%,
-    rgba(20, 46, 38, 0.86) 45%,
-    rgba(10, 20, 17, 0.78) 100%
-  );
-}
-[data-theme="dark"] .h1-hero__eyebrow {
-  color: #ffffff;
   background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.35);
-}
-[data-theme="dark"] .h1-hero__headline {
-  color: #ffffff;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
-}
-[data-theme="dark"] .h1-hero__subtext {
-  color: rgba(255, 255, 255, 0.96);
-}
-[data-theme="dark"] .h1-trust-badge {
-  background: rgba(10, 20, 17, 0.62);
-  border-color: rgba(255, 255, 255, 0.28);
-  color: #ffffff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
-}
-[data-theme="dark"] .h1-trust-badge:hover {
-  background: rgba(20, 46, 38, 0.78);
-  border-color: rgba(255, 255, 255, 0.4);
-}
-[data-theme="dark"] .h1-trust-badge strong,
-[data-theme="dark"] .h1-trust-badge span {
-  color: #ffffff;
-}
-[data-theme="dark"] .h1-trust-badge span {
-  color: rgba(255, 255, 255, 0.92);
-}
-[data-theme="dark"] .h1-trust-badge__icon {
-  color: #ffd36b;
-}
-.reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.65s var(--delay, 0s) ease, transform 0.65s var(--delay, 0s) ease;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
 }
 
-.reveal-on-scroll.revealed {
-  opacity: 1;
-  transform: translateY(0);
+.h1-cta-banner__phone-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #78e08f;
+  color: #0b231e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
- /* Responsive font sizes (all viewports) */
- @media (max-width: 1024px) {
-   .h1-hero__headline { font-size: clamp(2rem, 4.5vw, 3.2rem); }
-   .h1-hero__subtext { font-size: 1rem; }
-   .h1-cta-banner__headline { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
-   .h1-cta-banner__subtext { font-size: 1rem; }
-   .h1-about__text p, .h1-blog-preview__excerpt { font-size: 0.95rem; }
- }
- @media (max-width: 768px) {
-   .h1-hero__headline { font-size: clamp(1.8rem, 6vw, 2.6rem); }
-   .h1-hero__subtext { font-size: 0.96rem; }
-   .h1-hero__pill { font-size: 0.82rem; }
-   .h1-cta-banner__headline { font-size: 1.7rem; }
-   .h1-cta-banner__subtext { font-size: 0.95rem; }
-   .h1-stat__label { font-size: 0.82rem; }
- }
- @media (max-width: 480px) {
-   .h1-hero__headline { font-size: clamp(1.6rem, 7.5vw, 2.1rem); }
-   .h1-hero__subtext { font-size: 0.9rem; }
-   .h1-hero__pill { font-size: 0.78rem; }
-   .h1-cta-banner__headline { font-size: 1.45rem; }
-   .h1-cta-banner__subtext { font-size: 0.9rem; }
-   .h1-stat__suffix { font-size: 1.2rem; }
-   .h1-stat__label { font-size: 0.78rem; }
- }
+.h1-cta-banner__phone-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.h1-cta-banner__phone-sub {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.h1-cta-banner__phone-num {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.h1-cta-banner__assurances {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+}
+
+.h1-cta-banner__assurance-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+}
+
+.h1-cta-banner__assurance-item svg {
+  color: #78e08f;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE POLISH
+   ========================================================================== */
+@media (max-width: 640px) {
+  .h1-service-card {
+    padding: 1.75rem 1.5rem;
+  }
+  .h1-services__footer-banner {
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .h1-compassion__image {
+    height: 340px;
+  }
+  .h1-team__cta-box {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .h1-stats {
+    padding: 2.25rem 1.5rem;
+  }
+  .h1-stat__number {
+    font-size: 2.25rem;
+  }
+  .h1-cta-banner__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .h1-cta-banner__btn-main,
+  .h1-cta-banner__phone {
+    width: 100%;
+    justify-content: center;
+  }
+  .h1-cta-banner__assurances {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+  }
+}

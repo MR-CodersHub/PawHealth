@@ -198,96 +198,180 @@
     <section class="h1-services section" id="services" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">What We Offer</span>
+          <span class="section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2v20M2 12h20"/></svg>
+            Clinical Excellence &amp; Care
+          </span>
           <h2 id="services-heading" class="section-title">Comprehensive Veterinary Services</h2>
-          <p class="section-subtitle">From preventive care to complex procedures, our experienced team is here for every step of your pet's health journey.</p>
+          <p class="section-subtitle">From routine preventive wellness to advanced surgical triage, our board-certified clinical team delivers hospital-grade precision with gentle bedside empathy.</p>
         </div>
 
         <div class="h1-services__grid" role="list">
 
           <!-- Card 1: Vaccinations -->
           <article class="h1-service-card reveal-on-scroll" style="--delay: 0.05s" role="listitem">
-            <div class="h1-service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M18 2h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
-                <path d="M13 7l-5 5"/>
-                <path d="M5 12l-3 3 4 4 3-3"/>
-                <path d="M12 17l-3 3"/>
-              </svg>
+            <div class="h1-service-card__top">
+              <div class="h1-service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/>
+                </svg>
+              </div>
+              <span class="h1-service-card__badge">Core &amp; Lifestyle</span>
             </div>
-            <h3 class="h1-service-card__title">Vaccinations</h3>
-            <p class="h1-service-card__desc">Core and lifestyle vaccines for dogs &amp; cats to protect against preventable diseases.</p>
-            <a href="pages/services.html" class="h1-service-card__link" aria-label="Learn more about vaccinations">Learn More <span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+            <h3 class="h1-service-card__title">Vaccinations &amp; Prevention</h3>
+            <p class="h1-service-card__desc">Complete vaccine schedules for dogs and cats tailored to regional risks and your pet's lifestyle.</p>
+            <ul class="h1-service-card__features" aria-label="Vaccination features">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Rabies, DHPP, FVRCP &amp; Bordetella</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Digital immunization certificate</li>
+            </ul>
+            <div class="h1-service-card__action">
+              <a href="pages/service-details.html" class="h1-service-card__link" aria-label="Learn more about vaccinations & prevention">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </article>
 
-          <!-- Card 2: General Checkups -->
+          <!-- Card 2: Comprehensive Wellness Exams -->
           <article class="h1-service-card reveal-on-scroll" style="--delay: 0.1s" role="listitem">
-            <div class="h1-service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
-                <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
-                <circle cx="20" cy="10" r="2"/>
-              </svg>
+            <div class="h1-service-card__top">
+              <div class="h1-service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+                  <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+                  <circle cx="20" cy="10" r="2"/>
+                </svg>
+              </div>
+              <span class="h1-service-card__badge">12-System Check</span>
             </div>
-            <h3 class="h1-service-card__title">General Checkups</h3>
-            <p class="h1-service-card__desc">Routine wellness examinations to catch health issues early and keep pets thriving.</p>
-            <a href="pages/services.html" class="h1-service-card__link" aria-label="Learn more about general checkups">Learn More <span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+            <h3 class="h1-service-card__title">Comprehensive Wellness</h3>
+            <p class="h1-service-card__desc">Nose-to-tail physical exams detecting early signs of illness before symptoms become severe.</p>
+            <ul class="h1-service-card__features" aria-label="Wellness features">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Eyes, ears, cardiac, dental &amp; coat</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Dedicated 30-min unhurried visits</li>
+            </ul>
+            <div class="h1-service-card__action">
+              <a href="pages/services.html#preventive" class="h1-service-card__link" aria-label="Learn more about comprehensive wellness exams">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </article>
 
-          <!-- Card 3: Diagnostics -->
+          <!-- Card 3: In-House Diagnostics & Labs -->
           <article class="h1-service-card reveal-on-scroll" style="--delay: 0.15s" role="listitem">
-            <div class="h1-service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-4m-6 0h6"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
+            <div class="h1-service-card__top">
+              <div class="h1-service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0-14 0"/><circle cx="10" cy="8" r="4"/><path d="M18 2l4 4-6 6-4-4 6-6Z"/>
+                </svg>
+              </div>
+              <span class="h1-service-card__badge">Under 20 Mins</span>
             </div>
-            <h3 class="h1-service-card__title">Diagnostics</h3>
-            <p class="h1-service-card__desc">Lab tests, digital X-rays, and ultrasound for accurate and timely diagnoses.</p>
-            <a href="pages/services.html" class="h1-service-card__link" aria-label="Learn more about diagnostics">Learn More <span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+            <h3 class="h1-service-card__title">Diagnostics &amp; Digital Lab</h3>
+            <p class="h1-service-card__desc">Point-of-care IDEXX clinical laboratory, digital high-definition X-rays, and ultrasound scans.</p>
+            <ul class="h1-service-card__features" aria-label="Diagnostics features">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> In-house blood, urine &amp; cytology</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Low-radiation digital imaging</li>
+            </ul>
+            <div class="h1-service-card__action">
+              <a href="pages/services.html#diagnostics" class="h1-service-card__link" aria-label="Learn more about diagnostics and lab">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </article>
 
-          <!-- Card 4: Surgery -->
+          <!-- Card 4: Surgery & ICU Suites -->
           <article class="h1-service-card reveal-on-scroll" style="--delay: 0.2s" role="listitem">
-            <div class="h1-service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <line x1="6" y1="18" x2="18" y2="6"/>
-                <polyline points="8 6 6 6 6 8"/>
-                <polyline points="18 16 18 18 16 18"/>
-                <circle cx="12" cy="12" r="1"/>
-              </svg>
+            <div class="h1-service-card__top">
+              <div class="h1-service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6"/><path d="M9 15h6"/>
+                </svg>
+              </div>
+              <span class="h1-service-card__badge">Board-Certified</span>
             </div>
-            <h3 class="h1-service-card__title">Surgery</h3>
-            <p class="h1-service-card__desc">Safe, sterile surgical procedures performed by board-certified veterinary surgeons.</p>
-            <a href="pages/services.html" class="h1-service-card__link" aria-label="Learn more about surgery">Learn More <span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+            <h3 class="h1-service-card__title">Surgery &amp; Recovery Suites</h3>
+            <p class="h1-service-card__desc">Advanced soft-tissue and orthopedic surgeries under rigorous multi-parameter anesthesia monitoring.</p>
+            <ul class="h1-service-card__features" aria-label="Surgery features">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Spay, neuter &amp; reconstructive surgery</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Heated post-op recovery bays</li>
+            </ul>
+            <div class="h1-service-card__action">
+              <a href="pages/services.html#surgery" class="h1-service-card__link" aria-label="Learn more about surgical procedures">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </article>
 
-          <!-- Card 5: Dental Care -->
+          <!-- Card 5: Dental Care & Oral Surgery -->
           <article class="h1-service-card reveal-on-scroll" style="--delay: 0.25s" role="listitem">
-            <div class="h1-service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 5.5c-1.5-2-3.5-2.5-5-1.5C5 5 4 7 4 9c0 4 2 8 4 10 .7.7 1.3 1 2 1 .5 0 1-.2 1.5-.6.5.4 1 .6 1.5.6.7 0 1.3-.3 2-1 2-2 4-6 4-10 0-2-1-4-3-5-1.5-1-3.5-.5-5 1.5z"/>
-              </svg>
+            <div class="h1-service-card__top">
+              <div class="h1-service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C8.5 2 6 4.5 6 7.5c0 3.2 2 5.5 3 9.5.5 2 1 5 3 5s2.5-3 3-5c1-4 3-6.3 3-9.5C18 4.5 15.5 2 12 2z"/>
+                  <path d="M9 7c1 1 2 1 3 0s2-1 3 0"/>
+                </svg>
+              </div>
+              <span class="h1-service-card__badge">Ultrasonic Care</span>
             </div>
-            <h3 class="h1-service-card__title">Dental Care</h3>
-            <p class="h1-service-card__desc">Professional dental cleaning, polishing, and oral health treatment for pets.</p>
-            <a href="pages/services.html" class="h1-service-card__link" aria-label="Learn more about dental care">Learn More <span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+            <h3 class="h1-service-card__title">Dental Care &amp; Hygiene</h3>
+            <p class="h1-service-card__desc">Professional subgingival ultrasonic scaling, high-gloss polishing, and periodontal treatments.</p>
+            <ul class="h1-service-card__features" aria-label="Dental features">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Full-mouth digital dental radiographs</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Pain-free surgical extractions</li>
+            </ul>
+            <div class="h1-service-card__action">
+              <a href="pages/services.html#surgery" class="h1-service-card__link" aria-label="Learn more about veterinary dental care">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </article>
 
           <!-- Card 6: Emergency Care -->
           <article class="h1-service-card h1-service-card--emergency reveal-on-scroll" style="--delay: 0.3s" role="listitem">
-            <div class="h1-service-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <line x1="12" y1="8" x2="12" y2="16"/>
-                <line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
+            <div class="h1-service-card__top">
+              <div class="h1-service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M2 12h20"/>
+                </svg>
+              </div>
+              <span class="h1-service-card__badge h1-service-card__badge--emergency">
+                <span class="h1-pulse-dot" aria-hidden="true"></span> 24/7 Priority ICU
+              </span>
             </div>
-            <h3 class="h1-service-card__title">Emergency Care</h3>
-            <p class="h1-service-card__desc">Urgent care available 24/7 when your pet needs immediate attention.</p>
-            <a href="pages/services.html" class="h1-service-card__link" aria-label="Learn more about emergency care">Learn More <span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+            <h3 class="h1-service-card__title">Emergency &amp; Urgent Triage</h3>
+            <p class="h1-service-card__desc">Immediate critical care for acute trauma, toxin exposure, severe distress, and foreign body emergencies.</p>
+            <ul class="h1-service-card__features" aria-label="Emergency features">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Direct oxygen support &amp; vital stabilization</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Walk-ins triage with zero wait times</li>
+            </ul>
+            <div class="h1-service-card__action h1-service-card__action--dual">
+              <a href="tel:+15551234568" class="btn btn--danger-subtle btn--sm" aria-label="Call 24/7 Emergency triage line">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.72 5.72l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>(555) 123-4568</span>
+              </a>
+              <a href="pages/contact.html#emergency" class="h1-service-card__link" aria-label="Emergency triage information">
+                <span>Triage Protocol</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </article>
 
+        </div>
+
+        <!-- Services Footer Banner -->
+        <div class="h1-services__footer-banner reveal-on-scroll">
+          <div class="h1-services__footer-info">
+            <span class="h1-services__footer-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <span>Looking for dermatology, cardiology, senior hospice, or customized care? We offer <strong>50+ specialized procedures</strong>.</span>
+          </div>
+          <a href="pages/services.html" class="btn btn--outline-dark btn--sm">Explore All Clinical Services &rarr;</a>
         </div>
       </div>
     </section>
@@ -296,70 +380,114 @@
     <section class="h1-compassion section" id="compassion" aria-labelledby="compassion-heading">
       <div class="container">
         <div class="h1-compassion__grid">
-          <!-- Image Column -->
+
+          <!-- Image Column with Floating Badges -->
           <div class="h1-compassion__image-wrap reveal-on-scroll">
-            <img
-              src="https://i.pinimg.com/736x/0b/d2/31/0bd2319601b5d13781f21bca2518ff98.jpg"
-              alt="Veterinarian gently examining a dog with compassion"
-              class="h1-compassion__image"
-              loading="lazy"
-              width="800"
-              height="600"
-            />
-            <div class="h1-compassion__image-badge" aria-hidden="true">
-              <span class="h1-compassion__badge-number">10+</span>
-              <span class="h1-compassion__badge-text">Years of Caring</span>
+            <div class="h1-compassion__glow-backdrop" aria-hidden="true"></div>
+            <div class="h1-compassion__frame">
+              <img
+                src="https://i.pinimg.com/736x/0b/d2/31/0bd2319601b5d13781f21bca2518ff98.jpg"
+                alt="Veterinarian gently examining a dog with compassion"
+                class="h1-compassion__image"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            </div>
+
+            <!-- Floating Badge Top Left: Fear-Free -->
+            <div class="h1-compassion__float-badge h1-compassion__float-badge--top" aria-hidden="true">
+              <span class="h1-compassion__float-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div class="h1-compassion__float-content">
+                <strong>Fear-Free® Certified</strong>
+                <span>Zero-stress handling protocol</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Bottom Right: 10+ Years -->
+            <div class="h1-compassion__float-badge h1-compassion__float-badge--bottom" aria-hidden="true">
+              <span class="h1-compassion__float-icon h1-compassion__float-icon--amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div class="h1-compassion__float-content">
+                <strong>Unhurried 30-Min Visits</strong>
+                <span>Never rushed examinations</span>
+              </div>
             </div>
           </div>
 
           <!-- Text Column -->
-          <div class="h1-compassion__text reveal-on-scroll" style="--delay: 0.2s">
-            <span class="section-eyebrow">Our Philosophy</span>
-            <h2 id="compassion-heading" class="section-title">Patient-First Veterinary Care</h2>
-            <p>At PawHealth, we believe every pet deserves to be treated with the same love and attention you give them at home. Our patient-first approach means we take the time to understand your pet's unique needs before recommending any treatment.</p>
-            <p>We practice gentle, fear-free handling techniques that reduce anxiety and stress for your pet during every visit. Our clinic environment is designed to be calming and welcoming — because a relaxed pet is a healthier pet.</p>
-            <p>From the moment you walk through our doors, our team is focused on building a trusting relationship with both you and your pet. Clear communication is at the heart of everything we do — we explain every step of the diagnostic and treatment process so you're never left wondering.</p>
+          <div class="h1-compassion__text reveal-on-scroll" style="--delay: 0.15s">
+            <span class="section-eyebrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Our Patient-First Philosophy
+            </span>
+            <h2 id="compassion-heading" class="section-title">Veterinary Medicine With Heart, Patience &amp; Precision</h2>
+            <p class="h1-compassion__lead">We believe every pet deserves to be treated with the same tender respect and gentle patience you give them at home.</p>
+            <p class="h1-compassion__desc">Unlike traditional high-volume clinics where visits feel rushed, PawHealth was intentionally designed from the ground up to eliminate veterinary anxiety. We utilize feline-friendly waiting zones, pheromone-diffused exam rooms, and positive reward handling to transform nervous appointments into comfortable visits.</p>
 
-            <ul class="h1-feature-list" role="list">
-              <li class="h1-feature-item">
-                <span class="h1-feature-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245C48" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                <span>Individualized treatment plans tailored to each pet</span>
-              </li>
-              <li class="h1-feature-item">
-                <span class="h1-feature-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245C48" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                <span>Gentle, fear-free handling approach for all animals</span>
-              </li>
-              <li class="h1-feature-item">
-                <span class="h1-feature-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245C48" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                <span>Transparent communication with pet owners every step</span>
-              </li>
-            </ul>
+            <!-- Feature Pillar Row -->
+            <div class="h1-compassion__pillars">
+              <div class="h1-compassion__pillar">
+                <div class="h1-compassion__pillar-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div class="h1-compassion__pillar-body">
+                  <h4>Individualized Treatment Plans</h4>
+                  <p>Custom health pathways formulated around your pet's precise breed, age, genetics, and daily lifestyle.</p>
+                </div>
+              </div>
 
-            <a href="pages/about.html" class="btn btn--primary" aria-label="Meet our veterinary team">Meet Our Team</a>
+              <div class="h1-compassion__pillar">
+                <div class="h1-compassion__pillar-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                </div>
+                <div class="h1-compassion__pillar-body">
+                  <h4>Calm, Low-Stress Environments</h4>
+                  <p>Acoustic dampening, separate dog/cat waiting suites, and non-slip examination tables prevent sensory overload.</p>
+                </div>
+              </div>
+
+              <div class="h1-compassion__pillar">
+                <div class="h1-compassion__pillar-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <div class="h1-compassion__pillar-body">
+                  <h4>Total Transparency &amp; Digital Records</h4>
+                  <p>Every diagnostic result, X-ray, and itemized invoice is uploaded directly to your pet's secure portal within hours.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="h1-compassion__actions">
+              <a href="#team" class="btn btn--primary">Meet Our Doctors</a>
+              <a href="pages/pricing.html" class="btn btn--outline-dark">View Transparent Pricing</a>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 4: MEET OUR TEAM ===== -->
+    <!-- ===== SECTION 4: MEET OUR VETERINARY DOCTORS ===== -->
     <section class="h1-team section" id="team" aria-labelledby="team-heading">
       <div class="container">
         <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">The People Behind PawHealth</span>
-          <h2 id="team-heading" class="section-title">Meet Our Caring Veterinarians</h2>
-          <p class="section-subtitle">Our board-certified veterinarians bring decades of combined experience and an unwavering passion for animal health.</p>
+          <span class="section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Expert Care Team
+          </span>
+          <h2 id="team-heading" class="section-title">Meet Our Veterinary Specialists</h2>
+          <p class="section-subtitle">Our licensed clinicians bring over 26 years of combined medical expertise, advanced surgical training, and heartfelt dedication to every visit.</p>
         </div>
 
-        <div class="h1-team__grid">
+        <div class="h1-team__grid" role="list">
 
           <!-- Dr. Sarah Mitchell -->
-          <article class="h1-vet-card reveal-on-scroll" style="--delay: 0.05s">
+          <article class="h1-vet-card reveal-on-scroll" style="--delay: 0.05s" role="listitem">
             <div class="h1-vet-card__photo-wrap">
               <img
                 src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&h=1000&q=80"
@@ -369,49 +497,71 @@
                 width="400"
                 height="500"
               />
+              <div class="h1-vet-card__status-pill">
+                <span class="h1-pulse-dot" aria-hidden="true"></span> Available Today
+              </div>
               <div class="h1-vet-card__overlay" aria-hidden="true">
-                <a href="#" class="h1-vet-card__social" aria-label="Dr. Sarah Mitchell on LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com" class="h1-vet-card__social" aria-label="Dr. Sarah Mitchell on LinkedIn" target="_blank" rel="noopener noreferrer">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
               </div>
             </div>
             <div class="h1-vet-card__body">
-              <span class="h1-vet-card__specialty">Internal Medicine</span>
+              <div class="h1-vet-card__meta">
+                <span class="h1-vet-card__specialty">Internal Medicine</span>
+                <span class="h1-vet-card__exp">12+ Yrs Exp</span>
+              </div>
               <h3 class="h1-vet-card__name">Dr. Sarah Mitchell</h3>
-              <p class="h1-vet-card__title-role">Chief Veterinarian</p>
-              <p class="h1-vet-card__exp">12 Years Experience</p>
-              <p class="h1-vet-card__bio">Dr. Mitchell leads our clinical team with expertise in internal medicine and a heart-centered approach to animal wellness.</p>
+              <p class="h1-vet-card__title-role">DVM, Chief Medical Director</p>
+              <p class="h1-vet-card__bio">UC Davis graduate specializing in internal medicine, geriatric canine care, and feline chronic disease management.</p>
+              <div class="h1-vet-card__footer">
+                <a href="pages/contact.html#appointment" class="btn btn--outline-dark btn--sm h1-vet-card__book-btn" aria-label="Book an appointment with Dr. Sarah Mitchell">
+                  <span>Book with Dr. Mitchell</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Dr. James Okoye -->
-          <article class="h1-vet-card reveal-on-scroll" style="--delay: 0.15s">
+          <article class="h1-vet-card reveal-on-scroll" style="--delay: 0.15s" role="listitem">
             <div class="h1-vet-card__photo-wrap">
               <img
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&h=1000&q=80"
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80"
                 alt="Dr. James Okoye, Veterinary Surgeon at PawHealth"
                 class="h1-vet-card__photo"
                 loading="lazy"
                 width="400"
                 height="500"
               />
+              <div class="h1-vet-card__status-pill">
+                <span class="h1-pulse-dot" aria-hidden="true"></span> Available Today
+              </div>
               <div class="h1-vet-card__overlay" aria-hidden="true">
-                <a href="#" class="h1-vet-card__social" aria-label="Dr. James Okoye on LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com" class="h1-vet-card__social" aria-label="Dr. James Okoye on LinkedIn" target="_blank" rel="noopener noreferrer">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
               </div>
             </div>
             <div class="h1-vet-card__body">
-              <span class="h1-vet-card__specialty">Surgery</span>
+              <div class="h1-vet-card__meta">
+                <span class="h1-vet-card__specialty">Surgery &amp; Ortho</span>
+                <span class="h1-vet-card__exp">8+ Yrs Exp</span>
+              </div>
               <h3 class="h1-vet-card__name">Dr. James Okoye</h3>
-              <p class="h1-vet-card__title-role">Veterinary Surgeon</p>
-              <p class="h1-vet-card__exp">8 Years Experience</p>
-              <p class="h1-vet-card__bio">Dr. Okoye is a skilled veterinary surgeon specializing in soft tissue and orthopedic procedures with remarkable precision.</p>
+              <p class="h1-vet-card__title-role">DVM, DACVS Board Certified</p>
+              <p class="h1-vet-card__bio">Cornell University alumnus leading minimally invasive soft tissue procedures and specialized orthopedic reconstructions.</p>
+              <div class="h1-vet-card__footer">
+                <a href="pages/contact.html#appointment" class="btn btn--outline-dark btn--sm h1-vet-card__book-btn" aria-label="Book an appointment with Dr. James Okoye">
+                  <span>Book with Dr. James</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Dr. Priya Sharma -->
-          <article class="h1-vet-card reveal-on-scroll" style="--delay: 0.25s">
+          <article class="h1-vet-card reveal-on-scroll" style="--delay: 0.25s" role="listitem">
             <div class="h1-vet-card__photo-wrap">
               <img
                 src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&h=1000&q=80"
@@ -420,141 +570,202 @@
                 loading="lazy"
                 width="400"
                 height="500"
-                style="object-position: 50% 0%;"
+                style="object-position: 50% 15%;"
               />
+              <div class="h1-vet-card__status-pill">
+                <span class="h1-pulse-dot" aria-hidden="true"></span> Available Today
+              </div>
               <div class="h1-vet-card__overlay" aria-hidden="true">
-                <a href="#" class="h1-vet-card__social" aria-label="Dr. Priya Sharma on LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com" class="h1-vet-card__social" aria-label="Dr. Priya Sharma on LinkedIn" target="_blank" rel="noopener noreferrer">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
               </div>
             </div>
             <div class="h1-vet-card__body">
-              <span class="h1-vet-card__specialty">Preventive Care</span>
+              <div class="h1-vet-card__meta">
+                <span class="h1-vet-card__specialty">Preventive &amp; CVA</span>
+                <span class="h1-vet-card__exp">6+ Yrs Exp</span>
+              </div>
               <h3 class="h1-vet-card__name">Dr. Priya Sharma</h3>
-              <p class="h1-vet-card__title-role">Animal Wellness Specialist</p>
-              <p class="h1-vet-card__exp">6 Years Experience</p>
-              <p class="h1-vet-card__bio">Dr. Sharma champions preventive health with tailored wellness plans that help pets live longer, happier lives.</p>
+              <p class="h1-vet-card__title-role">DVM, Certified Veterinary Acupuncturist</p>
+              <p class="h1-vet-card__bio">PennVet graduate championing integrative preventive medicine, low-stress pediatric puppy care, and chronic pain management.</p>
+              <div class="h1-vet-card__footer">
+                <a href="pages/contact.html#appointment" class="btn btn--outline-dark btn--sm h1-vet-card__book-btn" aria-label="Book an appointment with Dr. Priya Sharma">
+                  <span>Book with Dr. Priya</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
             </div>
           </article>
 
         </div>
 
         <div class="h1-team__cta reveal-on-scroll">
-          <a href="pages/about.html" class="btn btn--outline-dark" aria-label="Meet the full PawHealth veterinary team">Meet the Full Team</a>
+          <div class="h1-team__cta-box">
+            <div class="h1-team__cta-text">
+              <h4>Supported by 15+ Certified Veterinary Technicians &amp; Nurses</h4>
+              <p>Our dedicated support team provides continuous round-the-clock monitoring and tender care for every hospitalized pet.</p>
+            </div>
+            <a href="pages/about.html" class="btn btn--primary" aria-label="Meet the full PawHealth veterinary team">Meet Our Full Medical Staff &rarr;</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 5: WHY TRUST US ===== -->
+    <!-- ===== SECTION 5: WHY PET PARENTS TRUST PAWHEALTH & STATS ===== -->
     <section class="h1-trust section" id="trust" aria-labelledby="trust-heading">
       <div class="container">
         <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Our Commitment</span>
-          <h2 id="trust-heading" class="section-title">Why Pet Owners Trust PawHealth</h2>
-          <p class="section-subtitle">We've built a reputation for excellence, compassion, and results that speak for themselves.</p>
+          <span class="section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            The PawHealth Standard
+          </span>
+          <h2 id="trust-heading" class="section-title">Why Pet Parents Trust Us With Their Families</h2>
+          <p class="section-subtitle">We have built our hospital around the standards that matter most: clinical excellence, fear-free handling, upfront transparency, and genuine empathy.</p>
         </div>
 
         <div class="h1-trust__grid">
 
           <div class="h1-trust-card reveal-on-scroll" style="--delay: 0.05s">
             <div class="h1-trust-card__icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
             </div>
-            <h3 class="h1-trust-card__title">Experienced Vets</h3>
-            <p class="h1-trust-card__desc">Board-certified veterinary professionals with decades of combined clinical experience.</p>
-          </div>
-
-          <div class="h1-trust-card reveal-on-scroll" style="--delay: 0.1s">
-            <div class="h1-trust-card__icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h3 class="h1-trust-card__title">Modern Diagnostics</h3>
-            <p class="h1-trust-card__desc">Advanced digital imaging, in-house lab testing, and ultrasound technology.</p>
+            <h3 class="h1-trust-card__title">AAHA Accredited Hospital</h3>
+            <p class="h1-trust-card__desc">We voluntarily undergo evaluations on over 900 rigorous standards of veterinary excellence met by only 12% of hospitals.</p>
+            <span class="h1-trust-card__highlight">Top 12% in North America</span>
           </div>
 
           <div class="h1-trust-card reveal-on-scroll" style="--delay: 0.15s">
             <div class="h1-trust-card__icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
-            <h3 class="h1-trust-card__title">Personalized Care</h3>
-            <p class="h1-trust-card__desc">Individual treatment plans designed around your pet's specific health profile.</p>
-          </div>
-
-          <div class="h1-trust-card reveal-on-scroll" style="--delay: 0.2s">
-            <div class="h1-trust-card__icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="h1-trust-card__title">Preventive Focus</h3>
-            <p class="h1-trust-card__desc">Proactive health strategies to prevent illness and extend your pet's quality of life.</p>
+            <h3 class="h1-trust-card__title">Point-of-Care Digital Lab</h3>
+            <p class="h1-trust-card__desc">State-of-the-art IDEXX blood chemistry, digital radiology, and ultrasound systems provide accurate answers within 20 minutes.</p>
+            <span class="h1-trust-card__highlight">Zero External Delays</span>
           </div>
 
           <div class="h1-trust-card reveal-on-scroll" style="--delay: 0.25s">
             <div class="h1-trust-card__icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </div>
-            <h3 class="h1-trust-card__title">Pet-Friendly Space</h3>
-            <p class="h1-trust-card__desc">Calm, stress-reducing clinic environment designed with your pet's comfort in mind.</p>
+            <h3 class="h1-trust-card__title">Fear-Free® Low Stress Suites</h3>
+            <p class="h1-trust-card__desc">Separate canine and feline waiting lobbies, species-specific pheromones, and quiet exam rooms eliminate vet-visit anxiety.</p>
+            <span class="h1-trust-card__highlight">Calm &amp; Welcoming</span>
           </div>
 
-          <div class="h1-trust-card reveal-on-scroll" style="--delay: 0.3s">
+          <div class="h1-trust-card reveal-on-scroll" style="--delay: 0.35s">
             <div class="h1-trust-card__icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
-            <h3 class="h1-trust-card__title">Clear Communication</h3>
-            <p class="h1-trust-card__desc">We keep you fully informed — explaining diagnoses, options, and costs with transparency.</p>
+            <h3 class="h1-trust-card__title">100% Upfront Transparent Pricing</h3>
+            <p class="h1-trust-card__desc">No surprise fees or hidden hospital surcharges. You receive a full itemized treatment estimate before any procedure begins.</p>
+            <span class="h1-trust-card__highlight">No Hidden Fees</span>
           </div>
 
         </div>
 
-        <!-- Stats Row -->
-        <div class="h1-stats" aria-label="PawHealth statistics" role="list">
-          <div class="h1-stat reveal-on-scroll" role="listitem">
-            <span class="h1-stat__number" data-target="5000" aria-label="5000 or more pets treated">0</span>
-            <span class="h1-stat__suffix">+</span>
-            <span class="h1-stat__label">Pets Treated</span>
+        <!-- Modern Frosted Stats Bar (Compatible with js/home1.js animated counters) -->
+        <div class="h1-stats reveal-on-scroll" aria-label="PawHealth verified clinical statistics" role="list">
+          <div class="h1-stat" role="listitem">
+            <div class="h1-stat__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <div class="h1-stat__value-row">
+              <span class="h1-stat__number" data-target="5000" aria-label="5000 or more pets treated">0</span>
+              <span class="h1-stat__suffix">+</span>
+            </div>
+            <span class="h1-stat__label">Patients Treated &amp; Cared For</span>
           </div>
-          <div class="h1-stat reveal-on-scroll" style="--delay: 0.1s" role="listitem">
-            <span class="h1-stat__number" data-target="98" aria-label="98 percent satisfaction rate">0</span>
-            <span class="h1-stat__suffix">%</span>
-            <span class="h1-stat__label">Satisfaction Rate</span>
+
+          <div class="h1-stat" style="--delay: 0.1s" role="listitem">
+            <div class="h1-stat__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="h1-stat__value-row">
+              <span class="h1-stat__number" data-target="98" aria-label="98 percent satisfaction rate">0</span>
+              <span class="h1-stat__suffix">%</span>
+            </div>
+            <span class="h1-stat__label">Client Satisfaction Rating</span>
           </div>
-          <div class="h1-stat reveal-on-scroll" style="--delay: 0.2s" role="listitem">
-            <span class="h1-stat__number" data-target="10" aria-label="over 10 years in business">0</span>
-            <span class="h1-stat__suffix">+</span>
-            <span class="h1-stat__label">Years in Practice</span>
+
+          <div class="h1-stat" style="--delay: 0.2s" role="listitem">
+            <div class="h1-stat__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="h1-stat__value-row">
+              <span class="h1-stat__number" data-target="10" aria-label="over 10 years in clinical practice">0</span>
+              <span class="h1-stat__suffix">+</span>
+            </div>
+            <span class="h1-stat__label">Years in Clinical Practice</span>
           </div>
-          <div class="h1-stat reveal-on-scroll" style="--delay: 0.3s" role="listitem">
-            <span class="h1-stat__number" data-target="3" aria-label="3 expert vets">0</span>
-            <span class="h1-stat__suffix"></span>
-            <span class="h1-stat__label">Expert Vets</span>
+
+          <div class="h1-stat" style="--delay: 0.3s" role="listitem">
+            <div class="h1-stat__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="h1-stat__value-row">
+              <span class="h1-stat__number" data-target="3" aria-label="3 board certified specialist vets">0</span>
+              <span class="h1-stat__suffix"></span>
+            </div>
+            <span class="h1-stat__label">Board-Certified Specialists</span>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- ===== SECTION 6: APPOINTMENT CTA BANNER ===== -->
     <section class="h1-cta-banner" id="appointment" aria-labelledby="cta-heading">
+      <div class="h1-cta-banner__ambient h1-cta-banner__ambient--1" aria-hidden="true"></div>
+      <div class="h1-cta-banner__ambient h1-cta-banner__ambient--2" aria-hidden="true"></div>
       <div class="h1-cta-banner__paw-pattern" aria-hidden="true"></div>
-      <div class="h1-cta-banner__pet-silhouette" aria-hidden="true">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Dog silhouette -->
-          <ellipse cx="100" cy="130" rx="55" ry="45" fill="rgba(255,255,255,0.08)"/>
-          <circle cx="100" cy="80" r="30" fill="rgba(255,255,255,0.08)"/>
-          <ellipse cx="68" cy="65" rx="10" ry="18" fill="rgba(255,255,255,0.08)" transform="rotate(-20 68 65)"/>
-          <ellipse cx="132" cy="65" rx="10" ry="18" fill="rgba(255,255,255,0.08)" transform="rotate(20 132 65)"/>
-        </svg>
-      </div>
+
       <div class="container h1-cta-banner__content">
         <div class="h1-cta-banner__text reveal-on-scroll">
-          <h2 id="cta-heading" class="h1-cta-banner__headline">Ready to Give Your Pet the Best Care?</h2>
-          <p class="h1-cta-banner__subtext">Schedule a visit today and let our compassionate team care for your pet.</p>
+
+          <div class="h1-cta-banner__status-pill">
+            <span class="h1-pulse-dot" aria-hidden="true"></span>
+            <span>Same-Day Appointments Available &bull; Instant Confirmation</span>
+          </div>
+
+          <h2 id="cta-heading" class="h1-cta-banner__headline">
+            Give Your Pet The Compassionate, <span class="h1-cta-banner__accent-text">Expert Care</span> They Deserve
+          </h2>
+          <p class="h1-cta-banner__subtext">
+            Whether it is an annual physical, urgent triage, dental cleaning, or vaccine booster, our board-certified veterinary team is here for your family with unhurried visits and genuine love.
+          </p>
+
           <div class="h1-cta-banner__actions">
-            <a href="pages/contact.html" class="btn btn--white btn--large" aria-label="Schedule your pet's visit at PawHealth">Schedule Your Pet's Visit</a>
+            <a href="pages/contact.html#appointment" class="btn btn--white btn--large h1-cta-banner__btn-main" aria-label="Schedule your pet's visit online">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Schedule Visit Online</span>
+            </a>
             <a href="tel:+15551234567" class="h1-cta-banner__phone" aria-label="Call PawHealth at (555) 123-4567">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.72 5.72l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Call Us: (555) 123-4567
+              <div class="h1-cta-banner__phone-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.72 5.72l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="h1-cta-banner__phone-text">
+                <span class="h1-cta-banner__phone-sub">Call Any Time</span>
+                <strong class="h1-cta-banner__phone-num">(555) 123-4567</strong>
+              </div>
             </a>
           </div>
+
+          <div class="h1-cta-banner__assurances" aria-label="Booking assurances">
+            <div class="h1-cta-banner__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Instant Digital Confirmation</span>
+            </div>
+            <div class="h1-cta-banner__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Zero Prepayment or Deposit</span>
+            </div>
+            <div class="h1-cta-banner__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Free Rescheduling Anytime</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
