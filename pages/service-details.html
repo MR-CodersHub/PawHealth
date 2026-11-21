@@ -32,44 +32,139 @@
     <!-- ===== SECTION 1: SERVICE HERO ===== -->
     <section class="sd-hero" aria-label="Vaccination & Preventive Healthcare Hero">
       <div class="sd-hero__bg" role="img" aria-label="Veterinarian administering gentle vaccination to a pet"></div>
+      <div class="sd-hero__glow sd-hero__glow--1" aria-hidden="true"></div>
+      <div class="sd-hero__glow sd-hero__glow--2" aria-hidden="true"></div>
       <div class="sd-hero__overlay" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="sd-hero__content reveal-on-scroll">
-          <nav class="about-hero__breadcrumb" aria-label="Breadcrumb" style="margin-bottom: var(--space-4);">
-            <a href="../index.html">Home</a>
-            <span class="about-hero__breadcrumb-sep" aria-hidden="true">/</span>
-            <a href="services.html">Services</a>
-            <span class="about-hero__breadcrumb-sep" aria-hidden="true">/</span>
-            <span>Vaccination &amp; Prevention</span>
-          </nav>
+        <div class="sd-hero__inner">
+          <!-- Left Content Column -->
+          <div class="sd-hero__content reveal-on-scroll">
+            <nav class="sd-hero__breadcrumb" aria-label="Breadcrumb">
+              <a href="../index.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Home</span>
+              </a>
+              <span class="sd-hero__breadcrumb-sep" aria-hidden="true">/</span>
+              <a href="services.html">Services</a>
+              <span class="sd-hero__breadcrumb-sep" aria-hidden="true">/</span>
+              <span>Vaccination &amp; Prevention</span>
+            </nav>
 
-          <span class="sd-hero__pill">Preventive Healthcare</span>
-          <h1 class="sd-hero__title">Vaccination &amp; Preventive Healthcare</h1>
-          <p class="sd-hero__subtext">
-            Safeguard your companion against life-threatening viral and bacterial diseases. Our personalized immunization protocols combine thorough physical examinations with certified, high-safety vaccines.
-          </p>
+            <div class="sd-hero__pill-badge">
+              <span class="sd-hero__pulse-dot" aria-hidden="true"></span>
+              <span>Preventive Healthcare Specialty • Fear-Free® Certified</span>
+            </div>
 
-          <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
-            <a href="contact.html" class="btn btn--white btn--large sd-book-btn" aria-label="Book a vaccination consultation">Book a Consultation</a>
-            <a href="dashboard.html#book" class="btn btn--outline-light btn--large" aria-label="Book via pet owner dashboard">Book in Pet Portal</a>
+            <h1 class="sd-hero__title">
+              Vaccination &amp; Preventive <span class="sd-hero__title-accent">Healthcare</span>
+            </h1>
+
+            <p class="sd-hero__subtext">
+              Safeguard your companion against life-threatening viral and bacterial diseases. Our personalized immunization protocols combine thorough physical examinations with certified, high-safety vaccines.
+            </p>
+
+            <!-- Quick Jump Category Navigation Pills -->
+            <div class="sd-hero__pills" role="navigation" aria-label="Quick jump to service details sections">
+              <a href="#overview" class="sd-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Why Immunize</span>
+              </a>
+              <a href="#includes" class="sd-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                <span>What's Included</span>
+              </a>
+              <a href="#process" class="sd-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Process</span>
+              </a>
+              <a href="#faq" class="sd-cat-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                <span>FAQs</span>
+              </a>
+            </div>
+
+            <!-- Dual Action CTAs -->
+            <div class="sd-hero__cta-group">
+              <a href="contact.html#appointment" class="btn btn--primary btn--large sd-hero__cta-primary sd-book-btn" aria-label="Book a vaccination consultation">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Book a Consultation</span>
+              </a>
+              <a href="dashboard.html#book" class="btn btn--outline-light btn--large sd-hero__cta-secondary" aria-label="Book via pet owner dashboard">
+                <span>Book in Pet Portal</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+              </a>
+            </div>
+
+            <!-- Trust Metrics Bar -->
+            <div class="sd-hero__stats-row" role="region" aria-label="Clinical vaccination statistics">
+              <div class="sd-hero__stat-card">
+                <strong class="sd-hero__stat-num">Dogs &amp; Cats</strong>
+                <span class="sd-hero__stat-label">Puppy to Senior Care</span>
+              </div>
+              <div class="sd-hero__stat-card">
+                <strong class="sd-hero__stat-num">30 Mins</strong>
+                <span class="sd-hero__stat-label">Unhurried Full Exam</span>
+              </div>
+              <div class="sd-hero__stat-card">
+                <strong class="sd-hero__stat-num">Digital</strong>
+                <span class="sd-hero__stat-label">Health Passport in Portal</span>
+              </div>
+              <div class="sd-hero__stat-card">
+                <strong class="sd-hero__stat-num">100%</strong>
+                <span class="sd-hero__stat-label">Safe Certified Vaccines</span>
+              </div>
+            </div>
           </div>
 
-          <div class="sd-hero__stats-bar">
-            <div class="sd-hero__stat-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-              <span>Available for Dogs, Cats &amp; Puppies</span>
-            </div>
-            <div class="sd-hero__stat-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-              <span>Quick 30-Minute Consultation</span>
-            </div>
-            <div class="sd-hero__stat-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-              <span>Digital Health Records in Dashboard</span>
+          <!-- Right Visual Collage with Floating Micro-Cards -->
+          <div class="sd-hero__visual reveal-on-scroll" aria-label="Veterinary vaccination procedure showcase">
+            <div class="sd-hero__image-wrap">
+              <img src="https://i.pinimg.com/1200x/de/91/c0/de91c096de604ff9f4e4824d5857da5a.jpg" alt="Veterinarian administering gentle care to a happy dog" class="sd-hero__image" loading="eager" width="600" height="700" />
+              <div class="sd-hero__image-shine" aria-hidden="true"></div>
+
+              <!-- Floating Card 1: Core & Lifestyle Vaccines -->
+              <div class="sd-hero__float-card sd-hero__float-card--top" aria-hidden="true">
+                <div class="sd-hero__float-icon sd-hero__float-icon--teal">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="sd-hero__float-text">
+                  <strong>Core &amp; Lifestyle</strong>
+                  <span>Tailored Exposure Profiles</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Digital Health Passport -->
+              <div class="sd-hero__float-card sd-hero__float-card--bottom" aria-hidden="true">
+                <div class="sd-hero__float-icon sd-hero__float-icon--coral">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <div class="sd-hero__float-text">
+                  <strong>Digital Certificate</strong>
+                  <span>Instant Access in Portal</span>
+                </div>
+              </div>
+
+              <!-- Floating Card 3: Fear-Free Certified -->
+              <div class="sd-hero__float-card sd-hero__float-card--badge" aria-hidden="true">
+                <div class="sd-hero__float-icon sd-hero__float-icon--gold">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="sd-hero__float-text">
+                  <strong>Fear-Free® Certified</strong>
+                  <span class="sd-hero__stars">★★★★★ Gentle Bedside Touch</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Bottom Curve Transition into Service Overview Section -->
+      <div class="sd-hero__curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none">
+          <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"></path>
+        </svg>
       </div>
     </section>
 
