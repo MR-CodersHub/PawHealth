@@ -46,6 +46,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // Quick topic pills click event in hero
+  const topicPills = document.querySelectorAll('.blog-topic-pill');
+  topicPills.forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      e.preventDefault();
+      const topic = pill.getAttribute('data-search-topic') || pill.textContent.replace(/[^a-zA-Z ]/g, '').trim();
+      if (searchInput) {
+        searchInput.value = topic;
+        filterArticles(topic);
+        searchInput.focus();
+      }
+    });
+  });
+
   // Category card clicks filter articles
   const catCards = document.querySelectorAll('.blog-cat-card');
   catCards.forEach(catCard => {
