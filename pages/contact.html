@@ -549,11 +549,20 @@
         </div>
 
         <div class="contact-location-grid reveal-on-scroll">
-          <!-- Interactive Location Showcase Card -->
+          <!-- Interactive Location Showcase Card with Embedded Google Map -->
           <div class="contact-map-card">
             <div class="contact-map-visual">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" alt="PawHealth Animal Hospital modern campus aerial view" class="contact-map-img" loading="lazy" />
-              <div class="contact-map-overlay-layer" aria-hidden="true"></div>
+              <iframe
+                class="contact-map-iframe"
+                src="https://maps.google.com/maps?q=123+Greenleaf+Ave,+Suite+100&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Google Map location of PawHealth Animal Hospital, 123 Greenleaf Ave, Suite 100">
+              </iframe>
 
               <!-- Floating Campus Pin Badge -->
               <div class="contact-map-pin-card">
@@ -564,8 +573,7 @@
                   <strong class="contact-map-pin-name">PawHealth Animal Hospital</strong>
                   <span class="contact-map-pin-addr">123 Greenleaf Ave, Suite 100</span>
                   <div class="contact-map-pin-links">
-                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="contact-map-action-link">Google Maps &rarr;</a>
-                    <a href="https://maps.apple.com" target="_blank" rel="noopener noreferrer" class="contact-map-action-link">Apple Maps &rarr;</a>
+                    <a href="https://maps.google.com/?q=123+Greenleaf+Ave,+Suite+100" target="_blank" rel="noopener noreferrer" class="contact-map-action-link">Open in Google Maps &rarr;</a>
                   </div>
                 </div>
               </div>
