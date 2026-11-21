@@ -167,49 +167,104 @@
     </section>
 
     <!-- ===== SECTION 2: PREVENTIVE HEALTHCARE ===== -->
-    <section class="section service-section" id="preventive" aria-labelledby="preventive-heading">
+    <section class="services-block services-block--light section" id="preventive" aria-labelledby="preventive-heading">
       <div class="container">
-        <div class="service-section__grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(var(--space-8), 5vw, var(--space-16)); align-items: center;">
+        <div class="services-block__grid">
 
-          <div class="service-section__image-wrap reveal-on-scroll">
-            <img src="https://i.pinimg.com/736x/8c/0e/70/8c0e707e4d0e60d59809093a7c2e1e89.jpg" alt="Veterinarian performing routine physical examination on a pet" style="width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl);" loading="lazy" />
+          <!-- Left Media Column -->
+          <div class="services-block__media reveal-on-scroll">
+            <div class="services-block__glow-backdrop" aria-hidden="true"></div>
+            <div class="services-block__frame">
+              <img
+                src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=900&q=80"
+                alt="Veterinarian performing routine physical wellness examination on a pet"
+                class="services-block__img"
+                loading="lazy"
+                width="800"
+                height="560"
+              />
+            </div>
+
+            <div class="services-block__float-card services-block__float-card--top" aria-hidden="true">
+              <div class="services-block__float-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <div class="services-block__float-text">
+                <strong>Fear-Free® Certified Exam</strong>
+                <span>Pheromone calmed &bull; Zero panic</span>
+              </div>
+            </div>
+
+            <div class="services-block__float-card services-block__float-card--bottom" aria-hidden="true">
+              <div class="services-block__float-icon services-block__float-icon--amber">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="services-block__float-text">
+                <strong>Unhurried 30-Min Visits</strong>
+                <span>Never rushed physical checks</span>
+              </div>
+            </div>
           </div>
 
-          <div class="service-section__content reveal-on-scroll">
-            <span class="section-eyebrow">Foundation of Longevity</span>
-            <h2 id="preventive-heading" class="section-title">Preventive Healthcare &amp; Wellness</h2>
-            <p style="font-size: 1.05rem; color: var(--color-text); margin-bottom: var(--space-4); line-height: 1.65;">
-              Preventive care is the most compassionate and cost-effective approach to veterinary medicine. By detecting subtle biological shifts before clinical symptoms arise, we help pets live happier, healthier, and longer lives.
+          <!-- Right Content Column -->
+          <div class="services-block__content reveal-on-scroll" style="--delay: 0.15s">
+            <span class="section-eyebrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Foundation of Longevity
+            </span>
+            <h2 id="preventive-heading" class="section-title">Comprehensive Preventive Healthcare &amp; Wellness Exams</h2>
+            <p class="services-block__lead">
+              Preventive medicine is the most compassionate and effective foundation of animal wellness. By identifying subtle physiological shifts before symptoms escalate, we help pets live longer, pain-free lives.
             </p>
 
-            <ul class="service-feature-list" style="list-style: none; padding: 0; margin: 0 0 var(--space-6) 0; display: flex; flex-direction: column; gap: var(--space-3);">
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Routine Physical Examinations:</strong> Nose-to-tail check of eyes, ears, heart, lungs, lymph nodes, and musculoskeletal condition.
+            <!-- Feature Checklist Cards -->
+            <div class="services-checklist">
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Customized Immunizations:</strong> Core vaccines (Rabies, DHPP, FVRCP) plus lifestyle options tailored to local risks.
+                <div class="services-check-body">
+                  <h4>12-System Physical Examination</h4>
+                  <p>In-depth nose-to-tail review of cardiac rhythm, respiratory sounds, lymph nodes, ophthalmic health, and joint mobility.</p>
                 </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Parasite Screening &amp; Prevention:</strong> Year-round oral and topical controls for fleas, ticks, heartworm, and intestinal worms.
-                </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Life-Stage Checkups:</strong> Dedicated developmental reviews for puppies &amp; kittens and biannual reviews for senior companions.
-                </div>
-              </li>
-            </ul>
+              </div>
 
-            <a href="service-details.html" class="btn btn--primary" aria-label="Explore featured vaccination and prevention details">View Vaccination &amp; Prevention Details <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Customized Immunization Protocols</h4>
+                  <p>Core vaccines (Rabies, DHPP, FVRCP) plus individualized lifestyle options tailored to outdoor risk and regional exposure.</p>
+                </div>
+              </div>
+
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Year-Round Comprehensive Vector Defense</h4>
+                  <p>Point-of-care 4Dx testing for heartworm, Lyme, and tick-borne parasites with customized oral or topical prevention plans.</p>
+                </div>
+              </div>
+
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Life-Stage Development &amp; Nutrition Staging</h4>
+                  <p>Dedicated growth curve monitoring for puppies &amp; kittens and bi-annual organ screenings for senior companions.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="services-block__actions">
+              <a href="contact.html?service=preventive#appointment" class="btn btn--primary">Book Preventive Exam &rarr;</a>
+              <a href="service-details.html" class="btn btn--outline-dark">View Vaccine Schedules</a>
+            </div>
           </div>
 
         </div>
@@ -217,49 +272,104 @@
     </section>
 
     <!-- ===== SECTION 3: MEDICAL & DIAGNOSTIC SERVICES ===== -->
-    <section class="section service-section" id="diagnostics" style="background: var(--color-surface-alt);" aria-labelledby="diagnostics-heading">
+    <section class="services-block services-block--white section" id="diagnostics" aria-labelledby="diagnostics-heading">
       <div class="container">
-        <div class="service-section__grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(var(--space-8), 5vw, var(--space-16)); align-items: center;">
+        <div class="services-block__grid services-block__grid--reverse">
 
-          <div class="service-section__content reveal-on-scroll">
-            <span class="section-eyebrow">Precision Diagnostics</span>
-            <h2 id="diagnostics-heading" class="section-title">Internal Medicine &amp; Diagnostic Services</h2>
-            <p style="font-size: 1.05rem; color: var(--color-text); margin-bottom: var(--space-4); line-height: 1.65;">
-              When pets fall ill, timely and accurate diagnostics make all the difference. Our in-house diagnostic suite provides immediate clinical data, allowing our veterinary team to initiate targeted therapeutic interventions without delay.
+          <!-- Left Content Column -->
+          <div class="services-block__content reveal-on-scroll">
+            <span class="section-eyebrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M10 2v7.31L4.69 19.3A2 2 0 0 0 6.45 22h11.1a2 2 0 0 0 1.76-2.7L14 9.31V2"/><line x1="8" y1="2" x2="16" y2="2"/></svg>
+              Hospital-Grade Precision
+            </span>
+            <h2 id="diagnostics-heading" class="section-title">Internal Medicine &amp; Point-of-Care Diagnostics</h2>
+            <p class="services-block__lead">
+              When a pet is ill, minutes matter. Our in-house IDEXX clinical laboratory and low-radiation digital imaging suites produce immediate, definitive data so targeted medical therapy begins without delay.
             </p>
 
-            <ul class="service-feature-list" style="list-style: none; padding: 0; margin: 0 0 var(--space-6) 0; display: flex; flex-direction: column; gap: var(--space-3);">
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Comprehensive Consultations:</strong> In-depth investigation of gastrointestinal, respiratory, endocrine, and metabolic disorders.
+            <!-- Feature Checklist Cards -->
+            <div class="services-checklist">
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>In-House Laboratory Testing:</strong> Complete blood count (CBC), serum chemistry, urinalysis, electrolytes, and cytology in 20 minutes.
+                <div class="services-check-body">
+                  <h4>In-House Point-of-Care IDEXX Laboratory</h4>
+                  <p>Complete blood counts (CBC), comprehensive chemistry panels, electrolytes, blood gas, and in-clinic cytology in under 15 minutes.</p>
                 </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Digital Radiography (X-Ray):</strong> Crisp skeletal and thoracic imaging with minimal radiation exposure.
-                </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Diagnostic Ultrasound:</strong> Non-invasive real-time evaluation of abdominal organs, bladder, kidneys, and cardiac chambers.
-                </div>
-              </li>
-            </ul>
+              </div>
 
-            <a href="contact.html" class="btn btn--outline-dark" aria-label="Book a diagnostic consultation">Book a Diagnostic Consultation</a>
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Low-Radiation Digital HD Radiography (X-Ray)</h4>
+                  <p>Sub-second digital high-definition skeletal, thoracic, and abdominal X-rays with immediate cloud radiologist tele-consultation.</p>
+                </div>
+              </div>
+
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Diagnostic Color Doppler Ultrasound</h4>
+                  <p>Non-invasive real-time sonography evaluating abdominal organ architecture, bladder pathology, kidneys, and cardiac chambers.</p>
+                </div>
+              </div>
+
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Chronic Disease &amp; Internal Medicine Triage</h4>
+                  <p>Targeted therapeutic protocols for feline renal disease (CKD), diabetes mellitus, Cushing's, Addison's, and gastrointestinal disorders.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="services-block__actions">
+              <a href="contact.html?service=diagnostics#appointment" class="btn btn--primary">Schedule Diagnostic Visit &rarr;</a>
+              <a href="about.html#facilities" class="btn btn--outline-dark">Tour Our Diagnostic Lab</a>
+            </div>
           </div>
 
-          <div class="service-section__image-wrap reveal-on-scroll">
-            <img src="https://i.pinimg.com/1200x/b1/b2/63/b1b26308616b43dc05f9477bb09adf5a.jpg" alt="Veterinary diagnostics and internal medicine services" style="width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl);" loading="lazy" />
+          <!-- Right Media Column -->
+          <div class="services-block__media reveal-on-scroll" style="--delay: 0.15s">
+            <div class="services-block__glow-backdrop" aria-hidden="true"></div>
+            <div class="services-block__frame">
+              <img
+                src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80"
+                alt="Veterinary diagnostic laboratory with clinical blood testing and analysis"
+                class="services-block__img"
+                loading="lazy"
+                width="800"
+                height="560"
+              />
+            </div>
+
+            <div class="services-block__float-card services-block__float-card--top" aria-hidden="true">
+              <div class="services-block__float-icon services-block__float-icon--teal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="services-block__float-text">
+                <strong>Results in &lt; 15 Mins</strong>
+                <span>Zero external lab delay</span>
+              </div>
+            </div>
+
+            <div class="services-block__float-card services-block__float-card--bottom" aria-hidden="true">
+              <div class="services-block__float-icon services-block__float-icon--gold">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><circle cx="12" cy="13" r="2"/></svg>
+              </div>
+              <div class="services-block__float-text">
+                <strong>Instant Cloud DICOM</strong>
+                <span>Shared screen radiologist review</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -267,120 +377,280 @@
     </section>
 
     <!-- ===== SECTION 4: SURGICAL & DENTAL CARE ===== -->
-    <section class="section service-section" id="surgery" aria-labelledby="surgery-heading">
+    <section class="services-block services-block--light section" id="surgery" aria-labelledby="surgery-heading">
       <div class="container">
-        <div class="service-section__grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(var(--space-8), 5vw, var(--space-16)); align-items: center;">
+        <div class="services-block__grid">
 
-          <div class="service-section__image-wrap reveal-on-scroll">
-            <img src="https://i.pinimg.com/1200x/07/62/03/07620345d06ea53fe1afff0c10c67159.jpg" alt="Veterinary surgical care" style="width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl);" loading="lazy" />
+          <!-- Left Media Column -->
+          <div class="services-block__media reveal-on-scroll">
+            <div class="services-block__glow-backdrop" aria-hidden="true"></div>
+            <div class="services-block__frame">
+              <img
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=900&q=80"
+                alt="Positive-pressure sterile veterinary surgery suite with surgical lighting"
+                class="services-block__img"
+                loading="lazy"
+                width="800"
+                height="560"
+              />
+            </div>
+
+            <div class="services-block__float-card services-block__float-card--top" aria-hidden="true">
+              <div class="services-block__float-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div class="services-block__float-text">
+                <strong>Positive-Pressure HEPA</strong>
+                <span>Human surgical sterility</span>
+              </div>
+            </div>
+
+            <div class="services-block__float-card services-block__float-card--bottom" aria-hidden="true">
+              <div class="services-block__float-icon services-block__float-icon--amber">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div class="services-block__float-text">
+                <strong>6-Parameter Telemetry</strong>
+                <span>Dedicated nurse monitoring</span>
+              </div>
+            </div>
           </div>
 
-          <div class="service-section__content reveal-on-scroll">
-            <span class="section-eyebrow">Advanced Clinical Care</span>
-            <h2 id="surgery-heading" class="section-title">Surgical &amp; Dental Medicine</h2>
-            <p style="font-size: 1.05rem; color: var(--color-text); margin-bottom: var(--space-4); line-height: 1.65;">
-              Led by Dr. James Okoye, our surgical and dental division provides state-of-the-art procedures under strict sterile protocols. Patient safety is guarded with multi-parameter anesthesia monitoring and dedicated nurse supervision.
+          <!-- Right Content Column -->
+          <div class="services-block__content reveal-on-scroll" style="--delay: 0.15s">
+            <span class="section-eyebrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              Surgical Excellence
+            </span>
+            <h2 id="surgery-heading" class="section-title">Advanced Surgical Procedures &amp; Monitored Recovery</h2>
+            <p class="services-block__lead">
+              Surgeries at PawHealth are performed within sterile positive-pressure surgical suites equipped with hospital-grade multi-parameter anesthesia telemetry, warming blankets, and proactive multi-modal pain control.
             </p>
 
-            <ul class="service-feature-list" style="list-style: none; padding: 0; margin: 0 0 var(--space-6) 0; display: flex; flex-direction: column; gap: var(--space-3);">
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Veterinary Surgery:</strong> Spay/neuter, foreign body removal, mass removals, abdominal surgery, and orthopedic stabilization.
+            <!-- Feature Checklist Cards -->
+            <div class="services-checklist">
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Pre- &amp; Post-Op Monitoring:</strong> Mandatory pre-anesthetic blood screenings and heated recovery bays with dedicated nursing.
+                <div class="services-check-body">
+                  <h4>Soft-Tissue &amp; Reconstructive Surgery</h4>
+                  <p>Spay, neuter, exploratory laparotomy, mass removals, foreign body retrieval, gastropexy, and reconstructive wound repair.</p>
                 </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Dental Prophylaxis &amp; Cleaning:</strong> Ultrasonic scaling above and below gum line, tooth polishing, and digital dental radiography.
-                </div>
-              </li>
-              <li style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                <span style="color: var(--color-primary); font-weight: 700;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div>
-                  <strong>Tooth Extractions &amp; Oral Surgery:</strong> Gentle surgical extractions with localized nerve blocks for pain-free recovery.
-                </div>
-              </li>
-            </ul>
+              </div>
 
-            <div style="font-size: 0.85rem; color: var(--color-text-muted); background: var(--color-surface-alt); padding: var(--space-3) var(--space-4); border-radius: 8px; border-left: 3px solid var(--color-teal); margin-bottom: var(--space-5);">
-              <em>Note: Pre-surgical consultation and blood panel required prior to all elective surgical procedures.</em>
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Ultrasonic Dental Operatory &amp; Oral Surgery</h4>
+                  <p>Subgingival piezo ultrasonic scaling, full-mouth digital dental X-rays, and surgical extractions with localized nerve blocks.</p>
+                </div>
+              </div>
+
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Continuous Anesthesia &amp; Telemetry Monitoring</h4>
+                  <p>Real-time capnography (ETCO2), pulse oximetry, blood pressure, ECG, and circulating warm-air patient heating blankets.</p>
+                </div>
+              </div>
+
+              <div class="services-check-card">
+                <div class="services-check-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="services-check-body">
+                  <h4>Multimodal Analgesia &amp; Post-Op Recovery Bays</h4>
+                  <p>Customized pre-and-post-operative pain management protocols, heated recovery suites, and dedicated discharge nurse instructions.</p>
+                </div>
+              </div>
             </div>
 
-            <a href="contact.html" class="btn btn--primary" aria-label="Book a surgical consultation">Book Surgical Consultation</a>
+            <!-- Actions -->
+            <div class="services-block__actions">
+              <a href="contact.html?service=surgery#appointment" class="btn btn--primary">Book Surgical Consultation &rarr;</a>
+              <a href="about.html#facilities" class="btn btn--outline-dark">Explore Surgical Facilities</a>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 5: SPECIALIZED PET CARE ===== -->
-    <section class="section service-section" id="specialized" style="background: var(--color-cream);" aria-labelledby="specialized-heading">
+    <!-- ===== SECTION 5: SPECIALIZED CARE PROGRAMS & THERAPIES ===== -->
+    <section class="services-specialized section" id="specialized" aria-labelledby="specialized-heading">
       <div class="container">
         <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Tailored Solutions</span>
-          <h2 id="specialized-heading" class="section-title">Specialized Pet Care Disciplines</h2>
-          <p class="section-subtitle">We offer targeted veterinary focus programs designed to address unique dietary, dermatological, and life-stage challenges.</p>
+          <span class="section-eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Comprehensive Clinical Disciplines
+          </span>
+          <h2 id="specialized-heading" class="section-title">Specialized Disciplines For Complex Medical Needs</h2>
+          <p class="section-subtitle">Beyond routine clinical checkups, our veterinary hospital delivers targeted therapeutic care across complex animal medical specialties.</p>
         </div>
 
-        <div class="grid grid--4 reveal-on-scroll" style="gap: var(--space-6); margin-top: var(--space-8);">
+        <div class="services-specialized__grid" role="list">
 
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          <!-- Card 1: Allergy & Dermatology -->
+          <article class="services-spec-card reveal-on-scroll" style="--delay: 0.05s" role="listitem">
+            <div class="services-spec-card__top">
+              <div class="services-spec-card__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <span class="services-spec-card__tag">Allergy &amp; Skin</span>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Clinical Nutrition</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">Science-driven dietary plans for obesity management, diabetic regulation, renal support, and chronic digestive disorders.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <h3 class="services-spec-card__title">Dermatology &amp; Allergy Relief</h3>
+            <p class="services-spec-card__desc">Diagnosis and lasting therapeutic management for environmental allergies, chronic otitis ear infections, cytopoint biologics, and flea dermatitis.</p>
+            <div class="services-spec-card__footer">
+              <a href="contact.html?service=dermatology#appointment" class="services-spec-card__link">Consult Dermatology &rarr;</a>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Dermatology &amp; Coat</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">Diagnosis and therapeutic relief for environmental allergies, flea allergy dermatitis, fungal skin conditions, and ear infections.</p>
-          </div>
+          </article>
 
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <!-- Card 2: Class IV Laser Therapy -->
+          <article class="services-spec-card reveal-on-scroll" style="--delay: 0.1s" role="listitem">
+            <div class="services-spec-card__top">
+              <div class="services-spec-card__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              </div>
+              <span class="services-spec-card__tag">Regenerative Care</span>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Senior Pet Support</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">Arthritis pain control, mobility supplements, blood pressure monitoring, and cognitive dysfunction care for geriatric pets.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <h3 class="services-spec-card__title">Class IV Laser Rehabilitation</h3>
+            <p class="services-spec-card__desc">Non-invasive deep-tissue photobiomodulation that accelerates wound healing, reduces inflammation, and relieves chronic joint arthritis without medications.</p>
+            <div class="services-spec-card__footer">
+              <a href="contact.html?service=laser#appointment" class="services-spec-card__link">Consult Laser Therapy &rarr;</a>
             </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-charcoal);">Recovery &amp; Rehab</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">Physical rehabilitation guidance, thermal laser therapy, and exercise therapy to restore muscle mass after orthopedic trauma.</p>
-          </div>
+          </article>
 
+          <!-- Card 3: Senior Longevity -->
+          <article class="services-spec-card reveal-on-scroll" style="--delay: 0.15s" role="listitem">
+            <div class="services-spec-card__top">
+              <div class="services-spec-card__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <span class="services-spec-card__tag">Senior Longevity</span>
+            </div>
+            <h3 class="services-spec-card__title">Geriatric Quality of Life &amp; Arthritis</h3>
+            <p class="services-spec-card__desc">Biannual geriatric blood profiling, early renal SDMA detection, Librela/Solensia biologics, and cognitive dysfunction support keeping golden years peaceful.</p>
+            <div class="services-spec-card__footer">
+              <a href="contact.html?service=senior#appointment" class="services-spec-card__link">Consult Senior Care &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 4: Clinical Nutrition -->
+          <article class="services-spec-card reveal-on-scroll" style="--delay: 0.2s" role="listitem">
+            <div class="services-spec-card__top">
+              <div class="services-spec-card__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <span class="services-spec-card__tag">Medical Nutrition</span>
+            </div>
+            <h3 class="services-spec-card__title">Prescription Diets &amp; Weight Triage</h3>
+            <p class="services-spec-card__desc">Veterinary science-backed dietary management for diabetes regulation, renal support, bladder stone prevention, and structured weight optimization.</p>
+            <div class="services-spec-card__footer">
+              <a href="contact.html?service=nutrition#appointment" class="services-spec-card__link">Consult Nutrition &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 5: Pediatric Wellness -->
+          <article class="services-spec-card reveal-on-scroll" style="--delay: 0.25s" role="listitem">
+            <div class="services-spec-card__top">
+              <div class="services-spec-card__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7.5" cy="8.5" r="2"/><circle cx="12" cy="6.5" r="2"/><circle cx="16.5" cy="8.5" r="2"/><path d="M12 20c-3 0-5.5-2-5.5-4.5S9.5 11 12 11s5.5 2 5.5 4.5S15 20 12 20z"/></svg>
+              </div>
+              <span class="services-spec-card__tag">Pediatric Care</span>
+            </div>
+            <h3 class="services-spec-card__title">Puppy &amp; Kitten Developmental Care</h3>
+            <p class="services-spec-card__desc">Staged immunization boosters, gentle deworming, ISO microchipping, and behavioral conditioning establishing a confident, healthy companion.</p>
+            <div class="services-spec-card__footer">
+              <a href="contact.html?service=pediatric#appointment" class="services-spec-card__link">Consult Pediatric &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 6: 24/7 Urgent Care -->
+          <article class="services-spec-card services-spec-card--emergency reveal-on-scroll" style="--delay: 0.3s" role="listitem">
+            <div class="services-spec-card__top">
+              <div class="services-spec-card__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+              </div>
+              <span class="services-spec-card__tag services-spec-card__tag--emergency">
+                <span class="services-pulse-dot" aria-hidden="true"></span> Priority ICU
+              </span>
+            </div>
+            <h3 class="services-spec-card__title">24/7 Emergency &amp; Critical Care Triage</h3>
+            <p class="services-spec-card__desc">Immediate clinical stabilization for trauma, toxin ingestion, acute respiratory distress, and urinary blockages. Zero wait times for emergencies.</p>
+            <div class="services-spec-card__footer">
+              <a href="tel:+15551234568" class="btn btn--danger-subtle btn--sm">Call Emergency (555) 123-4568</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Custom procedure explorer banner -->
+        <div class="services-specialized__banner reveal-on-scroll">
+          <div class="services-specialized__banner-text">
+            <h4>Looking for a customized clinical treatment or specialty procedure?</h4>
+            <p>Our hospital offers over 50+ specialized procedures including cardiology consults, endoscopy, and post-operative physical rehabilitation.</p>
+          </div>
+          <a href="contact.html" class="btn btn--outline-dark btn--sm">Inquire With Our Clinical Team &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 6: BOOK VETERINARY CARE CTA ===== -->
-    <section class="section service-section" style="background: #245C48; color: #fff; text-align: center;" aria-labelledby="book-care-heading">
-      <div class="container">
-        <div class="reveal-on-scroll" style="max-width: 680px; margin-inline: auto;">
-          <span class="badge badge--primary" style="background: rgba(255,255,255,0.2); color: #fff; margin-bottom: var(--space-3);">Personalized Guidance</span>
-          <h2 id="book-care-heading" class="section-title" style="color: #fff; margin-bottom: var(--space-4);">Unsure Which Service Your Pet Needs?</h2>
-          <p style="font-size: 1.1rem; color: rgba(255,255,255,0.88); line-height: 1.6; margin-bottom: var(--space-8);">
-            Our compassionate veterinary intake team is here to listen to your pet's symptoms and guide you to the right appointment or preventive wellness plan.
+    <!-- ===== SECTION 6: HIGH-CONVERTING CONSULTATION & CARE CTA ===== -->
+    <section class="services-cta section" id="book" aria-labelledby="book-care-heading">
+      <div class="services-cta__ambient services-cta__ambient--1" aria-hidden="true"></div>
+      <div class="services-cta__ambient services-cta__ambient--2" aria-hidden="true"></div>
+
+      <div class="container services-cta__content">
+        <div class="services-cta__box reveal-on-scroll">
+
+          <div class="services-cta__status-pill">
+            <span class="services-pulse-dot" aria-hidden="true"></span>
+            <span>Same-Day Consultations Available &bull; Instant Online Confirmation</span>
+          </div>
+
+          <h2 id="book-care-heading" class="services-cta__headline">
+            Give Your Pet The Compassionate, <span class="services-cta__accent">Expert Medical Care</span> They Deserve
+          </h2>
+          <p class="services-cta__subtext">
+            Whether your pet is due for an annual wellness checkup, needs urgent lab answers, or requires advanced surgical evaluation, our board-certified clinical team is ready to welcome your family.
           </p>
 
-          <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
-            <a href="contact.html" class="btn btn--white btn--large" aria-label="Schedule a veterinary visit">Schedule a Consultation</a>
-            <a href="tel:+15551234567" class="btn btn--outline-light btn--large" aria-label="Call PawHealth for immediate advice">Call (555) 123-4567</a>
+          <div class="services-cta__actions">
+            <a href="contact.html#appointment" class="btn btn--white btn--large services-cta__btn-main" aria-label="Schedule a veterinary visit online">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Schedule Consultation Online</span>
+            </a>
+            <a href="tel:+15551234567" class="services-cta__phone" aria-label="Call PawHealth for consultation at (555) 123-4567">
+              <div class="services-cta__phone-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.72 5.72l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="services-cta__phone-meta">
+                <span class="services-cta__phone-label">Direct Hospital Line</span>
+                <strong class="services-cta__phone-num">(555) 123-4567</strong>
+              </div>
+            </a>
           </div>
+
+          <div class="services-cta__assurances" aria-label="PawHealth clinical commitments">
+            <div class="services-cta__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>100% Upfront Itemized Estimates</span>
+            </div>
+            <div class="services-cta__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Zero Prepayment or Deposit</span>
+            </div>
+            <div class="services-cta__assurance-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Dedicated Nurse Post-Visit Check-In</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
