@@ -82,19 +82,25 @@
 }
 .h2-hero__headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 4.8vw, 4.6rem);
+  font-size: clamp(2.1rem, 4vw, 3.8rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--color-charcoal);
   margin: 0;
+}
+
+@media (min-width: 981px) {
+  .h2-hero__headline-line {
+    white-space: nowrap;
+  }
 }
 .h2-hero__headline em {
   font-style: italic;
   color: #245C48;
   display: block;
 }
-[data-theme="dark"] .h2-hero__headline,
-[data-theme="dark"] .h2-hero__headline em { color: #edf7f2; }
+[data-theme="dark"] .h2-hero__headline { color: #edf7f2; }
+[data-theme="dark"] .h2-hero__headline em { color: #63c29f; }
 .h2-hero__subtext {
   margin: 0;
   max-width: 58ch;
@@ -1383,7 +1389,7 @@
    RESPONSIVE DESIGN (Preserving Hero Media Rules)
    ========================================================================== */
 @media (max-width: 1100px) {
-  .h2-hero__headline { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
+  .h2-hero__headline { font-size: clamp(1.9rem, 3.6vw, 3rem); }
   .h2-hero__subtext { font-size: 1rem; }
   .h2-lifestage-grid { grid-template-columns: repeat(2, 1fr); }
   .h2-treatments__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1394,7 +1400,7 @@
   .h2-hero__split { grid-template-columns: 1fr; }
   .h2-hero__image-wrap,
   .h2-hero__image { min-height: 420px; }
-  .h2-hero__headline { font-size: clamp(2rem, 5vw, 3rem); }
+  .h2-hero__headline { font-size: clamp(1.75rem, 4.2vw, 2.55rem); }
   .h2-hero__subtext { font-size: 0.98rem; line-height: 1.7; }
   .h2-hero__eyebrow { font-size: 0.74rem; }
   .h2-hero__pillar { font-size: 0.82rem; padding: 7px 12px; }
@@ -1415,7 +1421,7 @@
   .h2-hero__float-card { grid-template-columns: 1fr; gap: 10px; text-align: center; }
   .h2-hero__float-divider { width: 100%; height: 1px; }
   .h2-hero__cta-group .btn { width: 100%; justify-content: center; }
-  .h2-hero__headline { font-size: clamp(1.85rem, 8vw, 2.5rem); line-height: 1.12; }
+  .h2-hero__headline { font-size: clamp(1.6rem, 7vw, 2.2rem); line-height: 1.12; }
   .h2-hero__subtext { font-size: 0.94rem; }
   .h2-hero__eyebrow { font-size: 0.7rem; padding: 7px 12px; }
   .h2-hero__pillar { font-size: 0.78rem; }
@@ -1465,7 +1471,7 @@
 }
 
 @media (max-width: 480px) {
-  .h2-hero__headline { font-size: clamp(1.65rem, 8.5vw, 2.1rem); }
+  .h2-hero__headline { font-size: clamp(1.45rem, 7.5vw, 1.85rem); }
   .h2-hero__subtext { font-size: 0.9rem; }
   .h2-cta__headline { font-size: 1.55rem; }
 }
